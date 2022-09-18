@@ -1,6 +1,6 @@
 ---
 title: "Timothy Fraser, PhD"
-subtitle: "Home"
+subtitle: "About"
 navbar:
   date: "`r Sys.Date()`"
   left:
@@ -12,10 +12,3 @@ output:
   rmdformats::readthedown:
     highlight: kate
 ---
-
-```{r setup, include=FALSE}
-## Global options
-knitr::opts_chunk$set(cache = TRUE)
-```
-
-
