@@ -7,3 +7,4 @@ library(rmarkdown)
 library(credentials)
 library(tidyverse)
 
+rmarkdown::render_site()
