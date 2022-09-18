@@ -1,0 +1,114 @@
+.body {
+    margin: 5px;
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+.sidebar {
+  background-color: "#101010";
+
+}
+
+.button {
+      display: inline-block;
+      padding: 10px 60px;
+      text-align: center;
+      text-decoration: none;
+      color: grey;
+      background-color: white;
+      border-radius: 6px;
+      outline: none;
+}
+
+/* footer */
+.site-footer {
+      position: absolute;
+      width: 100%;
+      padding: 25px 0px 10px;
+      color: #fff;
+      right: 0;
+}
+
+.site-footer hr {
+      border-top-color: #fff;
+      opacity: 0.33
+}
+
+.site-footer hr.small {
+      margin: 20px 0
+}
+
+.site-footer .social-icons {
+      text-align: right
+}
+
+.site-footer .social-icons a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: transparent;
+}
+
+.copyright-text {
+      margin: 0
+}
+
+@media (max-width:991px) {
+      .site-footer [class^=col-] {
+            margin-bottom: 30px
+      }
+}
+
+@media (max-width:767px) {
+      .site-footer {
+            padding-bottom: 0
+      }
+
+      .site-footer .copyright-text, .site-footer .social-icons {
+            text-align: center
+      }
+}
+
+.social-icons {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none
+}
+
+.social-icons li {
+      display: inline-block;
+      margin-bottom: 4px
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: #93c54b;
+    font-size: 1.5em;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+      color: #93c54b;
+      background-color: #6590BB;
+}
+
+@media (max-width:767px) {
+      .social-icons li.title {
+            display: block;
+            margin-right: 0;
+            font-weight: 600
+      }
+}

@@ -1,4 +1,5 @@
 ---
+output_dir: "."
 title: "Timothy Fraser, PhD"
 subtitle: "About"
 navbar:
@@ -12,3 +13,5 @@ output:
   rmdformats::readthedown:
     highlight: kate
 ---
+
+
