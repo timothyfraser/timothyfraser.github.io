@@ -4,10 +4,11 @@
 
 # To render the site and review it, use this!
 blogdown::serve_site()
-```{r}
+
+
 #blogdown::build_dir()
+
 blogdown::build_site()
-```
 
 # For diagnostics, run:
 # blogdown::check_site()
