@@ -1,0 +1,418 @@
+---
+title: "Teaching Portfolio"
+author: "Timothy Fraser"
+date: "Systems Engineering Program<br>Cornell University"
+output: 
+  pagedown::html_resume
+main-color: "#7B0D1E"
+secondary-color: "#7B0D1E"
+---
+
+```{css text, echo=FALSE}
+
+/*---------------- Text sizing --------------*/
+
+element.style {
+font-size: 10pt;
+}
+/*---------------- List Item --------------*/
+
+p, ul, ol {
+font-size: 10pt;
+margin-right: 0%;
+margin-block-end: 0.25em;
+margin-block-start: 0.25em;
+line-height: 16.5px;
+}
+
+
+li {
+font-size: 10pt;
+}
+
+/*---------------- Header sizing --------------*/
+
+h1 {
+padding-top: 0px;
+font-size: 16pt;
+padding-bottom: 0px;
+margin-top: -25px;
+margin-bottom: 5px;
+}
+
+h2 {
+padding-top: 0px;
+font-size: 12pt;
+padding-bottom: 0px;
+margin-block-start: 0.50px;
+margin-block-end: 0.25px;
+}
+
+h3 {
+padding-top: 0px;
+font-size: 12pt;
+padding-bottom: 0px;
+margin-block-start: 0.50px;
+margin-block-end: 0.25px;
+}
+
+:root {
+--sidebar-width: 0in;
+--sidebar-background-color: #FFFFFF;
+}
+
+.pagedjs_pagebox > .pagedjs_area {
+padding-right: 0.5in;
+padding-left: 0.5in;
+}
+
+
+[data-id="title"] {
+left: 0.05in;
+margin-bottom: 0in;
+}
+
+```
+
+```{css columns, echo = FALSE}
+/*--- Column Spacing Options ----*/
+
+/*--- 2 Column Divider ----*/
+.col-two {
+columns: 2 200px;
+font-size: 2pt;
+padding-left: 20px;
+padding-top: 0px;
+margin: 0em 0;
+text-indent: 0px;
+/* number of columns and width in pixels*/
+}
+
+/*--- 3 Column Divider ----*/
+.col-three {
+columns: 3 200px;
+font-size: 2pt;
+padding-left: 0px;
+padding-top: 0px;
+margin: 0em 0;
+text-indent: 0px;
+/* number of columns and width in pixels*/
+}
+
+
+/*---------------- Grid Box for containing icons --------------*/
+.grid-pink {
+display: grid;
+grid-template-columns: 12.5% 87.5%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: #7B0D1E;
+background-color: #FFEBEE;
+border: solid 3px #FFEBEE;
+}
+
+.grid-red {
+display: grid;
+grid-template-columns: 12.5% 87.5%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: #FFEBEE;
+background-color: #7B0D1E;
+border: solid 3px #FFEBEE;
+}
+
+.grid-red-no-outline {
+display: grid;
+grid-template-columns: 12.5% 87.5%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: #FFEBEE;
+background-color: #7B0D1E;
+border: solid 3px #7B0D1E;
+}
+
+.grid-grey {
+display: grid;
+grid-template-columns: 12.5% 87.5%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: black;
+background-color: #FFEBEE;
+border: solid 3px #dbceef;
+}
+
+.grid-grey-whole {
+display: grid;
+grid-template-columns: 100%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: black;
+background-color: #FFEBEE;
+border: solid 3px #dbceef;
+}
+
+
+.col-1 {
+}
+
+.col-2 {
+padding-left: 20px;
+}
+
+```
+
+```{css box, echo = FALSE}
+/*--- Simple Box Section Dividers ----*/
+
+
+/*--- Simple Pink Box, no Icon ----*/
+div.box {
+padding: 0.25em;
+margin: 0em 0;
+padding-left: 5px;
+padding-top: 0px;
+padding-bottom: 0px;
+background-repeat: no-repeat;
+color: black;
+background-color: #e6ddf4;
+border: solid 3px #FFEBEE;
+text-indent: 0px;
+}
+
+/*--- Simple Red Box, no Icon ----*/
+
+div.redbox {
+padding: 0.0em;
+margin: 0em 0;
+padding-left: 5px;
+padding-top: 0px;
+padding-bottom: 0px;
+background-repeat: no-repeat;
+color: #FFEBEE;
+background-color: #7B0D1E;
+border: solid 3px #7B0D1E;
+text-indent: 0px;
+}
+
+/*--- Simple Pink Box, no Icon ----*/
+div.pinkbox {
+padding: 0.0em;
+margin: 0em 0;
+padding-left: 5px;
+padding-top: 0px;
+padding-bottom: 0px;
+background-repeat: no-repeat;
+color: #7B0D1E;
+background-color: #FFEBEE;
+border: solid 3px #FFEBEE;
+text-indent: 0px;
+}
+
+/*--- Simple Quote Box ----*/
+div.quote {
+padding-left: 80px;
+padding-top: 0px;
+margin: 0em 0;
+padding-bottom: 0px;
+text-indent: 0px;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(pagedown)
+#library(pagedreport)
+library(ggimage)
+library(magick)
+
+#remotes::install_github("rfortherestofus/pagedreport", ref = "main")
+
+# Use this tutorial to make nice boxes
+# https://desiree.rbind.io/post/2019/making-tip-boxes-with-bookdown-and-rmarkdown/
+```
+
+```{r include = FALSE, eval = FALSE}
+
+#book
+#book-reader
+#brain
+#graduation-cap
+#chalkboard-teacher
+#school
+#balance-scale-right
+#handshake
+#vote-yea
+
+library(rsvg)
+library(fontawesome)
+
+# Get icon of people with arrows
+fontawesome::fa_png(
+  name = "people-arrows",
+  stroke = "#7B0D1E",
+  stroke_width = 4,
+  fill = "white",  
+  file = "fa-people-arrows.png")
+# Get icon of person with a plus sign
+fontawesome::fa_png(
+  name = "user-plus",
+  fill = "white",  
+  file = "fa-user-plus.png")
+
+# Get icon of comment bubble
+fontawesome::fa_png(
+  name = "brain",
+  stroke = "#7B0D1E",
+  stroke_width = 4,
+  fill = "white",  
+  file = "fa-brain.png")
+
+# Get network
+fontawesome::fa_png(
+  name = "project-diagram",
+  fill = "#7B0D1E",  
+  file = "fa-project-diagram.png")
+
+# Get geo
+fontawesome::fa_png(
+  name = "map-marked",
+  fill = "#7B0D1E",  
+  file = "fa-map-marked.png")
+
+
+# Get environmental symbol
+fontawesome::fa_png(
+  name = "leaf",
+  fill = "#7B0D1E",  
+  file = "fa-leaf.png")
+
+
+# Get icon of comment bubble
+fontawesome::fa_png(
+  name = "comment",
+  stroke = "#7B0D1E",
+  stroke_width = 4,
+  fill = "white",  
+  file = "fa-comment.png")
+# Get icon of comment buble flipped
+image_read("fa-comment.png") %>%
+  image_flop() %>%
+  image_write("fa-comment.png", format = "png", quality = 100)
+# Get icon of vote yes
+fontawesome::fa_png(
+  name = "vote-yea",
+  fill = "white",  
+  file = "fa-vote-yea.png")
+
+#image_read("fa-vote-yea.png") %>%
+#  image_convert(format = "svg") %>%
+#  image_write("fa-vote-yea.svg")
+
+```
+
+Main
+================================================================================
+
+**Dr. Timothy Fraser** {#title}
+--------------------------------------------------------------------------------
+
+<i style="font-size:14.0pt">Computational Social Scientist</i>
+
+---
+
+# Course Descriptions for 3 New Courses
+
+<p style="text-indent: 20px">The following proposed courses are all directly based on my past research and teaching experiences, and I am eager to teach these given the opportunity!</p>
+
+
+::: grid-pink
+
+::: col-1
+
+```{r, out.width="50%", echo = FALSE}
+knitr::include_graphics("fa-leaf.png")
+```
+
+:::
+
+::: col-2
+
+<p style="text-indent: 20px">Climate Change and Urban Resilience</p>
+<p style="text-indent: 20px">[Public Policy / Comparative Environmental Studies Course]</p>
+
+:::
+
+:::
+
+<p style="text-indent: 20px">Why do some cities respond to, adapt to, and recover from the impacts of climate change better than others? This class introduces students to theories of community resilience, especially the role of social capital and social vulnerability in climate crises.</p>
+
+- This class pays specific attention to the intersectional nature of environmental politics, based on current research, exploring cases like (1) racial disparities in the renewable energy transition, using examples from the US and South Africa, (2) the role of women in the Japanese anti-nuclear movement after Fukushima, and (3) social mobilization by communities of color to recover after climate-driven disasters, including Hurricanes Katrina, Sandy, and Dorian.
+
+- In a term-length final project, students will explore an urban resilience outcome of their choosing in a specific community. Using introductory data visualization, students will test how aspects of social vulnerability, including race, gender, or class, shaped the resilience of that community to a climatic hazard.
+
+
+
+::: grid-pink
+
+::: col-1
+
+```{r, out.width="50%", echo = FALSE}
+knitr::include_graphics("fa-map-marked.png")
+```
+
+:::
+
+::: col-2
+
+<p style="text-indent: 20px">Mapping Green Communities with GIS</p>
+<p style="text-indent: 20px">[Good crossover course for Urban Policy / GIS / Environmental Studies]</p>
+
+:::
+
+:::
+
+Mapping is a key asset in solving environmental challenges. This class will introduce students to basic mapping and geographic information systems techniques, taught in the R coding language (or in ArcGIS, if preferred). (No prior coding experience necessary).
+
+- Students will learn to work with point, polygon, and raster data, basic visualization, spatial joins, hotspot analysis, and spatial interpolation.
+Students will apply mapping to evaluate geographic variation in (1) carbon emissions, (2) hurricane rainfall, (3) community preparedness for climatic hazards, (4) the density of environmental organizations, (5) renewable energy adoption, and (6) the density of communities’ social infrastructure, each of which are closely related to climate resilience.
+
+- In small groups, students will select an environmental resilience outcome in their community and map it. Using mobile phones, students go out into their community in groups and map the locations of these outcomes, visualize the data, and identify geospatial trends and disparities. Groups will conclude by producing an online dashboard to evaluate this environmental issue in their communities.
+
+
+
+
+
+::: grid-pink
+
+::: col-1
+
+```{r, out.width="50%", echo = FALSE}
+knitr::include_graphics("fa-project-diagram.png")
+```
+
+:::
+
+::: col-2
+
+<p style="text-indent: 20px">Social Network Analysis for Environmental Policy</p>
+<p style="text-indent: 20px">[Good crossover course for Data Analytics/Environmental Studies]</p>
+
+:::
+
+:::
+
+Networks are all around us! This course introduces students to basic social network analysis techniques in the R coding language (no prior coding experience necessary), through examples from environmental studies.
+
+- Students will explore trends in (1) disaster politics using networks of disaster recovery committee membership, (2) evacuation using Facebook user movement networks, (3) climate migration using migration networks, (3) industrial politics using the Enron email network, and (4) energy scholarship using citation networks.
+
+- Students will learn to visualize networks, identify central actors, find clusters, and predict connectivity with network statistics.
+
+- For their final project, students will investigate how network ties shaped an environmental outcome in a publicly available network, and summarize their findings in a class poster session for classmates and members of the public.
+
+

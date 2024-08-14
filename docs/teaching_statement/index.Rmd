@@ -1,0 +1,464 @@
+---
+title: "Teaching Statement"
+author: "Timothy Fraser"
+date: "Systems Engineering Program<br>Cornell University"
+output: 
+  pagedown::html_resume
+main-color: "#7B0D1E"
+secondary-color: "#7B0D1E"
+---
+
+```{css text, echo=FALSE}
+
+/*---------------- Text sizing --------------*/
+
+element.style {
+font-size: 10pt;
+}
+/*---------------- List Item --------------*/
+
+p, ul, ol {
+font-size: 10pt;
+margin-right: 0%;
+margin-block-end: 0.25em;
+margin-block-start: 0.25em;
+line-height: 16.5px;
+}
+
+
+li {
+font-size: 10pt;
+}
+
+/*---------------- Header sizing --------------*/
+
+h1 {
+padding-top: 0px;
+font-size: 16pt;
+padding-bottom: 0px;
+margin-top: -25px;
+margin-bottom: 5px;
+}
+
+h2 {
+padding-top: 0px;
+font-size: 12pt;
+padding-bottom: 0px;
+margin-block-start: 0.50px;
+margin-block-end: 0.25px;
+}
+
+h3 {
+padding-top: 0px;
+font-size: 12pt;
+padding-bottom: 0px;
+margin-block-start: 0.50px;
+margin-block-end: 0.25px;
+}
+
+:root {
+--sidebar-width: 0in;
+--sidebar-background-color: #FFFFFF;
+}
+
+.pagedjs_pagebox > .pagedjs_area {
+padding-right: 0.5in;
+padding-left: 0.5in;
+}
+
+
+[data-id="title"] {
+left: 0.05in;
+margin-bottom: 0in;
+}
+
+```
+
+```{css columns, echo = FALSE}
+/*--- Column Spacing Options ----*/
+
+/*--- 2 Column Divider ----*/
+.col-two {
+columns: 2 200px;
+font-size: 2pt;
+padding-left: 20px;
+padding-top: 0px;
+margin: 0em 0;
+text-indent: 0px;
+/* number of columns and width in pixels*/
+}
+
+/*--- 3 Column Divider ----*/
+.col-three {
+columns: 3 200px;
+font-size: 2pt;
+padding-left: 0px;
+padding-top: 0px;
+margin: 0em 0;
+text-indent: 0px;
+/* number of columns and width in pixels*/
+}
+
+
+/*---------------- Grid Box for containing icons --------------*/
+.grid-pink {
+display: grid;
+grid-template-columns: 12.5% 87.5%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: #7B0D1E;
+background-color: #FFEBEE;
+border: solid 3px #FFEBEE;
+}
+
+.grid-red {
+display: grid;
+grid-template-columns: 12.5% 87.5%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: #FFEBEE;
+background-color: #7B0D1E;
+border: solid 3px #FFEBEE;
+}
+
+.grid-red-no-outline {
+display: grid;
+grid-template-columns: 12.5% 87.5%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: #FFEBEE;
+background-color: #7B0D1E;
+border: solid 3px #7B0D1E;
+}
+
+.grid-grey {
+display: grid;
+grid-template-columns: 12.5% 87.5%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: black;
+background-color: #FFEBEE;
+border: solid 3px #dbceef;
+}
+
+.grid-grey-whole {
+display: grid;
+grid-template-columns: 100%; /*columns widths*/
+max-height: 40vh;
+padding: 0.25em;
+margin-bottom: 0px;
+color: black;
+background-color: #FFEBEE;
+border: solid 3px #dbceef;
+}
+
+
+.col-1 {
+}
+
+.col-2 {
+padding-left: 20px;
+}
+
+```
+
+```{css box, echo = FALSE}
+/*--- Simple Box Section Dividers ----*/
+
+
+/*--- Simple Pink Box, no Icon ----*/
+div.box {
+padding: 0.25em;
+margin: 0em 0;
+padding-left: 5px;
+padding-top: 0px;
+padding-bottom: 0px;
+background-repeat: no-repeat;
+color: black;
+background-color: #e6ddf4;
+border: solid 3px #FFEBEE;
+text-indent: 0px;
+}
+
+/*--- Simple Red Box, no Icon ----*/
+
+div.redbox {
+padding: 0.0em;
+margin: 0em 0;
+padding-left: 5px;
+padding-top: 0px;
+padding-bottom: 0px;
+background-repeat: no-repeat;
+color: #FFEBEE;
+background-color: #7B0D1E;
+border: solid 3px #7B0D1E;
+text-indent: 0px;
+}
+
+/*--- Simple Pink Box, no Icon ----*/
+div.pinkbox {
+padding: 0.0em;
+margin: 0em 0;
+padding-left: 5px;
+padding-top: 0px;
+padding-bottom: 0px;
+background-repeat: no-repeat;
+color: #7B0D1E;
+background-color: #FFEBEE;
+border: solid 3px #FFEBEE;
+text-indent: 0px;
+}
+
+/*--- Simple Quote Box ----*/
+div.quote {
+padding-left: 80px;
+padding-top: 0px;
+margin: 0em 0;
+padding-bottom: 0px;
+text-indent: 0px;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(pagedown)
+#library(pagedreport)
+library(ggimage)
+library(magick)
+
+#remotes::install_github("rfortherestofus/pagedreport", ref = "main")
+
+# Use this tutorial to make nice boxes
+# https://desiree.rbind.io/post/2019/making-tip-boxes-with-bookdown-and-rmarkdown/
+```
+
+```{r include = FALSE, eval = FALSE}
+
+#book
+#book-reader
+#brain
+#graduation-cap
+#chalkboard-teacher
+#school
+#balance-scale-right
+#handshake
+#vote-yea
+
+library(rsvg)
+library(fontawesome)
+
+# Get icon of people with arrows
+fontawesome::fa_png(
+  name = "people-arrows",
+  stroke = "#7B0D1E",
+  stroke_width = 4,
+  fill = "white",  
+  file = "fa-people-arrows.png")
+# Get icon of person with a plus sign
+fontawesome::fa_png(
+  name = "user-plus",
+  fill = "white",  
+  file = "fa-user-plus.png")
+
+# Get icon of comment bubble
+fontawesome::fa_png(
+  name = "brain",
+  stroke = "#7B0D1E",
+  stroke_width = 4,
+  fill = "white",  
+  file = "fa-brain.png")
+
+# Get network
+fontawesome::fa_png(
+  name = "project-diagram",
+  fill = "#7B0D1E",  
+  file = "fa-project-diagram.png")
+
+# Get geo
+fontawesome::fa_png(
+  name = "map-marked",
+  fill = "#7B0D1E",  
+  file = "fa-map-marked.png")
+
+
+# Get environmental symbol
+fontawesome::fa_png(
+  name = "leaf",
+  fill = "#7B0D1E",  
+  file = "fa-leaf.png")
+
+
+# Get icon of comment bubble
+fontawesome::fa_png(
+  name = "comment",
+  stroke = "#7B0D1E",
+  stroke_width = 4,
+  fill = "white",  
+  file = "fa-comment.png")
+# Get icon of comment buble flipped
+image_read("fa-comment.png") %>%
+  image_flop() %>%
+  image_write("fa-comment.png", format = "png", quality = 100)
+# Get icon of vote yes
+fontawesome::fa_png(
+  name = "vote-yea",
+  fill = "white",  
+  file = "fa-vote-yea.png")
+
+#image_read("fa-vote-yea.png") %>%
+#  image_convert(format = "svg") %>%
+#  image_write("fa-vote-yea.svg")
+
+```
+
+Main
+================================================================================
+
+**Dr. Timothy Fraser** {#title}
+--------------------------------------------------------------------------------
+
+<i style="font-size:14.0pt">Computational Social Scientist</i>
+
+---
+
+# Teaching Statement
+
+<p style="text-indent: 20px">As an educator, I rely on active learning methods to help students learn political science, data science, and methods. The ‘active learning’ I employ in my classroom refers to intense focus on student-led learning, as opposed to a lecture format. Below, I outline my teaching practices, built through teaching experiences and student research mentorship.</p>
+
+### Teaching Experience {-}
+
+<p style="text-indent: 20px">I have taught methods to masters and undergraduate students, both for political science and interdisciplinary contexts. Since 2022, I have taught advanced statistics and data science at Cornell University for the Systems Engineering Program, teaching masters students their core statistics coursework, all in the R programming language. This has included Systems Engineering & Six Sigma (2022, 2023, 2024), Systems Architecture - a decision science and optimization course (2023, 2024), and Data Science for Socio-Technical Systems (summer 2024), an introduction to time-series, GIS, and network data. Previously, I taught 3 undergraduate courses at Northeastern University: Quantitative Techniques for Political Science (Spring 2020, Fall 2021), and Research Methods (Summer 2021). I also taught as a teaching assistant for 8 courses, including Comparative Politics, Quantitative Techniques, American Politics, and a study-abroad program in Japan.</p>
+
+::: grid-red
+
+::: col-1
+
+```{r, out.width="100%", echo = FALSE}
+knitr::include_graphics("fa-vote-yea.png")
+```
+
+:::
+
+::: col-2
+
+
+<p style="text-indent: 20px">In course evaluations, my students rate my teaching highly (an average of 4.65 / 5, with a standard deviation of 0.16). Students rated my work above the department and university averages in several dimensions, including:</p>
+
+::: col-two
+
+1. teaching effectiveness
+2. effective use of class time
+3. feedback quality
+4. recommending me to other students
+5. respectful & inclusive learning environment
+
+6. effective action when students do not understand material
+7. availability outside of class
+8. my enthusiasm for the course.
+
+:::
+
+:::
+
+:::
+
+
+### Active Learning in the Classroom {-}
+
+<p style="text-indent: 20px">In my courses, I dedicate two-thirds of class time to
+active learning exercises, using an adapted reverse-classroom form. (I reserve the
+remaining third for lessons, class discussion, and weekly visits from guest scholars.) I use
+three forms of active learning: workshops, labs, and projects, discussed below.</p>
+
+### Active Learning through Workshops {-}
+
+<p style="text-indent: 20px">Once a week, students conduct a workshop.
+Together in small groups, they learn and apply new techniques based on the lesson content.
+For example, in Research Methods, students map local businesses. In Quantitative
+Techniques, students learn new visualizations in R. In comparative politics, students might
+role-play a social network to learn how social capital affects voting.</p>
+
+
+
+::: grid-pink
+
+::: col-1
+
+```{r, out.width="100%", echo = FALSE}
+knitr::include_graphics("fa-comment.png")
+```
+
+:::
+
+::: col-2
+
+<p style="text-indent: 20px">Evaluations show students value my reverse-classroom style, saying:
+“[he] was really patient with us as we all learned how to code... I appreciate
+how much he cared about our learning and efforts he made to make sure
+we understood and learned to apply our material.”</p>
+
+:::
+
+:::
+
+### Discovery-based Learning through Labs {-}
+
+<p style="text-indent: 20px">Discovery-based Learning through Labs: Later in the week, students apply their learning in labs to a contemporary social science question. This second layer of active learning solidifies workshop knowledge and asks them to discover how to use prior tools to solve new problems. My methods students deployed survey experiments to test marketability of a new Dunkin’ Donut flavor. Other labs focus on policy, like using the difference of means to test effects of the Fukushima disaster on Japanese cities’ renewable energy adoption. A few times, I ask students to summarize results into short 2 lab reports, emulating the methods, results, and discussion format of research papers. This helps them practice articulating their research’s value-added, limitations, and future directions.</p>
+
+::: grid-grey-whole
+
+<p style="text-indent: 20px">In evaluations, students highlight my active course design and class structure: “Professor Fraser does a great job incorporating different teaching styles and activities to keep the class fresh,” citing “labs, group-work, discussion, [and] lecture.”</p>
+
+<p style="text-indent: 20px">Others reported that ’[he] was always enthusiastic and prepared... [and] structured class time in a way that was really engaging. I really feel like I learned a lot from him.”</p>
+
+<p style="text-indent: 20px">They also indicate that I am flexible and responsive: “He listens to student responses about what he can do better and communicates well with students.”</p>
+
+<p style="text-indent: 20px">Others said I taught engaging virtual classes, providing “a really good variety of activities, including breakout rooms, lectures, discussions, guest lecturers, readings, videos, and in-class labs that were helpful in making the class interesting/informative... it was actually really engaging.”</p>
+
+:::
+
+### Building Inclusivity and Social Capital through Projects {-}
+
+<p style="text-indent: 20px">For term projects, I commission these groups to answer a real policy question with empirical data (past groups examined crime rates, terrorism, emissions, and partisanship, for example). These projects are valuable beyond content alone: my projects, workshops, and labs build social capital and trust among team members. I use frequent peer reviews, short group presentations, and honor codes to circulate feedback and norms, raising the quality of everyone’s work. These groups, whose members stay the same all term long, buoy students as they celebrate together the act of completing their first line of code, visual, experiment, or case study. </p>
+
+<p style="text-indent: 20px">Using these groups, I build an inclusive atmosphere that helps my students feel valued and respected, especially students with accommodations or from under-represented backgrounds. I incorporate discussions themes like racial discrimination, sexism, mental health, and different ways of learning to normalize and affirm respect for the diversity of our classroom and society. And, I use group discussions to help students practice using new language and build these norms together. Further, I have invited 21 weekly guest speakers to my courses; these talks also normalize the expertise of women (75% of speakers) and people of color (33%) in the social sciences, and help students envision themselves in the field.</p>
+
+
+::: grid-grey-whole
+
+<p style="text-indent: 20px">My evaluations show that students value this atmosphere. One student wrote that I “did a wonderful job of creating a welcoming and inclusive atmosphere.” Others valued my attention to accessibility, saying, “[he] is really mindful of all his students’ different situations and that really reflects in his teaching,” and “he was always available to help us better understand the course.”</p>
+
+:::
+
+### Research with Students {-}
+
+<p style="text-indent: 20px">In addition to teaching, I deeply enjoy research with students. At Northeastern, I ran 3 capstones for 10 public policy masters students. Meeting weekly, I trained student teams to record data and analyze results. Together, we produced publishable papers from each capstone. My capstones covered (1) Louisiana recovery policies after Hurricane Katrina, (2) membership on disaster recovery committees in New York City after Hurricane Sandy, and (3) mapping Boston community spaces.</p>
+
+<p style="text-indent: 20px">Also, I have conducted my own research with 8 talented undergraduates, producing 8 peer-reviewed studies. In May 2020, I started an ‘Environmental Politics Working Group’ with students, taught them statistics,predicting solar adoption, greenhouse gas emissions, and disaster vulnerability in Japanese cities. I also advised a senior capstone, helping a new interviewer design her questions for fieldwork in Japan and write 2 publishable studies. I led student engagement on two multigenerational research teams, coauthoring with undergraduates to publish 3 studies on social networks and disasters.</p>
+
+::: grid-red
+
+::: col-1
+
+```{r, out.width="100%", echo = FALSE}
+knitr::include_graphics("fa-user-plus.png")
+```
+
+:::
+
+::: col-2
+
+<p style="text-indent: 20px">**What I bring**: At my next post, I can bring ready-to-go undergraduate courses on (1) Quantitative Techniques in R and (2) Research Methods, plus my graduate course on (3) Data Science for Socio-Technical Systems, which builds R skills in time-series, GIS, and network data with a focus on data visualization and dashboards, as well as a graduate (4) Statistical Methods course (t-tests, ANOVA, OLS, etc.), adapted from my current Six Sigma course at Cornell.</p>
+
+<p style="text-indent: 20px">In Research Methods, my students apply 10 major methods, including interviews, surveys, social networks, and GIS, in labs about disasters, renewable, and pandemic recovery. In Quantitative Techniques, my students learn to code statistics and visualizations in R using labs on the Fukushima crisis, emissions, crime, and health, culminating in conference posters. (I can also teach any courses related to Public Policy and Comparative Politics, which were my PhD subfields.)</p>
+
+<p style="text-indent: 20px">I would be especially excited to develop a course on Climate Change and Urban Resilience, Energy Policy, Social Capital and Pandemic Resilience, GIS, Social Network Analysis, or a capstone course, where I could lead several teams in learning a new method and then providing real empirical research for local community partners and producing publishable research. Through my teaching, I aim to help students build data-driven toolkits for solving key environmental policy issues in our communities today.</p>
+
+:::
+
+:::
