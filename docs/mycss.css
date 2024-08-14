@@ -5,6 +5,14 @@
     margin-bottom: 0px;
     margin-left: 5px;
 }
+
+.chart-wrapper {
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  
+}
 .sidebar {
   background-color: "#101010";
 
