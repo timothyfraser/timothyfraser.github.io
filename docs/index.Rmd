@@ -163,7 +163,7 @@ knitr::include_graphics("images/interview.png")
 
 ### Highlights
 
-- 41 peer-reviewed publications, 7 chapters, 2 reports, 8 software packages, & more!
+- 42 peer-reviewed publications, 7 chapters, 2 reports, 8 software packages, & more!
 
 - Social Network Analysis, GIS, Panel Statistics, Surveys, Fieldwork
 
