@@ -30,7 +30,7 @@ Contact Info {#contact}
 Skills {#skills}
 --------------------------------------------------------------------------------
 
-`R`, Dashboards/ShinyApps, GIS, DataViz, Network Statistics, `html`, `css`, MySQL, APIs, Github Actions, Docker, `ggplot2`, `mermaid`, MOVES, ERGMs, SPSS, MATLAB.
+`R`, `Python`, `MySQL`, Dashboards, GIS, DataViz, Network Statistics, `html`, `css`, ShinyApps, APIs, Github Actions, Docker, Google Cloud, Cloud Orchestration, `ggplot2`, `mermaid`, MOVES, ERGMs, SPSS, MATLAB.
 
 Expertise {#expertise}
 --------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ Main
 ---
 
 - I develop software & methods to *help communities combat climate change.*
-- I published 44 peer-reviewed studies, plus dashboards, R packages, and other software, using big data analytics, networks, GIS, and AI.
+- I published 47 peer-reviewed studies, plus dashboards, R packages, and other software, using big data analytics, networks, GIS, and AI.
 - Passionate about teaching statistics and coding, and leading student research. 
 - Current Work: Dashboards for visualizing local emissions from transportation.
 
@@ -70,7 +70,7 @@ Ithaca, NY
 
 - Lead Climate Action in Transportation dashboard research at [Gao Labs](https://gao.cee.cornell.edu/)
 - Lab Manager for Gao Labs.
-- Teach +2 courses a year on Statistical Methods, and advise Masters student research teams.
+- Teach 2~3 courses a year on Statistical Methods, and advise Masters student research teams.
 
 ### Grant Coordinator for Center for Transportation, Environment, and Community Health (CTECH)
 
@@ -146,9 +146,30 @@ Middlebury, VT
 Publications {data-icon=file}
 --------------------------------------------------------------------------------
 
-### The great equalizer? Mixed effects of social infrastructure on diverse encounters in cities
+### A City of Two Tales: A Quantitative Analysis of Vulnerability, Connectedness, and Resilience in Cloverdale, CA
 
-[Computers, Environment, & Urban Systems](https://doi.org/10.1016/j.compenvurbsys.2024.102173) 113 (2024), 102173.
+International Journal of Disaster Risk Reduction (2024), in press.
+
+N/A
+
+2024
+
+**Timothy Fraser**, Aayushi Mishra, Osama Awadalla, Jennifer Shea, Daniel Homsey, Daniel P. Aldrich
+
+### [A tale of many cities: Mapping social infrastructure and social capital across the United States](https://drive.google.com/file/d/1a07Dtl_On0gKo81VnG1kpgoO9y8rtHfM/view?usp=sharing)
+
+Computers, Environment, & Urban Systems 114 (2024), 102195.
+
+N/A
+
+2024
+
+**Timothy Fraser**, Osama Awadalla, Harshita Sarup, & Daniel P. Aldrich
+
+
+### [The great equalizer? Mixed effects of social infrastructure on diverse encounters in cities](https://drive.google.com/file/d/1d6dGsLbo7KWWHZOJOz-E872omFmalGyg/view?usp=sharing)
+
+Computers, Environment, & Urban Systems 113 (2024), 102173.
 
 N/A
 
@@ -165,6 +186,19 @@ N/A
 2024
 
 Courtney Page-Tan, Miranda Bourdeau, & **Timothy Fraser**
+
+
+### County-level political group density, partisan polarization, and individual-level mortality among adults in the United States: A lagged multilevel study.
+
+Social Science & Medicine - Population Health 26 (2024), 101662. 
+
+N/A
+
+2024
+
+Sameera Nayak, **Timothy Fraser**, Daniel P. Aldrich, Costas Panagopoulos, & Daniel Kim
+
+
 
 ### [Making MOVES move: Fast emissions estimates for repeated transportation policy scenario analyses](https://drive.google.com/file/d/16py6zSmI_2webvMg0ovCyXeUbvyHuKXB/view?usp=sharing).
 
@@ -189,13 +223,13 @@ N/A
 
 ::: aside
 
-**Peer-reviewed Papers: [44]**
+**Peer-reviewed Papers: [47]**
 
 By Topic:
 
 - Emissions/Environmental Policy [~16]
-- Community Resilience, Evacuation, & Health [~20]
-- Political Polarization [~6]
+- Community Resilience, Evacuation, & Health [~22]
+- Political Polarization [~7]
 
 :::
 
@@ -883,6 +917,14 @@ N/A
 Invited Talks {data-icon=comments}
 --------------------------------------------------------------------------------
 
+### A Data-Driven Review of the Relationship between Social Capital and Social Infrastructure
+
+Invited talk presented for the Organisation for Economic Co-operation and Development (OECD), at their seminar "The Role of Social Capital in Place Transformation". Paris, France, October 2, 2024.
+
+N/A
+
+2024
+
 ### Cycling Cities: Measuring Transportation Equity in Bikeshare Networks. 
 
 Guest lecture presented for Course Politics and the Environment, Department of Political Science and International Relations, University of Delaware. February 28, 2024. (Virtual)
@@ -1343,6 +1385,10 @@ N/A
 
 2020 - Present
 
+- MOVESAI Neural Networks Modeling Team: Arnav Joshi, Jennie Wu, Alvin De Jun Tan, George Wang, Yifei Jin, Logan Roeling, Sana Chawla, Jiashen Li, Peilin Li, & Stanley Chen @CU
+- AI Reporting for County Emissions Team: Ran Yi, Jinglin Wang, Hanlin Yang @CU
+- AI Reporting for Electric Vehicle Charging Team: Andrew Duffy @CU
+- Product Measurement, Evaluation, and Learning Team: Yifei Li, Yuchen Tang, Chenfan Yin, Xuechao Zhang @CU
 - CAT Quality Team: Linpei Huang, Yueyi Mu, Quingyuan Guo @CU
 - CAT AI Reporter Team: Peilin Li, Shannya Niveyro, Maria Dobransky, Peculiar Lawrence, Leo Ziyu Kuang, Yan Guo  @CU
 - CAT Apps Team: Emily Yi-Wen Tseng, RuiRui Mao, Junna Chen  @CU
