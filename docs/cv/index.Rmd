@@ -53,7 +53,7 @@ Main
 ---
 
 - I develop software & methods to *help communities combat climate change.*
-- I published 47 peer-reviewed studies, plus dashboards, R packages, and other software, using big data analytics, networks, GIS, and AI.
+- I published 46 peer-reviewed studies, plus dashboards, R packages, and other software, using big data analytics, networks, GIS, and AI.
 - Passionate about teaching statistics and coding, and leading student research. 
 - Current Work: Dashboards for visualizing local emissions from transportation.
 
@@ -223,7 +223,7 @@ N/A
 
 ::: aside
 
-**Peer-reviewed Papers: [47]**
+**Peer-reviewed Papers: [46]**
 
 By Topic:
 
@@ -234,15 +234,6 @@ By Topic:
 :::
 
 
-### County-level political group density, partisan polarization, and individual-level mortality among adults in the United States: A lagged multilevel study
-
-[SSM - Population Health](https://doi.org/10.1016/j.ssmph.2024.101662) (2024), 101662.
-
-N/A
-
-2024
-
-Sameera S. Nayak, Daniel P. Aldrich, **Timothy Fraser**, Costas Panagopoulos, & Daniel Kim
 
 ### [How far I’ll go: Social infrastructure accessibility and proximity in urban neighborhoods.](https://drive.google.com/file/d/1QMymsV5h53lD3bms9qohWpNALiJDvG7e/view?usp=sharing)
 
