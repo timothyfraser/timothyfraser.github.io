@@ -53,20 +53,32 @@ Main
 ---
 
 - I develop software & methods to *help communities combat climate change.*
-- I published 46 peer-reviewed studies, plus dashboards, R packages, and other software, using big data analytics, networks, GIS, and AI.
+- I published 51 peer-reviewed studies, plus dashboards, R packages, and other software, using big data analytics, networks, GIS, and AI.
 - Passionate about teaching statistics and coding, and leading student research. 
 - Current Work: Dashboards for visualizing local emissions from transportation.
 
 Positions {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
-### Research Associate
+### Assistant Teaching Professor
 
 Cornell University Systems Engineering Program
 
 Ithaca, NY
 
-2023 - Present
+2025 - Present
+
+- Teach graduate courses in Systems Engineering, including  Data Science for Socio-Technical Systems, Statistics Bootcamps, Systems Reliability & Six Sigma,, and Research Projects for Masters of Engineering Student Teams.
+- Lead student research teams developing dashboards, APIs, cloud computing systems, and AI models for transportation emissions and environmental policy.
+- Develop open-source educational resources and coding tutorials in R, Python, and MATLAB.
+
+### Ezra SystemsResearch Associate
+
+Cornell University Systems Engineering Program
+
+Ithaca, NY
+
+2023 - 2025
 
 - Lead Climate Action in Transportation dashboard research at [Gao Labs](https://gao.cee.cornell.edu/)
 - Lab Manager for Gao Labs.
@@ -145,6 +157,76 @@ Middlebury, VT
 
 Publications {data-icon=file}
 --------------------------------------------------------------------------------
+
+### [A first look into congestion pricing in the United States: PM2.5 impacts after six months of New York City cordon pricing](https://doi.org/10.1038/s44407-025-00037-2)
+
+npj Clean Air 1 (2025), 39.
+
+N/A
+
+2025
+
+**Timothy Fraser**, Yeonkyeong Gina Park, Danni Lu, Mohammad Tayarani, Haiyan Deng, & H. Oliver Gao
+
+### [Who's at the table? Disaster committee composition and policy pathways after Hurricane Sandy](https://doi.org/10.1016/j.jenvman.2025.127089)
+
+Journal of Environmental Management 393 (2025), 127089.
+
+N/A
+
+2025
+
+**Timothy Fraser**, Lucy Hewitt, Jessica Chen, Matthew Cherkerzian, Vincent Rago, & Daniel P. Aldrich
+
+### [Cycling cities: Measuring urban mobility mixing in bikeshare networks](https://doi.org/10.1016/j.jtrangeo.2025.104223)
+
+Journal of Transport Geography 126 (2025), 104223.
+
+N/A
+
+2025
+
+**Timothy Fraser**, Katherine Van Woert, Sophia Olivieri, Jonathan Baron, Katelyn Buckley, & Pamela Lalli
+
+### [Driving climate action with the VISUALIZER: A dashboard for transportation emissions data analysis & visualization](https://doi.org/10.1016/j.uclim.2025.102459)
+
+Urban Climate 61 (2025), 102459.
+
+N/A
+
+2025
+
+**Timothy Fraser** & H. Oliver Gao
+
+### [Mapping green communities: Resources for measuring grassroots environmental organizing in Japan](https://doi.org/10.1016/j.erss.2025.104232)
+
+Energy Research & Social Science 127 (2025), 104232.
+
+N/A
+
+2025
+
+**Timothy Fraser** & Pinar Temocin
+
+### [Machine learning in spatiotemporal PM2.5 hotspots analysis for better targeted mitigation strategies](https://doi.org/10.1016/j.trd.2025.105017)
+
+Transportation Research Part D: Transport and Environment 148 (2025), 105017.
+
+N/A
+
+2025
+
+Danni Lu, Alireza Yazdiani, **Timothy Fraser**, Mohammad Tayarani, & H. Oliver Gao
+
+### [Networks in crisis: Measuring ethnic stratification and organizational reach post-disaster](https://doi.org/10.1016/j.ijdrr.2025.105561)
+
+International Journal of Disaster Risk Reduction 125 (2025), 105561.
+
+N/A
+
+2025
+
+**Timothy Fraser**, Jennifer Shea, Daniel Homsey, & Daniel P. Aldrich
 
 ### A City of Two Tales: A Quantitative Analysis of Vulnerability, Connectedness, and Resilience in Cloverdale, CA
 

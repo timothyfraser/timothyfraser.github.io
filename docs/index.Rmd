@@ -17,10 +17,11 @@ output:
     css: mycss.css
 ---
 
-
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(bslib)
+library(htmltools)
+library(shiny)
 library(dplyr)
 # Install thematic and un-comment for themed static plots (i.e., ggplot2)
 # thematic::thematic_rmd()
@@ -30,252 +31,803 @@ library(dplyr)
 
 ```{r, echo = FALSE}
 
-card_banner = card_image(file = "images/hero_image_cropped_banner.png")
-#  htmltools::span("Evacuation Network during Hurricane Dorian in Florida")
+# Hero banner
+card_banner = htmltools::div(
+  style = "width: 100%; margin-bottom: 20px;",
+  htmltools::img(
+    src = "images/hero_image_cropped_banner.png",
+    alt = "Hero banner",
+    style = "width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"
+  )
+)
 
+# Main bio card with sidebar
 card_bundle = page_sidebar(
   bslib::card(
-    
     card_header(
-      class = "bg-primary",
-      card_title(shiny::icon("user"), "Bio")
+      class = "bg-primary text-white",
+      card_title(htmltools::tagList(shiny::icon("user-graduate"), "About"))
     ),
     card_body(
-      "Dr. Timothy (Tim) Fraser is an Ezra Systems Research Associate in the Systems Engineering Program at Cornell University. ",
-      "He is also Coordinator for the Center for Transportation, Environment, & Community Health (CTECH) at Cornell. ",
-      "He is a former Ezra Systems Postdoctoral Associate at Cornell, and has a PhD in Political Science from Northeastern University.",
-    ),
-    card_body(
-      htmltools::span(
-        "Tim develops methods & software to help communities combat climate change, using big data analytics, networks, GIS, and AI. ",
-        "He has authored",
-        htmltools::a(
-          "41 peer-reviewed studies, plus dashboards, R packages, software, and chapters",
-          href = "https://timothyfraser.com/cv"),
-        ", focusing on urban resilience, disasters, energy, health, and the pandemic in the US and Japan. ")),
-    
-    card_body(
-      "His recent has been funded by multiple external grants from Fulbright & the Natural Hazards Center, as well as internal grants from Northeastern University. In 2016, he was a Fulbright Fellow at Kyushu University, Japan. ", 
-      htmltools::span("Tim teaches statistics and research methods, using examples from environmental policy, and enjoys leading research with undergraduates and master’s students. He also runs", htmltools::a("tutorials on data science in R.", href = "https://rpubs.com/timothyfraser")
+      htmltools::p(
+        htmltools::strong("Dr. Timothy (Tim) Fraser"), " is an ",
+        htmltools::strong("Assistant Teaching Professor"), " in the ",
+        htmltools::strong("Systems Engineering Program"), " at ",
+        htmltools::strong("Cornell University"), ", where he has been working since 2022. ",
+        "He is also ", htmltools::strong("Coordinator"), " for the ",
+        htmltools::strong("Center for Transportation, Environment, and Community Health (CTECH)"), "."
+      ),
+      htmltools::p(
+        "Dr. Fraser is a ", htmltools::strong("computational social scientist"), 
+        ", developing methods, systems, and software to help communities combat environmental crises. ",
+        "He has published ", htmltools::strong("51 peer-reviewed studies"), ", plus dashboards, R packages, and software, ",
+        "on urban resilience and environmental systems in the US and Japan. ",
+        "His research has been funded by multiple national grants, including ", htmltools::strong("Fulbright"), "."
+      ),
+      htmltools::p(
+        "He has advised researchers on social infrastructure at the ",
+        htmltools::strong("OECD"), " and ", htmltools::strong("UN Development Programme's Accelerator Labs"), 
+        ", and earned his ", htmltools::strong("PhD from Northeastern University"), " in 2022."
+      ),
+      htmltools::p(
+        htmltools::strong("Current Research Focus:"), " Developing AI and cloud computing tools to quantify, visualize, ",
+        "and communicate environmental policy data to the public, to support community action and resilience ",
+        "in socio-technical systems."
       )
     ),
-    
     card_footer(
-      htmltools::a(
-        "See My CV",
-        class="button", href="https://timothyfraser.com/cv")
+      htmltools::div(
+        class = "d-flex gap-2",
+        htmltools::a(
+          htmltools::tagList(shiny::icon("file-pdf"), " View CV"),
+          class = "btn btn-primary",
+          href = "https://timothyfraser.com/cv",
+          target = "_blank"
+        ),
+        htmltools::a(
+          htmltools::tagList(shiny::icon("university"), " Cornell Website"),
+          class = "btn btn-outline-primary",
+          href = "https://www.engineering.cornell.edu/people/timothy-fraser/",
+          target = "_blank"
+        ),
+        htmltools::a(
+          htmltools::tagList(shiny::icon("github"), " GitHub"),
+          class = "btn btn-outline-primary",
+          href = "https://github.com/timothyfraser",
+          target = "_blank"
+        ),
+        htmltools::a(
+          htmltools::tagList(shiny::icon("linkedin"), " LinkedIn"),
+          class = "btn btn-outline-primary",
+          href = "https://www.linkedin.com/in/timothy-fraser-698786186/",
+          target = "_blank"
+        )
+      )
     )
   ),
   sidebar = bslib::sidebar(
-    # Image card
-    card_image(file = "images/headshot_cropped.png"),
-    card_footer(
-      htmltools::h2("Dr. Tim Fraser", class = "text-primary"),
-      "Computational Social Scientist"
+    card(
+      htmltools::div(
+        style = "width: 100%; text-align: center;",
+        htmltools::img(
+          src = "images/headshot_cropped.png",
+          alt = "Dr. Tim Fraser headshot",
+          style = "width: 100%; max-width: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto;"
+        )
+      ),
+      card_body(
+        htmltools::h3("Dr. Tim Fraser", class = "text-primary text-center"),
+        htmltools::p(
+          class = "text-center text-muted",
+          htmltools::strong("Computational Social Scientist")
+        ),
+        htmltools::hr(),
+        htmltools::p(
+          class = "small text-center",
+          shiny::icon("map-marker-alt"), " Cornell University",
+          htmltools::br(),
+          shiny::icon("envelope"), " timothy.fraser.1@gmail.com"
+        )
+      )
     ),
     open = "open",
-    width = "300px"
+    width = "300px",
+    bg = "#f8f9fa"
   )
 )
 
-
+# Areas of expertise with improved styling
 card_areas = card(
-  card_header(card_title("Areas of Expertise"), class = "bg-primary"),
-  layout_column_wrap(
-    card_body("Political Methodology", class = "bg-primary"),
-    card_body("Big Data and APIs", class = "bg-warning"),
-    card_body("Dashboards & DataViz", class = "bg-danger"),
-    card_body("AI & Automated Reporting", class = "bg-info"),
-    card_body("Climate Change & Community Resilience", class = "bg-primary"),
-    card_body("Urban Policy & GIS", class = "bg-danger"),
-    card_body("Renewable Energy Policy", class = "bg-info"),
-    card_body("Network Statistics", class = "bg-warning"),
-    card_body("Environmental Policy", class = "bg-primary"),
-    card_body("Japanese Politics", class = "bg-info")
-  ),
-)
-
-card_feature = card(
-  
   card_header(
-    class = "bg-primary",
-    card_title("Featured Work")
+    class = "bg-primary text-white",
+    card_title(htmltools::tagList(shiny::icon("brain"), " Areas of Expertise"))
   ),
-  
-  layout_column_wrap(
-    
-    card(
-      card_header(
-        htmltools::a("Climate Action in Transportation Dashboard", href = "https://visualizer.cat-apps.com")),
-      card_image(file = "images/dashboard_cat.png", width = "100%"),
-      card_footer(
-        htmltools::span("Visualize your county's emissions from transportation! Powered by ",
-                        htmltools::a("Gao Labs @ Cornell", href = "https://gao-labs.github.io/"))
+  card_body(
+    layout_column_wrap(
+      width = 1/3,
+      gap = "10px",
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("chart-line", class = "text-primary", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("AI & Cloud Computing")
+        ),
+        class = "text-center border-primary"
+      ),
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("database", class = "text-info", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("Big Data & APIs")
+        ),
+        class = "text-center border-info"
+      ),
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("chart-bar", class = "text-success", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("Dashboards & DataViz")
+        ),
+        class = "text-center border-success"
+      ),
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("leaf", class = "text-success", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("Environmental Policy")
+        ),
+        class = "text-center border-success"
+      ),
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("city", class = "text-warning", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("Urban Resilience")
+        ),
+        class = "text-center border-warning"
+      ),
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("project-diagram", class = "text-danger", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("Network Statistics")
+        ),
+        class = "text-center border-danger"
+      ),
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("solar-panel", class = "text-info", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("Renewable Energy")
+        ),
+        class = "text-center border-info"
+      ),
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("map-marked-alt", class = "text-primary", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("GIS & Spatial Analysis")
+        ),
+        class = "text-center border-primary"
+      ),
+      card_body(
+        htmltools::tagList(
+          htmltools::div(
+            shiny::icon("code", class = "text-secondary", style = "font-size: 4em;"),
+            style = "margin-bottom: 10px;"
+          ),
+          htmltools::strong("R Packages & Software")
+        ),
+        class = "text-center border-secondary"
       )
-    ),
-    
-    card(
-      card_header(
-        htmltools::a("Social Capital Indices Map Every US Census Tract",
-                     href = "https://www.nature.com/articles/s41598-022-10275-z")
-      ),
-      card_image(file = "images/update_nyc.png", width = "100%"),
-      card_footer(
-        htmltools::a("New Open-Access study out in Nature Scientific Reports",
-                     href = "https://doi.org/10.1038/s41598-022-10275-z"))
-    ),
-    
-    card(
-      card_header(
-        htmltools::a("Community Resilience in Japan Dashboard",
-                     href = "https://timfraser.shinyapps.io/community_resilience_in_japan")
-      ),
-      card_image(file = "images/feature_dashstat.png", width = "100%"),
-      card_footer("How prepared in your city for crisis? Find out here!")
     )
   )
 )
 
-page(
-  theme = bslib::bs_theme(version = 5, preset = "yeti"),
-  card_banner,
-  card_bundle,
-  htmltools::br(),
-  card_areas,
-  htmltools::br(),
-  card_feature
-)
-
-
-```
-
-
-
-# Research {data-orientation=rows}
-
-## Images
-
-### 
-
-```{r, echo = FALSE, out.width="90%", fig.align='center', fig.cap="Interview in the field with environmental activists in Japan"}
-knitr::include_graphics("images/interview.png")
-```
-
-### Highlights
-
-- 42 peer-reviewed publications, 7 chapters, 2 reports, 8 software packages, & more!
-
-- Social Network Analysis, GIS, Panel Statistics, Surveys, Fieldwork
-
-- >25 student coauthors
-
-- Consulted for UNDP Accelerator Labs and other groups.
-
-### Buttons
-
-<a class="button" style='text-align:center;' href="https://timothyfraser.com/cv">See My CV</a>
-
-<a class="button" href="https://drive.google.com/uc?view=download&id=19lDu2Q7C2nnWvI1XBRuQ82ywKXO_w4oI">Research Statement</a>
-
-<a class="button" href="https://drive.google.com/uc?view=download&id=1VhuKNa_V6DBYIfOtouZ0M1KJ3VZe5WL0">Recent Study</a>
-
-<a class="button" href="https://timfraser.shinyapps.io/community_resilience_in_japan/">Sample Dashboard</a>
-
-## Past Projects
-
-### {-}
-
-```{r,echo = FALSE}
-card(
-  card_header(class = "bg-primary",
-    card_title("Projects", class = "h4")
+# Featured work with enhanced cards
+card_feature = card(
+  card_header(
+    class = "bg-primary text-white",
+    card_title(htmltools::tagList(shiny::icon("star"), " Featured Work"))
   ),
-  layout_column_wrap(fill = TRUE,
-    card_body("Networks & Resilience", class = "bg-primary"),
-    card_body("Mapping Resilience", class = "bg-warning"),
-    card_body("Social Ties & Pandemics", class = "bg-primary"),
-    card_body("Polarization & Health", class= "bg-warning"),
-    card_body("Social Mobilization & Energy Policy", class = "bg-primary"),
-    card_body("Japanese Environmental Policy", class = "bg-warning"),
-    card_body("Scholarly Networks", class = "bg-primary")
+  card_body(
+    layout_column_wrap(
+      width = 1/3,
+      min_width = "250px",
+      gap = "15px",
+
+
+      card(
+        class = "h-100 shadow-sm",
+        card_header(
+          class = "bg-light",
+          htmltools::h5(
+            htmltools::a(
+              "NYC Congestion Pricing Impacts on Air Quality",
+              href = "https://doi.org/10.1038/s44407-025-00037-2",
+              target = "_blank",
+              class = "text-decoration-none"
+            )
+          )
+        ),
+        card_image(
+          file = "images/image_nyc_congestion.png",
+          width = "100%",
+          height = "200px"
+        ),
+        card_body(
+          htmltools::p(
+            class = "small",
+            "Analyzing the environmental impacts of congestion pricing policies in New York City."
+          )
+        )
+      ),
+      
+      card(
+        class = "h-100 shadow-sm",
+        card_header(
+          class = "bg-light",
+          htmltools::h5(
+            htmltools::a(
+              "Social Infrastructure Mapping",
+              href = "#",
+              target = "_blank",
+              class = "text-decoration-none"
+            )
+          )
+        ),
+        card_image(
+          file = "images/image_social_infra_nyc.png",
+          width = "100%",
+          height = "200px"
+        ),
+        card_body(
+          htmltools::p(
+            class = "small",
+            "Mapping social infrastructure and community resources across urban areas."
+          )
+        )
+      ),
+      card(
+        class = "h-100 shadow-sm",
+        card_header(
+          class = "bg-light",
+          htmltools::h5(
+            htmltools::a(
+              "Climate Action in Transportation Dashboard",
+              href = "https://visualizer.cat-apps.com",
+              target = "_blank",
+              class = "text-decoration-none"
+            )
+          )
+        ),
+        card_image(
+          file = "images/dashboard_cat.PNG",
+          width = "100%",
+          height = "200px"
+        ),
+        card_body(
+          htmltools::p(
+            class = "small",
+            "Visualize your county's emissions from transportation! ",
+            "Powered by ",
+            htmltools::a(
+              "Gao Labs @ Cornell",
+              href = "https://gao-labs.github.io/",
+              target = "_blank"
+            )
+          )
+        )
+      ),
+
+
+      card(
+        class = "h-100 shadow-sm",
+        card_header(
+          class = "bg-light",
+          htmltools::h5(
+            htmltools::a(
+              "Social Capital Indices Map",
+              href = "https://www.nature.com/articles/s41598-022-10275-z",
+              target = "_blank",
+              class = "text-decoration-none"
+            )
+          )
+        ),
+        card_image(
+          file = "images/update_nyc.png",
+          width = "100%",
+          height = "200px"
+        ),
+        card_body(
+          htmltools::p(
+            class = "small",
+            htmltools::a(
+              "Open-access study in Nature Scientific Reports",
+              href = "https://doi.org/10.1038/s41598-022-10275-z",
+              target = "_blank"
+            )
+          )
+        )
+      ),
+
+
+      card(
+        class = "h-100 shadow-sm",
+        card_header(
+          class = "bg-light",
+          htmltools::h5(
+            htmltools::a(
+              "Community Resilience Dashboard",
+              href = "https://timfraser.shinyapps.io/community_resilience_in_japan",
+              target = "_blank",
+              class = "text-decoration-none"
+            )
+          )
+        ),
+        card_image(
+          file = "images/feature_dashstat.png",
+          width = "100%",
+          height = "200px"
+        ),
+        card_body(
+          htmltools::p(
+            class = "small",
+            "How prepared is your city for crisis? Find out here!"
+          )
+        )
+      )
+    )
+      
   )
 )
 
+# Stats card
+card_stats = card(
+  card_header(
+    class = "bg-info text-white",
+    card_title(htmltools::tagList(shiny::icon("chart-pie"), " Research Impact"))
+  ),
+  card_body(
+    layout_column_wrap(
+      width = 1/4,
+      card_body(
+        htmltools::h2("51", class = "text-primary text-center"),
+        htmltools::p("Peer-Reviewed Studies", class = "text-center text-muted mb-0")
+      ),
+      card_body(
+        htmltools::h2("10+", class = "text-info text-center"),
+        htmltools::p("R Packages & Dashboards", class = "text-center text-muted mb-0")
+      ),
+      card_body(
+        htmltools::h2("50+", class = "text-success text-center"),
+        htmltools::p("Student Coauthors", class = "text-center text-muted mb-0")
+      ),
+      card_body(
+        htmltools::h2("30+", class = "text-warning text-center"),
+        htmltools::p("Journal Reviews", class = "text-center text-muted mb-0")
+      )
+    )
+  )
+)
+
+# Main page layout
+page(
+  theme = bslib::bs_theme(
+    version = 5,
+    preset = "yeti",
+    primary = "#B31B1B",
+    secondary = "#2C2C2C"
+  ),
+  card_banner,
+  htmltools::br(),
+  card_bundle,
+  htmltools::br(),
+  card_feature,
+  htmltools::br(),
+  card_stats,
+  htmltools::br(),
+  card_areas
+)
+```
+
+# Research {data-orientation=rows, data-icon="fa-microscope"}
+
+```{r research_overview, echo = FALSE}
+card_research = htmltools::div(
+  id = "card_research_wrapper",
+  card(
+    card_header(
+      class = "bg-primary text-white",
+      card_title(htmltools::tagList(shiny::icon("microscope"), " Research Overview"))
+    ),
+    card_body(
+      style = "overflow: visible !important; height: 100% !important; max-height: none !important; min-height: auto !important;",
+      layout_column_wrap(
+        width = 1/2,
+        card_body(
+          style = "overflow: visible !important; height: auto !important;",
+          htmltools::h4("Research Focus"),
+          htmltools::p(
+            "Dr. Fraser's research focuses on developing AI and cloud computing tools ",
+            "to quantify, visualize, and communicate environmental policy data to the public, ",
+            "supporting community action and resilience in socio-technical systems."
+          ),
+          htmltools::h5("Key Areas:"),
+          htmltools::tags$ul(
+            htmltools::tags$li("Urban resilience and environmental systems"),
+            htmltools::tags$li("Transportation emissions and climate action"),
+            htmltools::tags$li("Social infrastructure and community resilience"),
+            htmltools::tags$li("Network analysis and big data analytics"),
+            htmltools::tags$li("Environmental policy in the US and Japan")
+          )
+        ),
+        card_body(
+          style = "overflow: visible !important; height: auto !important;",
+          htmltools::h4("Research Highlights"),
+          htmltools::tags$ul(
+            htmltools::tags$li(htmltools::strong("51"), " peer-reviewed publications"),
+            htmltools::tags$li(htmltools::strong("10+"), " R packages and dashboards"),
+            htmltools::tags$li(htmltools::strong("50+"), " student coauthors"),
+            htmltools::tags$li("Social Network Analysis, GIS, Panel Statistics, Surveys"),
+            htmltools::tags$li("Consulted for OECD and UN Development Programme")
+          )
+        )
+      )
+    )
+  )
+)
+
+card_research
 ```
 
 
-## Collaborating Researchers
-
-### Coauthors
-
-- Daniel Aldrich, Northeastern University
-
-- Courtney Page-Tan, Embry-Riddle Aeronautical University
-
-- Andrew Chapman, Kyushu University
-
-- Pinar Temocin, Hiroshima University
-
-- Costas Panagopoulos, Northeastern University
-
-- Sameera Nayak, Northeastern University
-
-- Juheon Lee, Midwestern State University
-
-- Melanie Fraser, Cornell University
-
-- Daniel Kim, Northeastern University
-
-### Frequent Student Coauthors
-
-- Larissa Morikawa
-
-- Andrew Small
-
-- Lily Cunningham
-
-- Mary Bancroft
-
-- Eri Lee
-
-- Nikki Naquin
-
-- Dustin Hinkley
-
-- Amos Nasongo
-
-Together, these students and I applied data science techniques and published 7 peer-reviewed studies in top journals in environmental policy, including:
-
-- Global Environmental Change
-
-- Environmental Innovations & Societal Transitions
-
-- Climate Risk Management
-
-- Journal of Environmental Management
-
-- Global Environmental Politics
-
-- and more!
-
-
-
-## Third Box
-
-### Public Scholarship & Press
-
-- Reviewed by: Carlos Irwin Oronce and Yusuke Tsugawa. [Bonding and linking social capital are key determinants for successful pandemic policy.](https://doi.org/10.1016/j.socscimed.2021.114376) Social Science & Medicine 287, 114376.
-
-- Quoted in: Marcos Cabello. [Rumors during a natural disaster may facilitate greater evacuation — even when unnecessary](https://academictimes.com/rumors-during-a-natural-disaster-may-facilitate-greater-evacuation-even-when-unnecessary/). The Academic Times, June 8, 2021.
-
-- Quoted in: Sophie Yeo. [When Climate Disaster Strikes, It's Renewable Energy That Keeps The Lights On](https://www.huffingtonpost.co.uk/entry/renewables-clean-energy-climate-disasters_n_5fad67d1c5b6cae94043c56b). Huffington Post, December 1, 2020.
-
-- Timothy Fraser and Daniel P. Aldrich. [The Fukushima Effect at Home: New roles for local actors in Japan's energy policy.](https://www.advancedsciencenews.com/the-fukushima-effect-at-home-new-roles-for-local-actors-in-japans-energy-policy/) Advanced Science News. June 9, 2020
-
-# Teaching
-
-Updates in progress. Coming soon!
+```{r quick_links, echo = FALSE}
+card_chunk = bslib::layout_column_wrap(
+  width = 1/2,
+  card(
+  bslib::card_image(
+    file = "images/interview.png",
+    alt = "Interview in the field with environmental activists in Japan",
+    style = "max-width: 90%; height: auto;"
+  )
+  ),
+  card(
+  card_header(
+    class = "bg-primary text-white",
+    card_title(htmltools::tagList(shiny::icon("link"), " Quick Links"))
+  ),
+  card_body(
+    layout_column_wrap(
+      width = 1/2,
+      gap = "15px",
+      htmltools::a(
+        htmltools::tagList(
+          shiny::icon("file-pdf"),
+          " View Full CV"
+        ),
+        class = "btn btn-primary btn-lg",
+        href = "https://timothyfraser.com/cv",
+        target = "_blank"
+      ),
+      htmltools::a(
+        htmltools::tagList(
+          shiny::icon("file-alt"),
+          " Research Statement"
+        ),
+        class = "btn btn-outline-primary btn-lg",
+        href = "https://timothyfraser.com/research_statement/",
+        target = "_blank"
+      ),
+      htmltools::a(
+        htmltools::tagList(
+          shiny::icon("file-download"),
+          " Recent Study"
+        ),
+        class = "btn btn-outline-primary btn-lg",
+        href = "https://drive.google.com/uc?view=download&id=1VhuKNa_V6DBYIfOtouZ0M1KJ3VZe5WL0",
+        target = "_blank"
+      ),
+      htmltools::a(
+        htmltools::tagList(
+          shiny::icon("chart-bar"),
+          " Sample Dashboard"
+        ),
+        class = "btn btn-outline-primary btn-lg",
+        href = "https://timfraser.shinyapps.io/community_resilience_in_japan/",
+        target = "_blank"
+      )
+    )
+  )
+  )
+)
+card_chunk
+```
 
 
+```{r research_projects, echo = FALSE}
+card_projects = htmltools::div(
+  style = "margin-bottom: 20px; margin-top: 5px; clear: both; position: relative;",
+  card(
+    card_header(
+      class = "bg-primary text-white",
+      card_title(htmltools::tagList(shiny::icon("project-diagram"), " Research Projects"))
+    ),
+    card_body(
+      style = "overflow: visible; height: auto;",
+      layout_column_wrap(
+        width = 1/3,
+        gap = "10px",
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("wind"), " Air Quality"),
+          class = "bg-info text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("car"), " Transportation Systems"),
+          class = "bg-warning text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("chart-line"), " Dashboards & Public Communication"),
+          class = "bg-secondary text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("network-wired"), " Networks & Resilience"),
+          class = "bg-primary text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("map"), " Mapping Resilience"),
+          class = "bg-warning text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("users"), " Social Ties & Pandemics"),
+          class = "bg-secondary text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("heartbeat"), " Polarization & Health"),
+          class = "bg-primary text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("solar-panel"), " Energy Policy"),
+          class = "bg-warning text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("globe-asia"), " Japanese Environmental Policy"),
+          class = "bg-secondary text-white text-center"
+        ),
+        card_body(
+          style = "overflow: visible; height: auto; min-height: 80px; display: flex; align-items: center; justify-content: center;",
+          htmltools::h5(shiny::icon("sitemap"), " Scholarly Networks"),
+          class = "bg-primary text-white text-center"
+        )
+      )
+    )
+  )
+)
 
+card_projects
+```
 
+```{r press_reviews, echo = FALSE}
+card_press = htmltools::div(
+  style = "margin-top: 10px; clear: both; position: relative;",
+  card(
+    card_header(
+      class = "bg-primary text-white",
+      card_title(htmltools::tagList(shiny::icon("newspaper"), " Public Scholarship & Press"))
+    ),
+    card_body(
+      htmltools::tags$ul(
+        htmltools::tags$li(
+          "Featured in: Streetsblog NYC. ",
+          htmltools::a(
+            "Tuesday's Headlines: Clearing the Air Edition",
+            href = "https://nyc.streetsblog.org/2025/12/09/tuesdays-headlines-clearing-the-air-edition",
+            target = "_blank"
+          ),
+          ". December 9, 2025."
+        ),
+        htmltools::tags$li(
+          "Featured in: Cornell Chronicle. ",
+          htmltools::a(
+            "Congestion pricing improved air quality in NYC and suburbs",
+            href = "https://news.cornell.edu/stories/2025/12/congestion-pricing-improved-air-quality-nyc-and-suburbs",
+            target = "_blank"
+          ),
+          ". December 2025."
+        ),
+        htmltools::tags$li(
+          "Featured in: Yale Environment 360. ",
+          htmltools::a(
+            "New York congestion pricing pollution",
+            href = "https://e360.yale.edu/digest/new-york-congestion-pricing-pollution",
+            target = "_blank"
+          ),
+          ". 2025."
+        ),
+        htmltools::tags$li(
+          "Reviewed by: Carlos Irwin Oronce and Yusuke Tsugawa. ",
+          htmltools::a(
+            "Bonding and linking social capital are key determinants for successful pandemic policy.",
+            href = "https://doi.org/10.1016/j.socscimed.2021.114376",
+            target = "_blank"
+          ),
+          " Social Science & Medicine 287, 114376."
+        ),
+        htmltools::tags$li(
+          "Quoted in: Marcos Cabello. ",
+          htmltools::a(
+            "Rumors during a natural disaster may facilitate greater evacuation — even when unnecessary",
+            href = "https://academictimes.com/rumors-during-a-natural-disaster-may-facilitate-greater-evacuation-even-when-unnecessary/",
+            target = "_blank"
+          ),
+          ". The Academic Times, June 8, 2021."
+        ),
+        htmltools::tags$li(
+          "Quoted in: Sophie Yeo. ",
+          htmltools::a(
+            "When Climate Disaster Strikes, It's Renewable Energy That Keeps The Lights On",
+            href = "https://www.huffingtonpost.co.uk/entry/renewables-clean-energy-climate-disasters_n_5fad67d1c5b6cae94043c56b",
+            target = "_blank"
+          ),
+          ". Huffington Post, December 1, 2020."
+        ),
+        htmltools::tags$li(
+          "Timothy Fraser and Daniel P. Aldrich. ",
+          htmltools::a(
+            "The Fukushima Effect at Home: New roles for local actors in Japan's energy policy.",
+            href = "https://www.advancedsciencenews.com/the-fukushima-effect-at-home-new-roles-for-local-actors-in-japans-energy-policy/",
+            target = "_blank"
+          ),
+          " Advanced Science News. June 9, 2020."
+        )
+      )
+    )
+  )
+)
+
+card_press
+```
+
+```{r collaborators, echo = FALSE}
+card_collaborators = card(
+  card_header(
+    class = "bg-primary text-white",
+    card_title(htmltools::tagList(shiny::icon("users"), " Collaborators"))
+  ),
+  card_body(
+    htmltools::div(
+      class = "row",
+      htmltools::div(
+        class = "col-md-6",
+        htmltools::h4("Faculty Collaborators"),
+        htmltools::tags$ul(
+          htmltools::tags$li(htmltools::strong("Oliver Gao"), ", Cornell University"),
+          htmltools::tags$li(htmltools::strong("Gina Park"), ", Cornell University"),
+          htmltools::tags$li(htmltools::strong("Daniel Aldrich"), ", Northeastern University"),
+          htmltools::tags$li(htmltools::strong("Courtney Page-Tan"), ", Embry-Riddle Aeronautical University"),
+          htmltools::tags$li(htmltools::strong("Andrew Chapman"), ", Kyushu University"),
+          htmltools::tags$li(htmltools::strong("Pinar Temocin"), ", Hiroshima University"),
+          htmltools::tags$li(htmltools::strong("Costas Panagopoulos"), ", Northeastern University"),
+          htmltools::tags$li(htmltools::strong("Sameera Nayak"), ", Northeastern University"),
+          htmltools::tags$li(htmltools::strong("Juheon Lee"), ", Midwestern State University"),
+          htmltools::tags$li(htmltools::strong("Melanie Fraser"), ", Cornell University"),
+          htmltools::tags$li(htmltools::strong("Daniel Kim"), ", Northeastern University")
+        )
+      ),
+      htmltools::div(
+        class = "col-md-6",
+        htmltools::h4("Student Collaborators"),
+        htmltools::tags$ul(
+          htmltools::tags$li("Larissa Morikawa"),
+          htmltools::tags$li("Andrew Small"),
+          htmltools::tags$li("Lily Cunningham"),
+          htmltools::tags$li("Mary Bancroft"),
+          htmltools::tags$li("Eri Lee"),
+          htmltools::tags$li("Nikki Naquin"),
+          htmltools::tags$li("Amos Nasongo")
+        ),
+        htmltools::hr(),
+        htmltools::p(
+          "Together, these students and I have applied data science techniques and published peer-reviewed studies in top journals in environmental policy, including:"
+        ),
+        htmltools::tags$ul(
+          htmltools::tags$li("Global Environmental Change"),
+          htmltools::tags$li("Environmental Innovations & Societal Transitions"),
+          htmltools::tags$li("Climate Risk Management"),
+          htmltools::tags$li("Journal of Environmental Management"),
+          htmltools::tags$li("Global Environmental Politics"),
+          htmltools::tags$li("Nature Scientific Reports"),
+          htmltools::tags$li("And more!")
+        )
+      )
+    )
+  )
+)
+
+htmltools::div(
+  style = "margin-top: 40px; margin-bottom: 40px; clear: both; position: relative;",
+  card_collaborators
+)
+```
+
+# Teaching {data-icon="fa-chalkboard-teacher"}
+
+```{r, echo = FALSE}
+card_teaching = card(
+  card_header(
+    class = "bg-success text-white",
+    card_title(htmltools::tagList(shiny::icon("chalkboard-teacher"), " Teaching"))
+  ),
+  card_body(
+    htmltools::div(
+      class = "row",
+      htmltools::div(
+        class = "col-md-6",
+        htmltools::h4("Graduate Courses"),
+        htmltools::p(htmltools::strong("@ Cornell University Systems Engineering Program")),
+        htmltools::tags$ul(
+          htmltools::tags$li("SYSEN 5300 - Systems Reliability & Six Sigma (2022, 2023)"),
+          htmltools::tags$li("SYSEN 5400 - Systems Architecture (2023, 2024)"),
+          htmltools::tags$li("SYSEN 5460 - Data Science for Socio-Technical Systems: Data Communication & Decision-Making at Scale (2024)"),
+          htmltools::tags$li("SYSEN 5900 - Research Projects for Masters of Engineering Student Teams (2023, 2024)")
+        )
+      ),
+      htmltools::div(
+        class = "col-md-6",
+        htmltools::h4("Undergraduate Courses"),
+        htmltools::p(htmltools::strong("@ Northeastern University Political Science Department")),
+        htmltools::tags$ul(
+          htmltools::tags$li("POLS 2400 - Quantitative Techniques & Statistics in R (Fall 2021, Spring 2020)"),
+          htmltools::tags$li("POLS 2399 - Research Methods in Political Science (Summer 2021)"),
+          htmltools::tags$li("Masters Capstone Coordinator (Fall 2021, Spring 2021, Spring 2020)")
+        ),
+        htmltools::hr(),
+        htmltools::h5("Educational Resources"),
+        htmltools::p(
+          "Dr. Fraser develops methods tutorials for coding in R, MATLAB, and SQL. ",
+          "See tutorials at ",
+          htmltools::a(
+            "RPubs",
+            href = "https://rpubs.com/timothyfraser",
+            target = "_blank"
+          ),
+          " and ",
+          htmltools::a(
+            "Sigma Textbook",
+            href = "https://timothyfraser.com/sigma/introduction",
+            target = "_blank"
+          ),
+          "."
+        )
+      )
+    )
+  )
+)
+
+card_teaching
+```

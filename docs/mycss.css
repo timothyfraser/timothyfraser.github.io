@@ -1,100 +1,467 @@
-.body {
-    margin: 5px;
-    margin-top: 0px;
-    margin-right: 5px;
-    margin-bottom: 0px;
-    margin-left: 5px;
+/* ============================================
+   General Body & Layout
+   ============================================ */
+
+body {
+    margin: 0;
+    padding: 0 20px;
 }
+
+.body {
+    margin: 0 auto;
+    padding: 15px 20px;
+    max-width: 1400px;
+}
+
+/* Flexdashboard container margins */
+.container-fluid,
+.flexdashboard-container,
+.flexdashboard-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+}
+
+/* Main flexdashboard wrapper */
+.flexdashboard {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Ensure body has margins */
+html, body {
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* ============================================
+   Chart Wrapper Spacing
+   ============================================ */
 
 .chart-wrapper {
-  margin-left: 15px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-right: 15px;
-  
+    margin: 20px 15px;
+    padding: 10px;
 }
+
+/* ============================================
+   Sidebar Styling
+   ============================================ */
+
 .sidebar {
-  background-color: "#101010";
-
+    background-color: #f8f9fa;
 }
 
+/* ============================================
+   Button Improvements - Better Spacing & Readability
+   ============================================ */
+
+/* Bootstrap button overrides for better spacing */
+.btn {
+    margin: 8px 4px;
+    padding: 12px 24px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background-color: #B31B1B;
+    border-color: #B31B1B;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #8B1515;
+    border-color: #8B1515;
+    color: #ffffff;
+}
+
+.btn-outline-primary {
+    color: #B31B1B;
+    border-color: #B31B1B;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: #B31B1B;
+    border-color: #B31B1B;
+    color: #ffffff;
+}
+
+/* Quick Links section - better button layout */
+.card-body .layout-column-wrap .btn {
+    margin: 8px 0;
+    width: 100%;
+    min-height: 50px;
+    padding: 14px 20px;
+    font-size: 1rem;
+}
+
+/* Ensure buttons in layout wraps have proper spacing */
+.layout-column-wrap .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* Legacy button class for backwards compatibility */
 .button {
-      display: inline-block;
-      padding: 10px 60px;
-      text-align: center;
-      text-decoration: none;
-      color: grey;
-      background-color: white;
-      border-radius: 6px;
-      outline: none;
+    display: inline-block;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #B31B1B;
+    border: 2px solid #B31B1B;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 8px 4px;
 }
 
-/* footer */
+.button:hover {
+    background-color: #8B1515;
+    border-color: #8B1515;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(179, 27, 27, 0.3);
+}
+
+/* ============================================
+   Card Improvements
+   ============================================ */
+
+/* Better card spacing */
+.card {
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    overflow: visible; /* Prevent scrollbars */
+    height: auto; /* Let content determine height */
+    max-height: none; /* Remove height restrictions */
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    padding: 20px;
+    overflow: visible; /* Prevent scrollbars */
+    height: auto; /* Let content determine height */
+}
+
+.card-header {
+    padding: 15px 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-footer {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+
+/* Remove any overflow restrictions on cards */
+.card * {
+    overflow: visible;
+}
+
+/* Specifically fix Research Overview card */
+.card_research,
+.card_research .card,
+.card_research .card-body {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: auto !important;
+}
+
+/* Fix row layout in cards */
+.card-body .row {
+    margin: 0;
+    overflow: visible;
+}
+
+.card-body .row > div {
+    overflow: visible;
+    height: auto;
+}
+
+/* Ensure all cards have no height restrictions */
+.card {
+    height: auto !important;
+    max-height: none !important;
+}
+
+/* Research Overview card specific fixes - Force full height, no scrollbar */
+#card_research_wrapper,
+#card_research_wrapper .card,
+#card_research_wrapper .card-body,
+.card_research,
+.card_research.card {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: auto !important;
+}
+
+#card_research_wrapper .card-body,
+.card_research .card-body {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: auto !important;
+}
+
+#card_research_wrapper .layout-column-wrap,
+.card_research .layout-column-wrap {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+#card_research_wrapper .card-body > *,
+.card_research .card-body > * {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+.card_research .row {
+    overflow: visible !important;
+}
+
+.card_research .row > div {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+/* Target flexdashboard section containing Research Overview */
+.flexdashboard-section:has(#card_research_wrapper),
+section:has(#card_research_wrapper),
+.flexdashboard-row:has(#card_research_wrapper),
+.chart-wrapper:has(#card_research_wrapper) {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+/* Force all parent containers to allow full height */
+#card_research_wrapper,
+#card_research_wrapper * {
+    overflow: visible !important;
+}
+
+#card_research_wrapper .card,
+#card_research_wrapper .card-body,
+#card_research_wrapper .layout-column-wrap,
+#card_research_wrapper .card-body > * {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* ============================================
+   Cornell Red Color Theme
+   ============================================ */
+
+/* Cornell Red Primary Color */
+:root {
+    --cornell-red: #B31B1B;
+    --cornell-dark: #2C2C2C;
+    --cornell-light: #F5F5F5;
+}
+
+/* Ensure text is readable on colored backgrounds */
+.bg-primary {
+    background-color: #B31B1B !important;
+    color: #ffffff !important;
+}
+
+.bg-primary.text-white,
+.bg-primary .text-white {
+    color: #ffffff !important;
+}
+
+.bg-info {
+    background-color: #B31B1B !important;
+    color: #ffffff !important;
+}
+
+.bg-success {
+    background-color: #B31B1B !important;
+    color: #ffffff !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important; /* Dark text on yellow for readability */
+}
+
+.bg-danger {
+    background-color: #B31B1B !important;
+    color: #ffffff !important;
+}
+
+.bg-secondary {
+    background-color: #2C2C2C !important;
+    color: #ffffff !important;
+}
+
+/* Text colors for better contrast */
+.text-primary {
+    color: #B31B1B !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Navbar styling with Cornell red */
+.navbar {
+    background-color: #B31B1B !important;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #F5F5F5 !important;
+}
+
+/* ============================================
+   Layout Column Wrap Spacing
+   ============================================ */
+
+.layout-column-wrap {
+    gap: 15px !important;
+}
+
+.layout-column-wrap > * {
+    margin-bottom: 10px;
+}
+
+/* ============================================
+   Page Spacing
+   ============================================ */
+
+/* Better spacing between sections */
+.page {
+    padding: 20px 15px;
+}
+
+/* Spacing for br tags */
+br {
+    line-height: 1.5;
+}
+
+/* ============================================
+   Typography Improvements
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+/* ============================================
+   List Styling
+   ============================================ */
+
+ul, ol {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Footer Styling
+   ============================================ */
+
 .site-footer {
-      position: absolute;
-      width: 100%;
-      padding: 25px 0px 10px;
-      color: #fff;
-      right: 0;
+    position: relative;
+    width: 100%;
+    padding: 30px 0px 15px;
+    color: #fff;
+    background-color: #343a40;
+    margin-top: 40px;
 }
 
 .site-footer hr {
-      border-top-color: #fff;
-      opacity: 0.33
+    border-top-color: #fff;
+    opacity: 0.33;
+    margin: 20px 0;
 }
 
 .site-footer hr.small {
-      margin: 20px 0
+    margin: 20px 0;
 }
 
 .site-footer .social-icons {
-      text-align: right
+    text-align: right;
 }
 
 .site-footer .social-icons a {
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      margin-left: 6px;
-      margin-right: 0;
-      border-radius: 100%;
-      background-color: transparent;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: transparent;
 }
 
 .copyright-text {
-      margin: 0
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width:991px) {
-      .site-footer [class^=col-] {
-            margin-bottom: 30px
-      }
-}
-
-@media (max-width:767px) {
-      .site-footer {
-            padding-bottom: 0
-      }
-
-      .site-footer .copyright-text, .site-footer .social-icons {
-            text-align: center
-      }
-}
+/* ============================================
+   Social Icons
+   ============================================ */
 
 .social-icons {
-      padding-left: 0;
-      margin-bottom: 0;
-      list-style: none
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 
 .social-icons li {
-      display: inline-block;
-      margin-bottom: 4px
+    display: inline-block;
+    margin-bottom: 4px;
 }
 
 .social-icons a {
     background-color: #eceeef;
-    color: #93c54b;
+    color: #B31B1B;
     font-size: 1.5em;
     display: inline-block;
     line-height: 44px;
@@ -103,20 +470,288 @@
     text-align: center;
     margin-right: 8px;
     border-radius: 100%;
-    -webkit-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
+    transition: all 0.3s ease;
 }
 
-.social-icons a:active, .social-icons a:focus, .social-icons a:hover {
-      color: #93c54b;
-      background-color: #6590BB;
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #ffffff;
+    background-color: #B31B1B;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(179, 27, 27, 0.3);
 }
 
-@media (max-width:767px) {
-      .social-icons li.title {
-            display: block;
-            margin-right: 0;
-            font-weight: 600
-      }
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 991px) {
+    .site-footer [class^=col-] {
+        margin-bottom: 30px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .body {
+        padding: 10px;
+    }
+    
+    .site-footer {
+        padding-bottom: 0;
+    }
+
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center;
+    }
+    
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600;
+    }
+    
+    .card-body .layout-column-wrap {
+        flex-direction: column;
+    }
+    
+    .card-body .layout-column-wrap .btn {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   Accessibility Improvements
+   ============================================ */
+
+/* Better focus states for keyboard navigation */
+a:focus,
+button:focus,
+.btn:focus {
+    outline: 3px solid #B31B1B;
+    outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast for links */
+a {
+    color: #B31B1B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8B1515;
+    text-decoration: underline;
+}
+
+/* ============================================
+   Image Styling
+   ============================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+/* Banner image styling */
+.card_banner img,
+img[src*="hero_image"] {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Headshot styling */
+img[src*="headshot"] {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Interview image styling */
+img[src*="interview"] {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* Areas of Expertise icon sizing */
+.card_areas .fa,
+.card_areas i {
+    font-size: 4em !important;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ============================================
+   Flexdashboard Specific
+   ============================================ */
+
+/* Better spacing in flexdashboard sections */
+.section {
+    padding: 10px 0;
+    margin-bottom: 15px;
+    clear: both; /* Prevent overlap */
+}
+
+.section-content {
+    padding: 10px;
+}
+
+/* Fix flexdashboard row sections */
+.flexdashboard-row {
+    margin-bottom: 15px;
+    clear: both;
+}
+
+/* Ensure sections don't overlap */
+.flexdashboard-section {
+    margin-bottom: 15px;
+    padding: 10px;
+    clear: both;
+}
+
+/* Research page sections - ensure proper spacing */
+#Research .section,
+#Research .flexdashboard-section {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Fix image sections to not overlap with cards */
+.flexdashboard-section img {
+    margin: 20px 0;
+    display: block;
+    max-width: 100%;
+}
+
+/* Quick Links section specific fixes - ensure it doesn't overlap */
+section[data-section="Quick Links"],
+.flexdashboard-section:has(.card_links),
+.flexdashboard-section:has(#card_links) {
+    margin-top: 40px !important;
+    clear: both !important;
+    padding-top: 20px;
+}
+
+/* Featured Image section spacing - ensure proper margins */
+section[data-section="Featured Image"],
+.flexdashboard-section:has(img) {
+    margin: 30px 0 !important;
+    padding: 20px;
+    clear: both;
+}
+
+/* Ensure proper spacing between all research sections */
+#Research section {
+    margin-bottom: 20px;
+    clear: both;
+    padding-bottom: 10px;
+}
+
+#Research .section {
+    margin-bottom: 20px;
+    padding: 10px;
+    clear: both;
+}
+
+/* Ensure cards don't overlap */
+.card_projects,
+#card_research_wrapper,
+.card_collaborators,
+.card_press {
+    clear: both;
+    position: relative;
+}
+
+/* Specific spacing for Research page cards - ensure no overlap */
+.card_projects {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.card_collaborators {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card_press {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* Prevent card overlap with position and clear */
+.card {
+    position: relative;
+    clear: both;
+}
+
+/* Ensure all Research page cards are properly spaced */
+#Research .card,
+#Research .card_projects,
+#Research .card_collaborators,
+#Research .card_press {
+    margin-bottom: 30px;
+    clear: both;
+    position: relative;
+}
+
+/* Target specific sections to prevent overlap - ensure proper spacing */
+section[data-section="Research Projects"] {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+section[data-section="Collaborators"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+section[data-section="Public Scholarship & Press"] {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Research Projects card items - fill to full height, no scrollbar */
+.card_projects .card-body,
+.card_projects .layout-column-wrap,
+.card_projects .card-body > * {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+
+.card_projects .card-body {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+.card_projects .layout-column-wrap .card-body {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 80px;
 }
