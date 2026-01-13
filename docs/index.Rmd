@@ -60,8 +60,9 @@ card_bundle = page_sidebar(
       htmltools::p(
         "Dr. Fraser is a ", htmltools::strong("computational social scientist"), 
         ", developing methods, systems, and software to help communities combat environmental crises. ",
-        "He has published ", htmltools::strong("51 peer-reviewed studies"), ", plus dashboards, R packages, and software, ",
+        "He has published ", htmltools::strong(">50 peer-reviewed studies"), ", plus dashboards, R packages, and software, ",
         "on urban resilience and environmental systems in the US and Japan. ",
+        "He uses big data, networks, GIS, AI, and more to understand environmental policy systems. ",
         "His research has been funded by multiple national grants, including ", htmltools::strong("Fulbright"), "."
       ),
       htmltools::p(
@@ -72,7 +73,7 @@ card_bundle = page_sidebar(
       htmltools::p(
         htmltools::strong("Current Research Focus:"), " Developing AI and cloud computing tools to quantify, visualize, ",
         "and communicate environmental policy data to the public, to support community action and resilience ",
-        "in socio-technical systems."
+        "in socio-technical systems. "
       )
     ),
     card_footer(
@@ -495,6 +496,40 @@ card_research = htmltools::div(
 )
 
 card_research
+```
+
+```{r citation_metrics, echo = FALSE}
+card_citations = card(
+  card_header(
+    class = "bg-info text-white",
+    card_title(htmltools::tagList(shiny::icon("chart-line"), " Citation Metrics"))
+  ),
+  card_body(
+    htmltools::div(
+      style = "text-align: center;",
+      htmltools::p(
+        class = "lead",
+        "Research impact metrics from Google Scholar"
+      ),
+      htmltools::img(
+        src = "images/cited_by_2026.png",
+        alt = "Citation metrics showing 1670 total citations, h-index of 25, and yearly citation trends",
+        style = "width: 100%; max-width: 800px; height: auto; border-radius: 8px; margin-top: 15px;"
+      ),
+      htmltools::p(
+        class = "small text-muted mt-3",
+        htmltools::a(
+          "View full Google Scholar profile",
+          href = "https://scholar.google.com/citations?hl=en&user=4mKDi60AAAAJ&view_op=list_works&authuser=2&gmla=AJsN-F5DXwWtxq1TMcF6R4bf7_TPrcqd0GlcLGRkimWxqDjmau2GIbwmV9u8Qk8eBh1mfCC69WiRwjxrCj2AGD28iY2YFOsZ3vDvTmxL66fUzjmk90RKG-w",
+          target = "_blank",
+          class = "text-decoration-none"
+        )
+      )
+    )
+  )
+)
+
+card_citations
 ```
 
 
