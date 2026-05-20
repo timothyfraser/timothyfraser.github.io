@@ -294,6 +294,7 @@ function computeMetrics(pubs, press, manual) {
   return {
     citations: manual.citations ?? null,
     h_index: manual.h_index ?? null,
+    i10_index: manual.i10_index ?? null,
     as_of: manual.as_of ?? null,
     peer_reviewed: peerReviewed,
     chapters,

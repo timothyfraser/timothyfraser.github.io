@@ -35,6 +35,7 @@ export default function Home() {
         stats={[
           { label: 'Citations', value: metrics.citations ?? '—', accent: true },
           { label: 'h-index', value: metrics.h_index ?? '—' },
+          { label: 'i10-index', value: metrics.i10_index ?? '—' },
           { label: 'Peer-reviewed', value: metrics.peer_reviewed },
           { label: 'Software', value: metrics.software },
           { label: 'Coauthors', value: metrics.coauthors },

@@ -48,6 +48,7 @@ export interface CoauthorGraph {
 export interface MetricsComputed {
   citations: number | null;
   h_index: number | null;
+  i10_index: number | null;
   as_of: string | null;
   peer_reviewed: number;
   chapters: number;
