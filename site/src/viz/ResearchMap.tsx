@@ -22,7 +22,7 @@ const TOPIC_COLOR: Record<string, string> = {
   energy: 'var(--topic-energy)',
   health: 'var(--topic-health)',
   networks: 'var(--topic-networks)',
-  home: 'var(--cornell)',
+  home: 'var(--accent)',
 };
 
 interface PanelDef {
@@ -54,7 +54,7 @@ export default function ResearchMap({ height = 340 }: { height?: number }) {
 
   return (
     <div className="research-map" ref={wrapRef} style={{ position: 'relative' }}>
-      <div className="kicker" style={{ marginBottom: 12 }}>Research sites · {researchSites.length} locations</div>
+      <div className="eyebrow" style={{ marginBottom: 12 }}>Research sites · {researchSites.length} locations</div>
       <div style={{ display: 'grid', gridTemplateColumns: `repeat(${activePanels.length}, minmax(0,1fr))`, gap: 12 }}>
         {activePanels.map(p => (
           <Panel
@@ -116,7 +116,7 @@ function Panel({ def, height, onHover }: PanelProps) {
         ref={ref}
         viewBox={`0 0 ${width} ${useHeight}`}
         preserveAspectRatio="xMidYMid meet"
-        style={{ width: '100%', height: 'auto', background: 'var(--paper-3)', borderRadius: 3, border: '1px solid var(--line)' }}
+        style={{ width: '100%', height: 'auto', background: 'var(--bg-3)', borderRadius: 3, border: '1px solid var(--line)' }}
         aria-label={`${def.label} research sites`}
         role="img"
       >
@@ -140,7 +140,7 @@ function Panel({ def, height, onHover }: PanelProps) {
                 cy={y}
                 r={site.topic === 'home' ? 7 : 5}
                 fill={TOPIC_COLOR[site.topic] || 'var(--ink)'}
-                stroke="var(--paper)"
+                stroke="var(--bg)"
                 strokeWidth={1.4}
                 style={{ cursor: 'pointer' }}
                 onMouseEnter={(ev) => {
@@ -154,7 +154,7 @@ function Panel({ def, height, onHover }: PanelProps) {
           );
         })}
       </svg>
-      <div style={{ position: 'absolute', top: 6, left: 8, fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--muted)' }}>
+      <div style={{ position: 'absolute', top: 6, left: 8, fontFamily: 'var(--font-body)', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--muted)' }}>
         {def.label}
       </div>
     </div>

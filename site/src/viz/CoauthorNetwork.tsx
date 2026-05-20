@@ -109,7 +109,7 @@ export default function CoauthorNetwork({ height = 540, showLegend = true, showT
     nodeSel.append('circle')
       .attr('r', d => sizeFor(d))
       .attr('fill', d => d.isCenter ? 'var(--ink)' : TOPIC_COLOR[d.topic] || 'var(--muted)')
-      .attr('stroke', d => d.isCenter ? 'var(--cornell)' : 'var(--paper)')
+      .attr('stroke', d => d.isCenter ? 'var(--accent)' : 'var(--bg)')
       .attr('stroke-width', d => d.isCenter ? 3 : 1.5);
 
     // Label only Tim + top-weight nodes
@@ -119,13 +119,13 @@ export default function CoauthorNetwork({ height = 540, showLegend = true, showT
       .text(d => d.isCenter ? 'Timothy Fraser' : d.label)
       .attr('x', d => sizeFor(d) + 4)
       .attr('y', 4)
-      .attr('font-family', 'var(--font-mono)')
+      .attr('font-family', 'var(--font-body)')
       .attr('font-size', d => d.isCenter ? 12 : 10)
       .attr('font-weight', d => d.isCenter ? 700 : 500)
       .attr('fill', 'var(--ink)')
       .attr('pointer-events', 'none')
       .attr('paint-order', 'stroke')
-      .attr('stroke', 'var(--paper)')
+      .attr('stroke', 'var(--bg)')
       .attr('stroke-width', 3)
       .attr('stroke-linejoin', 'round');
 
@@ -219,6 +219,6 @@ function drawStatic(
   g.append('circle')
     .attr('r', d => d.isCenter ? 14 : Math.max(3, Math.min(10, 3 + Math.sqrt(d.weight) * 2.2)))
     .attr('fill', d => d.isCenter ? 'var(--ink)' : TOPIC_COLOR[d.topic] || 'var(--muted)')
-    .attr('stroke', d => d.isCenter ? 'var(--cornell)' : 'var(--paper)')
+    .attr('stroke', d => d.isCenter ? 'var(--accent)' : 'var(--bg)')
     .attr('stroke-width', d => d.isCenter ? 3 : 1.5);
 }

@@ -1,10 +1,10 @@
 import { publications } from '../data/loaders';
 
 const TOPIC_GROUPS: { label: string; topics: string[]; color: string }[] = [
-  { label: 'Emissions / Environmental', topics: ['environment', 'transportation', 'energy'], color: 'var(--signal)' },
-  { label: 'Resilience / Health',       topics: ['disaster', 'resilience', 'social_infrastructure', 'health'], color: 'var(--cool)' },
-  { label: 'Polarization',              topics: ['polarization'], color: 'var(--gold)' },
-  { label: 'Networks / GIS (method)',   topics: ['networks', 'gis'], color: 'var(--hot)' },
+  { label: 'Emissions / Environmental', topics: ['environment', 'transportation', 'energy'], color: 'var(--topic-environment)' },
+  { label: 'Resilience / Health',       topics: ['disaster', 'resilience', 'social_infrastructure', 'health'], color: 'var(--topic-disaster)' },
+  { label: 'Polarization',              topics: ['polarization'], color: 'var(--topic-polarization)' },
+  { label: 'Networks / GIS (method)',   topics: ['networks', 'gis'], color: 'var(--topic-transportation)' },
 ];
 
 export default function TopicBars() {

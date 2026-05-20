@@ -51,9 +51,12 @@ npm run preview    # serves the build locally
 touching `site/**` or `docs/cv/**`, then assembles a Pages artifact:
 
 - Vite output at the artifact root.
-- Independently-rendered sub-paths from `docs/` (cv, sigma, netsci,
-  research_statement, teaching_statement, teaching_portfolio,
-  diversity_statement, images) are copied in so their URLs keep working.
+- Sub-paths that live in *this* repo's `docs/` (cv, research_statement,
+  teaching_statement, teaching_portfolio, diversity_statement, images)
+  are copied in so their URLs keep working.
+- `/sigma`, `/netsci`, `/dsai` are served from **separate repos** via the
+  user-pages custom-domain spillover (`timothyfraser.github.io/<repo>` →
+  `timothyfraser.com/<repo>`) and are not affected by this workflow.
 - `CNAME` + `.nojekyll` ensured.
 
 **One-time setup:** in repo Settings → Pages, set Source = "GitHub

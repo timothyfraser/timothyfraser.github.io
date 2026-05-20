@@ -294,6 +294,7 @@ function computeMetrics(pubs, press, manual) {
   return {
     citations: manual.citations ?? null,
     h_index: manual.h_index ?? null,
+    i10_index: manual.i10_index ?? null,
     as_of: manual.as_of ?? null,
     peer_reviewed: peerReviewed,
     chapters,
@@ -330,9 +331,10 @@ function main() {
   writeJson('coauthor-graph.json', graph);
   writeJson('press.json', { items: press, monthly: buckets });
   writeJson('metrics-computed.json', metrics);
+  // Deterministic build-info — no per-run timestamp so the working tree
+  // doesn't get dirtied on every dev/build. The footer surfaces
+  // metrics.as_of (Tim-maintained) as the "last updated" signal instead.
   writeJson('build-info.json', {
-    built_at: new Date().toISOString(),
-    node: process.version,
     counts: {
       publications: pubs.length,
       press: press.length,

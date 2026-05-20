@@ -10,26 +10,24 @@ export default function Teaching() {
   return (
     <div className="wrap">
       <SectionMast
-        kicker="Teaching · active learning, public textbooks"
-        title={<>Teaching as <em>open infrastructure</em>.</>}
-        lede="Two-thirds of class time spent on workshops, labs, and team projects — plus a growing library of open textbooks, course sites, and R/Python tutorials anyone can use."
+        eyebrow="Teaching"
+        title="Open courses, open textbooks"
+        subhead="Two-thirds of class time on workshops, labs, and team projects — plus a growing library of open textbooks, course sites, and R/Python tutorials."
       />
 
-      <section className="cluster reveal d2">
-        <div className="kicker" style={{ marginBottom: 16 }}>Featured open resources</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Featured open resources</h2>
+        </div>
         <div className="grid-2">
           {featured.map(r => (
-            <Card key={r.id} accent={(r.accent as any) || 'signal'}>
-              <CardHead
-                id={r.kind}
-                name={r.name}
-                tag={r.blurb}
-              />
+            <Card key={r.id} featured>
+              <CardHead id={r.kind} name={r.name} tag={r.blurb} />
               <CardBody>
                 <div className="chips">
                   {r.tags.map(t => <span className="chip" key={t}>{t}</span>)}
                 </div>
-                <p style={{ marginTop: 12 }}>
+                <p style={{ marginTop: 14 }}>
                   <a className="btn" href={r.url}>Open →</a>
                 </p>
               </CardBody>
@@ -38,17 +36,19 @@ export default function Teaching() {
         </div>
       </section>
 
-      <section className="cluster">
-        <div className="kicker" style={{ marginBottom: 16 }}>More tutorials & workshops</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>More tutorials & workshops</h2>
+        </div>
         <div className="grid-2">
           {other.map(r => (
-            <Card key={r.id} accent="gold">
+            <Card key={r.id}>
               <CardHead id={r.kind} name={r.name} tag={r.blurb} />
               <CardBody>
                 <div className="chips">
                   {r.tags.map(t => <span className="chip" key={t}>{t}</span>)}
                 </div>
-                <p style={{ marginTop: 12 }}>
+                <p style={{ marginTop: 14 }}>
                   <a className="btn ghost" href={r.url}>Open →</a>
                 </p>
               </CardBody>
@@ -57,11 +57,13 @@ export default function Teaching() {
         </div>
       </section>
 
-      <section className="cluster">
-        <div className="kicker" style={{ marginBottom: 14 }}>Courses taught</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Courses taught</h2>
+        </div>
         <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: 8 }}>
           <thead>
-            <tr style={{ textAlign: 'left' }}>
+            <tr>
               <th style={th}>Code</th>
               <th style={th}>Title</th>
               <th style={th}>Level</th>
@@ -71,8 +73,8 @@ export default function Teaching() {
           </thead>
           <tbody>
             {teaching.courses_taught.map(c => (
-              <tr key={c.code} style={{ borderBottom: '1px dashed var(--line)' }}>
-                <td style={td}><span className="mono">{c.code}</span></td>
+              <tr key={c.code} style={{ borderBottom: '1px solid var(--line)' }}>
+                <td style={td}>{c.code}</td>
                 <td style={{ ...td, fontFamily: 'var(--font-display)', fontWeight: 600 }}>{c.title}</td>
                 <td style={td}>{c.level}</td>
                 <td style={td}>{c.inst}</td>
@@ -83,8 +85,10 @@ export default function Teaching() {
         </table>
       </section>
 
-      <section className="cluster reveal d3">
-        <Markdown>{markdownPages.teaching}</Markdown>
+      <section className="section">
+        <div className="prose">
+          <Markdown>{markdownPages.teaching}</Markdown>
+        </div>
       </section>
     </div>
   );
@@ -94,14 +98,12 @@ const th = {
   textAlign: 'left' as const,
   padding: '10px 6px',
   borderBottom: '2px solid var(--ink)',
-  fontFamily: 'var(--font-mono)',
-  fontSize: '0.72rem',
-  letterSpacing: '0.14em',
-  textTransform: 'uppercase' as const,
+  fontSize: '0.78rem',
+  fontWeight: 600,
   color: 'var(--muted)',
 };
 const td = {
   padding: '10px 6px',
-  fontSize: '0.92rem',
+  fontSize: '0.94rem',
   verticalAlign: 'top' as const,
 };

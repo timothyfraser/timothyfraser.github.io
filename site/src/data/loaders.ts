@@ -17,6 +17,7 @@ import studentsCsv from '../../content/students.csv?raw';
 import sitesCsv from '../../content/sites.csv?raw';
 
 import homeIntroMd from '../../content/pages/home-intro.md?raw';
+import aboutMd from '../../content/pages/about.md?raw';
 import researchMd from '../../content/pages/research.md?raw';
 import teachingMd from '../../content/pages/teaching.md?raw';
 
@@ -62,7 +63,7 @@ export const press = pressJson as { items: PressItem[]; monthly: Record<string, 
 export const coauthorGraph = coauthorJson as unknown as CoauthorGraph;
 export const metricsComputed = metricsJson as MetricsComputed;
 export const metrics = { ...metricsManual, ...metricsComputed } as MetricsComputed & typeof metricsManual;
-export const buildMeta = buildInfo as { built_at: string; node: string; counts: Record<string, number> };
+export const buildMeta = buildInfo as { counts: Record<string, number> };
 
 export const site = siteCfg as SiteCfg;
 export const projects = projectsJson as ProjectItem[];
@@ -100,6 +101,7 @@ export const researchSites: ResearchSite[] = parseCsv(sitesCsv).map(r => ({
 
 export const markdownPages = {
   home: homeIntroMd,
+  about: aboutMd,
   research: researchMd,
   teaching: teachingMd,
 };

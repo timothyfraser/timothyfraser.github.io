@@ -1,5 +1,6 @@
 import SectionMast from '../components/SectionMast';
 import Markdown from '../components/Markdown';
+import Figure from '../components/Figure';
 import CoauthorNetwork from '../viz/CoauthorNetwork';
 import ResearchMap from '../viz/ResearchMap';
 import TopicBars from '../viz/TopicBars';
@@ -17,32 +18,82 @@ export default function Research() {
   return (
     <div className="wrap">
       <SectionMast
-        kicker="Research · methods, mapping, mobility"
-        title={<>How communities <em>adapt</em>.</>}
-        lede="A computational social science of cities: networks, social infrastructure, mobility big data, and policy dashboards."
+        eyebrow="Research"
+        title="Methods, mapping, and mobility"
+        subhead="A computational social science of cities — networks, social infrastructure, mobility big-data, and policy dashboards."
       />
 
-      <div className="reveal d2">
-        <Markdown>{markdownPages.research}</Markdown>
-      </div>
+      <section className="section">
+        <Figure
+          src="/images/image_my_approach.png"
+          alt="Diagram of Tim's mixed-methods research approach"
+          caption="Mixed-methods toolkit: network statistics, GIS, and quasi-experiments applied to environmental and resilience policy."
+          align="right"
+        />
+        <div className="prose">
+          <Markdown>{markdownPages.research}</Markdown>
+        </div>
+        <div style={{ clear: 'both' }} />
+      </section>
 
-      <section className="cluster">
-        <div className="kicker" style={{ marginBottom: 12 }}>Research footprint</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Selected figures</h2>
+          <p className="subhead">A few visuals from recent and ongoing work.</p>
+        </div>
+        <div className="grid-2">
+          <Figure
+            src="/images/image_nyc_congestion.png"
+            alt="NYC congestion pricing analysis"
+            caption="NYC congestion pricing — PM2.5 changes after six months of the cordon (npj Clean Air, 2025)."
+          />
+          <Figure
+            src="/images/image_social_infra_nyc.png"
+            alt="NYC social infrastructure map"
+            caption="Social-infrastructure density across NYC neighborhoods — part of the multi-city mapping series."
+          />
+          <Figure
+            src="/images/feature_dashjapan.png"
+            alt="Japan dashboard"
+            caption="Japanese municipal social-capital & vulnerability dashboard — public, queryable, validated."
+          />
+          <Figure
+            src="/images/feature_dashstat.png"
+            alt="Statistics dashboard"
+            caption="Visualizer dashboard for CAT-formatted MOVES outputs — emissions by county, scenario, and pollutant."
+          />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-head">
+          <h2>Research footprint</h2>
+          <p className="subhead">US- and Japan-anchored; project sites across both regions plus consulting work in Mexico, Paraguay, and South Africa.</p>
+        </div>
         <ResearchMap height={300} />
       </section>
 
-      <section className="cluster">
-        <div className="kicker" style={{ marginBottom: 12 }}>Publications by topic</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Publications by topic</h2>
+          <p className="subhead">Counts across the recurring topic clusters in the publication record.</p>
+        </div>
         <TopicBars />
       </section>
 
-      <section className="cluster">
-        <div className="kicker" style={{ marginBottom: 12 }}>Coauthorship</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Coauthorship</h2>
+          <p className="subhead">Every node is a collaborator; edges are shared papers. Color encodes dominant research topic.</p>
+        </div>
         <CoauthorNetwork height={460} />
       </section>
 
-      <section className="cluster">
-        <div className="kicker" style={{ marginBottom: 14 }}>Selected recent papers</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Selected recent papers</h2>
+          <p className="subhead">2023 onward — see the Publications page for the full filterable list.</p>
+        </div>
         {selected.map(p => (
           <div className="pub-row" key={p.id}>
             <div className="pub-meta">{p.year} · {p.type}</div>
@@ -60,21 +111,24 @@ export default function Research() {
         ))}
       </section>
 
-      <section className="cluster">
-        <div className="kicker" style={{ marginBottom: 16 }}>Research projects</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Active research projects</h2>
+          <p className="subhead">Broader research projects beyond the recruiting MEng tracks.</p>
+        </div>
         <div className="grid-2">
           {researchProjects.map(p => (
-            <Card key={p.id} accent={p.accent}>
+            <Card key={p.id}>
               <CardHead
                 id={p.category}
                 name={p.name}
                 tag={p.tagline}
-                badge={<span className={`badge ${p.badge.variant}`}>{p.badge.label}</span>}
+                badge={<span className="badge accent">{p.badge.label}</span>}
               />
               <CardBody>
                 <p>{p.body}</p>
                 {p.links.length > 0 && (
-                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 10 }}>
                     {p.links.map(l => <a key={l.url} className="btn ghost" href={l.url}>{l.label} →</a>)}
                   </div>
                 )}

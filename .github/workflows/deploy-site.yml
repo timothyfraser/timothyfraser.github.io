@@ -48,15 +48,16 @@ jobs:
         run: npm run build
 
       # Assemble the Pages artifact: Vite output at root, plus carry-forward
-      # of independently-rendered sub-paths from docs/ (cv, sigma if present,
-      # netsci, statements, images). Anything missing in docs/ is simply not
-      # included.
+      # of sub-paths that live in THIS repo's docs/ folder (cv, statements,
+      # images). /sigma, /netsci, /dsai are served from separate repos via
+      # the user-pages custom-domain spillover and are not affected here.
+      # Anything missing in docs/ is simply not included.
       - name: Assemble Pages artifact
         working-directory: ${{ github.workspace }}
         run: |
           mkdir -p _site
           cp -r site/dist/. _site/
-          for sub in cv sigma netsci research_statement teaching_statement teaching_portfolio diversity_statement images; do
+          for sub in cv research_statement teaching_statement teaching_portfolio diversity_statement images; do
             if [ -d "docs/$sub" ]; then
               echo "carry forward: docs/$sub"
               mkdir -p "_site/$sub"

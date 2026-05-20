@@ -1,44 +1,35 @@
 :root {
-  /* Editorial palette — anchored on meng_projects.html */
-  --ink: #10201c;
-  --paper: #f4f1e8;
-  --paper-2: #ece8da;
-  --paper-3: #e3dec8;
-  --line: #cfc8b3;
-  --line-2: #b9b196;
+  /* Surfaces & ink — OKLCH, never #fff or #000 */
+  --bg:       oklch(98.5% 0.005 90);    /* warm off-white */
+  --bg-2:     oklch(96.5% 0.006 90);    /* card / table-stripe surface */
+  --bg-3:     oklch(93.5% 0.008 80);    /* subtle band */
+  --ink:      oklch(22%   0.02  260);   /* primary text */
+  --ink-2:    oklch(36%   0.02  260);   /* secondary text / headings on muted */
+  --muted:    oklch(52%   0.015 260);   /* tertiary text, meta */
+  --line:     oklch(90%   0.006 260);   /* hairlines */
+  --line-2:   oklch(80%   0.008 260);   /* heavier dividers */
 
-  --signal: #1f6f54;      /* monitor green — primary accent */
-  --signal-2: #2c8f6c;
-  --hot: #d9531e;         /* exceedance orange — transport/alert */
-  --cool: #2d6a8f;        /* transit blue — data */
-  --gold: #c79a2a;        /* highlight/underline */
-  --muted: #5b675f;
+  /* The one accent — Cornell red */
+  --accent:   oklch(48%   0.18  28);
+  --accent-2: oklch(40%   0.16  28);    /* hover/active */
+  --accent-soft: oklch(95% 0.04 28);    /* tinted background for badges */
 
-  /* Cornell red — institutional accent */
-  --cornell: #B31B1B;
+  /* A11y focus ring — distinct from accent */
+  --focus:    oklch(60%   0.18  240);
 
-  /* Topic palette (used by network nodes, topic bars, map dots) */
-  --topic-environment: var(--signal);
-  --topic-transportation: var(--hot);
-  --topic-disaster: var(--cool);
-  --topic-resilience: #5b3e8f;
-  --topic-polarization: var(--gold);
-  --topic-energy: #b85c00;
-  --topic-health: #8f2d4a;
-  --topic-networks: #4a6f8f;
+  /* Shadows */
+  --shadow-sm: 0 1px 0 oklch(0% 0 0 / 0.04);
+  --shadow-md: 0 1px 2px oklch(0% 0 0 / 0.06), 0 4px 16px oklch(0% 0 0 / 0.06);
 
-  --shadow-sm: 0 1px 0 rgba(16, 32, 28, 0.05);
-  --shadow-md: 0 1px 0 rgba(16, 32, 28, 0.05), 0 12px 30px -18px rgba(16, 32, 28, 0.4);
-  --shadow-lg: 0 4px 0 rgba(16, 32, 28, 0.06), 0 28px 60px -28px rgba(16, 32, 28, 0.45);
-
-  --radius: 4px;
+  --radius:    6px;
   --radius-sm: 3px;
-  --radius-pill: 100px;
+  --radius-pill: 999px;
 
-  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
-  --font-body: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  /* Type system — Source Serif 4 (display) + Inter (body). No mono in chrome. */
+  --font-display: 'Source Serif 4', 'Source Serif Pro', 'Iowan Old Style', Georgia, serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   --container: 1080px;
-  --container-narrow: 760px;
+  --container-narrow: 720px;
+  --prose-max: 70ch;
 }

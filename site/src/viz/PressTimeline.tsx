@@ -4,11 +4,11 @@ import * as d3 from 'd3';
 import type { PressItem } from '../data/types';
 
 const TYPE_COLOR: Record<string, string> = {
-  quoted_in: 'var(--signal)',
-  cited_in: 'var(--cool)',
-  interviewed: 'var(--hot)',
-  op_ed: 'var(--cornell)',
-  reviewed_in: 'var(--gold)',
+  quoted_in: 'var(--topic-environment)',
+  cited_in: 'var(--topic-disaster)',
+  interviewed: 'var(--topic-transportation)',
+  op_ed: 'var(--accent)',
+  reviewed_in: 'var(--topic-polarization)',
 };
 const TYPE_LABEL: Record<string, string> = {
   quoted_in: 'Quoted in',
@@ -68,7 +68,7 @@ export default function PressTimeline({ height = 160 }: { height?: number }) {
 
   return (
     <div className="timeline" ref={wrapRef} style={{ position: 'relative' }}>
-      <div className="kicker" style={{ marginBottom: 12 }}>Press feed · {items.length} hits</div>
+      <div className="eyebrow" style={{ marginBottom: 12 }}>Press feed · {items.length} hits</div>
       <svg className="timeline-svg" viewBox={`0 0 ${width} ${height}`} role="img"
            aria-label={`Press coverage timeline showing ${items.length} press mentions over time, colored by type.`}>
         {/* Baseline */}
@@ -79,7 +79,7 @@ export default function PressTimeline({ height = 160 }: { height?: number }) {
           return (
             <g key={i}>
               <line x1={xp} y1={height - padY} x2={xp} y2={height - padY + 6} stroke="var(--muted)" />
-              <text x={xp} y={height - 2} fontSize={10} fontFamily="var(--font-mono)"
+              <text x={xp} y={height - 2} fontSize={10} fontFamily="var(--font-body)"
                     textAnchor="middle" fill="var(--muted)">
                 {d.getFullYear()}
               </text>
@@ -94,7 +94,7 @@ export default function PressTimeline({ height = 160 }: { height?: number }) {
             cy={p.y}
             r={4}
             fill={TYPE_COLOR[p.item.type] || 'var(--muted)'}
-            stroke="var(--paper)"
+            stroke="var(--bg)"
             strokeWidth={1.2}
             style={{ cursor: 'pointer' }}
             onMouseEnter={(e) => {
