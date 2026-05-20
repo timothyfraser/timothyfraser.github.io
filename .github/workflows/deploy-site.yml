@@ -1,0 +1,88 @@
+name: Deploy timothyfraser.com
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'docs/cv/**'
+      - '.github/workflows/deploy-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Mirror CV CSVs into site/content so the CV stays the canonical source.
+      - name: Sync CV data into content/
+        run: |
+          if [ -f ../docs/cv/publications.csv ]; then cp ../docs/cv/publications.csv content/publications.csv; fi
+          if [ -f ../docs/cv/press.csv ]; then cp ../docs/cv/press.csv content/press.csv; fi
+
+      - name: Build content + Vite
+        run: npm run build
+
+      # Assemble the Pages artifact: Vite output at root, plus carry-forward
+      # of independently-rendered sub-paths from docs/ (cv, sigma if present,
+      # netsci, statements, images). Anything missing in docs/ is simply not
+      # included.
+      - name: Assemble Pages artifact
+        working-directory: ${{ github.workspace }}
+        run: |
+          mkdir -p _site
+          cp -r site/dist/. _site/
+          for sub in cv sigma netsci research_statement teaching_statement teaching_portfolio diversity_statement images; do
+            if [ -d "docs/$sub" ]; then
+              echo "carry forward: docs/$sub"
+              mkdir -p "_site/$sub"
+              cp -r "docs/$sub/." "_site/$sub/"
+            fi
+          done
+          # Ensure CNAME + .nojekyll at root
+          echo "timothyfraser.com" > _site/CNAME
+          touch _site/.nojekyll
+          ls _site
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

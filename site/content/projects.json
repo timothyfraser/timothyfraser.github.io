@@ -1,0 +1,117 @@
+[
+  {
+    "id": "cpportal",
+    "n": "01",
+    "kind": "meng",
+    "category": "Environmental + Causal Inference",
+    "name": "CPPORTAL",
+    "tagline": "A Congestion Pricing Portal for real-time analysis of air quality impacts from New York City's congestion pricing policy.",
+    "badge": { "label": "Data → Writing", "variant": "collect" },
+    "accent": "cool",
+    "body": "Collecting and integrating a large body of public transit and air quality data, then building the analytical pipeline to ask whether the cordon actually moved the needle on pollution. The portal stitches together monitor-day observations into a coherent panel and serves results in near-real-time.",
+    "question": null,
+    "phase": { "label": "Current Phase", "steps": ["Data collection", "Integration", "Writing"], "now": "Writing" },
+    "skills": ["Data science & wrangling", "Databases / panels", "Statistics & causal ID", "Dataviz", "DAGs", "Cloud orchestration"],
+    "recruiting": true,
+    "links": [
+      { "label": "Related paper (npj Clean Air)", "url": "https://doi.org/10.1038/s44407-025-00037-2" }
+    ]
+  },
+  {
+    "id": "movesai",
+    "n": "02",
+    "kind": "meng",
+    "category": "Machine Learning + Tooling",
+    "name": "MOVESAI",
+    "tagline": "A machine-learning short-form surrogate of the EPA's MOVES vehicle emissions simulator — fast, queryable, and deployable.",
+    "badge": { "label": "Platform → Paper", "variant": "build" },
+    "accent": "hot",
+    "body": "MOVES is powerful but heavy. MOVESAI learns a compact surrogate model that reproduces its emissions outputs at a fraction of the runtime, wrapped in an API and front-end so others can actually use it — then writes the whole thing up.",
+    "question": null,
+    "phase": { "label": "Trajectory", "steps": ["Platform", "Paper"], "now": "Platform" },
+    "skills": ["Machine learning", "API design", "Front-end", "Academic writing"],
+    "recruiting": true,
+    "links": []
+  },
+  {
+    "id": "bikeshare",
+    "n": "03",
+    "kind": "meng",
+    "category": "Networks + Big Data",
+    "name": "BIKESHARE",
+    "tagline": "One giant bikeshare mobility database to rule them all.",
+    "badge": { "label": "Data → Networks", "variant": "collect" },
+    "accent": "signal",
+    "body": "An ambitious effort to fetch, unify, and model bikeshare trip data at global scale — treating riders' movements as networks and asking what patterns emerge once cities can be compared on common ground.",
+    "question": "What could we learn if we could see how bikeshare users travel in cities across the world?",
+    "phase": { "label": "Trajectory", "steps": ["Fetch", "Unify", "Model"], "now": "Fetch" },
+    "skills": ["Network science", "Big data", "Data fetching at scale"],
+    "recruiting": true,
+    "links": []
+  },
+  {
+    "id": "cat",
+    "n": "04",
+    "kind": "research",
+    "category": "Dashboards + Transportation Emissions",
+    "name": "Climate Action in Transportation (CAT)",
+    "tagline": "A dashboard system that lets local decision-makers estimate transportation emissions online — without running MOVES locally.",
+    "badge": { "label": "Live Platform", "variant": "signal" },
+    "accent": "signal",
+    "body": "Lead software developer & coordinator on a multi-million-dollar US-DOT-funded effort at Cornell with Dr. Oliver Gao. We build the dashboards, databases, APIs, and cloud jobs that turn EPA MOVES into a public-facing emissions tool: CAT VISUALIZER, policyoptimizer, catr, moveslite, calculator.",
+    "phase": null,
+    "skills": ["R / Shiny", "Docker / GitHub Actions", "MySQL", "MOVES", "Dashboards", "API design"],
+    "recruiting": false,
+    "links": [
+      { "label": "cat-apps.com", "url": "https://cat-apps.com/" },
+      { "label": "VISUALIZER", "url": "https://visualizer.cat-apps.com/" }
+    ]
+  },
+  {
+    "id": "social-infrastructure",
+    "n": "05",
+    "kind": "research",
+    "category": "Mapping + GIS",
+    "name": "Social Infrastructure Mapping",
+    "tagline": "Mapping community spaces that build social capital — across Boston, Fukuoka, and the 25 largest US cities.",
+    "badge": { "label": "Multi-City", "variant": "collect" },
+    "accent": "cool",
+    "body": "With colleagues at Northeastern and MIT, mapping community-level places (parks, libraries, places of worship, social businesses) using the Google Maps Places API + ground-truthing, then linking to pandemic, mobility, and resilience outcomes. Now in expansion phase with Cornell undergraduates across US cities.",
+    "phase": null,
+    "skills": ["GIS", "Places API", "Mobility data", "Survey design"],
+    "recruiting": false,
+    "links": [
+      { "label": "Boston study", "url": "https://doi.org/10.1016/j.uclim.2022.101287" }
+    ]
+  },
+  {
+    "id": "evacuation",
+    "n": "06",
+    "kind": "research",
+    "category": "Big Data + Disaster",
+    "name": "Evacuation with Mobility Data",
+    "tagline": "Estimating evacuation from hurricanes, wildfires, earthquakes, and floods using anonymized cell-phone movement data.",
+    "badge": { "label": "Methods", "variant": "build" },
+    "accent": "hot",
+    "body": "Replacing roadside / post-hoc surveys with passive mobility data to measure who evacuates, where they go, and what predicts that flow — Hurricane Dorian, the 2018 Hokkaido earthquake, Hurricane Zeta, the Glass Fire, COVID-era evacuation, and more.",
+    "phase": null,
+    "skills": ["Mobility data", "Network analysis", "Quasi-experiments"],
+    "recruiting": false,
+    "links": []
+  },
+  {
+    "id": "polarization-health",
+    "n": "07",
+    "kind": "research",
+    "category": "Surveys + Polarization",
+    "name": "Polarization & Health",
+    "tagline": "Two national surveys testing how partisan polarization shapes Americans' physical and mental well-being.",
+    "badge": { "label": "Surveys", "variant": "collect" },
+    "accent": "gold",
+    "body": "Drafted and administered two nationwide surveys on trust, polarization, and health. Findings: cross-party division is linked to worse health outcomes; close in-group ties buffer that effect; polarization also predicts COVID-19 vaccination uptake.",
+    "phase": null,
+    "skills": ["Survey design", "Multilevel models", "Health outcomes"],
+    "recruiting": false,
+    "links": []
+  }
+]

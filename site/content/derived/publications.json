@@ -1,0 +1,2012 @@
+[
+  {
+    "id": "pub-0-a-first-look-into-congestion-pricing-in-",
+    "title": "A first look into congestion pricing in the United States: PM2.5 impacts after six months of New York City cordon pricing",
+    "year": 2025,
+    "journal": "npj Clean Air 1 (2025), 39.",
+    "authors": [
+      "Timothy Fraser",
+      "Yeonkyeong Gina Park",
+      "Danni Lu",
+      "Mohammad Tayarani",
+      "Haiyan Deng",
+      "H. Oliver Gao"
+    ],
+    "doi": "10.1038/s44407-025-00037-2",
+    "link": "https://doi.org/10.1038/s44407-025-00037-2",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation",
+      "gis"
+    ],
+    "dominant": "transportation",
+    "volume": "1",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-1-who-s-at-the-table-disaster-committee-c",
+    "title": "Who's at the table? Disaster committee composition and policy pathways after Hurricane Sandy",
+    "year": 2025,
+    "journal": "Journal of Environmental Management 393 (2025), 127089.",
+    "authors": [
+      "Timothy Fraser",
+      "Lucy Hewitt",
+      "Jessica Chen",
+      "Matthew Cherkerzian",
+      "Vincent Rago",
+      "Daniel P. Aldrich"
+    ],
+    "doi": "10.1016/j.jenvman.2025.127089",
+    "link": "https://doi.org/10.1016/j.jenvman.2025.127089",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "disaster"
+    ],
+    "dominant": "environment",
+    "volume": "393",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-2-cycling-cities-measuring-urban-mobility",
+    "title": "Cycling cities: Measuring urban mobility mixing in bikeshare networks",
+    "year": 2025,
+    "journal": "Journal of Transport Geography 126 (2025), 104223.",
+    "authors": [
+      "Timothy Fraser",
+      "Katherine Van Woert",
+      "Sophia Olivieri",
+      "Jonathan Baron",
+      "Katelyn Buckley",
+      "Pamela Lalli"
+    ],
+    "doi": "10.1016/j.jtrangeo.2025.104223",
+    "link": "https://doi.org/10.1016/j.jtrangeo.2025.104223",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "transportation",
+      "networks",
+      "gis"
+    ],
+    "dominant": "transportation",
+    "volume": "126",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-3-driving-climate-action-with-the-visualiz",
+    "title": "Driving climate action with the VISUALIZER: A dashboard for transportation emissions data analysis & visualization",
+    "year": 2025,
+    "journal": "Urban Climate 61 (2025), 102459.",
+    "authors": [
+      "Timothy Fraser",
+      "H. Oliver Gao"
+    ],
+    "doi": "10.1016/j.uclim.2025.102459",
+    "link": "https://doi.org/10.1016/j.uclim.2025.102459",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation",
+      "gis"
+    ],
+    "dominant": "transportation",
+    "volume": "61",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-4-mapping-green-communities-resources-for",
+    "title": "Mapping green communities: Resources for measuring grassroots environmental organizing in Japan",
+    "year": 2025,
+    "journal": "Energy Research & Social Science 127 (2025), 104232.",
+    "authors": [
+      "Timothy Fraser",
+      "Pinar Temocin"
+    ],
+    "doi": "10.1016/j.erss.2025.104232",
+    "link": "https://doi.org/10.1016/j.erss.2025.104232",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "gis",
+      "energy"
+    ],
+    "dominant": "environment",
+    "volume": "127",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-5-machine-learning-in-spatiotemporal-pm2-5",
+    "title": "Machine learning in spatiotemporal PM2.5 hotspots analysis for better targeted mitigation strategies",
+    "year": 2025,
+    "journal": "Transportation Research Part D: Transport and Environment 148 (2025), 105017.",
+    "authors": [
+      "Danni Lu",
+      "Alireza Yazdiani",
+      "Timothy Fraser",
+      "Mohammad Tayarani",
+      "H. Oliver Gao"
+    ],
+    "doi": "10.1016/j.trd.2025.105017",
+    "link": "https://doi.org/10.1016/j.trd.2025.105017",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "148",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-6-networks-in-crisis-measuring-ethnic-str",
+    "title": "Networks in crisis: Measuring ethnic stratification and organizational reach post-disaster",
+    "year": 2025,
+    "journal": "International Journal of Disaster Risk Reduction 125 (2025), 105561.",
+    "authors": [
+      "Timothy Fraser",
+      "Jennifer Shea",
+      "Daniel Homsey",
+      "Daniel P. Aldrich"
+    ],
+    "doi": "10.1016/j.ijdrr.2025.105561",
+    "link": "https://doi.org/10.1016/j.ijdrr.2025.105561",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "disaster",
+      "networks"
+    ],
+    "dominant": "disaster",
+    "volume": "125",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-7-a-city-of-two-tales-a-quantitative-anal",
+    "title": "A City of Two Tales: A Quantitative Analysis of Vulnerability, Connectedness, and Resilience in Cloverdale, CA",
+    "year": 2024,
+    "journal": "International Journal of Disaster Risk Reduction (2024), in press.",
+    "authors": [
+      "Timothy Fraser",
+      "Aayushi Mishra",
+      "Osama Awadalla",
+      "Jennifer Shea",
+      "Daniel Homsey",
+      "Daniel P. Aldrich"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "disaster",
+      "gis"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-8-a-tale-of-many-cities-mapping-social-in",
+    "title": "A tale of many cities: Mapping social infrastructure and social capital across the United States",
+    "year": 2024,
+    "journal": "Computers, Environment, & Urban Systems 114 (2024), 102195.",
+    "authors": [
+      "Timothy Fraser",
+      "Osama Awadalla",
+      "Harshita Sarup",
+      "Daniel P. Aldrich"
+    ],
+    "doi": null,
+    "link": "https://drive.google.com/file/d/1a07Dtl_On0gKo81VnG1kpgoO9y8rtHfM/view?usp=sharing",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "resilience",
+      "social_infrastructure",
+      "gis"
+    ],
+    "dominant": "environment",
+    "volume": "114",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-9-the-great-equalizer-mixed-effects-of-so",
+    "title": "The great equalizer? Mixed effects of social infrastructure on diverse encounters in cities",
+    "year": 2024,
+    "journal": "Computers, Environment, & Urban Systems 113 (2024), 102173.",
+    "authors": [
+      "Timothy Fraser",
+      "Takahiro Yabe",
+      "Daniel P. Aldrich",
+      "Esteban Moro"
+    ],
+    "doi": null,
+    "link": "https://drive.google.com/file/d/1d6dGsLbo7KWWHZOJOz-E872omFmalGyg/view?usp=sharing",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "resilience",
+      "social_infrastructure",
+      "gis"
+    ],
+    "dominant": "environment",
+    "volume": "113",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-10-democracy-in-distress-examining-2020-gen",
+    "title": "Democracy in distress Examining 2020 general election voting behavior in the Greater Boston Area during the COVID-19 pandemic",
+    "year": 2024,
+    "journal": "International Journal of Disaster Risk Reduction 112 (2024), 104749.",
+    "authors": [
+      "Courtney Page-Tan",
+      "Miranda Bourdeau",
+      "Timothy Fraser"
+    ],
+    "doi": "10.1016/j.ijdrr.2024.104749",
+    "link": "https://doi.org/10.1016/j.ijdrr.2024.104749",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "disaster",
+      "health"
+    ],
+    "dominant": "disaster",
+    "volume": "112",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-11-county-level-political-group-density-pa",
+    "title": "County-level political group density, partisan polarization, and individual-level mortality among adults in the United States: A lagged multilevel study.",
+    "year": 2024,
+    "journal": "Social Science & Medicine - Population Health 26 (2024), 101662.",
+    "authors": [
+      "Sameera Nayak",
+      "Timothy Fraser",
+      "Daniel P. Aldrich",
+      "Costas Panagopoulos",
+      "Daniel Kim"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "polarization",
+      "health"
+    ],
+    "dominant": "health",
+    "volume": "26",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-12-making-moves-move-fast-emissions-estima",
+    "title": "Making MOVES move: Fast emissions estimates for repeated transportation policy scenario analyses.",
+    "year": 2024,
+    "journal": "Environmental Modelling and Software 178 (2024), 106084.",
+    "authors": [
+      "Timothy Fraser",
+      "Yan Guo",
+      "H. Oliver Gao"
+    ],
+    "doi": "10.1016/j.envsoft.2024.106084",
+    "link": "https://drive.google.com/file/d/16py6zSmI_2webvMg0ovCyXeUbvyHuKXB/view?usp=sharing",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "178",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-13-how-far-i-ll-go-social-infrastructure-a",
+    "title": "How far I’ll go: Social infrastructure accessibility and proximity in urban neighborhoods.",
+    "year": 2024,
+    "journal": "Landscape and Urban Planning 241 (2024), 104922.",
+    "authors": [
+      "Timothy Fraser",
+      "Olivia Feeley",
+      "Andres Ridge",
+      "Ava Cervini",
+      "Vincent Rago",
+      "Kelly Gilmore",
+      "Gianna Worthington",
+      "Illana Berliavsky"
+    ],
+    "doi": "10.1016/j.landurbplan.2023.104922",
+    "link": "https://drive.google.com/file/d/1QMymsV5h53lD3bms9qohWpNALiJDvG7e/view?usp=sharing",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "gis"
+    ],
+    "dominant": "resilience",
+    "volume": "241",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-14-elections-and-post-traumatic-stress-evi",
+    "title": "Elections and Post Traumatic Stress: Evidence from the 2020 U.S. Presidential Election.",
+    "year": 2023,
+    "journal": "Politics and the Life Sciences (2023), 1-59.",
+    "authors": [
+      "Timothy Fraser",
+      "Costas Panagopoulos",
+      "Kevin Smith"
+    ],
+    "doi": "10.1017/pls.2023.8",
+    "link": "https://doi.org/10.1017/pls.2023.8",
+    "description": null,
+    "type": "paper",
+    "topics": [],
+    "dominant": "other",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-15-leapfrogging-or-lagging-drivers-of-soci",
+    "title": "Leapfrogging or Lagging? Drivers of Social Equity from Renewable Energy Transitions Globally.",
+    "year": 2023,
+    "journal": "Energy Research & Social Sciences 98 (2023), 103006.",
+    "authors": [
+      "Timothy Fraser",
+      "Andrew J. Chapman",
+      "Yosuke Shigetomi"
+    ],
+    "doi": "10.1016/j.erss.2023.103006",
+    "link": "https://doi.org/10.1016/j.erss.2023.103006",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "social_infrastructure",
+      "energy"
+    ],
+    "dominant": "energy",
+    "volume": "98",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-16-opposing-views-associations-of-politica",
+    "title": "Opposing Views: Associations of Political Polarization, Political Party Affiliation, and Social Trust with COVID-19 Vaccination Intent and Receipt.",
+    "year": 2023,
+    "journal": "Journal of Public Health 45(1) (2023), 35-39.",
+    "authors": [
+      "Andrew Dolman",
+      "Timothy Fraser",
+      "Costas Panagopoulos",
+      "Daniel P. Aldrich",
+      "Daniel Kim"
+    ],
+    "doi": "10.1093/pubmed/fdab401",
+    "link": "https://doi.org/10.1093/pubmed/fdab401",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "polarization",
+      "health"
+    ],
+    "dominant": "health",
+    "volume": "45",
+    "issue": "1"
+  },
+  {
+    "id": "pub-17-trust-but-verify-validating-new-measure",
+    "title": "Trust but Verify: Validating New Measures for Mapping Social Infrastructure in Cities.",
+    "year": 2022,
+    "journal": "Urban Climate 46 (2022), 101287.",
+    "authors": [
+      "Timothy Fraser",
+      "Napuck Cherdchaiyapong",
+      "Winta Tekle",
+      "Erin Thomas",
+      "Joel Zayas",
+      "Courtney Page-Tan",
+      "Daniel P. Aldrich"
+    ],
+    "doi": "10.1016/j.uclim.2022.101287",
+    "link": "https://doi.org/10.1016/j.uclim.2022.101287",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "resilience",
+      "social_infrastructure",
+      "gis"
+    ],
+    "dominant": "environment",
+    "volume": "46",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-18-uneven-paths-soft-policy-s-benefits-to-",
+    "title": "Uneven paths: Soft Policy's benefits to recovery in Louisiana Parishes after Hurricanes Katrina and Rita.",
+    "year": 2022,
+    "journal": "Journal of Environmental Management 321 (2022), 115722.",
+    "authors": [
+      "Timothy Fraser",
+      "Alex R. Poniatowski",
+      "Nicholas Hersey",
+      "Haoran Zheng",
+      "Daniel P. Aldrich"
+    ],
+    "doi": "10.1016/j.jenvman.2022.115722Get",
+    "link": "https://doi.org/10.1016/j.jenvman.2022.115722Get",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "disaster"
+    ],
+    "dominant": "environment",
+    "volume": "321",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-19-better-together-the-role-of-social-capi",
+    "title": "Better together? The role of social capital in urban social vulnerability.",
+    "year": 2022,
+    "journal": "Habitat International 124 (2022), 102561.",
+    "authors": [
+      "Timothy Fraser",
+      "Nicole Naquin"
+    ],
+    "doi": "10.1016/j.habitatint.2022.102561",
+    "link": "https://doi.org/10.1016/j.habitatint.2022.102561",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "gis"
+    ],
+    "dominant": "resilience",
+    "volume": "124",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-20-the-road-more-traveled-evacuation-netwo",
+    "title": "The Road More Traveled: Evacuation Networks from 10 disasters in the US and Japan.",
+    "year": 2022,
+    "journal": "Environment & Behavior 54(4) (2022), 833-863.",
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": "10.1177/00139165221090159",
+    "link": "https://doi.org/10.1177/00139165221090159",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation",
+      "disaster",
+      "networks"
+    ],
+    "dominant": "transportation",
+    "volume": "54",
+    "issue": "4"
+  },
+  {
+    "id": "pub-21-field-research-when-there-is-limited-acc",
+    "title": "Field Research When There Is Limited Access to the Field: Lessons from Japan.",
+    "year": 2022,
+    "journal": "PS: Political Science & Politics (2022), 1-7.",
+    "authors": [
+      "Kenya Amano",
+      "Melanie Sayuri Dominguez",
+      "* Timothy Fraser",
+      "Etienne Gagnon",
+      "Trevor Incerti",
+      "Jinhyuk Jang",
+      ". . .",
+      "Charles Crabtree"
+    ],
+    "doi": "10.1017/S1049096522000932",
+    "link": "https://doi.org/10.1017/S1049096522000932",
+    "description": null,
+    "type": "paper",
+    "topics": [],
+    "dominant": "other",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-22-social-capital-s-impact-on-covid-19-outc",
+    "title": "Social Capital's Impact on COVID-19 Outcomes at Local Levels",
+    "year": 2022,
+    "journal": "Nature Scientific Reports 12 (2022), 6566.",
+    "authors": [
+      "Timothy Fraser",
+      "Courtney Page-Tan",
+      "Daniel P. Aldrich"
+    ],
+    "doi": "10.1038/s41598-022-10275-z",
+    "link": "https://doi.org/10.1038/s41598-022-10275-z",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "health"
+    ],
+    "dominant": "resilience",
+    "volume": "12",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-23-the-harmful-effects-of-partisan-polariza",
+    "title": "The Harmful Effects of Partisan Polarization on Health.",
+    "year": 2022,
+    "journal": "PNAS Nexus 1 (1) (2022), pgac011.",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel Aldrich",
+      "Costas Panagopoulos",
+      "David Hummel",
+      "Daniel Kim"
+    ],
+    "doi": "10.1093/pnasnexus/pgac011",
+    "link": "https://doi.org/10.1093/pnasnexus/pgac011",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "polarization",
+      "health"
+    ],
+    "dominant": "health",
+    "volume": "1",
+    "issue": "1"
+  },
+  {
+    "id": "pub-24-fleeing-the-unsustainable-city-soft-pol",
+    "title": "Fleeing the Unsustainable City: Soft Policy and the Janus-Faced Nature of Social Capital in Evacuation Networks.",
+    "year": 2022,
+    "journal": "Sustainability Science 17 (2022), 1995-2011.",
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": "10.1007/s11625-022-01098-y",
+    "link": "http://dx.doi.org/10.1007/s11625-022-01098-y",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "transportation",
+      "disaster",
+      "resilience",
+      "social_infrastructure",
+      "networks",
+      "gis"
+    ],
+    "dominant": "transportation",
+    "volume": "17",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-25-covid-19-to-go-the-role-of-disasters-an",
+    "title": "COVID-19 To Go? The Role of Disasters and Evacuation in the COVID-19 Pandemic.",
+    "year": 2022,
+    "journal": "Global Environmental Change 73 (2022), 102471.",
+    "authors": [
+      "Courtney Page-Tan",
+      "Timothy Fraser"
+    ],
+    "doi": "10.2139/ssrn.3836258",
+    "link": "https://dx.doi.org/10.2139/ssrn.3836258",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation",
+      "disaster",
+      "health"
+    ],
+    "dominant": "transportation",
+    "volume": "73",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-26-leaders-or-networkers-the-role-of-mayor",
+    "title": "Leaders or Networkers? The Role of Mayors in Renewable Energy Transition.",
+    "year": 2022,
+    "journal": "Environmental Innovations & Societal Transitions 42 (2022), 301-316.",
+    "authors": [
+      "Timothy Fraser",
+      "Mary Bancroft",
+      "Andrew Small",
+      "Lily Cunningham"
+    ],
+    "doi": "10.1016/j.eist.2022.01.003",
+    "link": "https://doi.org/10.1016/j.eist.2022.01.003",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "networks",
+      "energy"
+    ],
+    "dominant": "environment",
+    "volume": "42",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-27-do-all-roads-lead-to-sapporo-the-role-o",
+    "title": "Do All Roads Lead to Sapporo? The Role of Linking and Bridging Ties in Evacuation Decisions.",
+    "year": 2022,
+    "journal": "Ecology & Society 27(2) (2022), 3.",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel P. Aldrich",
+      "Larissa Morikawa"
+    ],
+    "doi": "10.5751/ES-13097-270203",
+    "link": "https://doi.org/10.5751/ES-13097-270203",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "transportation",
+      "disaster",
+      "resilience",
+      "social_infrastructure"
+    ],
+    "dominant": "transportation",
+    "volume": "27",
+    "issue": "2"
+  },
+  {
+    "id": "pub-28-bridging-the-divide-does-social-capital",
+    "title": "Bridging the Divide: Does Social Capital Moderate the Impact of Polarization on Health?",
+    "year": 2022,
+    "journal": "Political Research Quarterly 75(3) (2022), 875-891.",
+    "authors": [
+      "Costas Panagopoulos",
+      "Timothy Fraser",
+      "Daniel P. Aldrich",
+      "Daniel Kim",
+      "David Hummel"
+    ],
+    "doi": "10.1177/10659129211034561",
+    "link": "https://github.com/timothyfraser/cv/files/7790586/2021_Panagopoulos_et_al_PRQ.pdf",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "polarization",
+      "health"
+    ],
+    "dominant": "resilience",
+    "volume": "75",
+    "issue": "3"
+  },
+  {
+    "id": "pub-29-grassroots-vs-greenhouse-the-role-of-e",
+    "title": "Grassroots vs. Greenhouse: The Role of Environmental Organizations in Reducing Carbon Emissions.",
+    "year": 2021,
+    "journal": "Climatic Change 169(22) (2021), 1-21.",
+    "authors": [
+      "Timothy Fraser",
+      "Pinar Temocin"
+    ],
+    "doi": "10.1007/s10584-021-03260-4",
+    "link": "https://github.com/timothyfraser/cv/files/7790564/2021_Fraser_Temocin_CC.pdf",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment"
+    ],
+    "dominant": "environment",
+    "volume": "169",
+    "issue": "22"
+  },
+  {
+    "id": "pub-30-seawalls-or-social-recovery-the-role-of",
+    "title": "Seawalls or social recovery? The role of policy networks and design in disaster recovery.",
+    "year": 2021,
+    "journal": "Global Environmental Change 70 (2021), 102342.",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel P. Aldrich",
+      "Andrew Small"
+    ],
+    "doi": "10.1016/j.gloenvcha.2021.102342",
+    "link": "https://github.com/timothyfraser/cv/files/7790566/2021_Fraser_Aldrich_Small_GEC.pdf",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "disaster",
+      "networks"
+    ],
+    "dominant": "environment",
+    "volume": "70",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-31-bowling-alone-or-distancing-together-th",
+    "title": "Bowling alone or distancing together? The role of social capital in excess death rates from COVID19.",
+    "year": 2021,
+    "journal": "Social Science & Medicine 284 (2021), 114241.",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel P. Aldrich",
+      "Courtney Page-Tan"
+    ],
+    "doi": "10.1016/j.socscimed.2021.114241",
+    "link": "https://github.com/timothyfraser/cv/files/7790571/2021_Fraser_Aldrich_PageTan_SSM.pdf",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "health"
+    ],
+    "dominant": "resilience",
+    "volume": "284",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-32-rumor-has-it-the-role-of-social-ties-an",
+    "title": "Rumor has it: The role of social ties and misinformation in evacuation to nearby shelters after disaster.",
+    "year": 2021,
+    "journal": "Climate Risk Management 33 (2021), 100320.",
+    "authors": [
+      "Timothy Fraser",
+      "Larissa Morikawa",
+      "Daniel P. Aldrich"
+    ],
+    "doi": "10.1016/j.crm.2021.100320",
+    "link": "https://github.com/timothyfraser/cv/files/7790596/2021_Fraser_Morikawa_Aldrich_CRM.pdf",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation",
+      "disaster",
+      "resilience",
+      "social_infrastructure"
+    ],
+    "dominant": "transportation",
+    "volume": "33",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-33-is-divisive-politics-making-americans-si",
+    "title": "Is Divisive Politics Making Americans Sick? Associations of Perceived Partisan Polarization with Physical and Mental Health Outcomes Among Adults in the United States.",
+    "year": 2021,
+    "journal": "Social Science & Medicine, 284 (2021), 113976.",
+    "authors": [
+      "Sameera Nayak",
+      "Timothy Fraser",
+      "Costas Panagopoulos",
+      "Daniel P. Aldrich",
+      "Daniel Kim"
+    ],
+    "doi": "10.1016/j.socscimed.2021.113976",
+    "link": "https://doi.org/10.1016/j.socscimed.2021.113976",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "polarization",
+      "health"
+    ],
+    "dominant": "health",
+    "volume": "284",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-34-connecting-social-capital-and-vulnerabil",
+    "title": "Connecting Social Capital and Vulnerability: A Citation Network Analysis of Disaster Studies.",
+    "year": 2021,
+    "journal": "Natural Hazards Review 22(3) (2021), 1527-6996.",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel P. Aldrich",
+      "Andrew Small"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "disaster",
+      "resilience",
+      "social_infrastructure",
+      "networks"
+    ],
+    "dominant": "disaster",
+    "volume": "22",
+    "issue": "3"
+  },
+  {
+    "id": "pub-35-the-dual-effect-of-social-ties-on-covid-",
+    "title": "The dual effect of social ties on COVID-19 spread in Japan.",
+    "year": 2021,
+    "journal": "Scientific Reports 11(1) (2021).",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel P. Aldrich"
+    ],
+    "doi": "10.1038/s41598-021-81001-4",
+    "link": "https://doi.org/10.1038/s41598-021-81001-4",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "health"
+    ],
+    "dominant": "resilience",
+    "volume": "11",
+    "issue": "1"
+  },
+  {
+    "id": "pub-36-build-back-better-effects-of-crisis-on-",
+    "title": "Build back better? Effects of crisis on climate change adaptation in Japan and the US.",
+    "year": 2021,
+    "journal": "Global Environmental Politics 21(1), 54-75.",
+    "authors": [
+      "Timothy Fraser",
+      "Lily Cunningham",
+      "Amos Nasongo"
+    ],
+    "doi": "10.1162/glep_a_00588",
+    "link": "https://doi.org/10.1162/glep_a_00588",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "disaster"
+    ],
+    "dominant": "environment",
+    "volume": "21",
+    "issue": "1"
+  },
+  {
+    "id": "pub-37-japanese-social-capital-and-social-vulne",
+    "title": "Japanese Social Capital and Social Vulnerability Indices: Measuring Drivers of Community Resilience 2000-2017.",
+    "year": 2021,
+    "journal": "International Journal of Disaster Risk Reduction 52 (2021), 101965.",
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": "10.1016/j.ijdrr.2020.101965",
+    "link": "https://github.com/timothyfraser/cv/files/7790558/2021_Fraser_IJDRR.pdf",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "disaster",
+      "resilience",
+      "social_infrastructure"
+    ],
+    "dominant": "disaster",
+    "volume": "52",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-38-does-social-capital-boost-or-block-renew",
+    "title": "Does Social Capital Boost or Block Renewable Energy Siting? South African Solar Politics in Comparison.",
+    "year": 2021,
+    "journal": "Energy Research & Social Science 71 (2021), 101845.",
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": "10.1016/j.erss.2020.101845",
+    "link": "https://doi.org/10.1016/j.erss.2020.101845",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "energy"
+    ],
+    "dominant": "resilience",
+    "volume": "71",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-39-in-the-hands-of-a-few-disaster-recovery",
+    "title": "In the Hands of a Few: Disaster Recovery Committee Networks.",
+    "year": 2021,
+    "journal": "Journal of Environmental Management 280 (2021), 111643.",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel P. Aldrich",
+      "Andrew Small",
+      "Andrew Littlejohn"
+    ],
+    "doi": "10.1016/j.jenvman.2020.111643",
+    "link": "https://doi.org/10.1016/j.jenvman.2020.111643",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "disaster",
+      "networks"
+    ],
+    "dominant": "environment",
+    "volume": "280",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-40-climate-crisis-at-city-hall-how-japanes",
+    "title": "Climate Crisis at City Hall: How Japanese communities mobilize to eliminate emissions.",
+    "year": 2020,
+    "journal": "Environmental Innovations and Societal Transitions 37 (2020), 361-380.",
+    "authors": [
+      "Timothy Fraser",
+      "Lily Cunningham",
+      "Mary Bancroft",
+      "Amy Hunt",
+      "Eri Lee",
+      "Amos Nasongo"
+    ],
+    "doi": "10.1016/j.eist.2020.09.006",
+    "link": "https://doi.org/10.1016/j.eist.2020.09.006",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "disaster",
+      "gis"
+    ],
+    "dominant": "environment",
+    "volume": "37",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-41-the-fukushima-effect-at-home-the-changi",
+    "title": "The Fukushima Effect at Home: The changing role of domestic actors in Japanese energy policy.",
+    "year": 2020,
+    "journal": "WIREs Climate Change 11(5) (2020), e655.",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel P. Aldrich"
+    ],
+    "doi": "10.1002/wcc.655",
+    "link": "https://doi.org/10.1002/wcc.655",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "disaster",
+      "energy"
+    ],
+    "dominant": "environment",
+    "volume": "11",
+    "issue": "5"
+  },
+  {
+    "id": "pub-42-drivers-of-social-equity-in-renewable-en",
+    "title": "Drivers of social equity in renewable energy at the municipal level: The case of local Japanese energy policy and preferences.",
+    "year": 2020,
+    "journal": "Journal of Environmental Policy and Planning 22(3) (2020), 397-412.",
+    "authors": [
+      "Timothy Fraser",
+      "Andrew J. Chapman"
+    ],
+    "doi": "10.1080/1523908X.2020.1740659",
+    "link": "https://doi.org/10.1080/1523908X.2020.1740659",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "social_infrastructure",
+      "gis",
+      "energy"
+    ],
+    "dominant": "environment",
+    "volume": "22",
+    "issue": "3"
+  },
+  {
+    "id": "pub-43-japan-s-resilient-renewable-cities-how",
+    "title": "Japan's Resilient, Renewable Cities: How Socioeconomics and Local Policy drive Japan's Renewable Energy Transition.",
+    "year": 2020,
+    "journal": "Environmental Politics 29(3) (2020), 500-523.",
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": "10.1080/09644016.2019.1589037",
+    "link": "https://doi.org/10.1080/09644016.2019.1589037",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "gis",
+      "energy"
+    ],
+    "dominant": "environment",
+    "volume": "29",
+    "issue": "3"
+  },
+  {
+    "id": "pub-44-role-of-energy-finance-in-geothermal-pow",
+    "title": "Role of energy finance in geothermal power development in Japan.",
+    "year": 2020,
+    "journal": "International Review of Economics and Finance 70 (2020), 398-412.",
+    "authors": [
+      "Taghizadeh-Hesary",
+      "Farhad",
+      "Aline Mortha",
+      "Hadi Farabi-Asl",
+      "Tapan Sarker",
+      "Andrew Chapman",
+      "Yosuke Shigetomi",
+      "Timothy Fraser"
+    ],
+    "doi": "10.1016/j.iref.2020.06.011",
+    "link": "https://doi.org/10.1016/j.iref.2020.06.011",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "energy"
+    ],
+    "dominant": "energy",
+    "volume": "70",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-45-how-governance-and-disasters-shape-renew",
+    "title": "How Governance and Disasters shape Renewable Energy Transitions: The case of Japanese mega-solar.",
+    "year": 2019,
+    "journal": "Social Science Quarterly 100(3) (2019), 975-990.",
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": "10.1111/ssqu.12603",
+    "link": "https://doi.org/10.1111/ssqu.12603",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "disaster",
+      "energy"
+    ],
+    "dominant": "disaster",
+    "volume": "100",
+    "issue": "3"
+  },
+  {
+    "id": "pub-46-investigating-ties-between-energy-policy",
+    "title": "Investigating Ties between Energy Policy and Social Equity Research: A Citation Network Analysis.",
+    "year": 2019,
+    "journal": "Social Sciences 8 (5) (2019), 135.",
+    "authors": [
+      "Andrew J. Chapman",
+      "Timothy Fraser",
+      "Melanie Dennis"
+    ],
+    "doi": "10.3390/socsci8050135",
+    "link": "https://doi.org/10.3390/socsci8050135",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "social_infrastructure",
+      "networks",
+      "energy"
+    ],
+    "dominant": "energy",
+    "volume": "8",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-47-how-do-disasters-affect-individuals-soc",
+    "title": "How do disasters affect individuals’ social ties? The impacts of disaster experiences and the perceived risks of disasters on participation in voluntary associations.",
+    "year": 2019,
+    "journal": "International Journal of Disaster Risk Reduction 34 (2019), 108-115.",
+    "authors": [
+      "Juheon Lee",
+      "Timothy Fraser"
+    ],
+    "doi": "10.1016/j.ijdrr.2018.11.009",
+    "link": "https://doi.org/10.1016/j.ijdrr.2018.11.009",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "disaster",
+      "resilience",
+      "social_infrastructure"
+    ],
+    "dominant": "disaster",
+    "volume": "34",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-48-japan-s-mega-solar-boom-quantifying-soc",
+    "title": "Japan’s Mega Solar Boom: Quantifying Social Equity Expectations and Realities at the Local Scale.",
+    "year": 2019,
+    "journal": "Sustainability Science 14 (2019), 355-374.",
+    "authors": [
+      "Andrew Chapman",
+      "Timothy Fraser"
+    ],
+    "doi": "10.1007/s11625-018-0613-y",
+    "link": "https://doi.org/10.1007/s11625-018-0613-y",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "social_infrastructure",
+      "energy"
+    ],
+    "dominant": "energy",
+    "volume": "14",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-49-social-equity-impacts-in-japan-s-mega-so",
+    "title": "Social Equity Impacts in Japan’s Mega Solar Siting Process.",
+    "year": 2018,
+    "journal": "Energy for Sustainable Development 42 (2018), 136-151.",
+    "authors": [
+      "Timothy Fraser",
+      "Andrew Chapman"
+    ],
+    "doi": "10.1016/j.esd.2017.11.002",
+    "link": "https://doi.org/10.1016/j.esd.2017.11.002",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "social_infrastructure",
+      "energy"
+    ],
+    "dominant": "energy",
+    "volume": "42",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-50-all-politics-is-local-judicial-and-elec",
+    "title": "All Politics is Local: Judicial and Electoral Institutions’ Role in Japan’s Nuclear Restarts.",
+    "year": 2017,
+    "journal": "Pacific Affairs 90, no. 3, 433-457.",
+    "authors": [
+      "Daniel P. Aldrich",
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": "https://www.jstor.org/stable/44874505",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "energy"
+    ],
+    "dominant": "energy",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-51-hydrogen-import-pathway-comparison-frame",
+    "title": "Hydrogen Import Pathway Comparison Framework incorporating Cost and Social Preference: Case studies from Australia to Japan.",
+    "year": 2017,
+    "journal": "International Journal of Energy Research 41(14) (2017), 2374-2391.",
+    "authors": [
+      "Chapman",
+      "Andrew",
+      "Timothy Fraser",
+      "Kenshi Itaoka"
+    ],
+    "doi": "10.1002/er.3807",
+    "link": "https://doi.org/10.1002/er.3807",
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "energy"
+    ],
+    "dominant": "energy",
+    "volume": "41",
+    "issue": "14"
+  },
+  {
+    "id": "pub-52-social-capital-mobility-and-evacuation",
+    "title": "Social Capital, Mobility, and Evacuation Destinations During the Marshall Fire.",
+    "year": 2022,
+    "journal": "Natural Hazards Center Quick Response Grant Report Series, 348. Boulder, CO: Natural Hazards Center, University of Colorado Boulder.",
+    "authors": [
+      "Daniel Aldrich",
+      "Courtney Page-Tan",
+      "Timothy Fraser",
+      "Takahiro Yabe"
+    ],
+    "doi": null,
+    "link": "https://hazards.colorado.edu/quick-response-report/social-capital-mobility-and-evacuation-destinations-during-the-marshall-fire",
+    "description": null,
+    "type": "report",
+    "topics": [
+      "transportation",
+      "disaster",
+      "resilience",
+      "social_infrastructure"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-53-social-ties-quarantine-policy-and-the-",
+    "title": "Social Ties, Quarantine Policy, and the Spread of COVID-19.",
+    "year": 2020,
+    "journal": "Natural Hazards Center Quick Response Grant Report Series, 314. Boulder, CO: Natural Hazards Center, University of Colorado Boulder.",
+    "authors": [
+      "Daniel Aldrich",
+      "Timothy Fraser",
+      "Juheon Lee",
+      "Courtney Page-Tan",
+      "Toshiaki Yoshida"
+    ],
+    "doi": null,
+    "link": "https://hazards.colorado.edu/quick-response-report/social-ties-quarantine-policy-and-the-spread-of-covid-19",
+    "description": null,
+    "type": "report",
+    "topics": [
+      "disaster",
+      "resilience",
+      "social_infrastructure",
+      "health"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-54-it-s-who-you-know-how-social-networks-h",
+    "title": "It's Who You Know: How social networks help cities rebuild with renewables after disaster.",
+    "year": 2023,
+    "journal": "In Paola Cavaliere, ed. Handbook of Disaster Studies in Japan. Amsterdam University Press/MHM Limited. (forthcoming)",
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "chapter",
+    "topics": [
+      "disaster",
+      "resilience",
+      "social_infrastructure",
+      "networks",
+      "gis",
+      "energy"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-55-stronger-together-the-critical-role-of-",
+    "title": "Stronger Together: The Critical Role of Bridging and Linking Social Capital in Evacuation Outcomes.",
+    "year": 2023,
+    "journal": "In Paola Cavaliere, ed. Handbook of Disaster Studies in Japan. Amsterdam University Press/MHM Limited. (forthcoming)",
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "chapter",
+    "topics": [
+      "transportation",
+      "disaster",
+      "resilience",
+      "social_infrastructure"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-56-social-network-analysis-for-disasters-",
+    "title": "Social Network Analysis for Disasters.",
+    "year": 2021,
+    "journal": "In Jason Rivera, ed. Research Methods of Disaster and Emergency Management: Social Science Approaches in Application.",
+    "authors": [
+      "Timothy Fraser",
+      "Courtney Page-Tan",
+      "Daniel P. Aldrich"
+    ],
+    "doi": null,
+    "link": "https://www.researchgate.net/publication/351283811_Social_Network_Analysis_for_Disaster_Management_Research",
+    "description": null,
+    "type": "chapter",
+    "topics": [
+      "disaster",
+      "resilience",
+      "social_infrastructure",
+      "networks"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-57-mapping-resilience-gis-techniques-for-d",
+    "title": "Mapping Resilience: GIS Techniques for Disaster Studies.",
+    "year": 2021,
+    "journal": "In Jason Rivera, ed. Research Methods of Disaster and Emergency Management: Social Science Approaches in Application.",
+    "authors": [
+      "Courtney Page-Tan",
+      "Timothy Fraser",
+      "Daniel P. Aldrich"
+    ],
+    "doi": null,
+    "link": "https://www.researchgate.net/publication/351283898_Mapping_Resilience_GIS_Techniques_for_Disaster_Studies",
+    "description": null,
+    "type": "chapter",
+    "topics": [
+      "disaster",
+      "gis"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-58-social-sustainability-in-cities-urban-e",
+    "title": "Social Sustainability in Cities: Urban Energy.",
+    "year": 2020,
+    "journal": "In Alvarez-Risco, A., Rosen, M., Del-Aguila-Arcentales, S, & Marinova, D. Building sustainable cities: Social, Economic and Environmental Factors, Springer-Nature.",
+    "authors": [
+      "Timothy Fraser",
+      "Andrew J. Chapman"
+    ],
+    "doi": null,
+    "link": "https://www.researchgate.net/publication/344196674_Sustainability_of_Urban_Energy?_sg=ozKKOM4138T2xnoefuxus60AbYJzy10JR1-5uCDKGB-7PdNexeoPKIssPqP7FMiCDY87UgqDEadMeuloLnlOlfXs3V0eDLWP2LG8w7kh.lRCg37Dj8FDrfz9qlZx1WNllujoXNvuot1BfMTXBw0qKAjQxo2PIMTLjUKdw0UcPyxU0TbAcgmrZSKsCwNQqfA",
+    "description": null,
+    "type": "chapter",
+    "topics": [
+      "environment",
+      "gis",
+      "energy"
+    ],
+    "dominant": "environment",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-59-east-asia-s-nuclear-policies-fukushima-",
+    "title": "East Asia's Nuclear Policies: Fukushima Effect or a Nuclear Renaissance?",
+    "year": 2019,
+    "journal": "Georgetown Journal of Asian Affairs 4(2) (2019), 65.",
+    "authors": [
+      "Timothy Fraser",
+      "Daniel P. Aldrich"
+    ],
+    "doi": null,
+    "link": "https://issuu.com/georgetownsfs/docs/gjaa_vol.4_no.2/65",
+    "description": null,
+    "type": "chapter",
+    "topics": [
+      "disaster",
+      "energy"
+    ],
+    "dominant": "disaster",
+    "volume": "4",
+    "issue": "2"
+  },
+  {
+    "id": "pub-60-a-janus-faced-resource-social-capital-a",
+    "title": "A Janus Faced Resource: Social Capital and Resilience Trade-offs.",
+    "year": 2018,
+    "journal": "International Risk Governance Council Resource Guide, vol 2.",
+    "authors": [
+      "Daniel P. Aldrich",
+      "Courtney Page-Tan",
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": "https://irgc.epfl.ch/wp-content/uploads/2018/11/Aldrich-et-al-for-IRGC-Resilience-Guide-Vol-2-2018.pdf",
+    "description": null,
+    "type": "chapter",
+    "topics": [
+      "disaster",
+      "resilience",
+      "social_infrastructure"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-61-sigma-coding-tutorials-for-statistics-",
+    "title": "Sigma: Coding Tutorials for Statistics, System Reliability, and Six Sigma in R",
+    "year": 2023,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": "https://timothyfraser.com/sigma/introduction",
+    "description": null,
+    "type": "book",
+    "topics": [],
+    "dominant": "other",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-62-visualizer-app-for-comparing-emissions-i",
+    "title": "VISUALIZER App for Comparing Emissions in US States & Counties",
+    "year": 2024,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": "https://visualizer.cat-apps.com",
+    "description": "A suite of ShinyApp modules that visualize US state and county emissions from transportation. These include line charts, donut charts, rank charts, multi-line charts, infographics, maps, profile boxes, and more. [Alpha Version currently available](https://visualizer.cat-apps.com).",
+    "type": "software",
+    "topics": [
+      "environment"
+    ],
+    "dominant": "environment",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-63-policyoptimizer-r-package-for-selecting-",
+    "title": "policyoptimizer R Package for selecting optimal county transportation policy scenarios",
+    "year": 2024,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": "https://github.com/Gao-Labs/policyoptimizer",
+    "description": "An R package for transportation emissions policy optimization, focused on US states and counties. Based on Cornell's server of previous MOVES analyses and the federal CMAQ database of past transportation emissions policies' cost effectiveness stats.",
+    "type": "software",
+    "topics": [
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-64-archr-r-package-for-enumeration-evaluat",
+    "title": "archr R package for Enumeration, Evaluation, & Optimization of Complex Systems Architectures",
+    "year": 2024,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": "https://github.com/timothyfraser/archr",
+    "description": "A public `R` package for mapping all possible ways of building a system, measuring traits of each possible architecture, and conducting search and optimization on the population of architectures. Includes stakeholder network analysis modules. Designed for use with Cornell Systems Architecture course.",
+    "type": "software",
+    "topics": [],
+    "dominant": "other",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-65-moves_anywhere-docker-image-for-emission",
+    "title": "moves_anywhere Docker image for Emissions Estimation",
+    "year": 2024,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": "https://github.com/gao-labs/moves_anywhere",
+    "description": "A `Docker` image for the EPA's MOVES Emissions Estimation Software and post-processing. While MOVES was built for Windows, `moves_anywhere` can be run on **on any operating system**, with a simplified `git bash` command line interface, for quick, distributed batch computing of emissions scenarios.",
+    "type": "software",
+    "topics": [
+      "environment",
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-66-catr-r-package-for-querying-epa-s-moves-",
+    "title": "catr R package for querying EPA's MOVES software",
+    "year": 2023,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": "A proprietary R package for estimating emissions from transportation for US counties, using the EPA's MOVES software, to support Climate Action in Transportation using R (catr). Extends MOVES functionality by allowing for iterative MOVES runs, with custom policy scenarios and output formatting for easy visualization.",
+    "type": "software",
+    "topics": [
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-67-moveslite-r-package-for-fast-emissions-e",
+    "title": "moveslite R package for Fast Emissions Estimation",
+    "year": 2023,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": "A proprietary R package for speedy approximating county, state, or nation level emissions from custom inputs, using county-specific models of existing default air pollution emissions estimates from the EPA's MOVES software.",
+    "type": "software",
+    "topics": [
+      "environment",
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-68-calculator-app-for-comparing-emissions-p",
+    "title": "calculator App for Comparing Emissions Policy Scenarios",
+    "year": 2023,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": "A ShinyApp Dashboard that for visualizing and comparing transportation emissions scenarios based on custom user-supplied information about transportation activity levels and fleet composition. Uses my `moveslite` R package as an engine.",
+    "type": "software",
+    "topics": [
+      "environment"
+    ],
+    "dominant": "environment",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-69-geoshiny-verse-docker-image-for-deployin",
+    "title": "geoshiny-verse Docker image for Deploying Dashboards",
+    "year": 2023,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": "A geospatial-enabled ShinyApp dashboard deployment environment publicly available for any dashboard developer as a Docker image on Dockerhub. Will help anyone deploy a ShinyApp with mapping capabilities. At: https://hub.docker.com/repository/docker/tmf77/geoshiny-verse/general",
+    "type": "software",
+    "topics": [],
+    "dominant": "other",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-70-simulate-r-package-for-statistical-simul",
+    "title": "simulate R package for statistical simulation",
+    "year": 2023,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": "R package for tidyverse-friendly statistical simulation, to account for estimation and fundamental uncertainty when simulating quantities of interest from statistical models. At: https://github.com/timothyfraser/simulate",
+    "type": "software",
+    "topics": [],
+    "dominant": "other",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-71-tidyfault-r-package-for-fault-tree-analy",
+    "title": "tidyfault R package for fault tree analysis",
+    "year": 2023,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": "R Package for tidy fault tree analysis! Visualizes fault trees, identifies minimal cutsets, and calculates other quantities of interest. At: https://github.com/timothyfraser/tidyfault",
+    "type": "software",
+    "topics": [],
+    "dominant": "other",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-72-a-tale-of-many-cities-mapping-social-in",
+    "title": "A Tale of Many Cities: Mapping Social Infrastructure and Social Capital across North America",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "BA student Osama Awadalla",
+      "Daniel Aldrich",
+      "colleagues"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "under revise and resubmit",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "gis"
+    ],
+    "dominant": "resilience",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-73-cycling-cities-measuring-transportation",
+    "title": "Cycling Cities: Measuring Transportation Equity in Bikeshare Networks",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Katherine Van Woert",
+      "Sophia Olivieri",
+      "Jonathan Baron",
+      "Katelyn Buckley",
+      "Pamela Lalli"
+    ],
+    "doi": "10.2139/ssrn.4076776",
+    "link": "https://dx.doi.org/10.2139/ssrn.4076776",
+    "description": null,
+    "type": "under revise and resubmit",
+    "topics": [
+      "transportation",
+      "networks",
+      "gis"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-74-a-city-of-two-tales-a-quantitative-anal",
+    "title": "A City of Two Tales: A Quantitative Analysis of Vulnerability, Connectedness, and Resilience in Cloverdale, CA",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Ayushi Mishra",
+      "Osama Awadalla",
+      "Jennifer Shea",
+      "Daniel Homsey",
+      "Daniel P. Aldrich"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "under revise and resubmit",
+    "topics": [
+      "disaster",
+      "gis"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-75-mapping-green-communities-new-data-reso",
+    "title": "Mapping Green Communities: New Data Resources for Measuring Grassroots Environmental Organizing in Japan",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Pinar Temocin"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "under revise and resubmit",
+    "topics": [
+      "environment",
+      "gis"
+    ],
+    "dominant": "environment",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-76-cutting-carbon-on-a-dime-optimization-o",
+    "title": "Cutting Carbon on a Dime: Optimization of Transportation Policy Scenarios for Cost-Effective Emissions Reduction",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Leah Smith",
+      "Kaylen Li",
+      "Alireza",
+      "Yazdiani",
+      "Yan Guo",
+      "Osama Awadalla",
+      "Oliver Gao"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "under review",
+    "topics": [
+      "environment",
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-77-driving-climate-action-with-the-visualiz",
+    "title": "Driving Climate Action with the VISUALIZER Development and Applications of a Dashboard for Transportation Emissions Data & Visualization",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Oliver Gao"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "under review",
+    "topics": [
+      "environment",
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-78-networks-in-crisis-measuring-ethnic-str",
+    "title": "Networks in Crisis: Measuring Ethnic Stratification and Organizational Reach Post-Disaster",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Jennifer Shea",
+      "Daniel Homsey",
+      "Daniel P. Aldrich"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "under review",
+    "topics": [
+      "disaster",
+      "networks"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-79-ai-powered-emissions-reporting-using-gp",
+    "title": "AI-Powered Emissions Reporting: Using GPT to Write and Validate Emissions Data Reports for Policymakers",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Peilin Li",
+      "Yan Guo",
+      "Peculiar Lawrence",
+      "Shannya Niveyro",
+      "Maria Dobransky",
+      "Leo Kuang"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "environment",
+      "energy"
+    ],
+    "dominant": "environment",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-80-automated-algorithms-for-converting-emis",
+    "title": "Automated Algorithms for converting Emissions Data into Written Reports for Policymakers",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Peilin Li",
+      "Leo Kuang",
+      "Aarya Darak",
+      "Minghao Yang",
+      "Oliver Gao"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "environment"
+    ],
+    "dominant": "environment",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-81-cloud-moves-for-iterative-emissions-esti",
+    "title": "Cloud MOVES for Iterative Emissions Estimation: Architecting a Distributed Cloud Computing System for Transportation Emissions Management",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Oliver Gao"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "environment",
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-82-co-benefits-of-transportation-congestion",
+    "title": "Co-benefits of transportation congestion mitigation, air quality improvement, and health implication in U.S. between 1992 and 2022",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Xinwei Li",
+      "Oliver Gao"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "environment",
+      "transportation",
+      "health"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-83-networked-neighborhoods-the-role-of-soc",
+    "title": "Networked Neighborhoods: The role of Social Infrastructure in Social Connectivity in Urban Systems",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Khushi Patel"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "networks",
+      "gis"
+    ],
+    "dominant": "resilience",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-84-where-the-grass-is-greener-social-infra",
+    "title": "Where the Grass Is Greener: Social Infrastructure and Resilience to COVID-19.",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": "10.2139/ssrn.3841826",
+    "link": "http://dx.doi.org/10.2139/ssrn.3841826",
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "disaster",
+      "resilience",
+      "social_infrastructure",
+      "health"
+    ],
+    "dominant": "disaster",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-85-japan-s-green-voters-the-role-of-social",
+    "title": "Japan’s Green Voters: The Role of Social Capital in Women’s Movements against Nuclear Power Policy",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "energy"
+    ],
+    "dominant": "resilience",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-86-boomtown-or-bust-policy-feedback-effect",
+    "title": "Boomtown or Bust? Policy Feedback Effects of Controversial Facilities on Social Capital in Japan",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Toshiaki Yoshida"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure"
+    ],
+    "dominant": "resilience",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-87-bottom-up-or-top-down-bridging-academic",
+    "title": "Bottom-up or Top-Down? Bridging Academics in the ADVANCE Network for Gender Equity",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser",
+      "Laura K. Nelson",
+      "Kathrin Zippel"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "resilience",
+      "social_infrastructure",
+      "networks"
+    ],
+    "dominant": "resilience",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-88-networks-of-solar-cities-",
+    "title": "Networks of Solar Cities.",
+    "year": null,
+    "journal": null,
+    "authors": [
+      "Timothy Fraser"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "working paper",
+    "topics": [
+      "networks",
+      "gis",
+      "energy"
+    ],
+    "dominant": "energy",
+    "volume": "NA",
+    "issue": "NA"
+  }
+]
