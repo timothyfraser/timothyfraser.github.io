@@ -1,7 +1,7 @@
-import { site, buildMeta } from '../data/loaders';
+import { site, metrics } from '../data/loaders';
 
 export default function Footer() {
-  const builtDate = buildMeta?.built_at ? new Date(buildMeta.built_at).toISOString().slice(0, 10) : '';
+  const builtDate = metrics?.as_of ?? '';
   return (
     <footer className="site-footer">
       <div className="site-footer-inner">
@@ -12,7 +12,7 @@ export default function Footer() {
             {site.affiliation}<br />
             {site.institution} · {site.location}
           </p>
-          <p className="meta">Last built {builtDate || '—'}</p>
+          <p className="meta">Updated {builtDate || '—'}</p>
         </div>
         <div className="col">
           <h4>Sites</h4>

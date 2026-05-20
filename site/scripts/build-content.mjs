@@ -330,9 +330,10 @@ function main() {
   writeJson('coauthor-graph.json', graph);
   writeJson('press.json', { items: press, monthly: buckets });
   writeJson('metrics-computed.json', metrics);
+  // Deterministic build-info — no per-run timestamp so the working tree
+  // doesn't get dirtied on every dev/build. The footer surfaces
+  // metrics.as_of (Tim-maintained) as the "last updated" signal instead.
   writeJson('build-info.json', {
-    built_at: new Date().toISOString(),
-    node: process.version,
     counts: {
       publications: pubs.length,
       press: press.length,
