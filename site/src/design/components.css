@@ -352,3 +352,123 @@ figure.figure.left {
   margin: 24px 0;
   max-width: 50ch;
 }
+
+/* ============ StatBox primitive ============ */
+.statbox {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  background: var(--bg-2);
+  padding: 16px 16px 14px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.statbox .v {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.statbox .v em { color: var(--accent); font-style: normal; }
+.statbox .l {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+.statbox a.src {
+  font-size: 0.74rem;
+  color: var(--accent);
+  margin-top: 6px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+@media (max-width: 760px) {
+  .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ============ Action button menu ============ */
+.action-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 4px;
+}
+
+/* ============ Hero band tint (Home only) ============ */
+.hero-band {
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--line);
+  margin: 0 -28px 28px;
+  padding: 36px 28px 36px;
+}
+@media (max-width: 760px) {
+  .hero-band { padding: 24px 22px; margin: 0 -22px 22px; }
+}
+
+/* ============ WNYC card ============ */
+.wnyc-card {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 18px 22px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  margin: 24px 0;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.wnyc-card:hover {
+  text-decoration: none;
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--ink);
+}
+.wnyc-card .wnyc-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  font-size: 26px;
+}
+.wnyc-card .wnyc-meta {
+  font-size: 0.74rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.wnyc-card .wnyc-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 2px 0;
+}
+.wnyc-card .wnyc-sub {
+  font-size: 0.85rem;
+  color: var(--ink-2);
+}
+.wnyc-card .wnyc-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .wnyc-card { grid-template-columns: 48px 1fr; gap: 14px; padding: 14px 16px; }
+  .wnyc-card .wnyc-icon { width: 48px; height: 48px; font-size: 20px; }
+  .wnyc-card .wnyc-cta { grid-column: 1 / -1; }
+}

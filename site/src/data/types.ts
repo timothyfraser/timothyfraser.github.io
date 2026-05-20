@@ -55,6 +55,8 @@ export interface MetricsComputed {
   software: number;
   coauthors: number;
   press_total: number;
+  press_last_12mo: number;
+  press_by_year: Record<string, number>;
   press_by_type: Record<string, number>;
   by_type: Record<string, number>;
   topics: Record<string, number>;

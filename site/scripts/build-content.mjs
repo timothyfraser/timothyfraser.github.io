@@ -291,6 +291,28 @@ function computeMetrics(pubs, press, manual) {
   const pressByType = {};
   for (const p of press) pressByType[p.type] = (pressByType[p.type] || 0) + 1;
 
+  // Press in the last 12 months — count items with parsed date in window.
+  // For determinism: use the most recent press date as the "now" anchor
+  // rather than the wall clock, so the build is reproducible.
+  let pressLast12 = 0;
+  let pressByYear = {};
+  if (press.length) {
+    const maxDate = press
+      .map(p => p.date)
+      .filter(Boolean)
+      .sort()
+      .pop();
+    const anchor = maxDate ? new Date(maxDate) : new Date();
+    const cutoff = new Date(anchor);
+    cutoff.setFullYear(cutoff.getFullYear() - 1);
+    for (const p of press) {
+      if (!p.date) continue;
+      if (new Date(p.date) >= cutoff) pressLast12 += 1;
+      const y = p.year;
+      if (y) pressByYear[y] = (pressByYear[y] || 0) + 1;
+    }
+  }
+
   return {
     citations: manual.citations ?? null,
     h_index: manual.h_index ?? null,
@@ -301,6 +323,8 @@ function computeMetrics(pubs, press, manual) {
     software,
     coauthors: coauthors.size,
     press_total: press.length,
+    press_last_12mo: pressLast12,
+    press_by_year: pressByYear,
     press_by_type: pressByType,
     by_type: byType,
     topics: topicCounts,

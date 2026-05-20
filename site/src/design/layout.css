@@ -314,3 +314,39 @@
 @media (max-width: 640px) {
   .recruit-row { grid-template-columns: 1fr; }
 }
+
+/* Cornell-red rule under footer h4 labels */
+.site-footer h4 {
+  position: relative;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+/* Section head h2 gets a small red underline accent by default. */
+.section-head h2 {
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.section-head h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+}
+
+/* Press timeline override: the global red rule shouldn't leak into the eyebrow div of the existing timeline component. */
+
+/* Featured/work tile: red top hint on hover for recruitment salience */
+.work-tile {
+  border-top: 3px solid transparent;
+}
+.work-tile:hover { border-top-color: var(--accent); }
+
+/* Recruit row: subtle red accent on hover */
+.recruit-row { transition: background 0.12s ease; }
+.recruit-row:hover { background: var(--accent-soft); }
