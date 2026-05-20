@@ -22,9 +22,9 @@ export default function Software() {
   return (
     <div className="wrap">
       <SectionMast
-        kicker="Software · R packages, dashboards, course books"
-        title={<>Open <em>tooling</em> for emissions, networks, &amp; resilience.</>}
-        lede="Every project ships an R package, a dashboard, or a textbook. Source is on GitHub; dashboards run live."
+        eyebrow="Software"
+        title="R packages, dashboards, and course books"
+        subhead="Every project ships an R package, a dashboard, or a textbook. Source is on GitHub; dashboards run live."
       />
 
       <div className="filter-bar">
@@ -42,12 +42,12 @@ export default function Software() {
 
       <div className="grid-2">
         {filtered.map(s => (
-          <Card key={s.id} accent={s.featured ? 'signal' : 'gold'}>
+          <Card key={s.id} featured={s.featured}>
             <CardHead
-              id={s.tags.slice(0, 3).join(' · ').toUpperCase()}
+              id={s.tags.slice(0, 3).join(' · ')}
               name={s.name}
               tag={s.blurb}
-              badge={s.featured ? <span className="badge signal">Featured</span> : <span className="badge">{s.status}</span>}
+              badge={s.featured ? <span className="badge accent">Featured</span> : <span className="badge">{s.status}</span>}
             />
             <CardBody>
               <div className="chips">

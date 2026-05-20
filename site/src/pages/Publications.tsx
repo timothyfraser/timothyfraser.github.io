@@ -43,9 +43,9 @@ export default function Publications() {
   return (
     <div className="wrap">
       <SectionMast
-        kicker={`Publications · ${publications.length} entries`}
-        title={<>Papers, chapters, &amp; <em>software</em>.</>}
-        lede="Filter by type and topic. Click through for the DOI or the full PDF. The CV remains the canonical record."
+        eyebrow={`Publications · ${publications.length} entries`}
+        title="Papers, chapters, and software"
+        subhead="Filter by type and topic. Click through for the DOI or the full PDF. The CV remains the canonical record."
       />
 
       <TopicBars />
@@ -73,7 +73,7 @@ export default function Publications() {
         ))}
       </div>
 
-      <p className="mono" style={{ margin: '8px 0 20px' }}>
+      <p style={{ margin: '8px 0 18px', fontSize: '0.88rem', color: 'var(--muted)' }}>
         Showing {items.length} of {publications.length}
       </p>
 

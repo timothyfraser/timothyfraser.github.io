@@ -8,13 +8,15 @@ export default function Students() {
   return (
     <div className="wrap">
       <SectionMast
-        kicker="Students · current teams + past collaborations"
-        title={<>Research with <em>students</em>.</>}
-        lede="34+ students, 13+ peer-reviewed coauthored papers. Cornell MEng teams are recruiting now."
+        eyebrow="Students"
+        title="Research with students"
+        subhead="34+ students, 13+ peer-reviewed coauthored papers. Cornell MEng teams are recruiting now."
       />
 
-      <section>
-        <div className="kicker" style={{ marginBottom: 14 }}>Current Cornell teams</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Current Cornell teams</h2>
+        </div>
         {current.map((s, i) => (
           <div className="row" key={i}>
             <div className="row-meta">{s.level} · {s.institution}</div>
@@ -24,8 +26,10 @@ export default function Students() {
         ))}
       </section>
 
-      <section style={{ marginTop: 50 }}>
-        <div className="kicker" style={{ marginBottom: 14 }}>Past student collaborations</div>
+      <section className="section">
+        <div className="section-head">
+          <h2>Past student collaborations</h2>
+        </div>
         {past.map((s, i) => (
           <div className="row" key={i}>
             <div className="row-meta">{s.level} · {s.institution}</div>

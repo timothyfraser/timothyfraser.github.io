@@ -1,5 +1,6 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
 import Home from './pages/Home';
+import About from './pages/About';
 import Research from './pages/Research';
 import Teaching from './pages/Teaching';
 import Projects from './pages/Projects';
@@ -18,7 +19,7 @@ export default function App() {
       <nav className="site-nav" aria-label="Primary">
         <div className="site-nav-inner">
           <NavLink to="/" className="site-nav-brand">
-            Tim <em>Fraser</em>
+            Timothy Fraser
           </NavLink>
           <ul>
             {site.nav.map(item => (
@@ -41,6 +42,7 @@ export default function App() {
       <main id="main" className="page">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/research" element={<Research />} />
           <Route path="/teaching" element={<Teaching />} />
           <Route path="/projects" element={<Projects />} />

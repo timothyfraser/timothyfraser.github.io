@@ -41,10 +41,15 @@ export default function Press() {
   return (
     <div className="wrap">
       <SectionMast
-        kicker={`Press · ${press.items.length} mentions`}
-        title={<>In the <em>news</em>.</>}
-        lede="Quoted, cited, interviewed, and reviewed. The congestion-pricing cluster in late 2025 was a particularly busy moment."
+        eyebrow={`Press · ${press.items.length} mentions`}
+        title="In the news"
+        subhead="Quoted, cited, interviewed, and reviewed across academic and general-audience outlets. The late-2025 cluster was the congestion-pricing study."
       />
+
+      <figure className="figure" style={{ margin: '0 0 28px' }}>
+        <img src="/images/interview.png" alt="Tim being interviewed on television" />
+        <figcaption>Interview on local broadcast — coverage of the NYC congestion-pricing PM2.5 study.</figcaption>
+      </figure>
 
       <PressTimeline />
 
@@ -62,8 +67,8 @@ export default function Press() {
       </div>
 
       {groupedByYear.map(([year, list]) => (
-        <section key={year} style={{ marginTop: 26 }}>
-          <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.84rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--muted)', borderBottom: '2px solid var(--ink)', paddingBottom: 6 }}>
+        <section key={year} style={{ marginTop: 28 }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 600, borderBottom: '1px solid var(--line)', paddingBottom: 6, marginBottom: 6 }}>
             {year || 'Undated'}
           </h3>
           {list.map((p, i) => (

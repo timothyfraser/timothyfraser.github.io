@@ -17,6 +17,7 @@ import studentsCsv from '../../content/students.csv?raw';
 import sitesCsv from '../../content/sites.csv?raw';
 
 import homeIntroMd from '../../content/pages/home-intro.md?raw';
+import aboutMd from '../../content/pages/about.md?raw';
 import researchMd from '../../content/pages/research.md?raw';
 import teachingMd from '../../content/pages/teaching.md?raw';
 
@@ -100,6 +101,7 @@ export const researchSites: ResearchSite[] = parseCsv(sitesCsv).map(r => ({
 
 export const markdownPages = {
   home: homeIntroMd,
+  about: aboutMd,
   research: researchMd,
   teaching: teachingMd,
 };

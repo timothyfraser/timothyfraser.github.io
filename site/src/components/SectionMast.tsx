@@ -1,19 +1,17 @@
 import type { ReactNode } from 'react';
 
 interface Props {
-  kicker: string;
+  eyebrow?: string;
   title: ReactNode;
-  lede?: ReactNode;
-  subline?: ReactNode;
+  subhead?: ReactNode;
 }
 
-export default function SectionMast({ kicker, title, lede, subline }: Props) {
+export default function SectionMast({ eyebrow, title, subhead }: Props) {
   return (
-    <header className="section-mast reveal d1">
-      <div className="kicker">{kicker}</div>
+    <header className="reveal d1" style={{ padding: '44px 0 24px' }}>
+      {eyebrow && <div className="eyebrow">{eyebrow}</div>}
       <h1>{title}</h1>
-      {subline && <div className="sub">{subline}</div>}
-      {lede && <p className="lede">{lede}</p>}
+      {subhead && <p className="subhead">{subhead}</p>}
     </header>
   );
 }

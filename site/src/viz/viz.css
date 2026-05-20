@@ -1,7 +1,20 @@
+/* Topic palette — used only by D3 marks in this folder.
+   Kept out of the global tokens so chrome stays Cornell-red restrained. */
+:root {
+  --topic-environment: oklch(50% 0.12 160);
+  --topic-transportation: oklch(60% 0.16 40);
+  --topic-disaster: oklch(50% 0.12 240);
+  --topic-resilience: oklch(50% 0.12 300);
+  --topic-polarization: oklch(60% 0.13 80);
+  --topic-energy: oklch(55% 0.14 60);
+  --topic-health: oklch(50% 0.13 10);
+  --topic-networks: oklch(52% 0.10 220);
+}
+
 .coauthor-viz {
   position: relative;
-  background: var(--paper-2);
-  border: 1.5px solid var(--ink);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
   padding: 0;
@@ -16,12 +29,10 @@
   left: 16px;
   bottom: 16px;
   background: var(--ink);
-  color: var(--paper);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  color: var(--bg);
+  font-size: 0.78rem;
   padding: 8px 12px;
   border-radius: var(--radius-sm);
-  letter-spacing: 0.04em;
   z-index: 2;
   pointer-events: none;
   max-width: 60%;
@@ -29,13 +40,10 @@
 .viz-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 16px;
+  gap: 10px 16px;
   padding: 12px 18px;
-  border-top: 1px dashed var(--line);
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  border-top: 1px solid var(--line);
+  font-size: 0.76rem;
   color: var(--muted);
 }
 .viz-legend .dot {
@@ -47,19 +55,16 @@
 }
 .viz-fallback {
   padding: 12px 18px;
-  border-top: 1px dashed var(--line);
+  border-top: 1px solid var(--line);
   font-size: 0.9rem;
 }
 .viz-fallback summary {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
   color: var(--muted);
   cursor: pointer;
 }
 .viz-fallback ol {
-  margin: 12px 0 4px 20px;
+  margin: 10px 0 4px 20px;
   font-size: 0.92rem;
 }
 
@@ -75,26 +80,26 @@
   grid-template-columns: 200px 1fr 40px;
   gap: 12px;
   align-items: center;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
+  color: var(--ink-2);
 }
 .topicbar-track {
-  height: 14px;
-  background: var(--paper-3);
+  height: 12px;
+  background: var(--bg-3);
   border-radius: 2px;
   overflow: hidden;
 }
 .topicbar-fill {
   height: 100%;
-  background: var(--signal);
+  background: var(--accent);
 }
 
 /* Press timeline */
 .timeline {
-  background: var(--paper-2);
-  border: 1.5px solid var(--ink);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 20px 24px;
+  padding: 20px 22px;
   margin: 24px 0;
 }
 .timeline-svg { width: 100%; height: 140px; display: block; }
@@ -102,18 +107,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px 16px;
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  font-size: 0.76rem;
   color: var(--muted);
   margin-top: 14px;
 }
 
-/* Map */
+/* Research map */
 .research-map {
-  background: var(--paper-2);
-  border: 1.5px solid var(--ink);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 16px;
 }
@@ -121,10 +123,9 @@
 .map-tooltip {
   position: absolute;
   background: var(--ink);
-  color: var(--paper);
+  color: var(--bg);
   padding: 6px 10px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   border-radius: 3px;
   pointer-events: none;
   transform: translate(-50%, -130%);
