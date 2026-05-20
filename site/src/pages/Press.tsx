@@ -1,8 +1,11 @@
 import { useMemo, useState } from 'react';
 import SectionMast from '../components/SectionMast';
-import PressTimeline from '../viz/PressTimeline';
+import StatBox from '../components/StatBox';
+import WNYCEmbed from '../components/WNYCEmbed';
+import PressYearBars from '../viz/PressYearBars';
+import Figure from '../components/Figure';
 import '../viz/viz.css';
-import { press } from '../data/loaders';
+import { press, metrics } from '../data/loaders';
 
 const TYPE_LABEL: Record<string, string> = {
   quoted_in: 'Quoted in',
@@ -41,17 +44,41 @@ export default function Press() {
   return (
     <div className="wrap">
       <SectionMast
-        eyebrow={`Press · ${press.items.length} mentions`}
+        eyebrow="Press"
         title="In the news"
         subhead="Quoted, cited, interviewed, and reviewed across academic and general-audience outlets. The late-2025 cluster was the congestion-pricing study."
       />
 
-      <figure className="figure" style={{ margin: '0 0 28px' }}>
-        <img src="/images/interview.png" alt="Tim being interviewed on television" />
-        <figcaption>Interview on local broadcast — coverage of the NYC congestion-pricing PM2.5 study.</figcaption>
-      </figure>
+      {/* FEATURED WNYC */}
+      <WNYCEmbed />
 
-      <PressTimeline />
+      {/* STAT BOXES */}
+      <div className="grid-2" style={{ margin: '20px 0 28px' }}>
+        <StatBox
+          value={metrics.press_total}
+          label="Total press mentions"
+        />
+        <StatBox
+          value={metrics.press_last_12mo}
+          label="Mentions in the last 12 months"
+        />
+      </div>
+
+      {/* YEAR BARS — the recent spike now dominates */}
+      <PressYearBars />
+
+      {/* Interview — small, properly captioned */}
+      <Figure
+        src="/images/interview.png"
+        alt="Tim interviewing an anti-nuclear activist in Kagoshima, Japan"
+        caption="Tim interviewing an anti-nuclear activist in Kagoshima, Japan — Fulbright fieldwork, 2017."
+        align="right"
+      />
+
+      <div className="prose" style={{ maxWidth: 'none' }}>
+        <p>Below: full press feed, grouped by year. Filter or search to narrow.</p>
+      </div>
+      <div style={{ clear: 'both' }} />
 
       <div className="filter-bar">
         <input

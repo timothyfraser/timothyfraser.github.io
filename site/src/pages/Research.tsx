@@ -6,7 +6,14 @@ import ResearchMap from '../viz/ResearchMap';
 import TopicBars from '../viz/TopicBars';
 import '../viz/viz.css';
 import { markdownPages, publications, projects } from '../data/loaders';
-import Card, { CardBody, CardHead } from '../components/Card';
+import Card, { CardBody, CardHead, CardFigure } from '../components/Card';
+
+const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
+  cat: { src: '/images/dashboard_cat.PNG', alt: 'CAT dashboard' },
+  'social-infrastructure': { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure map' },
+  evacuation: { src: '/images/feature_dashjapan.png', alt: 'Japan dashboard' },
+  'polarization-health': { src: '/images/feature_dashstat.png', alt: 'Statistics dashboard' },
+};
 
 export default function Research() {
   const selected = publications
@@ -23,23 +30,46 @@ export default function Research() {
         subhead="A computational social science of cities — networks, social infrastructure, mobility big-data, and policy dashboards."
       />
 
+      {/* ACTIVE PROJECTS — promoted to TOP */}
       <section className="section">
-        <Figure
-          src="/images/image_my_approach.png"
-          alt="Diagram of Tim's mixed-methods research approach"
-          caption="Mixed-methods toolkit: network statistics, GIS, and quasi-experiments applied to environmental and resilience policy."
-          align="right"
-        />
-        <div className="prose">
-          <Markdown>{markdownPages.research}</Markdown>
+        <div className="section-head">
+          <h2>Active research projects</h2>
+          <p className="subhead">Ongoing work across emissions, resilience, mapping, and polarization.</p>
         </div>
-        <div style={{ clear: 'both' }} />
+        <div className="grid-2">
+          {researchProjects.map(p => {
+            const img = PROJECT_IMAGES[p.id];
+            return (
+              <Card key={p.id} featured>
+                {img && <CardFigure src={img.src} alt={img.alt} />}
+                <CardHead
+                  id={p.category}
+                  name={p.name}
+                  tag={p.tagline}
+                  badge={<span className="badge accent">{p.badge.label}</span>}
+                />
+                <CardBody>
+                  <p>{p.body}</p>
+                  <div className="chips">
+                    {p.skills.map(s => <span className="chip" key={s}>{s}</span>)}
+                  </div>
+                  {p.links.length > 0 && (
+                    <div style={{ marginTop: 12, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                      {p.links.map(l => <a key={l.url} className="btn ghost" href={l.url}>{l.label} →</a>)}
+                    </div>
+                  )}
+                </CardBody>
+              </Card>
+            );
+          })}
+        </div>
       </section>
 
+      {/* SELECTED FIGURES — promoted up */}
       <section className="section">
         <div className="section-head">
           <h2>Selected figures</h2>
-          <p className="subhead">A few visuals from recent and ongoing work.</p>
+          <p className="subhead">Visuals from recent and ongoing work — NYC, Boston, Japan.</p>
         </div>
         <div className="grid-2">
           <Figure
@@ -60,11 +90,12 @@ export default function Research() {
           <Figure
             src="/images/feature_dashstat.png"
             alt="Statistics dashboard"
-            caption="Visualizer dashboard for CAT-formatted MOVES outputs — emissions by county, scenario, and pollutant."
+            caption="VISUALIZER dashboard for CAT-formatted MOVES outputs — emissions by county, scenario, and pollutant."
           />
         </div>
       </section>
 
+      {/* MAP */}
       <section className="section">
         <div className="section-head">
           <h2>Research footprint</h2>
@@ -73,6 +104,7 @@ export default function Research() {
         <ResearchMap height={300} />
       </section>
 
+      {/* TOPIC BARS */}
       <section className="section">
         <div className="section-head">
           <h2>Publications by topic</h2>
@@ -81,6 +113,7 @@ export default function Research() {
         <TopicBars />
       </section>
 
+      {/* COAUTHOR NETWORK */}
       <section className="section">
         <div className="section-head">
           <h2>Coauthorship</h2>
@@ -89,6 +122,7 @@ export default function Research() {
         <CoauthorNetwork height={460} />
       </section>
 
+      {/* RECENT PAPERS */}
       <section className="section">
         <div className="section-head">
           <h2>Selected recent papers</h2>
@@ -111,31 +145,22 @@ export default function Research() {
         ))}
       </section>
 
+      {/* PROSE — demoted to the bottom; image floats inside */}
       <section className="section">
         <div className="section-head">
-          <h2>Active research projects</h2>
-          <p className="subhead">Broader research projects beyond the recruiting MEng tracks.</p>
+          <h2>Research summary</h2>
+          <p className="subhead">The longer story — what the methodology, the dashboards, and the student teams add up to.</p>
         </div>
-        <div className="grid-2">
-          {researchProjects.map(p => (
-            <Card key={p.id}>
-              <CardHead
-                id={p.category}
-                name={p.name}
-                tag={p.tagline}
-                badge={<span className="badge accent">{p.badge.label}</span>}
-              />
-              <CardBody>
-                <p>{p.body}</p>
-                {p.links.length > 0 && (
-                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 10 }}>
-                    {p.links.map(l => <a key={l.url} className="btn ghost" href={l.url}>{l.label} →</a>)}
-                  </div>
-                )}
-              </CardBody>
-            </Card>
-          ))}
+        <Figure
+          src="/images/image_my_approach.png"
+          alt="Diagram of Tim's mixed-methods research approach"
+          caption="Mixed-methods toolkit — networks, GIS, quasi-experiments — applied to environmental and resilience policy."
+          align="right"
+        />
+        <div className="prose">
+          <Markdown>{markdownPages.research}</Markdown>
         </div>
+        <div style={{ clear: 'both' }} />
       </section>
     </div>
   );

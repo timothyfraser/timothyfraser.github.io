@@ -8,6 +8,14 @@
   "software": 10,
   "coauthors": 97,
   "press_total": 31,
+  "press_last_12mo": 20,
+  "press_by_year": {
+    "2020": 2,
+    "2021": 2,
+    "2022": 1,
+    "2025": 17,
+    "2026": 9
+  },
   "press_by_type": {
     "cited_in": 16,
     "quoted_in": 13,
