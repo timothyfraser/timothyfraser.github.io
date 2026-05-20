@@ -1,0 +1,76 @@
+{
+  "courses_taught": [
+    { "code": "SYSEN 5300", "title": "Systems Reliability & Six Sigma", "level": "grad", "years": [2022, 2023, 2024, 2025], "inst": "Cornell" },
+    { "code": "SYSEN 5400", "title": "Systems Architecture", "level": "grad", "years": [2023, 2024], "inst": "Cornell" },
+    { "code": "SYSEN 5460", "title": "Data Science for Socio-Technical Systems", "level": "grad", "years": [2024], "inst": "Cornell" },
+    { "code": "SYSEN 5900", "title": "MEng Research Projects", "level": "grad", "years": [2023, 2024, 2025], "inst": "Cornell" },
+    { "code": "POLS 2400", "title": "Quantitative Techniques for Political Science", "level": "undergrad", "years": [2020, 2021], "inst": "Northeastern" },
+    { "code": "POLS 2403", "title": "Research Methods", "level": "undergrad", "years": [2021], "inst": "Northeastern" }
+  ],
+  "resources": [
+    {
+      "id": "sigma",
+      "name": "Sigma",
+      "kind": "Online Textbook",
+      "blurb": "System Reliability & Six Sigma in R and Python — ~28 chapters, dual-language, learning checks. Cornell SYSEN 5300.",
+      "url": "https://timothyfraser.com/sigma",
+      "featured": true,
+      "accent": "signal",
+      "tags": ["R", "Python", "reliability", "six sigma", "statistics"]
+    },
+    {
+      "id": "netsci",
+      "name": "NetSci",
+      "kind": "Course Site",
+      "blurb": "Network Science & Applications for Systems Engineering — interactive HTML activities with learning checks.",
+      "url": "https://timothyfraser.com/netsci",
+      "featured": true,
+      "accent": "cool",
+      "tags": ["networks", "R"]
+    },
+    {
+      "id": "dsai",
+      "name": "DSAI",
+      "kind": "Course",
+      "blurb": "A large course on Data Science & AI — open source, growing.",
+      "url": "https://github.com/timothyfraser/dsai",
+      "featured": true,
+      "accent": "hot",
+      "tags": ["AI", "data science", "Python"]
+    },
+    {
+      "id": "archr-workshops",
+      "name": "archr workshops",
+      "kind": "~20 Workshops",
+      "blurb": "Systems Architecture: enumeration, evaluation, and optimization in R.",
+      "url": "https://github.com/timothyfraser/archr",
+      "featured": false,
+      "accent": "gold",
+      "tags": ["R", "optimization", "systems"]
+    },
+    {
+      "id": "sts",
+      "name": "STS tutorials",
+      "kind": "30 R Tutorials",
+      "blurb": "DataViz & dashboards for Data Science for Socio-Technical Systems.",
+      "url": "https://github.com/timothyfraser/sts",
+      "tags": ["R", "dataviz"]
+    },
+    {
+      "id": "rpubs",
+      "name": "RPubs tutorials",
+      "kind": "22+ Tutorials",
+      "blurb": "Quantitative social science methods in R, public and reusable.",
+      "url": "https://rpubs.com/timothyfraser",
+      "tags": ["R", "tutorials"]
+    },
+    {
+      "id": "moves_tutorials",
+      "name": "moves_tutorials",
+      "kind": "Webinar Series",
+      "blurb": "Using EPA MOVES with modern computational tools in R.",
+      "url": "https://github.com/timothyfraser/moves_tutorials",
+      "tags": ["R", "MOVES", "emissions"]
+    }
+  ]
+}

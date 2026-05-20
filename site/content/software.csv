@@ -1,0 +1,15 @@
+id,name,blurb,repo_url,live_url,tags,year,status,featured
+cat,Climate Action in Transportation (CAT),Public dashboard system for estimating transportation emissions — built on EPA MOVES.,,https://cat-apps.com/,R|Shiny|MOVES|emissions|dashboards,2024,active,true
+visualizer,VISUALIZER,Suite of ShinyApp modules that visualize results for any CAT-formatted MOVES data table — line/donut/rank charts, maps, infographics.,https://github.com/timothyfraser/visualizer,https://visualizer.cat-apps.com/,R|Shiny|MOVES|dataviz,2024,active,true
+policyoptimizer,policyoptimizer,Optimization tool to simplify policy scenario selection for transportation emissions.,https://github.com/timothyfraser/policyoptimizer,,R|optimization|policy,2024,alpha,false
+catr,catr,R package: design custom input databases, runspecs, invoke default or custom MOVES runs, and convert output to CAT format.,https://github.com/timothyfraser/catr,,R|MOVES|package,2024,active,false
+moveslite,moveslite,R package for estimating county/state/nation emissions from custom inputs using cached MOVES output — seconds instead of minutes.,https://github.com/timothyfraser/moveslite,,R|MOVES|package|emissions,2024,active,true
+calculator,calculator,ShinyApp built on moveslite for visualizing and comparing transportation emissions scenarios.,https://github.com/timothyfraser/calculator,,R|Shiny|emissions,2024,active,false
+moves_anywhere,moves_anywhere,Tools to run MOVES outside its native UI — programmatic, automatable.,https://github.com/timothyfraser/moves_anywhere,,R|MOVES,2024,active,false
+archr,archr,R package for tidy systems-architecture enumeration, evaluation, and optimization.,https://github.com/timothyfraser/archr,,R|optimization|systems|package,2024,active,true
+tidyfault,tidyfault,R package for tidy fault tree analysis.,https://github.com/timothyfraser/tidyfault,,R|reliability|package,2024,active,true
+geoshiny-verse,geoshiny-verse,Helpers for building geospatial ShinyApps quickly.,https://github.com/timothyfraser/geoshiny-verse,,R|Shiny|GIS,2024,active,false
+simulate,simulate,Simulation tools for reliability and queueing systems.,https://github.com/timothyfraser/simulate,,R|simulation|reliability,2024,active,false
+dsai,DSAI,A large open course on Data Science & AI.,https://github.com/timothyfraser/dsai,,Python|AI|teaching,2025,active,true
+sigma,Sigma,Online textbook for System Reliability & Six Sigma in R and Python — ~28 chapters.,,https://timothyfraser.com/sigma,R|Python|teaching|textbook,2024,active,true
+netsci,NetSci,Course site for Network Science & Applications for Systems Engineering.,,https://timothyfraser.com/netsci,R|networks|teaching,2025,active,true

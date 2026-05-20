@@ -1,0 +1,44 @@
+:root {
+  /* Editorial palette — anchored on meng_projects.html */
+  --ink: #10201c;
+  --paper: #f4f1e8;
+  --paper-2: #ece8da;
+  --paper-3: #e3dec8;
+  --line: #cfc8b3;
+  --line-2: #b9b196;
+
+  --signal: #1f6f54;      /* monitor green — primary accent */
+  --signal-2: #2c8f6c;
+  --hot: #d9531e;         /* exceedance orange — transport/alert */
+  --cool: #2d6a8f;        /* transit blue — data */
+  --gold: #c79a2a;        /* highlight/underline */
+  --muted: #5b675f;
+
+  /* Cornell red — institutional accent */
+  --cornell: #B31B1B;
+
+  /* Topic palette (used by network nodes, topic bars, map dots) */
+  --topic-environment: var(--signal);
+  --topic-transportation: var(--hot);
+  --topic-disaster: var(--cool);
+  --topic-resilience: #5b3e8f;
+  --topic-polarization: var(--gold);
+  --topic-energy: #b85c00;
+  --topic-health: #8f2d4a;
+  --topic-networks: #4a6f8f;
+
+  --shadow-sm: 0 1px 0 rgba(16, 32, 28, 0.05);
+  --shadow-md: 0 1px 0 rgba(16, 32, 28, 0.05), 0 12px 30px -18px rgba(16, 32, 28, 0.4);
+  --shadow-lg: 0 4px 0 rgba(16, 32, 28, 0.06), 0 28px 60px -28px rgba(16, 32, 28, 0.45);
+
+  --radius: 4px;
+  --radius-sm: 3px;
+  --radius-pill: 100px;
+
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --container: 1080px;
+  --container-narrow: 760px;
+}

@@ -1,0 +1,336 @@
+/* ============ Card primitive ============ */
+.card {
+  background: var(--paper-2);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  margin: 0 0 28px;
+  overflow: hidden;
+  position: relative;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 8px;
+  background: var(--ink);
+}
+.card.accent-cool::before { background: var(--cool); }
+.card.accent-hot::before { background: var(--hot); }
+.card.accent-signal::before { background: var(--signal); }
+.card.accent-gold::before { background: var(--gold); }
+.card.accent-cornell::before { background: var(--cornell); }
+
+.card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px 28px 16px 36px;
+  border-bottom: 1px dashed var(--line);
+  flex-wrap: wrap;
+}
+.card-id {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.card-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  line-height: 1;
+  margin: 0.12em 0 0;
+  letter-spacing: -0.01em;
+}
+.card-tag {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 8px;
+  max-width: 50ch;
+}
+.card-body {
+  padding: 20px 28px 26px 36px;
+}
+.card-body p { margin: 0 0 12px; font-size: 0.97rem; }
+.card-body p.q {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.12rem;
+  color: var(--ink);
+  border-left: 3px solid var(--signal);
+  padding-left: 16px;
+  margin: 4px 0 18px;
+}
+
+@media (max-width: 560px) {
+  .card-head { padding-left: 26px; }
+  .card-body { padding-left: 26px; }
+}
+
+/* ============ Badge ============ */
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  display: inline-block;
+}
+.badge.write { background: var(--gold); color: var(--ink); }
+.badge.build { background: var(--hot); color: #fff; border-color: var(--hot); }
+.badge.collect { background: var(--cool); color: #fff; border-color: var(--cool); }
+.badge.signal { background: var(--signal); color: #fff; border-color: var(--signal); }
+.badge.cornell { background: var(--cornell); color: #fff; border-color: var(--cornell); }
+
+/* ============ Chip ============ */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+.chip b { color: var(--signal); font-weight: 600; }
+.chip.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.chip.active b { color: var(--paper); }
+button.chip { cursor: pointer; }
+button.chip:hover { border-color: var(--ink); }
+
+/* ============ Flow / phase indicator ============ */
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin: 6px 0 22px;
+}
+.flow .step {
+  padding: 6px 12px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.flow .step.now {
+  background: var(--ink);
+  color: var(--paper);
+}
+.flow .arrow {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* ============ Stat strip ============ */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  margin: 32px 0;
+  overflow: hidden;
+}
+.stat {
+  padding: 22px 20px;
+  border-right: 1px dashed var(--line);
+  background: var(--paper-2);
+}
+.stat:last-child { border-right: 0; }
+.stat-val {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ink);
+}
+.stat-val em { color: var(--signal); }
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ============ Section masthead ============ */
+.section-mast {
+  padding: 56px 0 24px;
+  border-bottom: 3px solid var(--ink);
+  margin-bottom: 36px;
+}
+.section-mast h1 em { color: var(--signal); font-style: italic; }
+.section-mast .sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 32px;
+  align-items: baseline;
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.section-mast .sub b { color: var(--ink); font-weight: 600; }
+.section-mast .lede {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.45;
+  margin: 22px 0 6px;
+  max-width: 56ch;
+  font-weight: 400;
+}
+.section-mast .lede span {
+  background: linear-gradient(transparent 62%, rgba(199, 154, 42, 0.4) 0);
+}
+
+/* ============ Button ============ */
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 11px 18px;
+  border: 1.5px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.12s ease;
+}
+.btn:hover { transform: translateY(-1px); border-bottom-color: var(--ink); }
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+}
+.btn.ghost:hover { background: var(--ink); color: var(--paper); }
+.btn.cornell {
+  background: var(--cornell);
+  border-color: var(--cornell);
+  color: #fff;
+}
+
+/* ============ Pull quote ============ */
+.pullquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  line-height: 1.35;
+  color: var(--ink);
+  border-left: 4px solid var(--signal);
+  padding: 6px 0 6px 22px;
+  margin: 28px 0;
+  max-width: 50ch;
+}
+
+/* ============ Filter bar ============ */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 18px 0 26px;
+}
+.filter-bar input[type="search"] {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  padding: 9px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  min-width: 240px;
+  flex: 1;
+}
+.filter-bar input[type="search"]:focus {
+  outline: 3px solid var(--signal);
+  outline-offset: 1px;
+}
+
+/* ============ List rows ============ */
+.row {
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.row:last-child { border-bottom: 0; }
+.row-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.row-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 4px 0 4px;
+  line-height: 1.25;
+}
+.row-sub {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* ============ Prose (markdown body) ============ */
+.prose {
+  max-width: 64ch;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.prose h2 {
+  margin: 1.6em 0 0.5em;
+  font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 0.2em;
+}
+.prose h3 {
+  margin: 1.4em 0 0.4em;
+  font-size: 1.2rem;
+}
+.prose p { margin: 0 0 1em; }
+.prose ul, .prose ol { margin: 0 0 1em 1.4em; }
+.prose li { margin-bottom: 0.4em; }
+.prose blockquote {
+  border-left: 3px solid var(--signal);
+  margin: 1em 0;
+  padding: 0.2em 0 0.2em 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+.prose strong { color: var(--ink); }
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--paper-3);
+  padding: 1px 5px;
+  border-radius: 2px;
+}

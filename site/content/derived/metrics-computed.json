@@ -1,0 +1,32 @@
+{
+  "citations": 1670,
+  "h_index": 25,
+  "as_of": "January 2026",
+  "peer_reviewed": 52,
+  "chapters": 7,
+  "software": 10,
+  "coauthors": 97,
+  "press_total": 31,
+  "press_by_type": {
+    "cited_in": 16,
+    "quoted_in": 13,
+    "reviewed_in": 1,
+    "op_ed": 1
+  },
+  "by_type": {
+    "paper": 52,
+    "report": 2,
+    "chapter": 7,
+    "book": 1,
+    "software": 10,
+    "under revise and resubmit": 4,
+    "under review": 3,
+    "working paper": 10
+  },
+  "topics": {
+    "emissions_env": 55,
+    "resilience_health": 55,
+    "polarization": 5,
+    "networks_gis": 33
+  }
+}

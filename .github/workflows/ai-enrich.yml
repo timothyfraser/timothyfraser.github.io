@@ -1,0 +1,42 @@
+name: AI content enrichment (manual)
+
+# Manually-triggered enrichment pass. Writes to content/derived/*suggested*.json
+# and opens a PR for review. Does NOT auto-merge; does NOT block the deploy job.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+      - name: Run AI enrichment
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npm run ai-enrich
+      - name: Open PR with suggested enrichments
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: ai-enrich/${{ github.run_id }}
+          base: main
+          title: 'AI: refresh suggested tags / blurbs'
+          commit-message: 'AI: refresh suggested tags / blurbs'
+          body: |
+            Auto-generated suggestions from `npm run ai-enrich`. Review before merging — these are *suggestions only*, not final content.
+          add-paths: |
+            site/content/derived/suggested-*.json
+            site/content/derived/blurbs.json

@@ -1,0 +1,34 @@
+{
+  "name": "Timothy Fraser, PhD",
+  "short_name": "Tim Fraser",
+  "role": "Computational Social Scientist",
+  "affiliation": "Assistant Teaching Professor, Systems Engineering",
+  "institution": "Cornell University",
+  "location": "Ithaca, NY",
+  "mission": "I build software & methods to help communities combat climate change.",
+  "email": "tmf77@cornell.edu",
+  "nav": [
+    { "label": "Research", "path": "/research" },
+    { "label": "Teaching", "path": "/teaching" },
+    { "label": "Projects", "path": "/projects" },
+    { "label": "Software", "path": "/software" },
+    { "label": "Students", "path": "/students" },
+    { "label": "Press", "path": "/press" },
+    { "label": "Publications", "path": "/publications" }
+  ],
+  "links": {
+    "cv": "https://timothyfraser.com/cv",
+    "sigma": "https://timothyfraser.com/sigma",
+    "netsci": "https://timothyfraser.com/netsci",
+    "research_statement": "https://timothyfraser.com/research_statement",
+    "teaching_statement": "https://timothyfraser.com/teaching_statement",
+    "github": "https://github.com/timothyfraser",
+    "scholar": "https://scholar.google.com/citations?hl=en&user=4mKDi60AAAAJ",
+    "linkedin": "https://www.linkedin.com/in/timothy-fraser-698786186/",
+    "dataverse": "https://dataverse.harvard.edu/dataverse/timothyfraser",
+    "researchgate": "https://www.researchgate.net/profile/Timothy_Fraser2",
+    "cat": "https://cat-apps.com/",
+    "rpubs": "https://rpubs.com/timothyfraser",
+    "twitter": "https://twitter.com/Timothy_Fraser1"
+  }
+}
