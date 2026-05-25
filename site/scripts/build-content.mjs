@@ -85,15 +85,29 @@ function writeJson(rel, data) {
 function normName(n) {
   return n.replace(/\s+/g, ' ').replace(/\.$/, '').trim();
 }
+// Collaborators who appear under several name forms in the CV are collapsed
+// to one identity so the coauthor graph counts them once. Keyed by the
+// lowercased, punctuation-stripped form authorKey() produces.
+const AUTHOR_ALIASES = {
+  'chapman': 'andrew j chapman',
+  'andrew chapman': 'andrew j chapman',
+};
+const CANONICAL_NAME = {
+  'andrew j chapman': 'Andrew J. Chapman',
+};
 function authorKey(n) {
-  return normName(n).toLowerCase()
+  const base = normName(n).toLowerCase()
     .replace(/[.]/g, '')
     .replace(/\bdr\b\s*/g, '')
     .trim();
+  return AUTHOR_ALIASES[base] || base;
 }
 function splitAuthors(raw) {
   if (!raw) return [];
   return raw
+    // Fix inverted "Last, First" forms before the comma split treats the
+    // comma as an author separator (otherwise "Chapman, Andrew" becomes two).
+    .replace(/Chapman,\s*Andrew/gi, 'Andrew Chapman')
     .replace(/&/g, ',')
     .replace(/\band\b/gi, ',')
     .split(',')
@@ -117,6 +131,32 @@ function topicsOf(row) {
   }
   return out;
 }
+
+// Keyword-based topic inference from a publication's title (+ journal /
+// description). Augments the hand-maintained topic_* flags so the topic
+// distribution reflects what the titles actually say — e.g. transportation,
+// energy, and health surface even where a flag was never set.
+const TITLE_KEYWORDS = {
+  transportation: [/transport/, /\btransit\b/, /congestion/, /vehicle/, /traffic/, /mobilit/, /commut/, /\bbus(es)?\b/, /bicycl/, /\bcycling\b/, /\bbike/, /pedestrian/, /\broads?\b/, /highway/, /\bcars?\b/, /driving/, /electric vehicle/, /\bmoves\b/],
+  environment: [/environment/, /\bclimate/, /emission/, /\bcarbon\b/, /pollut/, /air quality/, /\bpm2\.?5\b/, /sustainab/, /greenhouse/, /\bco2\b/, /decarboni/],
+  energy: [/\benerg/, /\bsolar\b/, /renewable/, /\bgrid\b/, /nuclear/, /photovoltaic/, /electricity/, /wind power/],
+  disaster: [/disaster/, /hurricane/, /earthquake/, /\bflood/, /tsunami/, /\brecovery\b/, /\bhazard/, /evacuat/, /wildfire/, /typhoon/, /catastroph/, /katrina/, /fukushima/],
+  resilience: [/resilien/, /social capital/, /\bcivic\b/, /communit/, /cohesion/, /collective action/, /\bvolunteer/, /neighbor/],
+  social_infrastructure: [/social infrastructure/, /\blibrar/, /\bparks?\b/, /third place/, /public space/],
+  health: [/\bhealth\b/, /mortality/, /\bcovid/, /pandemic/, /\bmental\b/, /well-?being/, /epidemi/, /disease/, /\bmedical\b/],
+  polarization: [/polari[sz]/, /partisan/, /ideolog/, /\baffective\b/, /political divi/],
+  networks: [/\bnetwork/, /coauthor/, /centrality/, /\bgraph\b/, /social ties/],
+  gis: [/\bspatial\b/, /\bmapping\b/, /geographic/, /\bgis\b/, /geospatial/, /\bcensus\b/],
+};
+function topicsFromText(text) {
+  if (!text) return [];
+  const hay = text.toLowerCase();
+  const out = [];
+  for (const [topic, patterns] of Object.entries(TITLE_KEYWORDS)) {
+    if (patterns.some(re => re.test(hay))) out.push(topic);
+  }
+  return out;
+}
 function dominantTopic(topics) {
   // Priority order — earlier = visual primacy on the network
   const order = ['transportation', 'environment', 'disaster', 'resilience', 'energy', 'health', 'polarization', 'networks', 'gis', 'social_infrastructure'];
@@ -130,7 +170,9 @@ function normalizePublications(rows) {
     .filter(r => r.title && r.title.trim())
     .map((r, i) => {
       const authors = splitAuthors(r.authors);
-      const topics = topicsOf(r);
+      const flagged = topicsOf(r);
+      const inferred = topicsFromText([r.title, r.journal, r.description].filter(Boolean).join(' . '));
+      const topics = Array.from(new Set([...flagged, ...inferred]));
       return {
         id: `pub-${i}-${(r.title || '').slice(0, 40).replace(/\W+/g, '-').toLowerCase()}`,
         title: r.title.trim(),
@@ -162,7 +204,7 @@ function buildCoauthorGraph(pubs) {
     if (!nodeMap.has(key)) {
       nodeMap.set(key, {
         id: key,
-        label: isTim(name) ? TIM : normName(name),
+        label: isTim(name) ? TIM : (CANONICAL_NAME[key] || normName(name)),
         weight: 0,
         topics: new Set(),
         isCenter: isTim(name),

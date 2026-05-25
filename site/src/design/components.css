@@ -411,6 +411,18 @@ figure.figure.left {
 @media (max-width: 760px) {
   .hero-band { padding: 24px 22px; margin: 0 -22px 22px; }
 }
+/* Full-bleed network banner across the top of the hero band */
+.hero-banner {
+  display: block;
+  width: calc(100% + 56px);
+  margin: -36px -28px 28px;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .hero-banner { width: calc(100% + 44px); margin: -24px -22px 20px; height: 92px; }
+}
 
 /* ============ WNYC card ============ */
 .wnyc-card {

@@ -27,8 +27,8 @@ export default function Home() {
       href: 'https://doi.org/10.1038/s44407-025-00037-2',
     },
     {
-      img: '/images/feature_dashstat.png',
-      alt: 'Sigma textbook for Six Sigma in R and Python',
+      img: '/images/epic-failure-function.png',
+      alt: 'The Epic Failure Function — cumulative probability of failure over time',
       title: 'Sigma — open textbook',
       desc: 'System Reliability & Six Sigma in R and Python. ~28 chapters, dual-language, with learning checks.',
       href: site.links.sigma,
@@ -39,12 +39,20 @@ export default function Home() {
     <div className="wrap">
       {/* HERO BAND — red-tinted */}
       <section className="hero-band reveal d1">
+        <img
+          className="hero-banner"
+          src="/images/hero_image_cropped_banner.png"
+          alt="Network visualization of a Hurricane Dorian evacuation network in Florida"
+        />
         <div className="hero">
           <div>
             <div className="eyebrow">Cornell University · Systems Engineering · CTECH</div>
             <h1>Timothy Fraser, PhD</h1>
             <p className="hero-role">
-              <b>Assistant Teaching Professor</b> of Systems Engineering at Cornell, and Coordinator of the <b>Center for Transportation, Environment, and Community Health (CTECH)</b>. I build methods, systems, and software to help communities combat environmental crises.
+              <b>Assistant Teaching Professor</b> of Systems Engineering at Cornell<br />
+              Coordinator of the <b>Center for Transportation, Environment, and Community Health (CTECH)</b>.<br />
+              <b>Cornell Atkinson Center for Sustainability</b> Faculty Fellow<br />
+              I build methods, systems, and software to help communities combat environmental crises.
             </p>
 
             <div className="action-menu">
@@ -105,7 +113,7 @@ export default function Home() {
       <section className="section reveal d3">
         <div className="section-head">
           <h2>What I work on</h2>
-          <p className="subhead">Across emissions, resilience, polarization, and methods — counts from the publication record.</p>
+          <p className="subhead">Publications by topic — many papers span several, so the bars overlap rather than partition the record.</p>
         </div>
         <TopicBars />
       </section>

@@ -1,6 +1,6 @@
 import SectionMast from '../components/SectionMast';
 import Markdown from '../components/Markdown';
-import Card, { CardBody, CardHead } from '../components/Card';
+import Card, { CardBody, CardHead, CardFigure } from '../components/Card';
 import { markdownPages, teaching } from '../data/loaders';
 
 export default function Teaching() {
@@ -22,6 +22,7 @@ export default function Teaching() {
         <div className="grid-2">
           {featured.map(r => (
             <Card key={r.id} featured>
+              {r.image && <CardFigure src={r.image} alt={`${r.name} — ${r.kind}`} />}
               <CardHead id={r.kind} name={r.name} tag={r.blurb} />
               <CardBody>
                 <div className="chips">

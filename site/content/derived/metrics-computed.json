@@ -6,7 +6,7 @@
   "peer_reviewed": 52,
   "chapters": 7,
   "software": 10,
-  "coauthors": 97,
+  "coauthors": 94,
   "press_total": 31,
   "press_last_12mo": 20,
   "press_by_year": {
@@ -33,9 +33,9 @@
     "working paper": 10
   },
   "topics": {
-    "emissions_env": 55,
+    "emissions_env": 56,
     "resilience_health": 55,
     "polarization": 5,
-    "networks_gis": 33
+    "networks_gis": 39
   }
 }
