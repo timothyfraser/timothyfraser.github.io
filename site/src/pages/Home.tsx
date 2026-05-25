@@ -39,6 +39,11 @@ export default function Home() {
     <div className="wrap">
       {/* HERO BAND — red-tinted */}
       <section className="hero-band reveal d1">
+        <img
+          className="hero-banner"
+          src="/images/hero_image_cropped_banner.png"
+          alt="Network visualization of a Hurricane Dorian evacuation network in Florida"
+        />
         <div className="hero">
           <div>
             <div className="eyebrow">Cornell University · Systems Engineering · CTECH</div>

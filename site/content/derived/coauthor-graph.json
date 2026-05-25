@@ -269,7 +269,7 @@
     {
       "id": "andrew j chapman",
       "label": "Andrew J. Chapman",
-      "weight": 4,
+      "weight": 8,
       "topic": "environment",
       "isCenter": false
     },
@@ -449,13 +449,6 @@
       "isCenter": false
     },
     {
-      "id": "andrew chapman",
-      "label": "Andrew Chapman",
-      "weight": 3,
-      "topic": "environment",
-      "isCenter": false
-    },
-    {
       "id": "melanie dennis",
       "label": "Melanie Dennis",
       "weight": 1,
@@ -467,20 +460,6 @@
       "label": "Juheon Lee",
       "weight": 2,
       "topic": "disaster",
-      "isCenter": false
-    },
-    {
-      "id": "chapman",
-      "label": "Chapman",
-      "weight": 1,
-      "topic": "energy",
-      "isCenter": false
-    },
-    {
-      "id": "andrew",
-      "label": "Andrew",
-      "weight": 1,
-      "topic": "energy",
       "isCenter": false
     },
     {
@@ -1325,7 +1304,7 @@
     {
       "source": "andrew j chapman",
       "target": "timothy fraser",
-      "weight": 4,
+      "weight": 8,
       "topic": "environment"
     },
     {
@@ -1337,7 +1316,7 @@
     {
       "source": "andrew j chapman",
       "target": "yosuke shigetomi",
-      "weight": 1,
+      "weight": 2,
       "topic": "energy"
     },
     {
@@ -1755,7 +1734,7 @@
       "topic": "energy"
     },
     {
-      "source": "andrew chapman",
+      "source": "andrew j chapman",
       "target": "taghizadeh-hesary",
       "weight": 1,
       "topic": "energy"
@@ -1791,7 +1770,7 @@
       "topic": "energy"
     },
     {
-      "source": "andrew chapman",
+      "source": "andrew j chapman",
       "target": "farhad",
       "weight": 1,
       "topic": "energy"
@@ -1822,7 +1801,7 @@
     },
     {
       "source": "aline mortha",
-      "target": "andrew chapman",
+      "target": "andrew j chapman",
       "weight": 1,
       "topic": "energy"
     },
@@ -1845,7 +1824,7 @@
       "topic": "energy"
     },
     {
-      "source": "andrew chapman",
+      "source": "andrew j chapman",
       "target": "hadi farabi-asl",
       "weight": 1,
       "topic": "energy"
@@ -1863,7 +1842,7 @@
       "topic": "energy"
     },
     {
-      "source": "andrew chapman",
+      "source": "andrew j chapman",
       "target": "tapan sarker",
       "weight": 1,
       "topic": "energy"
@@ -1879,18 +1858,6 @@
       "target": "timothy fraser",
       "weight": 1,
       "topic": "energy"
-    },
-    {
-      "source": "andrew chapman",
-      "target": "yosuke shigetomi",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "andrew chapman",
-      "target": "timothy fraser",
-      "weight": 3,
-      "topic": "environment"
     },
     {
       "source": "andrew j chapman",
@@ -1911,31 +1878,7 @@
       "topic": "disaster"
     },
     {
-      "source": "andrew",
-      "target": "chapman",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "chapman",
-      "target": "timothy fraser",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "chapman",
-      "target": "kenshi itaoka",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "andrew",
-      "target": "timothy fraser",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "andrew",
+      "source": "andrew j chapman",
       "target": "kenshi itaoka",
       "weight": 1,
       "topic": "energy"
@@ -2452,35 +2395,35 @@
       "x": 55.000000000000014,
       "y": 95.26279441628824
     },
-    "costas panagopoulos": {
+    "andrew j chapman": {
       "x": -54.99999999999998,
       "y": 95.26279441628826
     },
-    "daniel kim": {
+    "costas panagopoulos": {
       "x": -110,
       "y": 1.3471114790620885e-14
     },
-    "oliver gao": {
+    "daniel kim": {
       "x": -55.00000000000005,
       "y": -95.26279441628823
     },
-    "h oliver gao": {
+    "oliver gao": {
       "x": 55.000000000000014,
       "y": -95.26279441628824
     },
-    "jennifer shea": {
+    "h oliver gao": {
       "x": 200,
       "y": 0
     },
-    "daniel homsey": {
+    "jennifer shea": {
       "x": 180.19377358048382,
       "y": 86.77674782351163
     },
-    "osama awadalla": {
+    "daniel homsey": {
       "x": 124.69796037174672,
       "y": 156.36629649360597
     },
-    "andrew j chapman": {
+    "osama awadalla": {
       "x": 44.50418679126289,
       "y": 194.98558243636472
     },
@@ -2504,301 +2447,289 @@
       "x": -180.19377358048382,
       "y": -86.7767478235116
     },
-    "andrew chapman": {
+    "danni lu": {
       "x": -124.69796037174675,
       "y": -156.36629649360594
     },
-    "danni lu": {
+    "mohammad tayarani": {
       "x": -44.50418679126292,
       "y": -194.98558243636472
     },
-    "mohammad tayarani": {
+    "vincent rago": {
       "x": 44.504186791262846,
       "y": -194.98558243636472
     },
-    "vincent rago": {
+    "katherine van woert": {
       "x": 124.69796037174667,
       "y": -156.36629649360597
     },
-    "katherine van woert": {
+    "sophia olivieri": {
       "x": 180.19377358048382,
       "y": -86.77674782351167
     },
-    "sophia olivieri": {
+    "jonathan baron": {
       "x": 300,
       "y": 0
     },
-    "jonathan baron": {
+    "katelyn buckley": {
       "x": 293.4442802201417,
       "y": 62.373507245327794
     },
-    "katelyn buckley": {
+    "pamela lalli": {
       "x": 274.06363729278024,
       "y": 122.02099292274005
     },
-    "pamela lalli": {
+    "takahiro yabe": {
       "x": 242.70509831248424,
       "y": 176.33557568774194
     },
-    "takahiro yabe": {
+    "sameera nayak": {
       "x": 200.73918190765747,
       "y": 222.94344764321826
     },
-    "sameera nayak": {
+    "yosuke shigetomi": {
       "x": 150.00000000000003,
       "y": 259.8076211353316
     },
-    "yosuke shigetomi": {
+    "david hummel": {
       "x": 92.70509831248424,
       "y": 285.31695488854604
     },
-    "david hummel": {
+    "mary bancroft": {
       "x": 31.358538980296036,
       "y": 298.356568610482
     },
-    "mary bancroft": {
+    "larissa morikawa": {
       "x": -31.358538980296,
       "y": 298.35656861048204
     },
-    "larissa morikawa": {
+    "amos nasongo": {
       "x": -92.7050983124842,
       "y": 285.3169548885461
     },
-    "amos nasongo": {
+    "juheon lee": {
       "x": -149.99999999999994,
       "y": 259.8076211353316
     },
-    "juheon lee": {
+    "toshiaki yoshida": {
       "x": -200.73918190765738,
       "y": 222.94344764321835
     },
-    "toshiaki yoshida": {
+    "peilin li": {
       "x": -242.7050983124842,
       "y": 176.33557568774197
     },
-    "peilin li": {
+    "leo kuang": {
       "x": -274.0636372927803,
       "y": 122.02099292274
     },
-    "leo kuang": {
+    "yeonkyeong gina park": {
       "x": -293.4442802201417,
       "y": 62.373507245327794
     },
-    "yeonkyeong gina park": {
+    "haiyan deng": {
       "x": -300,
       "y": 3.6739403974420595e-14
     },
-    "haiyan deng": {
+    "lucy hewitt": {
       "x": -293.4442802201417,
       "y": -62.37350724532772
     },
-    "lucy hewitt": {
+    "jessica chen": {
       "x": -274.0636372927803,
       "y": -122.02099292273995
     },
-    "jessica chen": {
+    "matthew cherkerzian": {
       "x": -242.70509831248424,
       "y": -176.3355756877419
     },
-    "matthew cherkerzian": {
+    "alireza yazdiani": {
       "x": -200.73918190765752,
       "y": -222.9434476432182
     },
-    "alireza yazdiani": {
+    "aayushi mishra": {
       "x": -150.00000000000014,
       "y": -259.80762113533154
     },
-    "aayushi mishra": {
+    "harshita sarup": {
       "x": -92.70509831248427,
       "y": -285.31695488854604
     },
-    "harshita sarup": {
+    "esteban moro": {
       "x": -31.35853898029627,
       "y": -298.356568610482
     },
-    "esteban moro": {
+    "miranda bourdeau": {
       "x": 31.358538980296164,
       "y": -298.356568610482
     },
-    "miranda bourdeau": {
+    "olivia feeley": {
       "x": 92.70509831248417,
       "y": -285.3169548885461
     },
-    "olivia feeley": {
+    "andres ridge": {
       "x": 150.00000000000003,
       "y": -259.8076211353316
     },
-    "andres ridge": {
+    "ava cervini": {
       "x": 200.73918190765752,
       "y": -222.9434476432182
     },
-    "ava cervini": {
+    "kelly gilmore": {
       "x": 242.7050983124842,
       "y": -176.335575687742
     },
-    "kelly gilmore": {
+    "gianna worthington": {
       "x": 274.0636372927803,
       "y": -122.02099292274005
     },
-    "gianna worthington": {
+    "illana berliavsky": {
       "x": 293.44428022014165,
       "y": -62.373507245327964
     },
-    "illana berliavsky": {
+    "kevin smith": {
       "x": 400,
       "y": 0
     },
-    "kevin smith": {
-      "x": 394.82010505516513,
-      "y": 64.1645123431041
-    },
     "andrew dolman": {
-      "x": 379.4145767788582,
-      "y": 126.66719752058899
+      "x": 393.9231012048832,
+      "y": 69.45927106677213
     },
     "napuck cherdchaiyapong": {
-      "x": 354.18241026128396,
-      "y": 185.88926881750743
+      "x": 375.8770483143634,
+      "y": 136.80805733026747
     },
     "winta tekle": {
-      "x": 319.77710536140046,
-      "y": 240.29690569519153
+      "x": 346.4101615137755,
+      "y": 199.99999999999997
     },
     "erin thomas": {
-      "x": 277.0897414038398,
-      "y": 288.4809789375258
+      "x": 306.41777724759123,
+      "y": 257.1150438746157
     },
     "joel zayas": {
-      "x": 227.22589869246232,
-      "y": 329.1935463574626
+      "x": 257.11504387461576,
+      "y": 306.41777724759123
     },
     "alex r poniatowski": {
-      "x": 171.4770245612217,
-      "y": 361.38017384415286
+      "x": 200.00000000000006,
+      "y": 346.41016151377545
     },
     "nicholas hersey": {
-      "x": 111.2869855665811,
-      "y": 384.2072446525489
+      "x": 136.80805733026753,
+      "y": 375.8770483143633
     },
     "haoran zheng": {
-      "x": 48.2146721021292,
-      "y": 397.0835496392216
+      "x": 69.45927106677216,
+      "y": 393.9231012048832
     },
     "nicole naquin": {
-      "x": -16.10637604376596,
-      "y": 399.6755992686279
+      "x": 2.4492935982947064e-14,
+      "y": 400
     },
     "andrew littlejohn": {
-      "x": -80.01027751041774,
-      "y": 391.9162608169071
+      "x": -69.45927106677212,
+      "y": 393.9231012048832
     },
     "amy hunt": {
-      "x": -141.84195481701428,
-      "y": 374.0064970741659
+      "x": -136.80805733026747,
+      "y": 375.8770483143634
     },
     "eri lee": {
       "x": -199.99999999999991,
       "y": 346.4101615137755
     },
     "taghizadeh-hesary": {
-      "x": -252.97815023815087,
-      "y": 309.8419847310618
+      "x": -257.11504387461576,
+      "y": 306.41777724759123
     },
     "farhad": {
-      "x": -299.40429926844047,
-      "y": 265.24906329631807
+      "x": -306.4177772475912,
+      "y": 257.11504387461576
     },
     "aline mortha": {
-      "x": -338.0760342175178,
-      "y": 213.7863304511205
+      "x": -346.4101615137755,
+      "y": 199.99999999999997
     },
     "hadi farabi-asl": {
-      "x": -367.9917774635297,
-      "y": 156.78664394403006
+      "x": -375.8770483143633,
+      "y": 136.80805733026756
     },
     "tapan sarker": {
-      "x": -388.3767269704208,
-      "y": 95.72626571502308
+      "x": -393.9231012048832,
+      "y": 69.45927106677229
     },
     "melanie dennis": {
-      "x": -398.702923253684,
-      "y": 32.18662748669043
-    },
-    "chapman": {
-      "x": -398.702923253684,
-      "y": -32.186627486690156
-    },
-    "andrew": {
-      "x": -388.37672697042086,
-      "y": -95.72626571502298
+      "x": -400,
+      "y": 4.898587196589413e-14
     },
     "kenshi itaoka": {
-      "x": -367.9917774635297,
-      "y": -156.78664394402998
+      "x": -393.9231012048832,
+      "y": -69.45927106677219
     },
     "ba student osama awadalla": {
-      "x": -338.07603421751793,
-      "y": -213.78633045112042
+      "x": -375.8770483143634,
+      "y": -136.80805733026747
     },
     "colleagues": {
-      "x": -299.4042992684404,
-      "y": -265.2490632963181
+      "x": -346.41016151377545,
+      "y": -200.00000000000006
     },
     "ayushi mishra": {
-      "x": -252.97815023815082,
-      "y": -309.84198473106187
+      "x": -306.41777724759123,
+      "y": -257.1150438746157
     },
     "leah smith": {
+      "x": -257.11504387461576,
+      "y": -306.4177772475912
+    },
+    "kaylen li": {
       "x": -200.00000000000017,
       "y": -346.4101615137754
     },
-    "kaylen li": {
-      "x": -141.84195481701437,
-      "y": -374.0064970741659
-    },
     "alireza": {
-      "x": -80.01027751041782,
-      "y": -391.9162608169071
+      "x": -136.80805733026776,
+      "y": -375.87704831436326
     },
     "yazdiani": {
-      "x": -16.10637604376606,
-      "y": -399.6755992686278
+      "x": -69.45927106677213,
+      "y": -393.9231012048832
     },
     "peculiar lawrence": {
-      "x": 48.21467210212928,
-      "y": -397.0835496392216
+      "x": -7.347880794884119e-14,
+      "y": -400
     },
     "shannya niveyro": {
-      "x": 111.28698556658082,
-      "y": -384.207244652549
+      "x": 69.45927106677199,
+      "y": -393.92310120488327
     },
     "maria dobransky": {
-      "x": 171.47702456122153,
-      "y": -361.380173844153
+      "x": 136.8080573302676,
+      "y": -375.8770483143633
     },
     "aarya darak": {
-      "x": 227.22589869246224,
-      "y": -329.19354635746265
+      "x": 200.00000000000006,
+      "y": -346.41016151377545
     },
     "minghao yang": {
-      "x": 277.0897414038397,
-      "y": -288.48097893752583
+      "x": 257.1150438746157,
+      "y": -306.41777724759123
     },
     "xinwei li": {
-      "x": 319.77710536140046,
-      "y": -240.29690569519158
+      "x": 306.4177772475911,
+      "y": -257.1150438746158
     },
     "khushi patel": {
-      "x": 354.182410261284,
-      "y": -185.88926881750737
+      "x": 346.41016151377534,
+      "y": -200.00000000000017
     },
     "laura k nelson": {
-      "x": 379.41457677885813,
-      "y": -126.66719752058921
+      "x": 375.87704831436326,
+      "y": -136.8080573302678
     },
     "kathrin zippel": {
-      "x": 394.82010505516513,
-      "y": -64.16451234310425
+      "x": 393.9231012048832,
+      "y": -69.45927106677216
     }
   }
 }

@@ -28,7 +28,7 @@
       "url": "https://timothyfraser.com/netsci",
       "featured": true,
       "accent": "cool",
-      "image": "/images/image_my_approach.png",
+      "image": "/images/image_netsci_course.png",
       "tags": ["networks", "R"]
     },
     {
@@ -39,7 +39,7 @@
       "url": "https://github.com/timothyfraser/dsai",
       "featured": true,
       "accent": "hot",
-      "image": "/images/image_dsai_ai.svg",
+      "image": "/images/image_dsai_brain.jpg",
       "tags": ["AI", "data science", "Python"]
     },
     {

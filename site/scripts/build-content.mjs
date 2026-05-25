@@ -85,15 +85,29 @@ function writeJson(rel, data) {
 function normName(n) {
   return n.replace(/\s+/g, ' ').replace(/\.$/, '').trim();
 }
+// Collaborators who appear under several name forms in the CV are collapsed
+// to one identity so the coauthor graph counts them once. Keyed by the
+// lowercased, punctuation-stripped form authorKey() produces.
+const AUTHOR_ALIASES = {
+  'chapman': 'andrew j chapman',
+  'andrew chapman': 'andrew j chapman',
+};
+const CANONICAL_NAME = {
+  'andrew j chapman': 'Andrew J. Chapman',
+};
 function authorKey(n) {
-  return normName(n).toLowerCase()
+  const base = normName(n).toLowerCase()
     .replace(/[.]/g, '')
     .replace(/\bdr\b\s*/g, '')
     .trim();
+  return AUTHOR_ALIASES[base] || base;
 }
 function splitAuthors(raw) {
   if (!raw) return [];
   return raw
+    // Fix inverted "Last, First" forms before the comma split treats the
+    // comma as an author separator (otherwise "Chapman, Andrew" becomes two).
+    .replace(/Chapman,\s*Andrew/gi, 'Andrew Chapman')
     .replace(/&/g, ',')
     .replace(/\band\b/gi, ',')
     .split(',')
@@ -190,7 +204,7 @@ function buildCoauthorGraph(pubs) {
     if (!nodeMap.has(key)) {
       nodeMap.set(key, {
         id: key,
-        label: isTim(name) ? TIM : normName(name),
+        label: isTim(name) ? TIM : (CANONICAL_NAME[key] || normName(name)),
         weight: 0,
         topics: new Set(),
         isCenter: isTim(name),
