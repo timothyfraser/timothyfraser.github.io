@@ -3,7 +3,7 @@ import Card, { CardBody, CardHead, CardFigure } from '../components/Card';
 import { projects, site } from '../data/loaders';
 
 const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
-  cpportal: { src: '/images/update_nyc.png', alt: 'NYC congestion-pricing analysis' },
+  cpportal: { src: '/images/image_nyc_congestion.png', alt: 'NYC congestion-pricing effects on PM2.5 air quality' },
   bikeshare: { src: '/images/update_bluebikes.png', alt: 'Bluebikes bikeshare mobility network, Boston' },
   cat: { src: '/images/dashboard_cat.PNG', alt: 'CAT dashboard' },
   'social-infrastructure': { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure map' },
