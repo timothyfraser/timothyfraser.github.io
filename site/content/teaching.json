@@ -1,9 +1,10 @@
 {
   "courses_taught": [
     { "code": "SYSEN 5300", "title": "Systems Reliability & Six Sigma", "level": "grad", "years": [2022, 2023, 2024, 2025], "inst": "Cornell" },
+    { "code": "SYSEN 5381", "title": "Data Science and AI for Systems Engineering", "level": "grad", "years": [2026], "inst": "Cornell" },
     { "code": "SYSEN 5400", "title": "Systems Architecture", "level": "grad", "years": [2023, 2024], "inst": "Cornell" },
-    { "code": "SYSEN 5460", "title": "Data Science for Socio-Technical Systems", "level": "grad", "years": [2024], "inst": "Cornell" },
-    { "code": "SYSEN 5900", "title": "MEng Research Projects", "level": "grad", "years": [2023, 2024, 2025], "inst": "Cornell" },
+    { "code": "SYSEN 5460", "title": "Data Science for Socio-Technical Systems", "level": "grad", "years": [2024, 2025, 2026], "inst": "Cornell" },
+    { "code": "SYSEN 5900", "title": "MEng Research Projects", "level": "grad", "years": [2023, 2024, 2025, 2026], "inst": "Cornell" },
     { "code": "POLS 2400", "title": "Quantitative Techniques for Political Science", "level": "undergrad", "years": [2020, 2021], "inst": "Northeastern" },
     { "code": "POLS 2403", "title": "Research Methods", "level": "undergrad", "years": [2021], "inst": "Northeastern" }
   ],
@@ -16,6 +17,7 @@
       "url": "https://timothyfraser.com/sigma",
       "featured": true,
       "accent": "signal",
+      "image": "/images/epic-failure-function.png",
       "tags": ["R", "Python", "reliability", "six sigma", "statistics"]
     },
     {
@@ -26,6 +28,7 @@
       "url": "https://timothyfraser.com/netsci",
       "featured": true,
       "accent": "cool",
+      "image": "/images/image_my_approach.png",
       "tags": ["networks", "R"]
     },
     {
@@ -36,6 +39,7 @@
       "url": "https://github.com/timothyfraser/dsai",
       "featured": true,
       "accent": "hot",
+      "image": "/images/image_dsai_ai.svg",
       "tags": ["AI", "data science", "Python"]
     },
     {

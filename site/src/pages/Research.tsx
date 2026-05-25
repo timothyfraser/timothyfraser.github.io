@@ -108,7 +108,7 @@ export default function Research() {
       <section className="section">
         <div className="section-head">
           <h2>Publications by topic</h2>
-          <p className="subhead">Counts across the recurring topic clusters in the publication record.</p>
+          <p className="subhead">How many publications touch each topic — papers often span several, so totals overlap. Tags combine hand-coding with title keywords.</p>
         </div>
         <TopicBars />
       </section>

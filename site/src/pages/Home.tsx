@@ -108,7 +108,7 @@ export default function Home() {
       <section className="section reveal d3">
         <div className="section-head">
           <h2>What I work on</h2>
-          <p className="subhead">Across emissions, resilience, polarization, and methods — counts from the publication record.</p>
+          <p className="subhead">Publications by topic — many papers span several, so the bars overlap rather than partition the record.</p>
         </div>
         <TopicBars />
       </section>

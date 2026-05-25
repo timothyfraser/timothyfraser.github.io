@@ -87,6 +87,7 @@ export interface TeachingResource {
   url: string;
   featured?: boolean;
   accent?: string;
+  image?: string;
   tags: string[];
 }
 export interface TeachingData {

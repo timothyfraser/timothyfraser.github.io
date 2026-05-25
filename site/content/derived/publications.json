@@ -114,7 +114,8 @@
     "topics": [
       "environment",
       "gis",
-      "energy"
+      "energy",
+      "resilience"
     ],
     "dominant": "environment",
     "volume": "127",
@@ -186,7 +187,8 @@
     "type": "paper",
     "topics": [
       "disaster",
-      "gis"
+      "gis",
+      "resilience"
     ],
     "dominant": "disaster",
     "volume": "NA",
@@ -588,7 +590,8 @@
       "resilience",
       "social_infrastructure",
       "networks",
-      "gis"
+      "gis",
+      "environment"
     ],
     "dominant": "transportation",
     "volume": "17",
@@ -776,7 +779,8 @@
       "transportation",
       "disaster",
       "resilience",
-      "social_infrastructure"
+      "social_infrastructure",
+      "networks"
     ],
     "dominant": "transportation",
     "volume": "33",
@@ -846,7 +850,8 @@
     "topics": [
       "resilience",
       "social_infrastructure",
-      "health"
+      "health",
+      "networks"
     ],
     "dominant": "resilience",
     "volume": "11",
@@ -960,7 +965,8 @@
     "topics": [
       "environment",
       "disaster",
-      "gis"
+      "gis",
+      "resilience"
     ],
     "dominant": "environment",
     "volume": "37",
@@ -1026,7 +1032,8 @@
     "topics": [
       "environment",
       "gis",
-      "energy"
+      "energy",
+      "resilience"
     ],
     "dominant": "environment",
     "volume": "29",
@@ -1117,7 +1124,8 @@
     "topics": [
       "disaster",
       "resilience",
-      "social_infrastructure"
+      "social_infrastructure",
+      "networks"
     ],
     "dominant": "disaster",
     "volume": "34",
@@ -1138,9 +1146,10 @@
     "type": "paper",
     "topics": [
       "social_infrastructure",
-      "energy"
+      "energy",
+      "environment"
     ],
-    "dominant": "energy",
+    "dominant": "environment",
     "volume": "14",
     "issue": "NA"
   },
@@ -1159,9 +1168,10 @@
     "type": "paper",
     "topics": [
       "social_infrastructure",
-      "energy"
+      "energy",
+      "environment"
     ],
-    "dominant": "energy",
+    "dominant": "environment",
     "volume": "42",
     "issue": "NA"
   },
@@ -1252,7 +1262,8 @@
       "disaster",
       "resilience",
       "social_infrastructure",
-      "health"
+      "health",
+      "networks"
     ],
     "dominant": "disaster",
     "volume": "NA",
@@ -1344,7 +1355,8 @@
     "type": "chapter",
     "topics": [
       "disaster",
-      "gis"
+      "gis",
+      "resilience"
     ],
     "dominant": "disaster",
     "volume": "NA",
@@ -1446,9 +1458,10 @@
     "description": "A suite of ShinyApp modules that visualize US state and county emissions from transportation. These include line charts, donut charts, rank charts, multi-line charts, infographics, maps, profile boxes, and more. [Alpha Version currently available](https://visualizer.cat-apps.com).",
     "type": "software",
     "topics": [
-      "environment"
+      "environment",
+      "transportation"
     ],
-    "dominant": "environment",
+    "dominant": "transportation",
     "volume": "NA",
     "issue": "NA"
   },
@@ -1465,7 +1478,8 @@
     "description": "An R package for transportation emissions policy optimization, focused on US states and counties. Based on Cornell's server of previous MOVES analyses and the federal CMAQ database of past transportation emissions policies' cost effectiveness stats.",
     "type": "software",
     "topics": [
-      "transportation"
+      "transportation",
+      "environment"
     ],
     "dominant": "transportation",
     "volume": "NA",
@@ -1483,8 +1497,11 @@
     "link": "https://github.com/timothyfraser/archr",
     "description": "A public `R` package for mapping all possible ways of building a system, measuring traits of each possible architecture, and conducting search and optimization on the population of architectures. Includes stakeholder network analysis modules. Designed for use with Cornell Systems Architecture course.",
     "type": "software",
-    "topics": [],
-    "dominant": "other",
+    "topics": [
+      "networks",
+      "gis"
+    ],
+    "dominant": "networks",
     "volume": "NA",
     "issue": "NA"
   },
@@ -1521,7 +1538,8 @@
     "description": "A proprietary R package for estimating emissions from transportation for US counties, using the EPA's MOVES software, to support Climate Action in Transportation using R (catr). Extends MOVES functionality by allowing for iterative MOVES runs, with custom policy scenarios and output formatting for easy visualization.",
     "type": "software",
     "topics": [
-      "transportation"
+      "transportation",
+      "environment"
     ],
     "dominant": "transportation",
     "volume": "NA",
@@ -1560,9 +1578,10 @@
     "description": "A ShinyApp Dashboard that for visualizing and comparing transportation emissions scenarios based on custom user-supplied information about transportation activity levels and fleet composition. Uses my `moveslite` R package as an engine.",
     "type": "software",
     "topics": [
-      "environment"
+      "environment",
+      "transportation"
     ],
-    "dominant": "environment",
+    "dominant": "transportation",
     "volume": "NA",
     "issue": "NA"
   },
@@ -1578,8 +1597,11 @@
     "link": null,
     "description": "A geospatial-enabled ShinyApp dashboard deployment environment publicly available for any dashboard developer as a Docker image on Dockerhub. Will help anyone deploy a ShinyApp with mapping capabilities. At: https://hub.docker.com/repository/docker/tmf77/geoshiny-verse/general",
     "type": "software",
-    "topics": [],
-    "dominant": "other",
+    "topics": [
+      "environment",
+      "gis"
+    ],
+    "dominant": "environment",
     "volume": "NA",
     "issue": "NA"
   },
@@ -1686,7 +1708,8 @@
     "type": "under revise and resubmit",
     "topics": [
       "disaster",
-      "gis"
+      "gis",
+      "resilience"
     ],
     "dominant": "disaster",
     "volume": "NA",
@@ -1707,7 +1730,8 @@
     "type": "under revise and resubmit",
     "topics": [
       "environment",
-      "gis"
+      "gis",
+      "resilience"
     ],
     "dominant": "environment",
     "volume": "NA",

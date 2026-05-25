@@ -452,7 +452,7 @@
       "id": "andrew chapman",
       "label": "Andrew Chapman",
       "weight": 3,
-      "topic": "energy",
+      "topic": "environment",
       "isCenter": false
     },
     {
@@ -1890,7 +1890,7 @@
       "source": "andrew chapman",
       "target": "timothy fraser",
       "weight": 3,
-      "topic": "energy"
+      "topic": "environment"
     },
     {
       "source": "andrew j chapman",

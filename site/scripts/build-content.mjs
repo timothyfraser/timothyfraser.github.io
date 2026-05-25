@@ -117,6 +117,32 @@ function topicsOf(row) {
   }
   return out;
 }
+
+// Keyword-based topic inference from a publication's title (+ journal /
+// description). Augments the hand-maintained topic_* flags so the topic
+// distribution reflects what the titles actually say — e.g. transportation,
+// energy, and health surface even where a flag was never set.
+const TITLE_KEYWORDS = {
+  transportation: [/transport/, /\btransit\b/, /congestion/, /vehicle/, /traffic/, /mobilit/, /commut/, /\bbus(es)?\b/, /bicycl/, /\bcycling\b/, /\bbike/, /pedestrian/, /\broads?\b/, /highway/, /\bcars?\b/, /driving/, /electric vehicle/, /\bmoves\b/],
+  environment: [/environment/, /\bclimate/, /emission/, /\bcarbon\b/, /pollut/, /air quality/, /\bpm2\.?5\b/, /sustainab/, /greenhouse/, /\bco2\b/, /decarboni/],
+  energy: [/\benerg/, /\bsolar\b/, /renewable/, /\bgrid\b/, /nuclear/, /photovoltaic/, /electricity/, /wind power/],
+  disaster: [/disaster/, /hurricane/, /earthquake/, /\bflood/, /tsunami/, /\brecovery\b/, /\bhazard/, /evacuat/, /wildfire/, /typhoon/, /catastroph/, /katrina/, /fukushima/],
+  resilience: [/resilien/, /social capital/, /\bcivic\b/, /communit/, /cohesion/, /collective action/, /\bvolunteer/, /neighbor/],
+  social_infrastructure: [/social infrastructure/, /\blibrar/, /\bparks?\b/, /third place/, /public space/],
+  health: [/\bhealth\b/, /mortality/, /\bcovid/, /pandemic/, /\bmental\b/, /well-?being/, /epidemi/, /disease/, /\bmedical\b/],
+  polarization: [/polari[sz]/, /partisan/, /ideolog/, /\baffective\b/, /political divi/],
+  networks: [/\bnetwork/, /coauthor/, /centrality/, /\bgraph\b/, /social ties/],
+  gis: [/\bspatial\b/, /\bmapping\b/, /geographic/, /\bgis\b/, /geospatial/, /\bcensus\b/],
+};
+function topicsFromText(text) {
+  if (!text) return [];
+  const hay = text.toLowerCase();
+  const out = [];
+  for (const [topic, patterns] of Object.entries(TITLE_KEYWORDS)) {
+    if (patterns.some(re => re.test(hay))) out.push(topic);
+  }
+  return out;
+}
 function dominantTopic(topics) {
   // Priority order — earlier = visual primacy on the network
   const order = ['transportation', 'environment', 'disaster', 'resilience', 'energy', 'health', 'polarization', 'networks', 'gis', 'social_infrastructure'];
@@ -130,7 +156,9 @@ function normalizePublications(rows) {
     .filter(r => r.title && r.title.trim())
     .map((r, i) => {
       const authors = splitAuthors(r.authors);
-      const topics = topicsOf(r);
+      const flagged = topicsOf(r);
+      const inferred = topicsFromText([r.title, r.journal, r.description].filter(Boolean).join(' . '));
+      const topics = Array.from(new Set([...flagged, ...inferred]));
       return {
         id: `pub-${i}-${(r.title || '').slice(0, 40).replace(/\W+/g, '-').toLowerCase()}`,
         title: r.title.trim(),
