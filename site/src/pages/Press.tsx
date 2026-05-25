@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react';
 import SectionMast from '../components/SectionMast';
 import StatBox from '../components/StatBox';
 import WNYCEmbed from '../components/WNYCEmbed';
-import PressYearBars from '../viz/PressYearBars';
 import Figure from '../components/Figure';
 import '../viz/viz.css';
 import { press, metrics } from '../data/loaders';
@@ -63,9 +62,6 @@ export default function Press() {
           label="Mentions in the last 12 months"
         />
       </div>
-
-      {/* YEAR BARS — the recent spike now dominates */}
-      <PressYearBars />
 
       {/* Interview — small, properly captioned */}
       <Figure
