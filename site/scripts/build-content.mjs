@@ -91,9 +91,15 @@ function normName(n) {
 const AUTHOR_ALIASES = {
   'chapman': 'andrew j chapman',
   'andrew chapman': 'andrew j chapman',
+  'daniel aldrich': 'daniel p aldrich',
+  'oliver gao': 'h oliver gao',
+  'ayushi mishra': 'aayushi mishra',
 };
 const CANONICAL_NAME = {
   'andrew j chapman': 'Andrew J. Chapman',
+  'daniel p aldrich': 'Daniel P. Aldrich',
+  'h oliver gao': 'H. Oliver Gao',
+  'aayushi mishra': 'Aayushi Mishra',
 };
 function authorKey(n) {
   const base = normName(n).toLowerCase()
@@ -102,17 +108,25 @@ function authorKey(n) {
     .trim();
   return AUTHOR_ALIASES[base] || base;
 }
+// Non-author tokens that slip into the byline ("...and colleagues").
+const AUTHOR_DROP = new Set(['colleagues', 'others', 'et al', 'co-authors', 'coauthors']);
 function splitAuthors(raw) {
   if (!raw) return [];
   return raw
-    // Fix inverted "Last, First" forms before the comma split treats the
-    // comma as an author separator (otherwise "Chapman, Andrew" becomes two).
+    // Fix inverted "Last, First" forms and stray-comma typos before the comma
+    // split treats the comma as an author separator (otherwise each name
+    // becomes two phantom authors).
     .replace(/Chapman,\s*Andrew/gi, 'Andrew Chapman')
+    .replace(/Taghizadeh-Hesary,\s*Farhad/gi, 'Farhad Taghizadeh-Hesary')
+    .replace(/Alireza,\s*Yazdiani/gi, 'Alireza Yazdiani')
     .replace(/&/g, ',')
     .replace(/\band\b/gi, ',')
     .split(',')
     .map(s => normName(s))
-    .filter(Boolean);
+    // Strip academic-role prefixes, e.g. "BA student Osama Awadalla".
+    .map(s => s.replace(/^[A-Za-z.]+\s+student\s+/i, ''))
+    .filter(Boolean)
+    .filter(s => !AUTHOR_DROP.has(s.toLowerCase()));
 }
 function isTim(name) {
   return TIM_KEYS.has(authorKey(name));

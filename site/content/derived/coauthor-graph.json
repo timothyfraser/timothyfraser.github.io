@@ -38,7 +38,7 @@
     {
       "id": "h oliver gao",
       "label": "H. Oliver Gao",
-      "weight": 4,
+      "weight": 9,
       "topic": "transportation",
       "isCenter": false
     },
@@ -73,7 +73,7 @@
     {
       "id": "daniel p aldrich",
       "label": "Daniel P. Aldrich",
-      "weight": 27,
+      "weight": 31,
       "topic": "transportation",
       "isCenter": false
     },
@@ -122,7 +122,7 @@
     {
       "id": "alireza yazdiani",
       "label": "Alireza Yazdiani",
-      "weight": 1,
+      "weight": 2,
       "topic": "transportation",
       "isCenter": false
     },
@@ -143,14 +143,14 @@
     {
       "id": "aayushi mishra",
       "label": "Aayushi Mishra",
-      "weight": 1,
+      "weight": 2,
       "topic": "disaster",
       "isCenter": false
     },
     {
       "id": "osama awadalla",
       "label": "Osama Awadalla",
-      "weight": 4,
+      "weight": 5,
       "topic": "transportation",
       "isCenter": false
     },
@@ -344,13 +344,6 @@
       "isCenter": false
     },
     {
-      "id": "daniel aldrich",
-      "label": "Daniel Aldrich",
-      "weight": 4,
-      "topic": "transportation",
-      "isCenter": false
-    },
-    {
       "id": "david hummel",
       "label": "David Hummel",
       "weight": 2,
@@ -414,15 +407,8 @@
       "isCenter": false
     },
     {
-      "id": "taghizadeh-hesary",
-      "label": "Taghizadeh-Hesary",
-      "weight": 1,
-      "topic": "energy",
-      "isCenter": false
-    },
-    {
-      "id": "farhad",
-      "label": "Farhad",
+      "id": "farhad taghizadeh-hesary",
+      "label": "Farhad Taghizadeh-Hesary",
       "weight": 1,
       "topic": "energy",
       "isCenter": false
@@ -477,27 +463,6 @@
       "isCenter": false
     },
     {
-      "id": "ba student osama awadalla",
-      "label": "BA student Osama Awadalla",
-      "weight": 1,
-      "topic": "resilience",
-      "isCenter": false
-    },
-    {
-      "id": "colleagues",
-      "label": "colleagues",
-      "weight": 1,
-      "topic": "resilience",
-      "isCenter": false
-    },
-    {
-      "id": "ayushi mishra",
-      "label": "Ayushi Mishra",
-      "weight": 1,
-      "topic": "disaster",
-      "isCenter": false
-    },
-    {
       "id": "leah smith",
       "label": "Leah Smith",
       "weight": 1,
@@ -508,27 +473,6 @@
       "id": "kaylen li",
       "label": "Kaylen Li",
       "weight": 1,
-      "topic": "transportation",
-      "isCenter": false
-    },
-    {
-      "id": "alireza",
-      "label": "Alireza",
-      "weight": 1,
-      "topic": "transportation",
-      "isCenter": false
-    },
-    {
-      "id": "yazdiani",
-      "label": "Yazdiani",
-      "weight": 1,
-      "topic": "transportation",
-      "isCenter": false
-    },
-    {
-      "id": "oliver gao",
-      "label": "Oliver Gao",
-      "weight": 5,
       "topic": "transportation",
       "isCenter": false
     },
@@ -638,7 +582,7 @@
     {
       "source": "h oliver gao",
       "target": "timothy fraser",
-      "weight": 4,
+      "weight": 9,
       "topic": "transportation"
     },
     {
@@ -728,7 +672,7 @@
     {
       "source": "daniel p aldrich",
       "target": "timothy fraser",
-      "weight": 27,
+      "weight": 31,
       "topic": "transportation"
     },
     {
@@ -896,7 +840,7 @@
     {
       "source": "alireza yazdiani",
       "target": "timothy fraser",
-      "weight": 1,
+      "weight": 2,
       "topic": "transportation"
     },
     {
@@ -908,7 +852,7 @@
     {
       "source": "alireza yazdiani",
       "target": "h oliver gao",
-      "weight": 1,
+      "weight": 2,
       "topic": "transportation"
     },
     {
@@ -944,37 +888,37 @@
     {
       "source": "aayushi mishra",
       "target": "timothy fraser",
-      "weight": 1,
+      "weight": 2,
       "topic": "disaster"
     },
     {
       "source": "osama awadalla",
       "target": "timothy fraser",
-      "weight": 4,
+      "weight": 5,
       "topic": "transportation"
     },
     {
       "source": "aayushi mishra",
       "target": "osama awadalla",
-      "weight": 1,
+      "weight": 2,
       "topic": "disaster"
     },
     {
       "source": "aayushi mishra",
       "target": "jennifer shea",
-      "weight": 1,
+      "weight": 2,
       "topic": "disaster"
     },
     {
       "source": "aayushi mishra",
       "target": "daniel homsey",
-      "weight": 1,
+      "weight": 2,
       "topic": "disaster"
     },
     {
       "source": "aayushi mishra",
       "target": "daniel p aldrich",
-      "weight": 1,
+      "weight": 2,
       "topic": "disaster"
     },
     {
@@ -992,7 +936,7 @@
     {
       "source": "daniel p aldrich",
       "target": "osama awadalla",
-      "weight": 3,
+      "weight": 4,
       "topic": "environment"
     },
     {
@@ -1028,8 +972,8 @@
     {
       "source": "daniel p aldrich",
       "target": "takahiro yabe",
-      "weight": 1,
-      "topic": "environment"
+      "weight": 2,
+      "topic": "transportation"
     },
     {
       "source": "esteban moro",
@@ -1100,13 +1044,13 @@
     {
       "source": "costas panagopoulos",
       "target": "daniel p aldrich",
-      "weight": 4,
+      "weight": 5,
       "topic": "resilience"
     },
     {
       "source": "daniel kim",
       "target": "daniel p aldrich",
-      "weight": 4,
+      "weight": 5,
       "topic": "resilience"
     },
     {
@@ -1124,7 +1068,7 @@
     {
       "source": "h oliver gao",
       "target": "yan guo",
-      "weight": 1,
+      "weight": 2,
       "topic": "transportation"
     },
     {
@@ -1454,8 +1398,8 @@
     {
       "source": "courtney page-tan",
       "target": "daniel p aldrich",
-      "weight": 6,
-      "topic": "environment"
+      "weight": 8,
+      "topic": "transportation"
     },
     {
       "source": "alex r poniatowski",
@@ -1518,34 +1462,16 @@
       "topic": "resilience"
     },
     {
-      "source": "daniel aldrich",
-      "target": "timothy fraser",
-      "weight": 4,
-      "topic": "transportation"
-    },
-    {
       "source": "david hummel",
       "target": "timothy fraser",
       "weight": 2,
       "topic": "resilience"
     },
     {
-      "source": "costas panagopoulos",
-      "target": "daniel aldrich",
-      "weight": 1,
-      "topic": "health"
-    },
-    {
-      "source": "daniel aldrich",
+      "source": "daniel p aldrich",
       "target": "david hummel",
-      "weight": 1,
-      "topic": "health"
-    },
-    {
-      "source": "daniel aldrich",
-      "target": "daniel kim",
-      "weight": 1,
-      "topic": "health"
+      "weight": 2,
+      "topic": "resilience"
     },
     {
       "source": "costas panagopoulos",
@@ -1606,12 +1532,6 @@
       "target": "larissa morikawa",
       "weight": 2,
       "topic": "transportation"
-    },
-    {
-      "source": "daniel p aldrich",
-      "target": "david hummel",
-      "weight": 1,
-      "topic": "resilience"
     },
     {
       "source": "andrew small",
@@ -1710,79 +1630,37 @@
       "topic": "environment"
     },
     {
-      "source": "farhad",
-      "target": "taghizadeh-hesary",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
       "source": "aline mortha",
-      "target": "taghizadeh-hesary",
+      "target": "farhad taghizadeh-hesary",
       "weight": 1,
       "topic": "energy"
     },
     {
-      "source": "hadi farabi-asl",
-      "target": "taghizadeh-hesary",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "taghizadeh-hesary",
-      "target": "tapan sarker",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "andrew j chapman",
-      "target": "taghizadeh-hesary",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "taghizadeh-hesary",
-      "target": "yosuke shigetomi",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "taghizadeh-hesary",
-      "target": "timothy fraser",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "aline mortha",
-      "target": "farhad",
-      "weight": 1,
-      "topic": "energy"
-    },
-    {
-      "source": "farhad",
+      "source": "farhad taghizadeh-hesary",
       "target": "hadi farabi-asl",
       "weight": 1,
       "topic": "energy"
     },
     {
-      "source": "farhad",
+      "source": "farhad taghizadeh-hesary",
       "target": "tapan sarker",
       "weight": 1,
       "topic": "energy"
     },
     {
       "source": "andrew j chapman",
-      "target": "farhad",
+      "target": "farhad taghizadeh-hesary",
       "weight": 1,
       "topic": "energy"
     },
     {
-      "source": "farhad",
+      "source": "farhad taghizadeh-hesary",
       "target": "yosuke shigetomi",
       "weight": 1,
       "topic": "energy"
     },
     {
-      "source": "farhad",
+      "source": "farhad taghizadeh-hesary",
       "target": "timothy fraser",
       "weight": 1,
       "topic": "energy"
@@ -1891,30 +1769,18 @@
     },
     {
       "source": "courtney page-tan",
-      "target": "daniel aldrich",
-      "weight": 2,
-      "topic": "transportation"
-    },
-    {
-      "source": "daniel aldrich",
       "target": "takahiro yabe",
       "weight": 1,
       "topic": "transportation"
     },
     {
-      "source": "courtney page-tan",
-      "target": "takahiro yabe",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "daniel aldrich",
+      "source": "daniel p aldrich",
       "target": "juheon lee",
       "weight": 1,
       "topic": "disaster"
     },
     {
-      "source": "daniel aldrich",
+      "source": "daniel p aldrich",
       "target": "toshiaki yoshida",
       "weight": 1,
       "topic": "disaster"
@@ -1944,66 +1810,6 @@
       "topic": "disaster"
     },
     {
-      "source": "ba student osama awadalla",
-      "target": "timothy fraser",
-      "weight": 1,
-      "topic": "resilience"
-    },
-    {
-      "source": "colleagues",
-      "target": "timothy fraser",
-      "weight": 1,
-      "topic": "resilience"
-    },
-    {
-      "source": "ba student osama awadalla",
-      "target": "daniel aldrich",
-      "weight": 1,
-      "topic": "resilience"
-    },
-    {
-      "source": "ba student osama awadalla",
-      "target": "colleagues",
-      "weight": 1,
-      "topic": "resilience"
-    },
-    {
-      "source": "colleagues",
-      "target": "daniel aldrich",
-      "weight": 1,
-      "topic": "resilience"
-    },
-    {
-      "source": "ayushi mishra",
-      "target": "timothy fraser",
-      "weight": 1,
-      "topic": "disaster"
-    },
-    {
-      "source": "ayushi mishra",
-      "target": "osama awadalla",
-      "weight": 1,
-      "topic": "disaster"
-    },
-    {
-      "source": "ayushi mishra",
-      "target": "jennifer shea",
-      "weight": 1,
-      "topic": "disaster"
-    },
-    {
-      "source": "ayushi mishra",
-      "target": "daniel homsey",
-      "weight": 1,
-      "topic": "disaster"
-    },
-    {
-      "source": "ayushi mishra",
-      "target": "daniel p aldrich",
-      "weight": 1,
-      "topic": "disaster"
-    },
-    {
       "source": "leah smith",
       "target": "timothy fraser",
       "weight": 1,
@@ -2016,38 +1822,14 @@
       "topic": "transportation"
     },
     {
-      "source": "alireza",
-      "target": "timothy fraser",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "timothy fraser",
-      "target": "yazdiani",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "oliver gao",
-      "target": "timothy fraser",
-      "weight": 5,
-      "topic": "transportation"
-    },
-    {
       "source": "kaylen li",
       "target": "leah smith",
       "weight": 1,
       "topic": "transportation"
     },
     {
-      "source": "alireza",
+      "source": "alireza yazdiani",
       "target": "leah smith",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "leah smith",
-      "target": "yazdiani",
       "weight": 1,
       "topic": "transportation"
     },
@@ -2064,25 +1846,19 @@
       "topic": "transportation"
     },
     {
-      "source": "leah smith",
-      "target": "oliver gao",
+      "source": "h oliver gao",
+      "target": "leah smith",
       "weight": 1,
       "topic": "transportation"
     },
     {
-      "source": "alireza",
+      "source": "alireza yazdiani",
       "target": "kaylen li",
       "weight": 1,
       "topic": "transportation"
     },
     {
       "source": "kaylen li",
-      "target": "yazdiani",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "kaylen li",
       "target": "yan guo",
       "weight": 1,
       "topic": "transportation"
@@ -2094,67 +1870,31 @@
       "topic": "transportation"
     },
     {
-      "source": "kaylen li",
-      "target": "oliver gao",
+      "source": "h oliver gao",
+      "target": "kaylen li",
       "weight": 1,
       "topic": "transportation"
     },
     {
-      "source": "alireza",
-      "target": "yazdiani",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "alireza",
+      "source": "alireza yazdiani",
       "target": "yan guo",
       "weight": 1,
       "topic": "transportation"
     },
     {
-      "source": "alireza",
+      "source": "alireza yazdiani",
       "target": "osama awadalla",
       "weight": 1,
       "topic": "transportation"
     },
     {
-      "source": "alireza",
-      "target": "oliver gao",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "yan guo",
-      "target": "yazdiani",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "osama awadalla",
-      "target": "yazdiani",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "oliver gao",
-      "target": "yazdiani",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
       "source": "osama awadalla",
       "target": "yan guo",
       "weight": 1,
       "topic": "transportation"
     },
     {
-      "source": "oliver gao",
-      "target": "yan guo",
-      "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "oliver gao",
+      "source": "h oliver gao",
       "target": "osama awadalla",
       "weight": 1,
       "topic": "transportation"
@@ -2304,7 +2044,7 @@
       "topic": "environment"
     },
     {
-      "source": "oliver gao",
+      "source": "h oliver gao",
       "target": "peilin li",
       "weight": 1,
       "topic": "environment"
@@ -2322,8 +2062,8 @@
       "topic": "environment"
     },
     {
-      "source": "leo kuang",
-      "target": "oliver gao",
+      "source": "h oliver gao",
+      "target": "leo kuang",
       "weight": 1,
       "topic": "environment"
     },
@@ -2335,13 +2075,13 @@
     },
     {
       "source": "aarya darak",
-      "target": "oliver gao",
+      "target": "h oliver gao",
       "weight": 1,
       "topic": "environment"
     },
     {
-      "source": "minghao yang",
-      "target": "oliver gao",
+      "source": "h oliver gao",
+      "target": "minghao yang",
       "weight": 1,
       "topic": "environment"
     },
@@ -2352,7 +2092,7 @@
       "topic": "transportation"
     },
     {
-      "source": "oliver gao",
+      "source": "h oliver gao",
       "target": "xinwei li",
       "weight": 1,
       "topic": "transportation"
@@ -2395,23 +2135,23 @@
       "x": 55.000000000000014,
       "y": 95.26279441628824
     },
-    "andrew j chapman": {
+    "h oliver gao": {
       "x": -54.99999999999998,
       "y": 95.26279441628826
     },
-    "costas panagopoulos": {
+    "andrew j chapman": {
       "x": -110,
       "y": 1.3471114790620885e-14
     },
-    "daniel kim": {
+    "costas panagopoulos": {
       "x": -55.00000000000005,
       "y": -95.26279441628823
     },
-    "oliver gao": {
+    "osama awadalla": {
       "x": 55.000000000000014,
       "y": -95.26279441628824
     },
-    "h oliver gao": {
+    "daniel kim": {
       "x": 200,
       "y": 0
     },
@@ -2423,59 +2163,59 @@
       "x": 124.69796037174672,
       "y": 156.36629649360597
     },
-    "osama awadalla": {
+    "andrew small": {
       "x": 44.50418679126289,
       "y": 194.98558243636472
     },
-    "daniel aldrich": {
+    "pinar temocin": {
       "x": -44.50418679126287,
       "y": 194.98558243636472
     },
-    "andrew small": {
+    "yan guo": {
       "x": -124.6979603717467,
       "y": 156.36629649360597
     },
-    "pinar temocin": {
+    "lily cunningham": {
       "x": -180.19377358048382,
       "y": 86.77674782351164
     },
-    "yan guo": {
+    "danni lu": {
       "x": -200,
       "y": 2.4492935982947064e-14
     },
-    "lily cunningham": {
+    "mohammad tayarani": {
       "x": -180.19377358048382,
       "y": -86.7767478235116
     },
-    "danni lu": {
+    "vincent rago": {
       "x": -124.69796037174675,
       "y": -156.36629649360594
     },
-    "mohammad tayarani": {
+    "katherine van woert": {
       "x": -44.50418679126292,
       "y": -194.98558243636472
     },
-    "vincent rago": {
+    "sophia olivieri": {
       "x": 44.504186791262846,
       "y": -194.98558243636472
     },
-    "katherine van woert": {
+    "jonathan baron": {
       "x": 124.69796037174667,
       "y": -156.36629649360597
     },
-    "sophia olivieri": {
+    "katelyn buckley": {
       "x": 180.19377358048382,
       "y": -86.77674782351167
     },
-    "jonathan baron": {
+    "pamela lalli": {
       "x": 300,
       "y": 0
     },
-    "katelyn buckley": {
+    "alireza yazdiani": {
       "x": 293.4442802201417,
       "y": 62.373507245327794
     },
-    "pamela lalli": {
+    "aayushi mishra": {
       "x": 274.06363729278024,
       "y": 122.02099292274005
     },
@@ -2543,193 +2283,161 @@
       "x": -242.70509831248424,
       "y": -176.3355756877419
     },
-    "alireza yazdiani": {
+    "harshita sarup": {
       "x": -200.73918190765752,
       "y": -222.9434476432182
     },
-    "aayushi mishra": {
+    "esteban moro": {
       "x": -150.00000000000014,
       "y": -259.80762113533154
     },
-    "harshita sarup": {
+    "miranda bourdeau": {
       "x": -92.70509831248427,
       "y": -285.31695488854604
     },
-    "esteban moro": {
+    "olivia feeley": {
       "x": -31.35853898029627,
       "y": -298.356568610482
     },
-    "miranda bourdeau": {
+    "andres ridge": {
       "x": 31.358538980296164,
       "y": -298.356568610482
     },
-    "olivia feeley": {
+    "ava cervini": {
       "x": 92.70509831248417,
       "y": -285.3169548885461
     },
-    "andres ridge": {
+    "kelly gilmore": {
       "x": 150.00000000000003,
       "y": -259.8076211353316
     },
-    "ava cervini": {
+    "gianna worthington": {
       "x": 200.73918190765752,
       "y": -222.9434476432182
     },
-    "kelly gilmore": {
+    "illana berliavsky": {
       "x": 242.7050983124842,
       "y": -176.335575687742
     },
-    "gianna worthington": {
+    "kevin smith": {
       "x": 274.0636372927803,
       "y": -122.02099292274005
     },
-    "illana berliavsky": {
+    "andrew dolman": {
       "x": 293.44428022014165,
       "y": -62.373507245327964
     },
-    "kevin smith": {
+    "napuck cherdchaiyapong": {
       "x": 400,
       "y": 0
     },
-    "andrew dolman": {
-      "x": 393.9231012048832,
-      "y": 69.45927106677213
-    },
-    "napuck cherdchaiyapong": {
-      "x": 375.8770483143634,
-      "y": 136.80805733026747
-    },
     "winta tekle": {
-      "x": 346.4101615137755,
-      "y": 199.99999999999997
+      "x": 389.97116487272945,
+      "y": 89.00837358252576
     },
     "erin thomas": {
-      "x": 306.41777724759123,
-      "y": 257.1150438746157
+      "x": 360.38754716096764,
+      "y": 173.55349564702325
     },
     "joel zayas": {
-      "x": 257.11504387461576,
-      "y": 306.41777724759123
+      "x": 312.73259298721194,
+      "y": 249.3959207434934
     },
     "alex r poniatowski": {
-      "x": 200.00000000000006,
-      "y": 346.41016151377545
+      "x": 249.39592074349343,
+      "y": 312.73259298721194
     },
     "nicholas hersey": {
-      "x": 136.80805733026753,
-      "y": 375.8770483143633
+      "x": 173.55349564702328,
+      "y": 360.38754716096764
     },
     "haoran zheng": {
-      "x": 69.45927106677216,
-      "y": 393.9231012048832
+      "x": 89.00837358252578,
+      "y": 389.97116487272945
     },
     "nicole naquin": {
       "x": 2.4492935982947064e-14,
       "y": 400
     },
     "andrew littlejohn": {
-      "x": -69.45927106677212,
-      "y": 393.9231012048832
+      "x": -89.00837358252573,
+      "y": 389.97116487272945
     },
     "amy hunt": {
-      "x": -136.80805733026747,
-      "y": 375.8770483143634
+      "x": -173.55349564702323,
+      "y": 360.38754716096764
     },
     "eri lee": {
-      "x": -199.99999999999991,
-      "y": 346.4101615137755
+      "x": -249.3959207434934,
+      "y": 312.73259298721194
     },
-    "taghizadeh-hesary": {
-      "x": -257.11504387461576,
-      "y": 306.41777724759123
-    },
-    "farhad": {
-      "x": -306.4177772475912,
-      "y": 257.11504387461576
+    "farhad taghizadeh-hesary": {
+      "x": -312.7325929872119,
+      "y": 249.39592074349343
     },
     "aline mortha": {
-      "x": -346.4101615137755,
-      "y": 199.99999999999997
+      "x": -360.38754716096764,
+      "y": 173.55349564702328
     },
     "hadi farabi-asl": {
-      "x": -375.8770483143633,
-      "y": 136.80805733026756
+      "x": -389.97116487272945,
+      "y": 89.0083735825258
     },
     "tapan sarker": {
-      "x": -393.9231012048832,
-      "y": 69.45927106677229
-    },
-    "melanie dennis": {
       "x": -400,
       "y": 4.898587196589413e-14
     },
+    "melanie dennis": {
+      "x": -389.97116487272945,
+      "y": -89.0083735825257
+    },
     "kenshi itaoka": {
-      "x": -393.9231012048832,
-      "y": -69.45927106677219
-    },
-    "ba student osama awadalla": {
-      "x": -375.8770483143634,
-      "y": -136.80805733026747
-    },
-    "colleagues": {
-      "x": -346.41016151377545,
-      "y": -200.00000000000006
-    },
-    "ayushi mishra": {
-      "x": -306.41777724759123,
-      "y": -257.1150438746157
+      "x": -360.38754716096764,
+      "y": -173.5534956470232
     },
     "leah smith": {
-      "x": -257.11504387461576,
-      "y": -306.4177772475912
+      "x": -312.73259298721206,
+      "y": -249.3959207434932
     },
     "kaylen li": {
-      "x": -200.00000000000017,
-      "y": -346.4101615137754
-    },
-    "alireza": {
-      "x": -136.80805733026776,
-      "y": -375.87704831436326
-    },
-    "yazdiani": {
-      "x": -69.45927106677213,
-      "y": -393.9231012048832
+      "x": -249.3959207434935,
+      "y": -312.7325929872119
     },
     "peculiar lawrence": {
+      "x": -173.5534956470233,
+      "y": -360.38754716096764
+    },
+    "shannya niveyro": {
+      "x": -89.00837358252583,
+      "y": -389.97116487272945
+    },
+    "maria dobransky": {
       "x": -7.347880794884119e-14,
       "y": -400
     },
-    "shannya niveyro": {
-      "x": 69.45927106677199,
-      "y": -393.92310120488327
-    },
-    "maria dobransky": {
-      "x": 136.8080573302676,
-      "y": -375.8770483143633
-    },
     "aarya darak": {
-      "x": 200.00000000000006,
-      "y": -346.41016151377545
+      "x": 89.00837358252569,
+      "y": -389.97116487272945
     },
     "minghao yang": {
-      "x": 257.1150438746157,
-      "y": -306.41777724759123
+      "x": 173.55349564702317,
+      "y": -360.3875471609677
     },
     "xinwei li": {
-      "x": 306.4177772475911,
-      "y": -257.1150438746158
+      "x": 249.39592074349335,
+      "y": -312.73259298721194
     },
     "khushi patel": {
-      "x": 346.41016151377534,
-      "y": -200.00000000000017
+      "x": 312.7325929872119,
+      "y": -249.3959207434935
     },
     "laura k nelson": {
-      "x": 375.87704831436326,
-      "y": -136.8080573302678
+      "x": 360.38754716096764,
+      "y": -173.55349564702334
     },
     "kathrin zippel": {
-      "x": 393.9231012048832,
-      "y": -69.45927106677216
+      "x": 389.9711648727294,
+      "y": -89.00837358252586
     }
   }
 }
