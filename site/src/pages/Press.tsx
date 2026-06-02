@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
-import SectionMast from '../components/SectionMast';
 import StatBox from '../components/StatBox';
 import WNYCEmbed from '../components/WNYCEmbed';
 import Figure from '../components/Figure';
+import PressMediaIcon from '../components/PressMediaIcon';
 import '../viz/viz.css';
 import { press, metrics } from '../data/loaders';
 
@@ -42,11 +42,20 @@ export default function Press() {
 
   return (
     <div className="wrap">
-      <SectionMast
-        eyebrow="Press"
-        title="In the news"
-        subhead="Quoted, cited, interviewed, and reviewed across academic and general-audience outlets. The late-2025 cluster was the congestion-pricing study."
-      />
+      <header className="press-hero reveal d1">
+        <div className="press-hero-copy">
+          <div className="eyebrow">Press</div>
+          <h1>In the news</h1>
+          <p className="subhead">
+            Quoted, cited, interviewed, and reviewed across academic and general-audience outlets. The late-2025 cluster was the congestion-pricing study.
+          </p>
+        </div>
+        <Figure
+          src="/images/interview.png"
+          alt="Tim interviewing an anti-nuclear activist in Kagoshima, Japan"
+          caption="Tim interviewing an anti-nuclear activist in Kagoshima, Japan — Fulbright fieldwork, 2017."
+        />
+      </header>
 
       {/* FEATURED WNYC */}
       <WNYCEmbed />
@@ -63,18 +72,9 @@ export default function Press() {
         />
       </div>
 
-      {/* Interview — small, properly captioned */}
-      <Figure
-        src="/images/interview.png"
-        alt="Tim interviewing an anti-nuclear activist in Kagoshima, Japan"
-        caption="Tim interviewing an anti-nuclear activist in Kagoshima, Japan — Fulbright fieldwork, 2017."
-        align="right"
-      />
-
-      <div className="prose" style={{ maxWidth: 'none' }}>
+      <div className="prose" style={{ maxWidth: 'none', marginTop: 8 }}>
         <p>Below: full press feed, grouped by year. Filter or search to narrow.</p>
       </div>
-      <div style={{ clear: 'both' }} />
 
       <div className="filter-bar">
         <input
@@ -90,25 +90,28 @@ export default function Press() {
       </div>
 
       {groupedByYear.map(([year, list]) => (
-        <section key={year} style={{ marginTop: 28 }}>
+        <section key={year} className="press-year-group" style={{ marginTop: 28 }}>
           <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 600, borderBottom: '1px solid var(--line)', paddingBottom: 6, marginBottom: 6 }}>
             {year || 'Undated'}
           </h3>
-          {list.map((p, i) => (
-            <div className="press-row" key={i}>
-              <div className="date">{p.date_raw || p.year}</div>
-              <div>
-                <span className={`type-pill ${p.type}`}>{TYPE_LABEL[p.type] || p.type}</span>
-                <span className="title">
-                  {p.link ? <a href={p.link}>{p.title}</a> : p.title}
-                </span>
-                {p.press_author && (
-                  <span style={{ color: 'var(--muted)', fontSize: '0.88rem' }}> — {p.press_author}</span>
-                )}
+          <div className="press-feed">
+            {list.map((p, i) => (
+              <div className="press-row press-row-rich" key={i}>
+                <div className="date">{p.date_raw || p.year}</div>
+                <PressMediaIcon outlet={p.outlet} mediaType={p.media_type} />
+                <div className="press-main">
+                  <span className={`type-pill ${p.type}`}>{TYPE_LABEL[p.type] || p.type}</span>
+                  <span className="title">
+                    {p.link ? <a href={p.link}>{p.title}</a> : p.title}
+                  </span>
+                  {p.press_author && (
+                    <span style={{ color: 'var(--muted)', fontSize: '0.88rem' }}> — {p.press_author}</span>
+                  )}
+                </div>
+                <div className="outlet">{p.outlet}</div>
               </div>
-              <div className="outlet">{p.outlet}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
       ))}
 

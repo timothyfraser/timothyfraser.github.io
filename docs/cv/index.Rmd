@@ -335,7 +335,6 @@ Work In Progress {data-icon=spinner}
 - AI-Powered Emissions Reporting: Using GPT to Write and Validate Emissions Data Reports for Policymakers (with Peilin Li, Yan Guo, Peculiar Lawrence, Shannya Niveyro, Maria Dobransky, & Leo Kuang) 
 - Automated Algorithms for converting Emissions Data into Written Reports for Policymakers (with Peilin Li, Leo Kuang, Aarya Darak, Minghao Yang, & Oliver Gao)
 - Cloud MOVES for Iterative Emissions Estimation: Architecting a Distributed Cloud Computing System for Transportation Emissions Management (with Oliver Gao)
-- Co-benefits of transportation congestion mitigation, air quality improvement, and health implication in U.S. between 1992 and 2022 (with Xinwei Li and Oliver Gao)
 - Networked Neighborhoods: The role of Social Infrastructure in Social Connectivity in Urban Systems (with Khushi Patel)
 - [Where the Grass Is Greener: Social Infrastructure and Resilience to COVID-19.](http://dx.doi.org/10.2139/ssrn.3841826)
 - Japan’s Green Voters: The Role of Social Capital in Women’s Movements against Nuclear Power Policy
@@ -802,7 +801,6 @@ N/A
 - CAT Greentech Database Team: Jessie Wong, Emily Yi-Wen Tseng, RuiRui Mao, Shungo Najima  @CU
 - CAT Reporter Team: Peilin Li, Leo Ziyu Kuang, Aarya Darak, Minghao Yang [1 working paper] @CU
 - Social Infrastructure Project: Linpei Huang @CU
-- MOVESLite Project: Yan Guo [1 working paper] @CU
 - Mapping Social Infrastructure Team: Napuck Cherdchaiyapong, Winta Tekle, Erin Thomas, Joel Zayas [1 paper, capstone] @NU
 - Louisiana Recovery Team: Alex Poniatowski, Nicholas Hersey, Haoran Zheng [1 paper, capstone] @NU
 - Disaster Recovery Committees Team: Lucy Hewitt, Ziyue Chen, Matthew Cherkerzian [1 working paper, capstone] @NU

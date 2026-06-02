@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import SectionMast from '../components/SectionMast';
 import TopicBars from '../viz/TopicBars';
 import '../viz/viz.css';
+import PublicationsShelfSection from '../components/PublicationsShelfSection';
 import { publications } from '../data/loaders';
 
 const TYPE_LABELS: Record<string, string> = {
@@ -50,6 +51,8 @@ export default function Publications() {
 
       <TopicBars />
 
+      <PublicationsShelfSection style={{ marginTop: 32 }} />
+
       <div className="filter-bar">
         <input
           type="search"
@@ -92,6 +95,7 @@ export default function Publications() {
           </div>
         </div>
       ))}
+
     </div>
   );
 }

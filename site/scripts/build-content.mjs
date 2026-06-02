@@ -289,6 +289,14 @@ function buildCoauthorGraph(pubs) {
   return { nodes, edges, layout };
 }
 
+function parseAsOf(asOf) {
+  if (!asOf || typeof asOf !== 'string') return null;
+  const m = asOf.trim().match(/^([A-Za-z]+)\s+(\d{4})$/);
+  if (!m) return null;
+  const d = new Date(`${m[1]} 15, ${m[2]}`);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
 // -------- press --------
 function normalizePress(rows) {
   return rows
@@ -300,7 +308,8 @@ function normalizePress(rows) {
         const d = new Date(r.date);
         if (!isNaN(d.getTime())) parsedDate = d.toISOString().slice(0, 10);
       }
-      if (!parsedDate && yearN) parsedDate = `${yearN}-01-01`;
+      // Year-only rows: assume late-year so undated press clusters (e.g. Dec 2025) stay in-window.
+      if (!parsedDate && yearN) parsedDate = `${yearN}-12-31`;
       return {
         type: (r.type || '').trim(),
         press_author: (r.press_author || '').trim() || null,
@@ -347,9 +356,7 @@ function computeMetrics(pubs, press, manual) {
   const pressByType = {};
   for (const p of press) pressByType[p.type] = (pressByType[p.type] || 0) + 1;
 
-  // Press in the last 12 months — count items with parsed date in window.
-  // For determinism: use the most recent press date as the "now" anchor
-  // rather than the wall clock, so the build is reproducible.
+  // Press in the last 12 months — parsed date within window of metrics.as_of (or latest press date).
   let pressLast12 = 0;
   let pressByYear = {};
   if (press.length) {
@@ -358,7 +365,8 @@ function computeMetrics(pubs, press, manual) {
       .filter(Boolean)
       .sort()
       .pop();
-    const anchor = maxDate ? new Date(maxDate) : new Date();
+    const anchor = parseAsOf(manual.as_of)
+      ?? (maxDate ? new Date(maxDate) : new Date());
     const cutoff = new Date(anchor);
     cutoff.setFullYear(cutoff.getFullYear() - 1);
     for (const p of press) {

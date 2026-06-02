@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import SectionMast from '../components/SectionMast';
 import Card, { CardBody, CardHead } from '../components/Card';
 import { software } from '../data/loaders';
+import { VizEmbed } from '../components/viz/VizEmbed';
 
 export default function Software() {
   const [filter, setFilter] = useState('');
@@ -26,6 +27,8 @@ export default function Software() {
         title="R packages, dashboards, and course books"
         subhead="Every project ships an R package, a dashboard, or a textbook. Source is on GitHub; dashboards run live."
       />
+
+      <VizEmbed widget="softwareConveyor" title="Software conveyor" height={520} autoHeight />
 
       <div className="filter-bar">
         <input

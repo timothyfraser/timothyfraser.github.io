@@ -3,6 +3,7 @@ import StatBox from '../components/StatBox';
 import WNYCEmbed from '../components/WNYCEmbed';
 import TopicBars from '../viz/TopicBars';
 import '../viz/viz.css';
+import PublicationsShelfSection from '../components/PublicationsShelfSection';
 import { metrics, projects, press, site } from '../data/loaders';
 
 interface WorkTile { img: string; alt: string; title: string; desc: string; href: string; }
@@ -182,6 +183,8 @@ export default function Home() {
           <Link to="/press" className="btn ghost">All press →</Link>
         </p>
       </section>
+
+      <PublicationsShelfSection className="reveal d5" />
     </div>
   );
 }

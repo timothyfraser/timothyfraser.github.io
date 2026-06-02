@@ -12,10 +12,9 @@
     { "label": "Research", "path": "/research" },
     { "label": "Teaching", "path": "/teaching" },
     { "label": "Projects", "path": "/projects" },
-    { "label": "Software", "path": "/software" },
-    { "label": "Students", "path": "/students" },
     { "label": "Press", "path": "/press" },
-    { "label": "Publications", "path": "/publications" }
+    { "label": "Publications", "path": "/publications" },
+    { "label": "Software", "path": "/software" }
   ],
   "links": {
     "cv": "https://timothyfraser.com/cv",

@@ -112,14 +112,69 @@
   margin-top: 14px;
 }
 
-/* Research map */
+/* Research map (Leaflet) */
 .research-map {
   background: var(--bg-2);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 16px;
 }
-.research-map svg { display: block; width: 100%; height: auto; }
+.research-map .leaflet-container {
+  font-family: var(--font-body);
+  z-index: 0;
+}
+/* Leaflet owns overlay SVG sizing — do not stretch like a static viz SVG. */
+.research-map .leaflet-pane svg {
+  max-width: none;
+}
+.research-map-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  margin-bottom: 10px;
+}
+.research-map-head .eyebrow {
+  margin: 0;
+}
+.research-map-tour {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.research-map-tour .btn {
+  font-size: 0.82rem;
+  padding: 6px 14px;
+}
+.research-map-spotlight {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm, 3px);
+}
+.research-map-spotlight-meta {
+  color: var(--muted);
+}
+.research-map-counter {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.research-map-canvas {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  isolation: isolate;
+}
 .map-tooltip {
   position: absolute;
   background: var(--ink);
@@ -131,4 +186,15 @@
   transform: translate(-50%, -130%);
   white-space: nowrap;
   z-index: 4;
+}
+
+/* Complementary OD widget iframes */
+.viz-embed {
+  margin-top: var(--section-y, 56px);
+}
+.viz-embed iframe {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-white);
+  overflow: hidden;
 }

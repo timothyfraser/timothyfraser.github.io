@@ -154,6 +154,14 @@ export default function CoauthorNetwork({ height = 540, showLegend = true, showT
     .slice(0, 12);
 
   const hoveredNode = hovered ? coauthorGraph.nodes.find(n => n.id === hovered) : null;
+  const coauthorCount = coauthorGraph.nodes.filter(n => !n.isCenter).length;
+
+  const hoverStat = (node: CoauthorNode) => {
+    if (node.isCenter) {
+      return `${coauthorCount} coauthor${coauthorCount === 1 ? '' : 's'}`;
+    }
+    return `${node.weight} paper${node.weight === 1 ? '' : 's'} together`;
+  };
 
   return (
     <div ref={wrapRef} className="coauthor-viz">
@@ -161,7 +169,7 @@ export default function CoauthorNetwork({ height = 540, showLegend = true, showT
       {hoveredNode && (
         <div className="viz-tooltip" aria-live="polite">
           <strong>{hoveredNode.label}</strong>
-          <span> · {hoveredNode.weight} paper{hoveredNode.weight === 1 ? '' : 's'} together</span>
+          <span> · {hoverStat(hoveredNode)}</span>
           <span> · {hoveredNode.topic.replace(/_/g, ' ')}</span>
         </div>
       )}

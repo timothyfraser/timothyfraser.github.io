@@ -11,7 +11,7 @@ import Card, { CardBody, CardHead, CardFigure } from '../components/Card';
 const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
   cat: { src: '/images/dashboard_cat.PNG', alt: 'CAT dashboard' },
   'social-infrastructure': { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure map' },
-  evacuation: { src: '/images/feature_dashjapan.png', alt: 'Japan dashboard' },
+  evacuation: { src: '/images/hero_image_cropped_banner.png', alt: 'Hurricane Dorian evacuation network visualization' },
   'polarization-health': { src: '/images/feature_dashstat.png', alt: 'Statistics dashboard' },
 };
 
@@ -78,19 +78,9 @@ export default function Research() {
             caption="NYC congestion pricing — PM2.5 changes after six months of the cordon (npj Clean Air, 2025)."
           />
           <Figure
-            src="/images/image_social_infra_nyc.png"
-            alt="NYC social infrastructure map"
-            caption="Social-infrastructure density across NYC neighborhoods — part of the multi-city mapping series."
-          />
-          <Figure
-            src="/images/feature_dashjapan.png"
+            src="/images/feature_dashstat.png"
             alt="Japan dashboard"
             caption="Japanese municipal social-capital & vulnerability dashboard — public, queryable, validated."
-          />
-          <Figure
-            src="/images/feature_dashstat.png"
-            alt="Statistics dashboard"
-            caption="VISUALIZER dashboard for CAT-formatted MOVES outputs — emissions by county, scenario, and pollutant."
           />
         </div>
       </section>

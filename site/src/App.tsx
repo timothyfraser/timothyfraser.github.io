@@ -1,11 +1,10 @@
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Research from './pages/Research';
 import Teaching from './pages/Teaching';
 import Projects from './pages/Projects';
 import Software from './pages/Software';
-import Students from './pages/Students';
 import Press from './pages/Press';
 import Publications from './pages/Publications';
 import NotFound from './pages/NotFound';
@@ -46,10 +45,10 @@ export default function App() {
           <Route path="/research" element={<Research />} />
           <Route path="/teaching" element={<Teaching />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/software" element={<Software />} />
-          <Route path="/students" element={<Students />} />
           <Route path="/press" element={<Press />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/software" element={<Software />} />
+          <Route path="/students" element={<Navigate to="/projects#students" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

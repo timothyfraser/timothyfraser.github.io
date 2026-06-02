@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import SectionMast from '../components/SectionMast';
 import Card, { CardBody, CardHead, CardFigure } from '../components/Card';
+import StudentCollaborationsSection from '../components/StudentCollaborationsSection';
 import { projects, site } from '../data/loaders';
 
 const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
@@ -10,8 +13,15 @@ const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
 };
 
 export default function Projects() {
+  const location = useLocation();
   const meng = projects.filter(p => p.kind === 'meng');
   const research = projects.filter(p => p.kind === 'research');
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const el = document.querySelector(location.hash);
+    el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [location.hash]);
 
   return (
     <div className="wrap">
@@ -109,6 +119,8 @@ export default function Projects() {
           })}
         </div>
       </section>
+
+      <StudentCollaborationsSection />
     </div>
   );
 }
