@@ -66,6 +66,7 @@ export interface ProjectItem {
   id: string;
   n: string;
   kind: 'meng' | 'research';
+  icon?: string;
   category: string;
   name: string;
   tagline: string;
