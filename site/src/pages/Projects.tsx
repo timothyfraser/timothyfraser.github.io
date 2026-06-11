@@ -27,8 +27,8 @@ export default function Projects() {
     <div className="wrap">
       <SectionMast
         eyebrow="Projects"
-        title="Three MEng tracks, plus active research"
-        subhead="A connected line of work on cities, air, and movement — from a single tolling cordon in Manhattan to bikeshare networks spanning the globe."
+        title="Six MEng tracks, plus active research"
+        subhead="A connected line of work on cities, air, movement, and resilience — from congestion pricing corridors to fault trees, bikeshare networks to evacuation flows."
       />
 
       <section className="section">
@@ -43,7 +43,7 @@ export default function Projects() {
               {img && <CardFigure src={img.src} alt={img.alt} />}
               <CardHead
                 id={`Project ${p.n} · ${p.category}`}
-                name={p.name}
+                name={p.icon ? `${p.icon} ${p.name}` : p.name}
                 tag={p.tagline}
                 badge={<span className="badge accent">{p.badge.label}</span>}
               />
