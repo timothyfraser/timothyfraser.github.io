@@ -67,6 +67,14 @@
   object-fit: cover;
   display: block;
 }
+.card-figure-illustrative {
+  padding: 6px 12px;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--muted);
+  background: var(--bg-3);
+  border-top: 1px dashed var(--line);
+}
 
 /* ============ Badge ============ */
 .badge {

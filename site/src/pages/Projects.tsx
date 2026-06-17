@@ -5,10 +5,13 @@ import Card, { CardBody, CardHead, CardFigure } from '../components/Card';
 import StudentCollaborationsSection from '../components/StudentCollaborationsSection';
 import { projects, site } from '../data/loaders';
 
-const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
-  cpportal: { src: '/images/image_nyc_congestion.png', alt: 'NYC congestion-pricing effects on PM2.5 air quality' },
+const PROJECT_IMAGES: Record<string, { src: string; alt: string; illustrative?: boolean }> = {
+  movesai: { src: '/images/dashboard_cat.PNG', alt: 'CAT emissions dashboard — Tompkins County, NY profile' },
+  civic: { src: '/images/image_nyc_congestion.png', alt: 'NYC congestion-pricing effects on PM2.5 air quality' },
+  scorecard: { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure density map, NYC' },
   bikeshare: { src: '/images/update_bluebikes.png', alt: 'Bluebikes bikeshare mobility network, Boston' },
-  cat: { src: '/images/dashboard_cat.PNG', alt: 'CAT dashboard' },
+  faultdb: { src: '/images/epic-failure-function.png', alt: 'Cumulative probability of system failure over time' },
+  safecast: { src: '/images/illustrative_safecast.png', alt: 'Illustrative crowdsourced radiation map centered on Fukushima', illustrative: true },
   'social-infrastructure': { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure map' },
 };
 
@@ -28,7 +31,7 @@ export default function Projects() {
       <SectionMast
         eyebrow="Projects"
         title="Six MEng tracks, plus active research"
-        subhead="A connected line of work on cities, air, movement, and resilience — from congestion pricing corridors to fault trees, bikeshare networks to evacuation flows."
+        subhead="A connected line of work on cities, air, movement, and resilience — from AI emissions models and congestion-pricing corridors to bikeshare networks, fault trees, and open radiation monitoring."
       />
 
       <section className="section">
@@ -40,7 +43,7 @@ export default function Projects() {
           const img = PROJECT_IMAGES[p.id];
           return (
             <Card key={p.id} featured>
-              {img && <CardFigure src={img.src} alt={img.alt} />}
+              {img && <CardFigure src={img.src} alt={img.alt} illustrative={img.illustrative} />}
               <CardHead
                 id={`Project ${p.n} · ${p.category}`}
                 name={p.icon ? `${p.icon} ${p.name}` : p.name}
@@ -96,7 +99,7 @@ export default function Projects() {
             const img = PROJECT_IMAGES[p.id];
             return (
               <Card key={p.id}>
-                {img && <CardFigure src={img.src} alt={img.alt} />}
+                {img && <CardFigure src={img.src} alt={img.alt} illustrative={img.illustrative} />}
                 <CardHead
                   id={p.category}
                   name={p.name}

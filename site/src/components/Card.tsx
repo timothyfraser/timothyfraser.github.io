@@ -35,10 +35,15 @@ export function CardBody({ children }: { children: ReactNode }) {
   return <div className="card-body">{children}</div>;
 }
 
-export function CardFigure({ src, alt }: { src: string; alt: string }) {
+export function CardFigure({ src, alt, illustrative }: { src: string; alt: string; illustrative?: boolean }) {
   return (
     <figure className="card-figure">
       <img src={src} alt={alt} loading="lazy" />
+      {illustrative && (
+        <figcaption className="card-figure-illustrative">
+          Illustrative only — no real data behind this visual.
+        </figcaption>
+      )}
     </figure>
   );
 }
