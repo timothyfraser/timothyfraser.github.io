@@ -12,6 +12,8 @@ const PROJECT_IMAGES: Record<string, { src: string; alt: string; illustrative?: 
   bikeshare: { src: '/images/update_bluebikes.png', alt: 'Bluebikes bikeshare mobility network, Boston' },
   faultdb: { src: '/images/illustrative_faultdb.png', alt: 'Illustrative fault tree with AND/OR gates and a top-event probability', illustrative: true },
   safecast: { src: '/images/illustrative_safecast.png', alt: 'Illustrative crowdsourced radiation map centered on Fukushima', illustrative: true },
+  cat: { src: '/images/dashboard_cat.PNG', alt: 'CAT emissions dashboard — Tompkins County, NY profile' },
+  cpportal: { src: '/images/image_nyc_congestion.png', alt: 'NYC congestion-pricing effects on PM2.5 air quality' },
   'social-infrastructure': { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure map' },
 };
 
