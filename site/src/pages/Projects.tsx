@@ -10,7 +10,7 @@ const PROJECT_IMAGES: Record<string, { src: string; alt: string; illustrative?: 
   civic: { src: '/images/image_nyc_congestion.png', alt: 'NYC congestion-pricing effects on PM2.5 air quality' },
   scorecard: { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure density map, NYC' },
   bikeshare: { src: '/images/update_bluebikes.png', alt: 'Bluebikes bikeshare mobility network, Boston' },
-  faultdb: { src: '/images/epic-failure-function.png', alt: 'Cumulative probability of system failure over time' },
+  faultdb: { src: '/images/illustrative_faultdb.png', alt: 'Illustrative fault tree with AND/OR gates and a top-event probability', illustrative: true },
   safecast: { src: '/images/illustrative_safecast.png', alt: 'Illustrative crowdsourced radiation map centered on Fukushima', illustrative: true },
   'social-infrastructure': { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure map' },
 };
