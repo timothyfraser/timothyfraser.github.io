@@ -111,8 +111,45 @@
     ]
   },
   {
-    "id": "social-infrastructure",
+    "id": "cat",
     "n": "07",
+    "kind": "research",
+    "category": "Transportation Emissions + Dashboards",
+    "name": "Climate Action in Transportation (CAT)",
+    "tagline": "A US-DOT-funded platform that turns EPA MOVES into a public tool for estimating local transportation emissions.",
+    "badge": { "label": "Active · DOT-funded", "variant": "build" },
+    "accent": "signal",
+    "body": "Lead developer and coordinator on a multi-year, US-DOT-funded effort at Cornell with Dr. Oliver Gao, building the dashboards, databases, APIs, and cloud jobs that make EPA MOVES usable as a public-facing emissions tool for cities and counties.",
+    "phase": null,
+    "question": null,
+    "skills": ["R / Shiny", "APIs", "MySQL", "EPA MOVES"],
+    "recruiting": false,
+    "links": [
+      { "label": "cat-apps.com", "url": "https://cat-apps.com/" },
+      { "label": "VISUALIZER", "url": "https://visualizer.cat-apps.com/" }
+    ]
+  },
+  {
+    "id": "cpportal",
+    "n": "08",
+    "kind": "research",
+    "category": "Air Quality + Causal Inference",
+    "name": "CIVIC",
+    "tagline": "A city-scale platform measuring how congestion pricing, transit, and road policy reshape air quality and mobility worldwide.",
+    "badge": { "label": "Active", "variant": "collect" },
+    "accent": "cool",
+    "body": "Integrating air quality, transit, and traffic data from cities like NYC, London, and Stockholm, then applying causal inference to test whether transportation policies actually move the needle on pollution and travel — and for whom.",
+    "phase": null,
+    "question": null,
+    "skills": ["Causal inference", "Panel data", "Air quality", "Transit data"],
+    "recruiting": false,
+    "links": [
+      { "label": "npj Clean Air", "url": "https://doi.org/10.1038/s44407-025-00037-2" }
+    ]
+  },
+  {
+    "id": "social-infrastructure",
+    "n": "09",
     "kind": "research",
     "category": "Mapping + GIS",
     "name": "Social Infrastructure Mapping",
@@ -130,7 +167,7 @@
   },
   {
     "id": "evacuation",
-    "n": "08",
+    "n": "10",
     "kind": "research",
     "category": "Big Data + Disaster",
     "name": "Evacuation with Mobility Data",
@@ -146,7 +183,7 @@
   },
   {
     "id": "polarization-health",
-    "n": "09",
+    "n": "11",
     "kind": "research",
     "category": "Surveys + Polarization",
     "name": "Polarization & Health",
