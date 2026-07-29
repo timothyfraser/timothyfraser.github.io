@@ -3,10 +3,10 @@
   "h_index": 25,
   "i10_index": 43,
   "as_of": "May 2026",
-  "peer_reviewed": 52,
+  "peer_reviewed": 54,
   "chapters": 7,
   "software": 10,
-  "coauthors": 85,
+  "coauthors": 89,
   "press_total": 31,
   "press_last_12mo": 26,
   "press_by_year": {
@@ -23,7 +23,7 @@
     "op_ed": 1
   },
   "by_type": {
-    "paper": 52,
+    "paper": 54,
     "report": 2,
     "chapter": 7,
     "book": 1,
@@ -33,7 +33,7 @@
     "working paper": 9
   },
   "topics": {
-    "emissions_env": 55,
+    "emissions_env": 57,
     "resilience_health": 54,
     "polarization": 5,
     "networks_gis": 39

@@ -1,6 +1,53 @@
 [
   {
-    "id": "pub-0-a-first-look-into-congestion-pricing-in-",
+    "id": "pub-0-smarag-a-trustworthy-ai-system-for-carb",
+    "title": "SMARAG: A Trustworthy AI System for Carbon Reporting using Self-decisive Multi-Agentic Retrieval-Augmented Generation",
+    "year": 2026,
+    "journal": "Expert Systems with Applications (2026), accepted - forthcoming.",
+    "authors": [
+      "Xinlai Liu",
+      "Praneet Pablu",
+      "Yishuo Jiang",
+      "Timothy Fraser",
+      "H. Oliver Gao"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation"
+    ],
+    "dominant": "transportation",
+    "volume": "NA",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-1-future-strategies-for-california-s-zero-",
+    "title": "Future strategies for California’s zero-emission vehicle adoption using dynamical systems modeling",
+    "year": 2026,
+    "journal": "Transportation Research Part D: Transport and Environment 157 (2026), 105438.",
+    "authors": [
+      "Aadhithiyan Subramaniyan",
+      "Timothy Fraser",
+      "H. Oliver Gao"
+    ],
+    "doi": null,
+    "link": null,
+    "description": null,
+    "type": "paper",
+    "topics": [
+      "environment",
+      "transportation",
+      "energy"
+    ],
+    "dominant": "transportation",
+    "volume": "157",
+    "issue": "NA"
+  },
+  {
+    "id": "pub-2-a-first-look-into-congestion-pricing-in-",
     "title": "A first look into congestion pricing in the United States: PM2.5 impacts after six months of New York City cordon pricing",
     "year": 2025,
     "journal": "npj Clean Air 1 (2025), 39.",
@@ -26,7 +73,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-1-who-s-at-the-table-disaster-committee-c",
+    "id": "pub-3-who-s-at-the-table-disaster-committee-c",
     "title": "Who's at the table? Disaster committee composition and policy pathways after Hurricane Sandy",
     "year": 2025,
     "journal": "Journal of Environmental Management 393 (2025), 127089.",
@@ -51,7 +98,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-2-cycling-cities-measuring-urban-mobility",
+    "id": "pub-4-cycling-cities-measuring-urban-mobility",
     "title": "Cycling cities: Measuring urban mobility mixing in bikeshare networks",
     "year": 2025,
     "journal": "Journal of Transport Geography 126 (2025), 104223.",
@@ -77,7 +124,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-3-driving-climate-action-with-the-visualiz",
+    "id": "pub-5-driving-climate-action-with-the-visualiz",
     "title": "Driving climate action with the VISUALIZER: A dashboard for transportation emissions data analysis & visualization",
     "year": 2025,
     "journal": "Urban Climate 61 (2025), 102459.",
@@ -99,7 +146,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-4-mapping-green-communities-resources-for",
+    "id": "pub-6-mapping-green-communities-resources-for",
     "title": "Mapping green communities: Resources for measuring grassroots environmental organizing in Japan",
     "year": 2025,
     "journal": "Energy Research & Social Science 127 (2025), 104232.",
@@ -122,7 +169,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-5-machine-learning-in-spatiotemporal-pm2-5",
+    "id": "pub-7-machine-learning-in-spatiotemporal-pm2-5",
     "title": "Machine learning in spatiotemporal PM2.5 hotspots analysis for better targeted mitigation strategies",
     "year": 2025,
     "journal": "Transportation Research Part D: Transport and Environment 148 (2025), 105017.",
@@ -146,7 +193,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-6-networks-in-crisis-measuring-ethnic-str",
+    "id": "pub-8-networks-in-crisis-measuring-ethnic-str",
     "title": "Networks in crisis: Measuring ethnic stratification and organizational reach post-disaster",
     "year": 2025,
     "journal": "International Journal of Disaster Risk Reduction 125 (2025), 105561.",
@@ -169,7 +216,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-7-a-city-of-two-tales-a-quantitative-anal",
+    "id": "pub-9-a-city-of-two-tales-a-quantitative-anal",
     "title": "A City of Two Tales: A Quantitative Analysis of Vulnerability, Connectedness, and Resilience in Cloverdale, CA",
     "year": 2024,
     "journal": "International Journal of Disaster Risk Reduction (2024), in press.",
@@ -195,7 +242,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-8-a-tale-of-many-cities-mapping-social-in",
+    "id": "pub-10-a-tale-of-many-cities-mapping-social-in",
     "title": "A tale of many cities: Mapping social infrastructure and social capital across the United States",
     "year": 2024,
     "journal": "Computers, Environment, & Urban Systems 114 (2024), 102195.",
@@ -220,7 +267,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-9-the-great-equalizer-mixed-effects-of-so",
+    "id": "pub-11-the-great-equalizer-mixed-effects-of-so",
     "title": "The great equalizer? Mixed effects of social infrastructure on diverse encounters in cities",
     "year": 2024,
     "journal": "Computers, Environment, & Urban Systems 113 (2024), 102173.",
@@ -245,7 +292,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-10-democracy-in-distress-examining-2020-gen",
+    "id": "pub-12-democracy-in-distress-examining-2020-gen",
     "title": "Democracy in distress Examining 2020 general election voting behavior in the Greater Boston Area during the COVID-19 pandemic",
     "year": 2024,
     "journal": "International Journal of Disaster Risk Reduction 112 (2024), 104749.",
@@ -267,7 +314,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-11-county-level-political-group-density-pa",
+    "id": "pub-13-county-level-political-group-density-pa",
     "title": "County-level political group density, partisan polarization, and individual-level mortality among adults in the United States: A lagged multilevel study.",
     "year": 2024,
     "journal": "Social Science & Medicine - Population Health 26 (2024), 101662.",
@@ -291,7 +338,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-12-making-moves-move-fast-emissions-estima",
+    "id": "pub-14-making-moves-move-fast-emissions-estima",
     "title": "Making MOVES move: Fast emissions estimates for repeated transportation policy scenario analyses.",
     "year": 2024,
     "journal": "Environmental Modelling and Software 178 (2024), 106084.",
@@ -313,7 +360,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-13-how-far-i-ll-go-social-infrastructure-a",
+    "id": "pub-15-how-far-i-ll-go-social-infrastructure-a",
     "title": "How far I’ll go: Social infrastructure accessibility and proximity in urban neighborhoods.",
     "year": 2024,
     "journal": "Landscape and Urban Planning 241 (2024), 104922.",
@@ -341,7 +388,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-14-elections-and-post-traumatic-stress-evi",
+    "id": "pub-16-elections-and-post-traumatic-stress-evi",
     "title": "Elections and Post Traumatic Stress: Evidence from the 2020 U.S. Presidential Election.",
     "year": 2023,
     "journal": "Politics and the Life Sciences (2023), 1-59.",
@@ -360,7 +407,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-15-leapfrogging-or-lagging-drivers-of-soci",
+    "id": "pub-17-leapfrogging-or-lagging-drivers-of-soci",
     "title": "Leapfrogging or Lagging? Drivers of Social Equity from Renewable Energy Transitions Globally.",
     "year": 2023,
     "journal": "Energy Research & Social Sciences 98 (2023), 103006.",
@@ -382,7 +429,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-16-opposing-views-associations-of-politica",
+    "id": "pub-18-opposing-views-associations-of-politica",
     "title": "Opposing Views: Associations of Political Polarization, Political Party Affiliation, and Social Trust with COVID-19 Vaccination Intent and Receipt.",
     "year": 2023,
     "journal": "Journal of Public Health 45(1) (2023), 35-39.",
@@ -406,7 +453,7 @@
     "issue": "1"
   },
   {
-    "id": "pub-17-trust-but-verify-validating-new-measure",
+    "id": "pub-19-trust-but-verify-validating-new-measure",
     "title": "Trust but Verify: Validating New Measures for Mapping Social Infrastructure in Cities.",
     "year": 2022,
     "journal": "Urban Climate 46 (2022), 101287.",
@@ -434,7 +481,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-18-uneven-paths-soft-policy-s-benefits-to-",
+    "id": "pub-20-uneven-paths-soft-policy-s-benefits-to-",
     "title": "Uneven paths: Soft Policy's benefits to recovery in Louisiana Parishes after Hurricanes Katrina and Rita.",
     "year": 2022,
     "journal": "Journal of Environmental Management 321 (2022), 115722.",
@@ -458,7 +505,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-19-better-together-the-role-of-social-capi",
+    "id": "pub-21-better-together-the-role-of-social-capi",
     "title": "Better together? The role of social capital in urban social vulnerability.",
     "year": 2022,
     "journal": "Habitat International 124 (2022), 102561.",
@@ -480,7 +527,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-20-the-road-more-traveled-evacuation-netwo",
+    "id": "pub-22-the-road-more-traveled-evacuation-netwo",
     "title": "The Road More Traveled: Evacuation Networks from 10 disasters in the US and Japan.",
     "year": 2022,
     "journal": "Environment & Behavior 54(4) (2022), 833-863.",
@@ -502,7 +549,7 @@
     "issue": "4"
   },
   {
-    "id": "pub-21-field-research-when-there-is-limited-acc",
+    "id": "pub-23-field-research-when-there-is-limited-acc",
     "title": "Field Research When There Is Limited Access to the Field: Lessons from Japan.",
     "year": 2022,
     "journal": "PS: Political Science & Politics (2022), 1-7.",
@@ -526,7 +573,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-22-social-capital-s-impact-on-covid-19-outc",
+    "id": "pub-24-social-capital-s-impact-on-covid-19-outc",
     "title": "Social Capital's Impact on COVID-19 Outcomes at Local Levels",
     "year": 2022,
     "journal": "Nature Scientific Reports 12 (2022), 6566.",
@@ -549,7 +596,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-23-the-harmful-effects-of-partisan-polariza",
+    "id": "pub-25-the-harmful-effects-of-partisan-polariza",
     "title": "The Harmful Effects of Partisan Polarization on Health.",
     "year": 2022,
     "journal": "PNAS Nexus 1 (1) (2022), pgac011.",
@@ -573,7 +620,7 @@
     "issue": "1"
   },
   {
-    "id": "pub-24-fleeing-the-unsustainable-city-soft-pol",
+    "id": "pub-26-fleeing-the-unsustainable-city-soft-pol",
     "title": "Fleeing the Unsustainable City: Soft Policy and the Janus-Faced Nature of Social Capital in Evacuation Networks.",
     "year": 2022,
     "journal": "Sustainability Science 17 (2022), 1995-2011.",
@@ -598,7 +645,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-25-covid-19-to-go-the-role-of-disasters-an",
+    "id": "pub-27-covid-19-to-go-the-role-of-disasters-an",
     "title": "COVID-19 To Go? The Role of Disasters and Evacuation in the COVID-19 Pandemic.",
     "year": 2022,
     "journal": "Global Environmental Change 73 (2022), 102471.",
@@ -621,7 +668,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-26-leaders-or-networkers-the-role-of-mayor",
+    "id": "pub-28-leaders-or-networkers-the-role-of-mayor",
     "title": "Leaders or Networkers? The Role of Mayors in Renewable Energy Transition.",
     "year": 2022,
     "journal": "Environmental Innovations & Societal Transitions 42 (2022), 301-316.",
@@ -645,7 +692,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-27-do-all-roads-lead-to-sapporo-the-role-o",
+    "id": "pub-29-do-all-roads-lead-to-sapporo-the-role-o",
     "title": "Do All Roads Lead to Sapporo? The Role of Linking and Bridging Ties in Evacuation Decisions.",
     "year": 2022,
     "journal": "Ecology & Society 27(2) (2022), 3.",
@@ -669,7 +716,7 @@
     "issue": "2"
   },
   {
-    "id": "pub-28-bridging-the-divide-does-social-capital",
+    "id": "pub-30-bridging-the-divide-does-social-capital",
     "title": "Bridging the Divide: Does Social Capital Moderate the Impact of Polarization on Health?",
     "year": 2022,
     "journal": "Political Research Quarterly 75(3) (2022), 875-891.",
@@ -695,7 +742,7 @@
     "issue": "3"
   },
   {
-    "id": "pub-29-grassroots-vs-greenhouse-the-role-of-e",
+    "id": "pub-31-grassroots-vs-greenhouse-the-role-of-e",
     "title": "Grassroots vs. Greenhouse: The Role of Environmental Organizations in Reducing Carbon Emissions.",
     "year": 2021,
     "journal": "Climatic Change 169(22) (2021), 1-21.",
@@ -715,7 +762,7 @@
     "issue": "22"
   },
   {
-    "id": "pub-30-seawalls-or-social-recovery-the-role-of",
+    "id": "pub-32-seawalls-or-social-recovery-the-role-of",
     "title": "Seawalls or social recovery? The role of policy networks and design in disaster recovery.",
     "year": 2021,
     "journal": "Global Environmental Change 70 (2021), 102342.",
@@ -738,7 +785,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-31-bowling-alone-or-distancing-together-th",
+    "id": "pub-33-bowling-alone-or-distancing-together-th",
     "title": "Bowling alone or distancing together? The role of social capital in excess death rates from COVID19.",
     "year": 2021,
     "journal": "Social Science & Medicine 284 (2021), 114241.",
@@ -761,7 +808,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-32-rumor-has-it-the-role-of-social-ties-an",
+    "id": "pub-34-rumor-has-it-the-role-of-social-ties-an",
     "title": "Rumor has it: The role of social ties and misinformation in evacuation to nearby shelters after disaster.",
     "year": 2021,
     "journal": "Climate Risk Management 33 (2021), 100320.",
@@ -787,7 +834,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-33-is-divisive-politics-making-americans-si",
+    "id": "pub-35-is-divisive-politics-making-americans-si",
     "title": "Is Divisive Politics Making Americans Sick? Associations of Perceived Partisan Polarization with Physical and Mental Health Outcomes Among Adults in the United States.",
     "year": 2021,
     "journal": "Social Science & Medicine, 284 (2021), 113976.",
@@ -811,7 +858,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-34-connecting-social-capital-and-vulnerabil",
+    "id": "pub-36-connecting-social-capital-and-vulnerabil",
     "title": "Connecting Social Capital and Vulnerability: A Citation Network Analysis of Disaster Studies.",
     "year": 2021,
     "journal": "Natural Hazards Review 22(3) (2021), 1527-6996.",
@@ -835,7 +882,7 @@
     "issue": "3"
   },
   {
-    "id": "pub-35-the-dual-effect-of-social-ties-on-covid-",
+    "id": "pub-37-the-dual-effect-of-social-ties-on-covid-",
     "title": "The dual effect of social ties on COVID-19 spread in Japan.",
     "year": 2021,
     "journal": "Scientific Reports 11(1) (2021).",
@@ -858,7 +905,7 @@
     "issue": "1"
   },
   {
-    "id": "pub-36-build-back-better-effects-of-crisis-on-",
+    "id": "pub-38-build-back-better-effects-of-crisis-on-",
     "title": "Build back better? Effects of crisis on climate change adaptation in Japan and the US.",
     "year": 2021,
     "journal": "Global Environmental Politics 21(1), 54-75.",
@@ -880,7 +927,7 @@
     "issue": "1"
   },
   {
-    "id": "pub-37-japanese-social-capital-and-social-vulne",
+    "id": "pub-39-japanese-social-capital-and-social-vulne",
     "title": "Japanese Social Capital and Social Vulnerability Indices: Measuring Drivers of Community Resilience 2000-2017.",
     "year": 2021,
     "journal": "International Journal of Disaster Risk Reduction 52 (2021), 101965.",
@@ -901,7 +948,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-38-does-social-capital-boost-or-block-renew",
+    "id": "pub-40-does-social-capital-boost-or-block-renew",
     "title": "Does Social Capital Boost or Block Renewable Energy Siting? South African Solar Politics in Comparison.",
     "year": 2021,
     "journal": "Energy Research & Social Science 71 (2021), 101845.",
@@ -922,7 +969,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-39-in-the-hands-of-a-few-disaster-recovery",
+    "id": "pub-41-in-the-hands-of-a-few-disaster-recovery",
     "title": "In the Hands of a Few: Disaster Recovery Committee Networks.",
     "year": 2021,
     "journal": "Journal of Environmental Management 280 (2021), 111643.",
@@ -946,7 +993,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-40-climate-crisis-at-city-hall-how-japanes",
+    "id": "pub-42-climate-crisis-at-city-hall-how-japanes",
     "title": "Climate Crisis at City Hall: How Japanese communities mobilize to eliminate emissions.",
     "year": 2020,
     "journal": "Environmental Innovations and Societal Transitions 37 (2020), 361-380.",
@@ -973,7 +1020,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-41-the-fukushima-effect-at-home-the-changi",
+    "id": "pub-43-the-fukushima-effect-at-home-the-changi",
     "title": "The Fukushima Effect at Home: The changing role of domestic actors in Japanese energy policy.",
     "year": 2020,
     "journal": "WIREs Climate Change 11(5) (2020), e655.",
@@ -995,7 +1042,7 @@
     "issue": "5"
   },
   {
-    "id": "pub-42-drivers-of-social-equity-in-renewable-en",
+    "id": "pub-44-drivers-of-social-equity-in-renewable-en",
     "title": "Drivers of social equity in renewable energy at the municipal level: The case of local Japanese energy policy and preferences.",
     "year": 2020,
     "journal": "Journal of Environmental Policy and Planning 22(3) (2020), 397-412.",
@@ -1018,7 +1065,7 @@
     "issue": "3"
   },
   {
-    "id": "pub-43-japan-s-resilient-renewable-cities-how",
+    "id": "pub-45-japan-s-resilient-renewable-cities-how",
     "title": "Japan's Resilient, Renewable Cities: How Socioeconomics and Local Policy drive Japan's Renewable Energy Transition.",
     "year": 2020,
     "journal": "Environmental Politics 29(3) (2020), 500-523.",
@@ -1040,7 +1087,7 @@
     "issue": "3"
   },
   {
-    "id": "pub-44-role-of-energy-finance-in-geothermal-pow",
+    "id": "pub-46-role-of-energy-finance-in-geothermal-pow",
     "title": "Role of energy finance in geothermal power development in Japan.",
     "year": 2020,
     "journal": "International Review of Economics and Finance 70 (2020), 398-412.",
@@ -1065,7 +1112,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-45-how-governance-and-disasters-shape-renew",
+    "id": "pub-47-how-governance-and-disasters-shape-renew",
     "title": "How Governance and Disasters shape Renewable Energy Transitions: The case of Japanese mega-solar.",
     "year": 2019,
     "journal": "Social Science Quarterly 100(3) (2019), 975-990.",
@@ -1085,7 +1132,7 @@
     "issue": "3"
   },
   {
-    "id": "pub-46-investigating-ties-between-energy-policy",
+    "id": "pub-48-investigating-ties-between-energy-policy",
     "title": "Investigating Ties between Energy Policy and Social Equity Research: A Citation Network Analysis.",
     "year": 2019,
     "journal": "Social Sciences 8 (5) (2019), 135.",
@@ -1108,7 +1155,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-47-how-do-disasters-affect-individuals-soc",
+    "id": "pub-49-how-do-disasters-affect-individuals-soc",
     "title": "How do disasters affect individuals’ social ties? The impacts of disaster experiences and the perceived risks of disasters on participation in voluntary associations.",
     "year": 2019,
     "journal": "International Journal of Disaster Risk Reduction 34 (2019), 108-115.",
@@ -1131,7 +1178,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-48-japan-s-mega-solar-boom-quantifying-soc",
+    "id": "pub-50-japan-s-mega-solar-boom-quantifying-soc",
     "title": "Japan’s Mega Solar Boom: Quantifying Social Equity Expectations and Realities at the Local Scale.",
     "year": 2019,
     "journal": "Sustainability Science 14 (2019), 355-374.",
@@ -1153,7 +1200,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-49-social-equity-impacts-in-japan-s-mega-so",
+    "id": "pub-51-social-equity-impacts-in-japan-s-mega-so",
     "title": "Social Equity Impacts in Japan’s Mega Solar Siting Process.",
     "year": 2018,
     "journal": "Energy for Sustainable Development 42 (2018), 136-151.",
@@ -1175,7 +1222,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-50-all-politics-is-local-judicial-and-elec",
+    "id": "pub-52-all-politics-is-local-judicial-and-elec",
     "title": "All Politics is Local: Judicial and Electoral Institutions’ Role in Japan’s Nuclear Restarts.",
     "year": 2017,
     "journal": "Pacific Affairs 90, no. 3, 433-457.",
@@ -1195,7 +1242,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-51-hydrogen-import-pathway-comparison-frame",
+    "id": "pub-53-hydrogen-import-pathway-comparison-frame",
     "title": "Hydrogen Import Pathway Comparison Framework incorporating Cost and Social Preference: Case studies from Australia to Japan.",
     "year": 2017,
     "journal": "International Journal of Energy Research 41(14) (2017), 2374-2391.",
@@ -1216,7 +1263,7 @@
     "issue": "14"
   },
   {
-    "id": "pub-52-social-capital-mobility-and-evacuation",
+    "id": "pub-54-social-capital-mobility-and-evacuation",
     "title": "Social Capital, Mobility, and Evacuation Destinations During the Marshall Fire.",
     "year": 2022,
     "journal": "Natural Hazards Center Quick Response Grant Report Series, 348. Boulder, CO: Natural Hazards Center, University of Colorado Boulder.",
@@ -1241,7 +1288,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-53-social-ties-quarantine-policy-and-the-",
+    "id": "pub-55-social-ties-quarantine-policy-and-the-",
     "title": "Social Ties, Quarantine Policy, and the Spread of COVID-19.",
     "year": 2020,
     "journal": "Natural Hazards Center Quick Response Grant Report Series, 314. Boulder, CO: Natural Hazards Center, University of Colorado Boulder.",
@@ -1268,10 +1315,10 @@
     "issue": "NA"
   },
   {
-    "id": "pub-54-it-s-who-you-know-how-social-networks-h",
-    "title": "It's Who You Know: How social networks help cities rebuild with renewables after disaster.",
-    "year": 2023,
-    "journal": "In Paola Cavaliere, ed. Handbook of Disaster Studies in Japan. Amsterdam University Press/MHM Limited. (forthcoming)",
+    "id": "pub-56-it-s-who-you-know-how-social-networks-h",
+    "title": "It's Who You Know: How Social Networks Help Cities Rebuild with Renewables after Disaster.",
+    "year": 2026,
+    "journal": "In Paola Cavaliere & Junko Otani, eds. Handbook of Disaster Studies in Japan. Routledge (2026), 245-260.",
     "authors": [
       "Timothy Fraser"
     ],
@@ -1292,10 +1339,10 @@
     "issue": "NA"
   },
   {
-    "id": "pub-55-stronger-together-the-critical-role-of-",
+    "id": "pub-57-stronger-together-the-critical-role-of-",
     "title": "Stronger Together: The Critical Role of Bridging and Linking Social Capital in Evacuation Outcomes.",
-    "year": 2023,
-    "journal": "In Paola Cavaliere, ed. Handbook of Disaster Studies in Japan. Amsterdam University Press/MHM Limited. (forthcoming)",
+    "year": 2026,
+    "journal": "In Paola Cavaliere & Junko Otani, eds. Handbook of Disaster Studies in Japan. Routledge (2026), 278-292.",
     "authors": [
       "Timothy Fraser"
     ],
@@ -1314,7 +1361,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-56-social-network-analysis-for-disasters-",
+    "id": "pub-58-social-network-analysis-for-disasters-",
     "title": "Social Network Analysis for Disasters.",
     "year": 2021,
     "journal": "In Jason Rivera, ed. Research Methods of Disaster and Emergency Management: Social Science Approaches in Application.",
@@ -1338,7 +1385,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-57-mapping-resilience-gis-techniques-for-d",
+    "id": "pub-59-mapping-resilience-gis-techniques-for-d",
     "title": "Mapping Resilience: GIS Techniques for Disaster Studies.",
     "year": 2021,
     "journal": "In Jason Rivera, ed. Research Methods of Disaster and Emergency Management: Social Science Approaches in Application.",
@@ -1361,7 +1408,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-58-social-sustainability-in-cities-urban-e",
+    "id": "pub-60-social-sustainability-in-cities-urban-e",
     "title": "Social Sustainability in Cities: Urban Energy.",
     "year": 2020,
     "journal": "In Alvarez-Risco, A., Rosen, M., Del-Aguila-Arcentales, S, & Marinova, D. Building sustainable cities: Social, Economic and Environmental Factors, Springer-Nature.",
@@ -1383,7 +1430,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-59-east-asia-s-nuclear-policies-fukushima-",
+    "id": "pub-61-east-asia-s-nuclear-policies-fukushima-",
     "title": "East Asia's Nuclear Policies: Fukushima Effect or a Nuclear Renaissance?",
     "year": 2019,
     "journal": "Georgetown Journal of Asian Affairs 4(2) (2019), 65.",
@@ -1404,7 +1451,7 @@
     "issue": "2"
   },
   {
-    "id": "pub-60-a-janus-faced-resource-social-capital-a",
+    "id": "pub-62-a-janus-faced-resource-social-capital-a",
     "title": "A Janus Faced Resource: Social Capital and Resilience Trade-offs.",
     "year": 2018,
     "journal": "International Risk Governance Council Resource Guide, vol 2.",
@@ -1427,7 +1474,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-61-sigma-coding-tutorials-for-statistics-",
+    "id": "pub-63-sigma-coding-tutorials-for-statistics-",
     "title": "Sigma: Coding Tutorials for Statistics, System Reliability, and Six Sigma in R",
     "year": 2023,
     "journal": null,
@@ -1444,7 +1491,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-62-visualizer-app-for-comparing-emissions-i",
+    "id": "pub-64-visualizer-app-for-comparing-emissions-i",
     "title": "VISUALIZER App for Comparing Emissions in US States & Counties",
     "year": 2024,
     "journal": null,
@@ -1464,7 +1511,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-63-policyoptimizer-r-package-for-selecting-",
+    "id": "pub-65-policyoptimizer-r-package-for-selecting-",
     "title": "policyoptimizer R Package for selecting optimal county transportation policy scenarios",
     "year": 2024,
     "journal": null,
@@ -1484,7 +1531,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-64-archr-r-package-for-enumeration-evaluat",
+    "id": "pub-66-archr-r-package-for-enumeration-evaluat",
     "title": "archr R package for Enumeration, Evaluation, & Optimization of Complex Systems Architectures",
     "year": 2024,
     "journal": null,
@@ -1504,7 +1551,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-65-moves_anywhere-docker-image-for-emission",
+    "id": "pub-67-moves_anywhere-docker-image-for-emission",
     "title": "moves_anywhere Docker image for Emissions Estimation",
     "year": 2024,
     "journal": null,
@@ -1524,7 +1571,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-66-catr-r-package-for-querying-epa-s-moves-",
+    "id": "pub-68-catr-r-package-for-querying-epa-s-moves-",
     "title": "catr R package for querying EPA's MOVES software",
     "year": 2023,
     "journal": null,
@@ -1544,7 +1591,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-67-moveslite-r-package-for-fast-emissions-e",
+    "id": "pub-69-moveslite-r-package-for-fast-emissions-e",
     "title": "moveslite R package for Fast Emissions Estimation",
     "year": 2023,
     "journal": null,
@@ -1564,7 +1611,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-68-calculator-app-for-comparing-emissions-p",
+    "id": "pub-70-calculator-app-for-comparing-emissions-p",
     "title": "calculator App for Comparing Emissions Policy Scenarios",
     "year": 2023,
     "journal": null,
@@ -1584,7 +1631,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-69-geoshiny-verse-docker-image-for-deployin",
+    "id": "pub-71-geoshiny-verse-docker-image-for-deployin",
     "title": "geoshiny-verse Docker image for Deploying Dashboards",
     "year": 2023,
     "journal": null,
@@ -1604,7 +1651,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-70-simulate-r-package-for-statistical-simul",
+    "id": "pub-72-simulate-r-package-for-statistical-simul",
     "title": "simulate R package for statistical simulation",
     "year": 2023,
     "journal": null,
@@ -1621,7 +1668,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-71-tidyfault-r-package-for-fault-tree-analy",
+    "id": "pub-73-tidyfault-r-package-for-fault-tree-analy",
     "title": "tidyfault R package for fault tree analysis",
     "year": 2023,
     "journal": null,
@@ -1638,7 +1685,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-72-a-tale-of-many-cities-mapping-social-in",
+    "id": "pub-74-a-tale-of-many-cities-mapping-social-in",
     "title": "A Tale of Many Cities: Mapping Social Infrastructure and Social Capital across North America",
     "year": null,
     "journal": null,
@@ -1661,7 +1708,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-73-cycling-cities-measuring-transportation",
+    "id": "pub-75-cycling-cities-measuring-transportation",
     "title": "Cycling Cities: Measuring Transportation Equity in Bikeshare Networks",
     "year": null,
     "journal": null,
@@ -1687,7 +1734,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-74-a-city-of-two-tales-a-quantitative-anal",
+    "id": "pub-76-a-city-of-two-tales-a-quantitative-anal",
     "title": "A City of Two Tales: A Quantitative Analysis of Vulnerability, Connectedness, and Resilience in Cloverdale, CA",
     "year": null,
     "journal": null,
@@ -1713,7 +1760,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-75-mapping-green-communities-new-data-reso",
+    "id": "pub-77-mapping-green-communities-new-data-reso",
     "title": "Mapping Green Communities: New Data Resources for Measuring Grassroots Environmental Organizing in Japan",
     "year": null,
     "journal": null,
@@ -1735,7 +1782,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-76-cutting-carbon-on-a-dime-optimization-o",
+    "id": "pub-78-cutting-carbon-on-a-dime-optimization-o",
     "title": "Cutting Carbon on a Dime: Optimization of Transportation Policy Scenarios for Cost-Effective Emissions Reduction",
     "year": null,
     "journal": null,
@@ -1761,7 +1808,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-77-driving-climate-action-with-the-visualiz",
+    "id": "pub-79-driving-climate-action-with-the-visualiz",
     "title": "Driving Climate Action with the VISUALIZER Development and Applications of a Dashboard for Transportation Emissions Data & Visualization",
     "year": null,
     "journal": null,
@@ -1782,7 +1829,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-78-networks-in-crisis-measuring-ethnic-str",
+    "id": "pub-80-networks-in-crisis-measuring-ethnic-str",
     "title": "Networks in Crisis: Measuring Ethnic Stratification and Organizational Reach Post-Disaster",
     "year": null,
     "journal": null,
@@ -1805,7 +1852,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-79-ai-powered-emissions-reporting-using-gp",
+    "id": "pub-81-ai-powered-emissions-reporting-using-gp",
     "title": "AI-Powered Emissions Reporting: Using GPT to Write and Validate Emissions Data Reports for Policymakers",
     "year": null,
     "journal": null,
@@ -1831,7 +1878,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-80-automated-algorithms-for-converting-emis",
+    "id": "pub-82-automated-algorithms-for-converting-emis",
     "title": "Automated Algorithms for converting Emissions Data into Written Reports for Policymakers",
     "year": null,
     "journal": null,
@@ -1855,7 +1902,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-81-cloud-moves-for-iterative-emissions-esti",
+    "id": "pub-83-cloud-moves-for-iterative-emissions-esti",
     "title": "Cloud MOVES for Iterative Emissions Estimation: Architecting a Distributed Cloud Computing System for Transportation Emissions Management",
     "year": null,
     "journal": null,
@@ -1876,7 +1923,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-82-networked-neighborhoods-the-role-of-soc",
+    "id": "pub-84-networked-neighborhoods-the-role-of-soc",
     "title": "Networked Neighborhoods: The role of Social Infrastructure in Social Connectivity in Urban Systems",
     "year": null,
     "journal": null,
@@ -1899,7 +1946,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-83-where-the-grass-is-greener-social-infra",
+    "id": "pub-85-where-the-grass-is-greener-social-infra",
     "title": "Where the Grass Is Greener: Social Infrastructure and Resilience to COVID-19.",
     "year": null,
     "journal": null,
@@ -1921,7 +1968,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-84-japan-s-green-voters-the-role-of-social",
+    "id": "pub-86-japan-s-green-voters-the-role-of-social",
     "title": "Japan’s Green Voters: The Role of Social Capital in Women’s Movements against Nuclear Power Policy",
     "year": null,
     "journal": null,
@@ -1942,7 +1989,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-85-boomtown-or-bust-policy-feedback-effect",
+    "id": "pub-87-boomtown-or-bust-policy-feedback-effect",
     "title": "Boomtown or Bust? Policy Feedback Effects of Controversial Facilities on Social Capital in Japan",
     "year": null,
     "journal": null,
@@ -1963,7 +2010,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-86-bottom-up-or-top-down-bridging-academic",
+    "id": "pub-88-bottom-up-or-top-down-bridging-academic",
     "title": "Bottom-up or Top-Down? Bridging Academics in the ADVANCE Network for Gender Equity",
     "year": null,
     "journal": null,
@@ -1986,7 +2033,7 @@
     "issue": "NA"
   },
   {
-    "id": "pub-87-networks-of-solar-cities-",
+    "id": "pub-89-networks-of-solar-cities-",
     "title": "Networks of Solar Cities.",
     "year": null,
     "journal": null,
