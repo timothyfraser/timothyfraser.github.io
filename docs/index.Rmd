@@ -409,7 +409,7 @@ card_stats = card(
     layout_column_wrap(
       width = 1/4,
       card_body(
-        htmltools::h2("51", class = "text-primary text-center"),
+        htmltools::h2("54", class = "text-primary text-center"),
         htmltools::p("Peer-Reviewed Studies", class = "text-center text-muted mb-0")
       ),
       card_body(
@@ -483,7 +483,7 @@ card_research = htmltools::div(
           style = "overflow: visible !important; height: auto !important;",
           htmltools::h4("Research Highlights"),
           htmltools::tags$ul(
-            htmltools::tags$li(htmltools::strong("51"), " peer-reviewed publications"),
+            htmltools::tags$li(htmltools::strong("54"), " peer-reviewed publications"),
             htmltools::tags$li(htmltools::strong("10+"), " R packages and dashboards"),
             htmltools::tags$li(htmltools::strong("50+"), " student coauthors"),
             htmltools::tags$li("Social Network Analysis, GIS, Panel Statistics, Surveys"),

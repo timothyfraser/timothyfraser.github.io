@@ -1,11 +1,46 @@
 {
   "nodes": [
     {
+      "id": "xinlai liu",
+      "label": "Xinlai Liu",
+      "weight": 1,
+      "topic": "transportation",
+      "isCenter": false
+    },
+    {
+      "id": "praneet pablu",
+      "label": "Praneet Pablu",
+      "weight": 1,
+      "topic": "transportation",
+      "isCenter": false
+    },
+    {
+      "id": "yishuo jiang",
+      "label": "Yishuo Jiang",
+      "weight": 1,
+      "topic": "transportation",
+      "isCenter": false
+    },
+    {
       "id": "timothy fraser",
       "label": "Timothy Fraser",
-      "weight": 87,
+      "weight": 89,
       "topic": "transportation",
       "isCenter": true
+    },
+    {
+      "id": "h oliver gao",
+      "label": "H. Oliver Gao",
+      "weight": 10,
+      "topic": "transportation",
+      "isCenter": false
+    },
+    {
+      "id": "aadhithiyan subramaniyan",
+      "label": "Aadhithiyan Subramaniyan",
+      "weight": 1,
+      "topic": "transportation",
+      "isCenter": false
     },
     {
       "id": "yeonkyeong gina park",
@@ -32,13 +67,6 @@
       "id": "haiyan deng",
       "label": "Haiyan Deng",
       "weight": 1,
-      "topic": "transportation",
-      "isCenter": false
-    },
-    {
-      "id": "h oliver gao",
-      "label": "H. Oliver Gao",
-      "weight": 8,
       "topic": "transportation",
       "isCenter": false
     },
@@ -549,6 +577,78 @@
   ],
   "edges": [
     {
+      "source": "praneet pablu",
+      "target": "xinlai liu",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "xinlai liu",
+      "target": "yishuo jiang",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "timothy fraser",
+      "target": "xinlai liu",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "h oliver gao",
+      "target": "xinlai liu",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "praneet pablu",
+      "target": "yishuo jiang",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "praneet pablu",
+      "target": "timothy fraser",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "h oliver gao",
+      "target": "praneet pablu",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "timothy fraser",
+      "target": "yishuo jiang",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "h oliver gao",
+      "target": "yishuo jiang",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "h oliver gao",
+      "target": "timothy fraser",
+      "weight": 10,
+      "topic": "transportation"
+    },
+    {
+      "source": "aadhithiyan subramaniyan",
+      "target": "timothy fraser",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
+      "source": "aadhithiyan subramaniyan",
+      "target": "h oliver gao",
+      "weight": 1,
+      "topic": "transportation"
+    },
+    {
       "source": "timothy fraser",
       "target": "yeonkyeong gina park",
       "weight": 1,
@@ -570,12 +670,6 @@
       "source": "haiyan deng",
       "target": "timothy fraser",
       "weight": 1,
-      "topic": "transportation"
-    },
-    {
-      "source": "h oliver gao",
-      "target": "timothy fraser",
-      "weight": 8,
       "topic": "transportation"
     },
     {
@@ -2112,11 +2206,11 @@
       "x": 110,
       "y": 0
     },
-    "courtney page-tan": {
+    "h oliver gao": {
       "x": 55.000000000000014,
       "y": 95.26279441628824
     },
-    "h oliver gao": {
+    "courtney page-tan": {
       "x": -54.99999999999998,
       "y": 95.26279441628826
     },
@@ -2244,177 +2338,193 @@
       "x": -274.0636372927803,
       "y": 122.02099292274
     },
-    "yeonkyeong gina park": {
+    "xinlai liu": {
       "x": -293.4442802201417,
       "y": 62.373507245327794
     },
-    "haiyan deng": {
+    "praneet pablu": {
       "x": -300,
       "y": 3.6739403974420595e-14
     },
-    "lucy hewitt": {
+    "yishuo jiang": {
       "x": -293.4442802201417,
       "y": -62.37350724532772
     },
-    "jessica chen": {
+    "aadhithiyan subramaniyan": {
       "x": -274.0636372927803,
       "y": -122.02099292273995
     },
-    "matthew cherkerzian": {
+    "yeonkyeong gina park": {
       "x": -242.70509831248424,
       "y": -176.3355756877419
     },
-    "harshita sarup": {
+    "haiyan deng": {
       "x": -200.73918190765752,
       "y": -222.9434476432182
     },
-    "esteban moro": {
+    "lucy hewitt": {
       "x": -150.00000000000014,
       "y": -259.80762113533154
     },
-    "miranda bourdeau": {
+    "jessica chen": {
       "x": -92.70509831248427,
       "y": -285.31695488854604
     },
-    "olivia feeley": {
+    "matthew cherkerzian": {
       "x": -31.35853898029627,
       "y": -298.356568610482
     },
-    "andres ridge": {
+    "harshita sarup": {
       "x": 31.358538980296164,
       "y": -298.356568610482
     },
-    "ava cervini": {
+    "esteban moro": {
       "x": 92.70509831248417,
       "y": -285.3169548885461
     },
-    "kelly gilmore": {
+    "miranda bourdeau": {
       "x": 150.00000000000003,
       "y": -259.8076211353316
     },
-    "gianna worthington": {
+    "olivia feeley": {
       "x": 200.73918190765752,
       "y": -222.9434476432182
     },
-    "illana berliavsky": {
+    "andres ridge": {
       "x": 242.7050983124842,
       "y": -176.335575687742
     },
-    "kevin smith": {
+    "ava cervini": {
       "x": 274.0636372927803,
       "y": -122.02099292274005
     },
-    "andrew dolman": {
+    "kelly gilmore": {
       "x": 293.44428022014165,
       "y": -62.373507245327964
     },
-    "napuck cherdchaiyapong": {
+    "gianna worthington": {
       "x": 400,
       "y": 0
     },
+    "illana berliavsky": {
+      "x": 391.8119765009978,
+      "y": 80.51940803546402
+    },
+    "kevin smith": {
+      "x": 367.5831246480922,
+      "y": 157.74234204532743
+    },
+    "andrew dolman": {
+      "x": 328.3053764829105,
+      "y": 228.5072860379169
+    },
+    "napuck cherdchaiyapong": {
+      "x": 275.58676763027466,
+      "y": 289.917114891648
+    },
     "winta tekle": {
-      "x": 389.21794823192954,
-      "y": 92.24634829697605
+      "x": 211.58560413078496,
+      "y": 339.45770299790036
     },
     "erin thomas": {
-      "x": 357.4530561293649,
-      "y": 179.51967208018485
+      "x": 138.9221011379281,
+      "y": 375.1008528588322
     },
     "joel zayas": {
-      "x": 306.41777724759123,
-      "y": 257.1150438746157
+      "x": 60.57111100183068,
+      "y": 395.38732973124456
     },
     "alex r poniatowski": {
-      "x": 238.8634366811145,
-      "y": 320.8492771020175
+      "x": -20.259667535485057,
+      "y": 399.48660286842113
     },
     "nicholas hersey": {
-      "x": 158.43190641566275,
-      "y": 367.2864427521096
+      "x": -100.26101290348825,
+      "y": 387.2308475464817
     },
     "haoran zheng": {
-      "x": 69.45927106677216,
-      "y": 393.9231012048832
+      "x": -176.15766062305374,
+      "y": 359.12181582829663
     },
     "nicole naquin": {
-      "x": -23.257931564190308,
-      "y": 399.32326330850725
+      "x": -244.84239301906516,
+      "y": 316.3102947750794
     },
     "andrew littlejohn": {
-      "x": -114.721293084436,
-      "y": 383.19580492619554
+      "x": -303.5032490771163,
+      "y": 260.5489930888889
     },
     "amy hunt": {
-      "x": -199.99999999999991,
-      "y": 346.4101615137755
+      "x": -349.73864645783283,
+      "y": 194.1207850124324
     },
     "eri lee": {
-      "x": -274.4966551474934,
-      "y": 290.9494566292195
+      "x": -381.6557025600195,
+      "y": 119.74524918934321
     },
     "farhad taghizadeh-hesary": {
-      "x": -334.1951245651745,
-      "y": 219.8035912283225
+      "x": -397.9477293567581,
+      "y": 40.467328794972914
     },
     "aline mortha": {
-      "x": -375.8770483143633,
-      "y": 136.80805733026756
+      "x": -397.9477293567581,
+      "y": -40.467328794972815
     },
     "hadi farabi-asl": {
-      "x": -397.29534309677723,
-      "y": 46.43716565009214
+      "x": -381.6557025600196,
+      "y": -119.74524918934296
     },
     "tapan sarker": {
-      "x": -397.29534309677723,
-      "y": -46.43716565009205
+      "x": -349.7386464578328,
+      "y": -194.1207850124325
     },
     "melanie dennis": {
-      "x": -375.8770483143634,
-      "y": -136.80805733026747
+      "x": -303.50324907711644,
+      "y": -260.54899308888884
     },
     "kenshi itaoka": {
-      "x": -334.1951245651747,
-      "y": -219.80359122832223
+      "x": -244.84239301906507,
+      "y": -316.31029477507946
     },
     "leah smith": {
-      "x": -274.4966551474934,
-      "y": -290.94945662921947
+      "x": -176.157660623054,
+      "y": -359.1218158282965
     },
     "kaylen li": {
-      "x": -200.00000000000017,
-      "y": -346.4101615137754
+      "x": -100.2610129034882,
+      "y": -387.2308475464817
     },
     "peculiar lawrence": {
-      "x": -114.72129308443625,
-      "y": -383.19580492619554
+      "x": -20.259667535485065,
+      "y": -399.48660286842113
     },
     "shannya niveyro": {
-      "x": -23.257931564190496,
-      "y": -399.32326330850725
+      "x": 60.571111001830666,
+      "y": -395.38732973124456
     },
     "maria dobransky": {
-      "x": 69.45927106677199,
-      "y": -393.92310120488327
+      "x": 138.92210113792777,
+      "y": -375.1008528588323
     },
     "aarya darak": {
-      "x": 158.4319064156626,
-      "y": -367.2864427521097
+      "x": 211.58560413078496,
+      "y": -339.4577029979004
     },
     "minghao yang": {
-      "x": 238.86343668111434,
-      "y": -320.8492771020176
+      "x": 275.5867676302746,
+      "y": -289.917114891648
     },
     "khushi patel": {
-      "x": 306.4177772475911,
-      "y": -257.1150438746158
+      "x": 328.3053764829105,
+      "y": -228.50728603791697
     },
     "laura k nelson": {
-      "x": 357.4530561293649,
-      "y": -179.519672080185
+      "x": 367.5831246480922,
+      "y": -157.7423420453275
     },
     "kathrin zippel": {
-      "x": 389.21794823192954,
-      "y": -92.24634829697618
+      "x": 391.8119765009978,
+      "y": -80.51940803546411
     }
   }
 }
