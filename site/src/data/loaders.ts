@@ -9,6 +9,7 @@ import siteCfg from '../../content/site.json';
 import metricsManual from '../../content/metrics.json';
 import projectsJson from '../../content/projects.json';
 import teachingJson from '../../content/teaching.json';
+import coursesJson from '../../content/courses.json';
 
 // CSV files are loaded as raw text via ?raw and parsed at runtime — tiny cost,
 // but keeps the edit path easy (just edit the CSV).
@@ -23,7 +24,7 @@ import teachingMd from '../../content/pages/teaching.md?raw';
 
 import type {
   Publication, PressItem, CoauthorGraph, MetricsComputed,
-  ProjectItem, TeachingData, SoftwareItem, Student, SiteCfg, ResearchSite,
+  ProjectItem, TeachingData, SoftwareItem, Student, SiteCfg, ResearchSite, Course,
 } from './types';
 
 // --- CSV parser (minimal — handles quoted fields with embedded commas) ---
@@ -68,6 +69,7 @@ export const buildMeta = buildInfo as { counts: Record<string, number> };
 export const site = siteCfg as SiteCfg;
 export const projects = projectsJson as ProjectItem[];
 export const teaching = teachingJson as TeachingData;
+export const courses = coursesJson as Course[];
 
 export const software: SoftwareItem[] = parseCsv(softwareCsv).map(r => ({
   id: r.id,

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "sysen-5300",
+    "code": "SYSEN 5300",
+    "title": "Systems Reliability & Six Sigma",
+    "term": "Fall",
+    "level": "Graduate",
+    "inst": "Cornell University",
+    "accent": "signal",
+    "image": "/images/epic-failure-function.png",
+    "tagline": "Statistical process control, reliability engineering, and design of experiments — taught code-first in R and Python.",
+    "description": "A code-first course in reliability and Six Sigma techniques. Students learn statistical process control for monitoring and improving manufacturing and service processes, reliability engineering for predicting system performance over time, and life distributions that model failure patterns using exponential, Weibull, gamma, and log-normal models. The course also covers fault tree analysis for visualizing and quantifying system failure modes, physical acceleration models for converting lab test results into field performance estimates, design of experiments for optimizing processes, and quality control charts for detecting process change. Each chapter mixes short narrative explanations, runnable examples, and hands-on Learning Checks.",
+    "tags": ["R", "Python", "reliability", "six sigma", "statistics"],
+    "links": [
+      { "label": "Sigma textbook", "url": "https://timothyfraser.com/sigma", "primary": true },
+      { "label": "GitHub repo", "url": "https://github.com/timothyfraser/sigma" }
+    ]
+  },
+  {
+    "id": "sysen-5381",
+    "code": "SYSEN 5381",
+    "title": "Data Science and AI for Systems Engineering",
+    "term": "Spring",
+    "level": "Graduate",
+    "inst": "Cornell University",
+    "accent": "hot",
+    "image": "/images/image_dsai_course.jpg",
+    "tagline": "Query web APIs, build REST APIs, and ship cloud-hosted, AI-powered applications and reporting systems.",
+    "description": "Modern engineering systems increasingly rely on cloud-based, AI-driven data processing, automation, and analytics. This course equips Systems Engineering students with the coding skills needed to interact with cloud-hosted data, automate workflows, and build scalable AI-powered apps and analytics. Students gain hands-on experience querying web APIs, building APIs, and leveraging AI models for automation, covering API calls, querying generative AI, and automation in service of automated data reporting. Participants learn to examine and critique uses of AI in modern systems, weighing risk, value, tradeoffs, and policy issues for the customer and society. By the end, students have built cloud-hosted, AI-powered applications and reporting systems that dynamically retrieve, process, and visualize data using generative AI.",
+    "tags": ["AI", "APIs", "Python", "R", "deployment"],
+    "links": [
+      { "label": "Course repo", "url": "https://github.com/timothyfraser/dsai", "primary": true },
+      { "label": "Syllabus", "url": "https://github.com/timothyfraser/dsai/blob/main/docs/READ_course_details.md" },
+      { "label": "Schedule", "url": "https://github.com/timothyfraser/dsai/blob/main/docs/READ_schedule.md" }
+    ]
+  },
+  {
+    "id": "sysen-5460",
+    "code": "SYSEN 5460",
+    "title": "Data Science for Socio-Technical Systems",
+    "term": "Spring",
+    "level": "Graduate",
+    "inst": "Cornell University",
+    "accent": "cool",
+    "image": "/images/image_sts_course.jpg",
+    "tagline": "Decision-making and data communication at scale — relational databases, dataviz, and production-grade dashboards.",
+    "description": "Modern systems rely on databases to record, share, and route big data — electrical grids, airlines, public transit, bike sharing, banking, security, and software systems. This course trains participants to query and visualize big data at scale, with a topical focus on socio-technical systems. Contents include relational databases, data visualization, and data communication with dashboards, spanning common big-data formats including panel and time-series data, geographic information systems, and network data. Participants apply these skills to transportation and urban mobility, renewable energy, disaster resilience, and social infrastructure, quantifying system performance and communicating findings for non-experts. No prior coding or statistical experience is required.",
+    "tags": ["R", "databases", "dataviz", "dashboards", "GIS"],
+    "links": [
+      { "label": "Course repo", "url": "https://github.com/timothyfraser/sts", "primary": true },
+      { "label": "Syllabus", "url": "https://github.com/timothyfraser/sts/blob/main/docs/syllabus.md" }
+    ]
+  },
+  {
+    "id": "sysen-5470",
+    "code": "SYSEN 5470",
+    "title": "Network Science and Applications for Systems Engineering",
+    "term": "Summer",
+    "level": "Graduate",
+    "inst": "Cornell University",
+    "accent": "gold",
+    "image": "/images/image_netsci_course.png",
+    "tagline": "Analyzing networked engineered systems — supply chains, transit, power grids, and disaster response — in R and Python.",
+    "description": "A graduate course on analyzing networked engineered systems: supply chains, transit, power grids, and disaster response. The course is built around four skills — Identify, Measure, Infer, and Predict — taught through case studies with parallel R and Python code. Students work with project datasets of 100 to 500+ node networks, each shipped with a README codebook and ready-to-run loaders. Two browser-based coding playgrounds let students run code with no install: R via WebR with igraph, tidygraph, and ggraph, and Python via Pyodide with pandas, networkx, and matplotlib. Interactive HTML activities with learning checks accompany each module.",
+    "tags": ["networks", "R", "Python", "igraph", "networkx"],
+    "links": [
+      { "label": "Course website", "url": "https://timothyfraser.com/netsci", "primary": true },
+      { "label": "GitHub repo", "url": "https://github.com/timothyfraser/netsci" },
+      { "label": "Coding playground", "url": "https://timothyfraser.com/netsci/playground.html" }
+    ]
+  },
+  {
+    "id": "stats-bootcamp",
+    "code": "Stats Bootcamp",
+    "title": "Probability and Statistics Boot Camp",
+    "term": "January",
+    "level": "Graduate",
+    "inst": "Cornell University",
+    "accent": "cornell",
+    "image": "/images/image_bootcamp_course.jpg",
+    "tagline": "A two-week, self-paced winter refresher in probability and statistics — choose your modules, earn a certificate.",
+    "description": "This boot camp prepares students for the mathematics, probability, and statistics used in SYSEN 5200: Systems Analysis Behavior and Optimization and SYSEN 5300: Systems Engineering and Six Sigma. It is intended for participants with a limited background in mathematics, and for those who have not used mathematics recently and need a refresher. The camp gives students a working knowledge of basic probability and statistics and their application to engineering, plus programming modules introducing R and Python for simulation. Participants customize their path across more than 15 modules — statistical coding, descriptive statistics and distributions, difference of means, probability, simulation, optimization, and calculus for probability and statistics — with videos, office hours, and unlimited-attempt practice quizzes. There are no grades; completing quizzes across your chosen modules earns a Statistics Bootcamp Certificate.",
+    "tags": ["R", "Python", "probability", "statistics", "self-paced"],
+    "links": [
+      { "label": "Course repo", "url": "https://github.com/timothyfraser/stats_bootcamp", "primary": true },
+      { "label": "Syllabus", "url": "https://github.com/timothyfraser/stats_bootcamp/blob/main/docs/syllabus.md" },
+      { "label": "Earn your certificate", "url": "https://github.com/timothyfraser/stats_bootcamp/blob/main/docs/certificate.md" }
+    ]
+  }
+]

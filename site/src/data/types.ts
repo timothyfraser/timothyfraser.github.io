@@ -96,6 +96,21 @@ export interface TeachingData {
   resources: TeachingResource[];
 }
 
+export interface Course {
+  id: string;
+  code: string;
+  title: string;
+  term: string;
+  level: string;
+  inst: string;
+  accent: 'cool' | 'hot' | 'signal' | 'gold' | 'cornell';
+  image: string;
+  tagline: string;
+  description: string;
+  tags: string[];
+  links: { label: string; url: string; primary?: boolean }[];
+}
+
 export interface SoftwareItem {
   id: string;
   name: string;

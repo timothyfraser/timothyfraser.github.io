@@ -11,6 +11,7 @@
     { "label": "About", "path": "/about" },
     { "label": "Research", "path": "/research" },
     { "label": "Teaching", "path": "/teaching" },
+    { "label": "Courses", "path": "/courses" },
     { "label": "Projects", "path": "/projects" },
     { "label": "Press", "path": "/press" },
     { "label": "Publications", "path": "/publications" },
