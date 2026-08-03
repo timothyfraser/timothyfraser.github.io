@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Research from './pages/Research';
 import Teaching from './pages/Teaching';
+import Courses from './pages/Courses';
 import Projects from './pages/Projects';
 import Software from './pages/Software';
 import Press from './pages/Press';
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/research" element={<Research />} />
           <Route path="/teaching" element={<Teaching />} />
+          <Route path="/courses" element={<Courses />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/press" element={<Press />} />
           <Route path="/publications" element={<Publications />} />

@@ -56,6 +56,13 @@
   padding-left: 14px;
   margin: 4px 0 16px;
 }
+.card-meta {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
 .card-figure {
   margin: 0;
   border-bottom: 1px solid var(--line);
