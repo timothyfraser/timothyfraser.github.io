@@ -499,3 +499,90 @@ figure.figure.left {
   .wnyc-card .wnyc-icon { width: 48px; height: 48px; font-size: 20px; }
   .wnyc-card .wnyc-cta { grid-column: 1 / -1; }
 }
+
+/* ============ Feature photo (event / talk imagery) ============ */
+.feature-photo {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.feature-photo .feature-photo-img {
+  overflow: hidden;
+  background: var(--bg-3);
+}
+.feature-photo .feature-photo-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.feature-photo .feature-photo-body {
+  padding: 22px 26px 24px;
+}
+.feature-photo .feature-photo-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+.feature-photo .feature-photo-body p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0 0 0.8em;
+  max-width: 62ch;
+}
+.feature-photo .feature-photo-body p:last-of-type { margin-bottom: 0; }
+.feature-photo .feature-photo-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* Photo beside the copy */
+.feature-photo.split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: stretch;
+}
+/* Absolutely positioned so a tall copy column can never stretch the photo
+   past its grid track. */
+.feature-photo.split .feature-photo-img {
+  position: relative;
+  min-height: 340px;
+  border-right: 1px solid var(--line);
+}
+.feature-photo.split .feature-photo-img img {
+  position: absolute;
+  inset: 0;
+}
+.feature-photo.split .feature-photo-body {
+  align-self: center;
+}
+
+/* Photo full width above the copy */
+.feature-photo.banner .feature-photo-img {
+  aspect-ratio: 21 / 9;
+  max-height: 420px;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 800px) {
+  .feature-photo.split { grid-template-columns: 1fr; }
+  .feature-photo.split .feature-photo-img {
+    position: static;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .feature-photo.split .feature-photo-img img { position: static; }
+  .feature-photo .feature-photo-body { padding: 18px 20px 20px; }
+  .feature-photo .feature-photo-body h3 { font-size: 1.14rem; }
+  .feature-photo.banner .feature-photo-img { aspect-ratio: 16 / 9; }
+}

@@ -1,6 +1,7 @@
 import SectionMast from '../components/SectionMast';
 import Markdown from '../components/Markdown';
 import Figure from '../components/Figure';
+import FeaturePhoto from '../components/FeaturePhoto';
 import CoauthorNetwork from '../viz/CoauthorNetwork';
 import ResearchMap from '../viz/ResearchMap';
 import TopicBars from '../viz/TopicBars';
@@ -29,6 +30,28 @@ export default function Research() {
         title="Methods, mapping, and mobility"
         subhead="A computational social science of cities — networks, social infrastructure, mobility big-data, and policy dashboards."
       />
+
+      {/* KEYNOTE FEATURE — the research, in the room */}
+      <section className="section reveal d1">
+        <FeaturePhoto
+          layout="banner"
+          src="/images/keynote_cornell_panel.jpg"
+          alt="Timothy Fraser on a Cornell Engineering panel discussing New York City's congestion pricing program"
+          eyebrow="Congestion pricing"
+          title="Where the research gets argued out"
+          focus="center 35%"
+          links={[
+            { label: 'npj Clean Air, 2025', url: 'https://doi.org/10.1038/s44407-025-00037-2' },
+          ]}
+        >
+          <p>
+            A Cornell Engineering panel on New York City's congestion pricing program — one
+            of the live policy questions this work is built for. The projects below supply
+            the evidence: emissions models, mobility big-data, and quasi-experimental
+            estimates of what a cordon actually changes.
+          </p>
+        </FeaturePhoto>
+      </section>
 
       {/* ACTIVE PROJECTS — promoted to TOP */}
       <section className="section">
