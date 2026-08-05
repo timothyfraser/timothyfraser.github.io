@@ -1,4 +1,5 @@
 import Markdown from '../components/Markdown';
+import FeaturePhoto from '../components/FeaturePhoto';
 import { markdownPages, site } from '../data/loaders';
 
 export default function About() {
@@ -28,6 +29,24 @@ export default function About() {
       </section>
 
       <section className="section reveal d2">
+        <FeaturePhoto
+          src="/images/keynote_cornell_speaking.jpg"
+          alt="Timothy Fraser speaking on a Cornell Engineering panel about New York City's congestion pricing program"
+          eyebrow="Public engagement"
+          title="Taking congestion pricing to a public audience"
+          focus="40% 30%"
+          links={[{ label: 'Read the npj Clean Air study', url: 'https://doi.org/10.1038/s44407-025-00037-2' }]}
+        >
+          <p>
+            A model, a dashboard, or a paper only counts for something once people outside
+            the field can act on it. On a Cornell Engineering panel about New York City's
+            congestion pricing program, I walked through what the first months of the cordon
+            did to traffic and to air quality, and where the evidence is still thin.
+          </p>
+        </FeaturePhoto>
+      </section>
+
+      <section className="section reveal d3">
         <Markdown>{markdownPages.about}</Markdown>
       </section>
     </div>
