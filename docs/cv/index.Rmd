@@ -817,6 +817,7 @@ N/A
 - CAT Greentech Database Team: Jessie Wong, Emily Yi-Wen Tseng, RuiRui Mao, Shungo Najima  @CU
 - CAT Reporter Team: Peilin Li, Leo Ziyu Kuang, Aarya Darak, Minghao Yang [1 working paper] @CU
 - Social Infrastructure Project: Linpei Huang @CU
+- MOVESLite Project: Yan Guo [1 working paper] @CU
 - Mapping Social Infrastructure Team: Napuck Cherdchaiyapong, Winta Tekle, Erin Thomas, Joel Zayas [1 paper, capstone] @NU
 - Louisiana Recovery Team: Alex Poniatowski, Nicholas Hersey, Haoran Zheng [1 paper, capstone] @NU
 - Disaster Recovery Committees Team: Lucy Hewitt, Ziyue Chen, Matthew Cherkerzian [1 working paper, capstone] @NU
