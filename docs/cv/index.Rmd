@@ -365,6 +365,22 @@ cat(generate_press_section(csv_path = "press.csv", include_header = FALSE))
 Invited Talks {data-icon=comments}
 --------------------------------------------------------------------------------
 
+### Fast, repeatable emissions scenarios: MOVESLite and the CAT Platform
+
+Invited talk presented for the Mid-Atlantic Regional Air Management Association, Inc. (MARAMA). August 20, 2026. (Virtual)
+
+N/A
+
+2026
+
+### Urban congestion pricing: impacts on air quality and public health in NYC
+
+Closing keynote address presented at the National Society of Professional Engineers (NSPE) Professional Engineers Conference 2026. New York City, NY, August 7, 2026.
+
+N/A
+
+2026
+
 ### A Data-Driven Review of the Relationship between Social Capital and Social Infrastructure
 
 Invited talk presented for the Organisation for Economic Co-operation and Development (OECD), at their seminar "The Role of Social Capital in Place Transformation". Paris, France, October 2, 2024.
