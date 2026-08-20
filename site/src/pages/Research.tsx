@@ -13,7 +13,6 @@ const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
   cat: { src: '/images/dashboard_cat.PNG', alt: 'CAT dashboard' },
   'social-infrastructure': { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure map' },
   evacuation: { src: '/images/hero_image_cropped_banner.png', alt: 'Hurricane Dorian evacuation network visualization' },
-  'polarization-health': { src: '/images/feature_dashstat.png', alt: 'Statistics dashboard' },
 };
 
 export default function Research() {
@@ -57,7 +56,7 @@ export default function Research() {
       <section className="section">
         <div className="section-head">
           <h2>Active research projects</h2>
-          <p className="subhead">Ongoing work across emissions, resilience, mapping, and polarization.</p>
+          <p className="subhead">Ongoing work across emissions, resilience, and mapping.</p>
         </div>
         <div className="grid-2">
           {researchProjects.map(p => {

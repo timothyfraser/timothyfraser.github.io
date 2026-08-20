@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Press ribbon · Timothy Fraser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --surface: #ffffff;
+      --fg: #1b2333;
+      --muted: #5c6478;
+      --border: #e8e5df;
+      --accent: #b31b1b;
+      --accent-soft: #f9e8e8;
+      --ink-on-red: #ffffff;
+      --font-display: 'Source Serif 4', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-mono: ui-monospace, Menlo, monospace;
+      --radius: 6px;
+    }
+    body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; }
+    .stripe { height: 4px; background: var(--accent); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 22px 40px; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+    h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 8px; font-weight: 700; }
+    .lead { color: var(--muted); margin: 0 0 20px; max-width: 58ch; }
+    .ribbon {
+      display: flex; flex-direction: column; gap: 0;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; max-height: 480px; overflow-y: auto;
+    }
+    .press-row {
+      display: grid; grid-template-columns: 64px 56px 1fr auto;
+      gap: 12px 14px; align-items: center; padding: 14px 18px;
+      border-bottom: 1px solid var(--border); background: var(--surface);
+      cursor: pointer; transition: background 0.12s; text-align: left;
+      width: 100%; border-left: none; border-right: none; font: inherit; color: inherit;
+    }
+    .press-row:hover, .press-row.expanded { background: color-mix(in oklch, var(--accent) 6%, var(--surface)); }
+    .media-icon {
+      display: flex; align-items: center; justify-content: center;
+      width: 56px; height: 56px; border-radius: var(--radius);
+      background: var(--accent-soft); color: var(--accent); flex-shrink: 0;
+    }
+    .year { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); font-variant-numeric: tabular-nums; text-align: center; }
+    .title { font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin: 0 0 4px; line-height: 1.3; }
+    .outlet { font-size: 0.85rem; color: var(--muted); }
+    .pill {
+      font-family: var(--font-mono); font-size: 0.68rem; padding: 3px 8px;
+      border-radius: 999px; background: var(--accent); color: var(--ink-on-red); white-space: nowrap;
+    }
+    .detail-strip {
+      padding: 0 18px 14px calc(64px + 56px + 28px);
+      background: color-mix(in oklch, var(--accent) 4%, var(--surface));
+      font-size: 0.9rem; display: none;
+    }
+    .detail-strip.open { display: block; }
+    .detail-strip a { color: var(--accent); font-weight: 600; }
+    .media-tag { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); text-transform: capitalize; }
+    @media (max-width: 640px) {
+      .press-row { grid-template-columns: 52px 48px 1fr; }
+      .pill { grid-column: 3; justify-self: start; margin-top: 4px; }
+      .detail-strip { padding-left: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stripe"></div>
+  <div class="wrap">
+    <header id="ribbon-header">
+      <p class="eyebrow">In the press</p>
+      <h1>Press ribbon</h1>
+      <p class="lead">Coverage from your press CSV — distinct icons by outlet and media type.</p>
+    </header>
+    <div class="ribbon" id="ribbon-list" role="list">Loading press…</div>
+  </div>
+
+  <script type="module">
+    import { DATA, loadText, csvToObjects, displayField, initEmbedShell } from '../js/data-source.js';
+    initEmbedShell();
+
+    const TYPE_LABEL = {
+      quoted_in: 'Quoted',
+      cited_in: 'Cited',
+      interviewed: 'Interview',
+      op_ed: 'Op-ed',
+      reviewed_in: 'Reviewed',
+    };
+
+    const ICON_LIBRARY = {
+      newspaper_broadsheet: {
+        label: 'Broadsheet',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="10" y="8" width="28" height="32" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><line x1="14" y1="16" x2="34" y2="16" stroke="currentColor" stroke-width="2.5"/><line x1="14" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="28" x2="26" y2="28" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="34" x2="30" y2="34" stroke="currentColor" stroke-width="1.5"/></svg>`,
+      },
+      newspaper_tabloid: {
+        label: 'Tabloid / local',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="12" y="10" width="24" height="28" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="15" y="14" width="18" height="10" fill="currentColor" opacity="0.25"/><line x1="15" y1="28" x2="33" y2="28" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="1.5"/></svg>`,
+      },
+      online_globe: {
+        label: 'Online / web',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="24" cy="24" rx="6" ry="14" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="24" x2="38" y2="24" stroke="currentColor" stroke-width="1.5"/><path d="M24 10c4 4 6 9 6 14s-2 10-6 14" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`,
+      },
+      online_rss: {
+        label: 'Digital news',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M10 32a14 14 0 0 1 14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M10 24a22 22 0 0 1 22-22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="12" cy="36" r="3" fill="currentColor"/></svg>`,
+      },
+      journal_academic: {
+        label: 'Journal / peer review',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M14 8h18l8 8v26a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M26 8v10h10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="24" x2="32" y2="24" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="30" x2="28" y2="30" stroke="currentColor" stroke-width="1.5"/></svg>`,
+      },
+      government_capitol: {
+        label: 'Government / capitol',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M8 22h32v16H8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 22V14l10-6 10 6v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="24" y1="8" x2="24" y2="12" stroke="currentColor" stroke-width="2"/><rect x="20" y="28" width="8" height="10" fill="none" stroke="currentColor" stroke-width="2"/></svg>`,
+      },
+      government_seal: {
+        label: 'Official release',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M24 12v4M24 32v4M12 24h4M32 24h4" stroke="currentColor" stroke-width="1.5"/></svg>`,
+      },
+      radio_mic: {
+        label: 'Radio / podcast',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="18" y="8" width="12" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 20a10 10 0 0 0 20 0" fill="none" stroke="currentColor" stroke-width="2"/><line x1="24" y1="30" x2="24" y2="38" stroke="currentColor" stroke-width="2"/><line x1="16" y1="38" x2="32" y2="38" stroke="currentColor" stroke-width="2"/></svg>`,
+      },
+      tv_broadcast: {
+        label: 'TV broadcast',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="8" y="14" width="32" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 10l6-5 6 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="25" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 40h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+      },
+      magazine: {
+        label: 'Magazine / trade',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="12" y="6" width="24" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="16" y="10" width="16" height="12" fill="currentColor" opacity="0.2"/><line x1="16" y1="26" x2="32" y2="26" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="1.5"/></svg>`,
+      },
+      university: {
+        label: 'University press',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M24 8L6 18l18 10 18-10L24 8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 22v12l12 6 12-6V22" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>`,
+      },
+      default_info: {
+        label: 'Generic press',
+        svg: `<svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="2"/><line x1="24" y1="18" x2="24" y2="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="31" r="1.8" fill="currentColor"/></svg>`,
+      },
+    };
+
+    const DEFAULT_MEDIA_MAP = {
+      newspaper: 'newspaper_broadsheet',
+      online_news: 'online_globe',
+      journal: 'journal_academic',
+      government: 'government_capitol',
+      radio: 'radio_mic',
+      tv: 'tv_broadcast',
+    };
+
+    const DEFAULT_OUTLET_MAP = {
+      'The New York Times': 'newspaper_broadsheet',
+      'Newsday': 'newspaper_tabloid',
+      'Hell Gate': 'newspaper_tabloid',
+      'Highlands Current': 'newspaper_tabloid',
+      'Crain\'s New York': 'newspaper_broadsheet',
+      'El Mercurio': 'newspaper_broadsheet',
+      'The Academic Times': 'online_rss',
+      'SupplyChain247': 'magazine',
+      'CiTTi Magazine': 'magazine',
+      'Cornell Chronicle': 'university',
+      'New York Governor\'s Office': 'government_seal',
+      'Bloomberg': 'online_rss',
+      'Vox': 'online_globe',
+      'WNYC (NYC Public Radio)': 'radio_mic',
+      'News12 Long Island': 'tv_broadcast',
+    };
+
+    const iconMap = {
+      mediaMap: { ...DEFAULT_MEDIA_MAP },
+      outletMap: { ...DEFAULT_OUTLET_MAP },
+    };
+
+    let expanded = null;
+
+    function iconSvg(key) {
+      return (ICON_LIBRARY[key] || ICON_LIBRARY.default_info).svg;
+    }
+
+    function resolveIcon(row) {
+      const outlet = (row.outlet || '').trim();
+      if (iconMap.outletMap[outlet]) return iconMap.outletMap[outlet];
+      const media = (row.media_type || '').toLowerCase().replace(/\s+/g, '_');
+      if (iconMap.mediaMap[media]) return iconMap.mediaMap[media];
+      return 'default_info';
+    }
+
+    function renderRibbon(rows) {
+      const sorted = [...rows].sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
+      const listEl = document.getElementById('ribbon-list');
+
+      listEl.innerHTML = sorted.map((r, i) => {
+        const open = expanded === i;
+        const label = TYPE_LABEL[r.type] || r.type || 'Press';
+        const media = displayField(r.media_type).replace(/_/g, ' ');
+        const iconKey = resolveIcon(r);
+        return `
+          <button type="button" class="press-row${open ? ' expanded' : ''}" data-i="${i}">
+            <span class="year">${displayField(r.year)}</span>
+            <span class="media-icon" title="${ICON_LIBRARY[iconKey]?.label || media}">${iconSvg(iconKey)}</span>
+            <div>
+              <p class="title">${r.title || '-'}</p>
+              <span class="outlet">${displayField(r.outlet)}${r.press_author ? ` · ${r.press_author}` : ''}</span>
+            </div>
+            <span class="pill">${label}</span>
+          </button>
+          <div class="detail-strip${open ? ' open' : ''}" id="d-${i}">
+            <span class="media-tag">${media}</span>
+            ${r.link ? ` · <a href="${r.link}" target="_blank" rel="noopener">Read coverage</a>` : ' · -'}
+            ${r.date ? ` · <span class="outlet">${displayField(r.date)}</span>` : ''}
+          </div>`;
+      }).join('');
+
+      listEl.querySelectorAll('.press-row').forEach((el) => {
+        el.addEventListener('click', () => {
+          const i = parseInt(el.dataset.i, 10);
+          expanded = expanded === i ? null : i;
+          renderRibbon(rows);
+        });
+      });
+    }
+
+    try {
+      const text = await loadText(DATA.press);
+      const rows = csvToObjects(text).filter((r) => r.title || r.outlet);
+      renderRibbon(rows);
+    } catch (e) {
+      document.getElementById('ribbon-list').textContent = `Load error: ${e.message}`;
+    }
+  </script>
+</body>
+</html>

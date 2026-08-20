@@ -586,3 +586,154 @@ figure.figure.left {
   .feature-photo .feature-photo-body h3 { font-size: 1.14rem; }
   .feature-photo.banner .feature-photo-img { aspect-ratio: 16 / 9; }
 }
+
+/* ============ Course card: collapsible long description (Teaching) ============ */
+.course-card-desc {
+  margin: 2px 0 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.course-card-desc > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 2px 0;
+}
+.course-card-desc > summary::-webkit-details-marker { display: none; }
+.course-card-desc > summary::marker { content: ""; }
+.course-card-desc > summary::after {
+  content: "\25BE";
+  font-size: 0.9em;
+  line-height: 1;
+  transition: transform 0.15s ease;
+}
+.course-card-desc[open] > summary::after { transform: rotate(180deg); }
+.course-card-desc > summary:hover { color: var(--accent-2); text-decoration: underline; }
+.course-card-desc > summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+.course-card-desc > summary .course-card-desc-close { display: none; }
+.course-card-desc[open] > summary .course-card-desc-open { display: none; }
+.course-card-desc[open] > summary .course-card-desc-close { display: inline; }
+.course-card-desc .course-card-desc-body {
+  margin: 10px 0 2px;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+/* ============ Course "Also taught" list (Teaching) ============ */
+.course-also-head {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 10px 0 8px;
+}
+.course-also-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.course-also-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 18px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.course-also-code {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+.course-also-title {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.course-also-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .course-also-row { grid-template-columns: 1fr; }
+  .course-also-meta { white-space: normal; }
+}
+
+/* ============ Open-resource card (Teaching) — deliberately unlike a course card:
+   compact, photo-free, kind-labelled, tinted band + left rule. ============ */
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px 20px 18px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--line-2);
+  border-radius: var(--radius);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.resource-card:hover {
+  color: var(--ink);
+  text-decoration: none;
+  border-color: var(--line-2);
+  border-left-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+.resource-card.is-featured { border-left-color: var(--accent); }
+.resource-card-kind {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-2);
+  background: var(--bg);
+  color: var(--muted);
+}
+.resource-card.is-featured .resource-card-kind {
+  background: var(--accent-soft);
+  border-color: oklch(48% 0.18 28 / 0.25);
+  color: var(--accent-2);
+}
+.resource-card-name {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.resource-card:hover .resource-card-name { color: var(--accent); }
+.resource-card-blurb {
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 56ch;
+}
+.resource-card-cta {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+}

@@ -10,6 +10,7 @@ import metricsManual from '../../content/metrics.json';
 import projectsJson from '../../content/projects.json';
 import teachingJson from '../../content/teaching.json';
 import coursesJson from '../../content/courses.json';
+import speakingJson from '../../content/speaking.json';
 
 // CSV files are loaded as raw text via ?raw and parsed at runtime — tiny cost,
 // but keeps the edit path easy (just edit the CSV).
@@ -100,6 +101,21 @@ export const researchSites: ResearchSite[] = parseCsv(sitesCsv).map(r => ({
   blurb: r.blurb,
   year: r.year ? parseInt(r.year, 10) : null,
 }));
+
+// --- Speaking engagements (keynotes / invited talks), shown on the Press page ---
+export type SpeakingItem = {
+  role: string;
+  title: string;
+  venue: string;
+  location?: string;
+  date: string;
+  year: number;
+  featured?: boolean;
+  image?: string;
+  image_alt?: string;
+  image_credit?: string;
+};
+export const speaking = speakingJson as SpeakingItem[];
 
 export const markdownPages = {
   home: homeIntroMd,
