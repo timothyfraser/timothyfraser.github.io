@@ -1,0 +1,23 @@
+[
+  {
+    "role": "Closing Keynote",
+    "title": "Urban congestion pricing: impacts on air quality and public health in NYC",
+    "venue": "National Society of Professional Engineers (NSPE) Conference 2026",
+    "location": "New York City",
+    "date": "August 7, 2026",
+    "year": 2026,
+    "featured": true,
+    "image": "/images/nspe_keynote_stage.jpg",
+    "image_alt": "Tim Fraser delivering the closing keynote at the NSPE 2026 Conference in New York City",
+    "image_credit": "Photo by Corpora Studios"
+  },
+  {
+    "role": "Invited talk",
+    "title": "Fast, repeatable emissions scenarios: MOVESLite and the CAT Platform",
+    "venue": "Mid-Atlantic Regional Air Management Association, Inc. (MARAMA)",
+    "location": "Virtual",
+    "date": "August 20, 2026",
+    "year": 2026,
+    "featured": false
+  }
+]

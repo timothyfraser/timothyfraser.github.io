@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scholar metrics pulse · Timothy Fraser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --surface: #ffffff;
+      --fg: #1b2333;
+      --muted: #5c6478;
+      --border: #e8e5df;
+      --accent: #b31b1b;
+      --accent-2: #8f1515;
+      --accent-soft: #f9e8e8;
+      --ink-on-red: #ffffff;
+      --font-display: 'Source Serif 4', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-mono: ui-monospace, Menlo, monospace;
+      --radius: 6px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--fg); font-family: var(--font-body); }
+    .stripe { height: 4px; background: var(--accent); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 22px 48px; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+    h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 8px; }
+    .lead { color: var(--muted); max-width: 62ch; margin: 0 0 20px; line-height: 1.55; }
+    .controls { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      padding: 8px 14px; font-size: 0.85rem; font-weight: 600; border-radius: var(--radius);
+      border: 1px solid var(--border); background: var(--surface); cursor: pointer; font-family: inherit;
+    }
+    .btn-accent { background: var(--accent); color: var(--ink-on-red); border-color: var(--accent); }
+    .btn-accent:hover { background: var(--accent-2); }
+
+    .viz-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+      gap: 0;
+      min-height: min(520px, 72vh);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+    .pour-column {
+      position: relative;
+      height: min(520px, 72vh);
+      min-height: 420px;
+      border-right: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--surface) 0%, color-mix(in oklch, var(--accent-soft) 18%, var(--surface)) 100%);
+    }
+    #pour-canvas {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .count-overlay {
+      position: absolute;
+      bottom: 28%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .count-num {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      margin: 0;
+      text-shadow: 0 1px 0 var(--surface), 0 0 24px color-mix(in oklch, var(--surface) 80%, transparent);
+    }
+    .count-caption { font-size: 0.82rem; color: var(--muted); margin: 6px 0 0; }
+
+    .metrics-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      padding: 28px 24px;
+      background: color-mix(in oklch, var(--bg) 40%, var(--surface));
+    }
+    .metric-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .metric-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+    .metric-val {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .metric-bar {
+      height: 8px;
+      background: color-mix(in oklch, var(--fg) 6%, var(--border));
+      border-radius: 999px;
+      margin-top: 14px;
+      overflow: hidden;
+    }
+    .metric-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+    .metric-sub { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-top: 10px; }
+    .as-of-line { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+
+    @media (max-width: 760px) {
+      .viz-panel { grid-template-columns: 1fr; }
+      .pour-column { border-right: none; border-bottom: 1px solid var(--border); min-height: 360px; }
+      .metrics-column { flex-direction: row; flex-wrap: wrap; }
+      .metric-card { flex: 1 1 140px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stripe"></div>
+  <div class="wrap" id="app">Loading metrics…</div>
+  <script type="module">
+    import { DATA, loadJSON, displayField, initEmbedShell } from '../js/data-source.js';
+    initEmbedShell();
+
+    const GUMDROP_COLORS = [
+      '#b31b1b', '#c44d4d', '#9a6b4f', '#7a8fa8', '#a8926a',
+      '#8f6b7a', '#6d8f7a', '#b87333', '#8b7355', '#a04040',
+    ];
+
+    function parseHex(hex) {
+      const h = hex.replace('#', '');
+      return {
+        r: parseInt(h.slice(0, 2), 16),
+        g: parseInt(h.slice(2, 4), 16),
+        b: parseInt(h.slice(4, 6), 16),
+      };
+    }
+
+    function colorMix(hex, hex2, t) {
+      const a = parseHex(hex);
+      const b = parseHex(hex2);
+      const r = Math.round(a.r + (b.r - a.r) * t);
+      const g = Math.round(a.g + (b.g - a.g) * t);
+      const bl = Math.round(a.b + (b.b - a.b) * t);
+      return `rgb(${r},${g},${bl})`;
+    }
+
+    function drawGumdrop(ctx, x, y, r, color) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.ellipse(x, y + r * 0.08, r, r * 1.05, 0, 0, Math.PI * 2);
+      const grad = ctx.createRadialGradient(x - r * 0.28, y - r * 0.35, r * 0.1, x, y, r * 1.1);
+      grad.addColorStop(0, '#ffffff');
+      grad.addColorStop(0.22, color);
+      grad.addColorStop(1, colorMix(color, '#1b2333', 0.35));
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.strokeStyle = colorMix(color, '#1b2333', 0.25);
+      ctx.lineWidth = Math.max(0.8, r * 0.08);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    class CitationPourEngine {
+      constructor(canvas, options) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.target = options.target;
+        this.spawnTotal = options.spawnTotal;
+        this.onCount = options.onCount;
+        this.onComplete = options.onComplete;
+
+        this.falling = [];
+        this.settled = [];
+        this.streamDots = [];
+        this.landed = 0;
+        this.displayCount = 0;
+        this.fillRatio = 0;
+        this.running = false;
+        this.paused = false;
+        this.done = false;
+        this.rafId = null;
+        this.lastTs = 0;
+        this.spawnTimeline = null;
+        this.dpr = 1;
+        this.w = 0;
+        this.h = 0;
+
+        this.bowl = { cx: 0, rimY: 0, floorY: 0, rx: 0, ry: 0 };
+        this.hopper = { x: 0, y: 0, spoutY: 0, chuteBottom: 0 };
+
+        this.tick = this.tick.bind(this);
+        this.resize = this.resize.bind(this);
+        window.addEventListener('resize', this.resize);
+      }
+
+      destroy() {
+        cancelAnimationFrame(this.rafId);
+        if (this.spawnTimeline) this.spawnTimeline.kill();
+        window.removeEventListener('resize', this.resize);
+      }
+
+      resize() {
+        const rect = this.canvas.parentElement.getBoundingClientRect();
+        this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+        this.w = Math.max(rect.width, 320);
+        this.h = Math.max(rect.height, 360);
+        this.canvas.width = Math.round(this.w * this.dpr);
+        this.canvas.height = Math.round(this.h * this.dpr);
+        this.canvas.style.width = `${this.w}px`;
+        this.canvas.style.height = `${this.h}px`;
+        this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+
+        this.hopper.x = this.w * 0.5;
+        this.hopper.y = this.h * 0.045;
+        this.hopper.spoutY = this.hopper.y + 62;
+        this.hopper.chuteBottom = this.hopper.y + 118;
+
+        this.bowl.cx = this.w * 0.5;
+        this.bowl.rimY = this.h * 0.54;
+        this.bowl.floorY = this.h * 0.9;
+        this.bowl.rx = Math.min(this.w * 0.4, 200);
+        this.bowl.ry = 24;
+      }
+
+      reset() {
+        this.falling = [];
+        this.settled = [];
+        this.streamDots = [];
+        this.landed = 0;
+        this.displayCount = 0;
+        this.fillRatio = 0;
+        this.done = false;
+        this.onCount(0);
+      }
+
+      start() {
+        this.reset();
+        this.running = true;
+        this.paused = false;
+        if (this.spawnTimeline) this.spawnTimeline.kill();
+
+        const interval = Math.max(55, Math.min(110, Math.round(9000 / this.spawnTotal)));
+        this.spawnTimeline = gsap.timeline({ repeat: 0 });
+        for (let i = 0; i < this.spawnTotal; i += 1) {
+          this.spawnTimeline.call(() => this.spawnGumdrop(), null, i * (interval / 1000));
+        }
+        this.spawnTimeline.call(() => { this.running = false; }, null, (this.spawnTotal * interval) / 1000 + 2);
+
+        cancelAnimationFrame(this.rafId);
+        this.lastTs = performance.now();
+        this.rafId = requestAnimationFrame(this.tick);
+      }
+
+      pauseToggle() {
+        this.paused = !this.paused;
+        if (this.spawnTimeline) {
+          if (this.paused) this.spawnTimeline.pause();
+          else this.spawnTimeline.resume();
+        }
+        return this.paused;
+      }
+
+      spawnGumdrop() {
+        if (this.paused || this.done) return;
+        const r = 6 + Math.random() * 5;
+        const color = GUMDROP_COLORS[Math.floor(Math.random() * GUMDROP_COLORS.length)];
+        const spread = (Math.random() - 0.5) * 16;
+        this.falling.push({
+          x: this.hopper.x + spread,
+          y: this.hopper.y + 16,
+          vx: spread * 0.012 + (Math.random() - 0.5) * 0.28,
+          vy: 0.25 + Math.random() * 0.35,
+          r,
+          color,
+          rot: Math.random() * Math.PI * 2,
+          vr: (Math.random() - 0.5) * 0.08,
+          phase: 'chute',
+        });
+        for (let i = 0; i < 3; i += 1) {
+          this.streamDots.push({
+            x: this.hopper.x + (Math.random() - 0.5) * 10,
+            y: this.hopper.spoutY + Math.random() * 8,
+            vy: 2.8 + Math.random() * 1.4,
+            life: 1,
+            r: 2 + Math.random() * 2,
+            color,
+          });
+        }
+      }
+
+      pileY(x, r) {
+        let maxY = this.bowl.floorY - r - 4;
+        for (const g of this.settled) {
+          const dx = Math.abs(g.x - x);
+          if (dx < (g.r + r) * 0.95) {
+            maxY = Math.min(maxY, g.y - (g.r + r) * 0.82);
+          }
+        }
+        return maxY;
+      }
+
+      inBowlInterior(x, y) {
+        const nx = (x - this.bowl.cx) / (this.bowl.rx * 0.88);
+        const ny = (y - this.bowl.rimY) / (this.bowl.floorY - this.bowl.rimY + 8);
+        return nx * nx + ny * ny * 0.62 <= 1 && y >= this.bowl.rimY - 2;
+      }
+
+      settle(g) {
+        const clampedX = Math.max(
+          this.bowl.cx - this.bowl.rx * 0.76,
+          Math.min(this.bowl.cx + this.bowl.rx * 0.76, g.x),
+        );
+        const y = this.pileY(clampedX, g.r);
+        this.settled.push({ x: clampedX, y, r: g.r, color: g.color });
+        this.landed += 1;
+
+        const perDrop = this.target / this.spawnTotal;
+        this.displayCount = Math.min(this.target, Math.round(this.landed * perDrop));
+        this.fillRatio = this.displayCount / Math.max(this.target, 1);
+        this.onCount(this.displayCount);
+
+        if (this.landed >= this.spawnTotal) {
+          this.displayCount = this.target;
+          this.fillRatio = 1;
+          this.onCount(this.target);
+          this.done = true;
+          this.onComplete();
+        }
+      }
+
+      tick(ts) {
+        const dt = Math.min(32, ts - this.lastTs) / 16.67;
+        this.lastTs = ts;
+
+        if (!this.paused) {
+          for (let i = this.falling.length - 1; i >= 0; i -= 1) {
+            const g = this.falling[i];
+            g.vy += 0.16 * dt;
+            g.vx += (this.bowl.cx - g.x) * 0.0025 * dt;
+            g.x += g.vx * dt;
+            g.y += g.vy * dt;
+            g.rot += g.vr * dt;
+
+            if (g.phase === 'chute' && g.y >= this.hopper.spoutY) {
+              g.phase = 'air';
+            }
+
+            const bottom = g.y + g.r;
+            if (g.phase === 'air' && bottom >= this.bowl.rimY && this.inBowlInterior(g.x, bottom)) {
+              this.falling.splice(i, 1);
+              this.settle(g);
+            } else if (g.y > this.h + 50) {
+              this.falling.splice(i, 1);
+              this.settle(g);
+            }
+          }
+
+          for (let i = this.streamDots.length - 1; i >= 0; i -= 1) {
+            const d = this.streamDots[i];
+            d.y += d.vy * dt;
+            d.life -= 0.035 * dt;
+            if (d.life <= 0 || d.y > this.hopper.chuteBottom + 40) {
+              this.streamDots.splice(i, 1);
+            }
+          }
+        }
+
+        this.draw();
+        this.rafId = requestAnimationFrame(this.tick);
+      }
+
+      drawBowlBack(ctx) {
+        const { cx, rimY, floorY, rx, ry } = this.bowl;
+        const fillTop = floorY - this.fillRatio * (floorY - rimY - 20);
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(cx - rx, rimY);
+        ctx.quadraticCurveTo(cx, rimY - 38, cx + rx, rimY);
+        ctx.lineTo(cx + rx * 0.88, floorY);
+        ctx.quadraticCurveTo(cx, floorY + 16, cx - rx * 0.88, floorY);
+        ctx.closePath();
+        ctx.fillStyle = colorMix('#ffffff', '#f9e8e8', 0.12);
+        ctx.fill();
+        ctx.strokeStyle = '#d8d4cc';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(cx - rx * 0.92, rimY + 4);
+        ctx.quadraticCurveTo(cx, floorY + 10, cx + rx * 0.92, rimY + 4);
+        ctx.lineTo(cx + rx * 0.88, floorY);
+        ctx.quadraticCurveTo(cx, floorY + 16, cx - rx * 0.88, floorY);
+        ctx.closePath();
+        ctx.clip();
+
+        if (this.fillRatio > 0.01) {
+          ctx.beginPath();
+          ctx.moveTo(cx - rx * 0.9, fillTop);
+          ctx.quadraticCurveTo(cx, fillTop - 8 - this.fillRatio * 10, cx + rx * 0.9, fillTop);
+          ctx.lineTo(cx + rx * 0.88, floorY);
+          ctx.lineTo(cx - rx * 0.88, floorY);
+          ctx.closePath();
+          ctx.fillStyle = colorMix('#f9e8e8', '#b31b1b', 0.1 + this.fillRatio * 0.38);
+          ctx.fill();
+        }
+
+        for (const g of this.settled) {
+          drawGumdrop(ctx, g.x, g.y, g.r, g.color);
+        }
+        ctx.restore();
+
+        ctx.restore();
+      }
+
+      drawHopperFrame(ctx) {
+        const x = this.hopper.x;
+        const y = this.hopper.y;
+        const spout = this.hopper.spoutY;
+        const chute = this.hopper.chuteBottom;
+
+        ctx.save();
+        ctx.fillStyle = colorMix('#e8e5df', '#faf9f6', 0.5);
+        ctx.strokeStyle = '#c8c4bc';
+        ctx.lineWidth = 2;
+
+        ctx.beginPath();
+        ctx.moveTo(x - 40, y);
+        ctx.lineTo(x + 40, y);
+        ctx.lineTo(x + 44, y + 22);
+        ctx.lineTo(x - 44, y + 22);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = '600 9px ui-monospace, Menlo, monospace';
+        ctx.fillStyle = '#5c6478';
+        ctx.textAlign = 'center';
+        ctx.fillText('SCHOLAR', x, y + 14);
+
+        ctx.strokeStyle = '#c8c4bc';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(x - 26, y + 22);
+        ctx.lineTo(x - 12, spout);
+        ctx.lineTo(x - 6, chute);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x + 26, y + 22);
+        ctx.lineTo(x + 12, spout);
+        ctx.lineTo(x + 6, chute);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(x - 26, y + 22);
+        ctx.lineTo(x + 26, y + 22);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x - 12, spout);
+        ctx.lineTo(x + 12, spout);
+        ctx.stroke();
+
+        if (this.running && !this.paused && !this.done) {
+          ctx.globalAlpha = 0.35;
+          const grad = ctx.createLinearGradient(x, spout, x, chute + 48);
+          grad.addColorStop(0, 'rgba(179,27,27,0.4)');
+          grad.addColorStop(0.45, 'rgba(249,232,232,0.5)');
+          grad.addColorStop(1, 'rgba(249,232,232,0)');
+          ctx.fillStyle = grad;
+          ctx.fillRect(x - 5, spout, 10, chute - spout + 52);
+        }
+        ctx.restore();
+      }
+
+      drawBowlRim(ctx) {
+        const { cx, rimY, rx, ry } = this.bowl;
+        ctx.save();
+        ctx.beginPath();
+        ctx.ellipse(cx, rimY, rx, ry, 0, 0, Math.PI * 2);
+        ctx.strokeStyle = colorMix('#b31b1b', '#d8d4cc', 0.4);
+        ctx.lineWidth = 3;
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      draw() {
+        const ctx = this.ctx;
+        ctx.clearRect(0, 0, this.w, this.h);
+
+        this.drawBowlBack(ctx);
+        this.drawHopperFrame(ctx);
+
+        for (const g of this.falling) {
+          ctx.save();
+          ctx.translate(g.x, g.y);
+          ctx.rotate(g.rot);
+          drawGumdrop(ctx, 0, 0, g.r, g.color);
+          ctx.restore();
+        }
+
+        for (const d of this.streamDots) {
+          ctx.save();
+          ctx.globalAlpha = d.life * 0.7;
+          drawGumdrop(ctx, d.x, d.y, d.r, d.color);
+          ctx.restore();
+        }
+
+        this.drawBowlRim(ctx);
+      }
+    }
+
+    function render(m) {
+      const spawnTotal = 120;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      document.getElementById('app').innerHTML = `
+        <header>
+          <p class="eyebrow">Google Scholar</p>
+          <h1>Citation pour</h1>
+          <p class="lead">Gumdrop citations pour from Scholar into the bowl; live count and index bars from <code>mpvfews4-metrics.json</code>.</p>
+        </header>
+        <div class="controls">
+          <button type="button" class="btn btn-accent" id="replay-pour">Replay pour</button>
+          <button type="button" class="btn" id="pause-pour">Pause</button>
+        </div>
+        <div class="viz-panel" id="viz-panel">
+          <div class="pour-column">
+            <canvas id="pour-canvas" aria-label="Citation gumdrops pouring into bowl"></canvas>
+            <div class="count-overlay">
+              <p class="count-num" id="live-count">0</p>
+              <p class="count-caption">citations in the bowl</p>
+            </div>
+          </div>
+          <div class="metrics-column">
+            <div class="metric-card">
+              <h3>h-index</h3>
+              <p class="metric-val" id="val-h">0</p>
+              <div class="metric-bar"><div class="metric-bar-fill" id="bar-h"></div></div>
+              <p class="metric-sub">Target: ${m.h_index}</p>
+            </div>
+            <div class="metric-card">
+              <h3>i10-index</h3>
+              <p class="metric-val" id="val-i10">0</p>
+              <div class="metric-bar"><div class="metric-bar-fill" id="bar-i10"></div></div>
+              <p class="metric-sub">Target: ${m.i10_index}</p>
+            </div>
+          </div>
+        </div>
+        <p class="as-of-line">As of ${displayField(m.as_of)} · values from metrics JSON</p>
+      `;
+
+      const canvas = document.getElementById('pour-canvas');
+      const countEl = document.getElementById('live-count');
+      const hEl = document.getElementById('val-h');
+      const i10El = document.getElementById('val-i10');
+      const barH = document.getElementById('bar-h');
+      const barI10 = document.getElementById('bar-i10');
+
+      let metricsAnimated = false;
+      const countObj = { n: 0 };
+
+      function resetMetrics() {
+        metricsAnimated = false;
+        countObj.n = 0;
+        gsap.killTweensOf([hEl, i10El, barH, barI10, countObj]);
+        hEl.textContent = '0';
+        i10El.textContent = '0';
+        barH.style.width = '0%';
+        barI10.style.width = '0%';
+      }
+
+      function animateMetrics() {
+        if (metricsAnimated) return;
+        metricsAnimated = true;
+        gsap.to({ h: 0, i10: 0 }, {
+          h: m.h_index,
+          i10: m.i10_index,
+          duration: reducedMotion ? 0.01 : 1.8,
+          ease: 'power2.out',
+          onUpdate() {
+            hEl.textContent = Math.round(this.targets()[0].h);
+            i10El.textContent = Math.round(this.targets()[0].i10);
+            barH.style.width = `${(this.targets()[0].h / Math.max(m.h_index, 1)) * 100}%`;
+            barI10.style.width = `${(this.targets()[0].i10 / Math.max(m.i10_index, 1)) * 100}%`;
+          },
+        });
+      }
+
+      const engine = new CitationPourEngine(canvas, {
+        target: m.citations,
+        spawnTotal: reducedMotion ? 48 : spawnTotal,
+        onCount: (n) => {
+          gsap.to(countObj, {
+            n,
+            duration: reducedMotion ? 0.05 : 0.18,
+            overwrite: true,
+            onUpdate() {
+              countEl.textContent = Math.round(countObj.n).toLocaleString();
+            },
+          });
+        },
+        onComplete: animateMetrics,
+      });
+
+      engine.resize();
+      engine.draw();
+
+      document.getElementById('replay-pour').addEventListener('click', () => {
+        resetMetrics();
+        engine.start();
+      });
+
+      document.getElementById('pause-pour').addEventListener('click', (e) => {
+        const paused = engine.pauseToggle();
+        e.target.textContent = paused ? 'Resume' : 'Pause';
+      });
+
+      requestAnimationFrame(() => {
+        engine.resize();
+        engine.start();
+      });
+    }
+
+    try {
+      const m = await loadJSON(DATA.metrics);
+      render(m);
+    } catch (e) {
+      document.getElementById('app').textContent = `Load error: ${e.message}`;
+    }
+  </script>
+</body>
+</html>

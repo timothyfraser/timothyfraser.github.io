@@ -45,6 +45,50 @@
       "year": 2026
     },
     {
+      "type": "quoted_in",
+      "press_author": "Sam Walker",
+      "title": "Greenville grad's research shows impact of NYC congestion toll",
+      "outlet": "The Record-Argus",
+      "media_type": "newspaper",
+      "link": "https://www.recordargusnews.com/news/greenville-grads-research-shows-impact-of-nyc-congestion-toll/article_7e2b61ad-0897-4da0-be83-fdf312707029.html",
+      "date_raw": "August 20, 2026",
+      "date": "2026-08-20",
+      "year": 2026
+    },
+    {
+      "type": "cited_in",
+      "press_author": "Michael Sol Warren",
+      "title": "Congestion pricing hasn't changed much about NYC's air quality, city report finds",
+      "outlet": "Gothamist",
+      "media_type": "online_news",
+      "link": "https://gothamist.com/news/congestion-pricing-hasnt-changed-much-about-nycs-air-quality-city-report-finds",
+      "date_raw": "August 16, 2026",
+      "date": "2026-08-16",
+      "year": 2026
+    },
+    {
+      "type": "quoted_in",
+      "press_author": null,
+      "title": "After 1 year, congestion pricing in Manhattan did not significantly improve air quality",
+      "outlet": "Newsday",
+      "media_type": "newspaper",
+      "link": "https://www.newsday.com/news/new-york/manhattan-congestion-pricing-air-quality-mta-s32g9bfy",
+      "date_raw": "August 2026",
+      "date": "2026-08-01",
+      "year": 2026
+    },
+    {
+      "type": "cited_in",
+      "press_author": "Emerging Europe Insight",
+      "title": "Road rage",
+      "outlet": "Emerging Europe",
+      "media_type": "online_news",
+      "link": "https://emerging-europe.com/road-rage/",
+      "date_raw": "May 20, 2026",
+      "date": "2026-05-20",
+      "year": 2026
+    },
+    {
       "type": "cited_in",
       "press_author": "Pratik Pawar",
       "title": "Is NYC's controversial $9 toll working? The data is in.",
@@ -344,6 +388,8 @@
   ],
   "monthly": {
     "2026-12": 4,
+    "2026-08": 3,
+    "2026-05": 1,
     "2026-01": 5,
     "2025-12": 17,
     "2022-09": 1,

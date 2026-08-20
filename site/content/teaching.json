@@ -32,6 +32,26 @@
       "tags": ["networks", "R"]
     },
     {
+      "id": "netsci-visualizer",
+      "name": "NetSci VISUALIZER",
+      "kind": "Interactive Tool",
+      "blurb": "Build, lay out, and inspect network data in the browser — no install, no setup.",
+      "url": "https://timothyfraser.com/netsci/visualizer.html",
+      "featured": true,
+      "accent": "cool",
+      "tags": ["networks", "visualization", "browser"]
+    },
+    {
+      "id": "netsci-playground",
+      "name": "NetSci Coding Playground",
+      "kind": "Interactive Tool",
+      "blurb": "Run network code in the browser: R via WebR (igraph, tidygraph, ggraph) and Python via Pyodide (pandas, networkx, matplotlib).",
+      "url": "https://timothyfraser.com/netsci/playground.html",
+      "featured": true,
+      "accent": "cool",
+      "tags": ["R", "Python", "WebR", "Pyodide"]
+    },
+    {
       "id": "dsai",
       "name": "DSAI",
       "kind": "Course",

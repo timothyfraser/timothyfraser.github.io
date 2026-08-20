@@ -126,7 +126,9 @@
     "recruiting": false,
     "links": [
       { "label": "cat-apps.com", "url": "https://cat-apps.com/" },
-      { "label": "VISUALIZER", "url": "https://visualizer.cat-apps.com/" }
+      { "label": "VISUALIZER", "url": "https://visualizer.cat-apps.com/" },
+      { "label": "Calculator", "url": "https://cat-apps.com/#/calculator" },
+      { "label": "CAT API Explorer", "url": "https://cat-apps.com/#/api-docs" }
     ]
   },
   {
@@ -178,22 +180,6 @@
     "phase": null,
     "question": null,
     "skills": ["Mobility data", "Network analysis", "Quasi-experiments"],
-    "recruiting": false,
-    "links": []
-  },
-  {
-    "id": "polarization-health",
-    "n": "11",
-    "kind": "research",
-    "category": "Surveys + Polarization",
-    "name": "Polarization & Health",
-    "tagline": "Two national surveys testing how partisan polarization shapes Americans' physical and mental well-being.",
-    "badge": { "label": "Surveys", "variant": "collect" },
-    "accent": "gold",
-    "body": "Two national surveys linking partisan polarization to Americans' physical and mental health — and to COVID-19 vaccination uptake.",
-    "phase": null,
-    "question": null,
-    "skills": ["Survey design", "Multilevel models", "Health outcomes"],
     "recruiting": false,
     "links": []
   }

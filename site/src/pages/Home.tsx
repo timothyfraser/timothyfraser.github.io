@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import StatBox from '../components/StatBox';
 import WNYCEmbed from '../components/WNYCEmbed';
+import FeaturePhoto from '../components/FeaturePhoto';
 import TopicBars from '../viz/TopicBars';
 import '../viz/viz.css';
 import PublicationsShelfSection from '../components/PublicationsShelfSection';
@@ -105,8 +106,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NSPE CLOSING KEYNOTE */}
+      <section className="section reveal d2">
+        <div className="section-head">
+          <h2>Closing Keynote — NSPE 2026</h2>
+          <p className="subhead">
+            National Society of Professional Engineers · Professional Engineers Conference ·
+            New York City · August 7, 2026
+          </p>
+        </div>
+        <FeaturePhoto
+          src="/images/nspe_keynote_closeup.jpg"
+          alt="Timothy Fraser delivering the closing keynote at the NSPE Professional Engineers Conference 2026 in New York City"
+          eyebrow="Closing Keynote · NSPE Professional Engineers Conference 2026"
+          title={<>&ldquo;Urban congestion pricing: impacts on air quality and public health in NYC&rdquo;</>}
+          focus="50% 30%"
+        >
+          <p>
+            I closed out the National Society of Professional Engineers' national conference in
+            New York City, walking a room of licensed engineers through what Manhattan's cordon
+            pricing program has done to traffic, to PM<sub>2.5</sub>, and to public health — and
+            what the evidence still cannot tell us.
+          </p>
+          <p style={{ fontSize: '0.78rem', letterSpacing: '0.04em', color: 'var(--muted)', marginTop: 14 }}>
+            Photo by Corpora Studios
+          </p>
+          <div className="feature-photo-links">
+            <Link to="/press" className="btn ghost">Talks &amp; press →</Link>
+            <a
+              className="btn ghost"
+              href="https://doi.org/10.1038/s44407-025-00037-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the npj Clean Air study ↗
+            </a>
+          </div>
+        </FeaturePhoto>
+      </section>
+
       {/* WNYC FEATURED INTERVIEW */}
-      <section className="reveal d2">
+      <section className="reveal d3">
         <WNYCEmbed />
       </section>
 

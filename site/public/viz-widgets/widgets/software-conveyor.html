@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Software conveyor · Timothy Fraser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --surface: #ffffff;
+      --fg: #1b2333;
+      --muted: #5c6478;
+      --border: #e8e5df;
+      --accent: #b31b1b;
+      --accent-2: #8f1515;
+      --accent-soft: #f9e8e8;
+      --ink-on-red: #ffffff;
+      --belt: #d4cfc4;
+      --belt-stripe: #c0bab0;
+      --frame: #5a5854;
+      --plate: #ffffff;
+      --plate-rim: #e2ddd4;
+      --font-display: 'Source Serif 4', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-mono: ui-monospace, Menlo, monospace;
+      --radius: 6px;
+      --status-active: #2d6a4f;
+      --status-alpha: #b8860b;
+      --type-shiny: #1d4e89;
+      --type-package: #6b4c9a;
+      --type-teaching: #8f1515;
+      --type-python: #2d6a4f;
+      --type-gis: #0d6e6e;
+      --type-dataviz: #b45309;
+      --type-sim: #4a5568;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 17px; line-height: 1.55; }
+    .stripe { height: 4px; background: var(--accent); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 22px 48px; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+    h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 8px; }
+    .lead { color: var(--muted); max-width: 62ch; margin: 0 0 20px; }
+    .controls { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      padding: 9px 16px; font-size: 0.88rem; font-weight: 600; border-radius: var(--radius);
+      text-decoration: none; border: none; cursor: pointer; font-family: inherit;
+    }
+    .btn-accent { background: var(--accent); color: var(--ink-on-red); }
+    .btn-accent:hover { background: var(--accent-2); }
+    .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--fg); }
+    .meta { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); }
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 10px 16px; margin-bottom: 16px;
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted);
+    }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Kaiten lane ── */
+    .kaiten-lane {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto 28px;
+      padding: 18px 0 36px;
+      background: linear-gradient(180deg, color-mix(in oklch, var(--fg) 3%, var(--bg)), var(--bg));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .lane-rail {
+      position: absolute;
+      top: 12px; bottom: 28px;
+      width: 12px;
+      background: linear-gradient(90deg, var(--frame), color-mix(in oklch, white 15%, var(--frame)));
+      border-radius: 2px;
+      z-index: 4;
+    }
+    .lane-rail.left { left: 10px; }
+    .lane-rail.right { right: 10px; }
+
+    .belt-window {
+      position: relative;
+      margin: 0 36px;
+      height: 148px;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: inset 0 2px 10px color-mix(in oklch, var(--fg) 10%, transparent);
+    }
+    .belt-surface {
+      position: absolute;
+      inset: 0;
+      background-color: var(--belt);
+      background-image: repeating-linear-gradient(
+        90deg,
+        var(--belt-stripe) 0,
+        var(--belt-stripe) 28px,
+        var(--belt) 28px,
+        var(--belt) 56px
+      );
+      background-size: 112px 100%;
+    }
+    .belt-surface::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent 0, transparent 22px,
+        color-mix(in oklch, var(--fg) 5%, transparent) 22px,
+        color-mix(in oklch, var(--fg) 5%, transparent) 23px
+      );
+      pointer-events: none;
+    }
+
+    .belt-train-wrap {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+    }
+    .belt-train {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 36px;
+      will-change: transform;
+      pointer-events: auto;
+    }
+
+    .plate-item {
+      flex: 0 0 auto;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 4px 0;
+      font: inherit;
+      color: inherit;
+      transition: filter 0.15s ease;
+    }
+    .plate-item:hover { filter: drop-shadow(0 6px 12px color-mix(in oklch, var(--fg) 14%, transparent)); }
+    .plate-item.selected .dish {
+      box-shadow:
+        0 0 0 3px var(--accent),
+        0 2px 0 color-mix(in oklch, var(--fg) 12%, transparent),
+        0 8px 20px color-mix(in oklch, var(--accent) 22%, transparent);
+    }
+    .plate-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 50%; }
+
+    .dish {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 38% 32%, var(--plate) 0%, color-mix(in oklch, var(--plate-rim) 40%, var(--plate)) 100%);
+      border: 3px solid var(--plate-rim);
+      box-shadow:
+        0 2px 0 color-mix(in oklch, var(--fg) 12%, transparent),
+        0 5px 12px color-mix(in oklch, var(--fg) 10%, transparent),
+        inset 0 -3px 6px color-mix(in oklch, var(--fg) 4%, transparent);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      position: relative;
+    }
+    .plate-item.featured .dish {
+      border-color: color-mix(in oklch, var(--accent) 45%, var(--plate-rim));
+    }
+    .type-icon { width: 36px; height: 36px; color: var(--icon-color, var(--accent)); }
+    .type-icon svg { width: 100%; height: 100%; display: block; }
+    .plate-label {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      font-weight: 600;
+      line-height: 1.1;
+      text-align: center;
+      max-width: 84px;
+      color: var(--fg);
+      padding: 0 4px;
+    }
+    .status-ring {
+      position: absolute;
+      top: 5px; right: 5px;
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      border: 2px solid var(--plate);
+      background: var(--muted);
+    }
+    .status-ring.active { background: var(--status-active); }
+    .status-ring.alpha { background: var(--status-alpha); }
+    .type-tag {
+      position: absolute;
+      bottom: 7px; left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-size: 0.5rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .roller {
+      position: absolute;
+      bottom: 6px;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #9a9690, var(--frame));
+      border: 2px solid color-mix(in oklch, var(--fg) 15%, var(--frame));
+      z-index: 5;
+    }
+    .roller.left { left: 18px; }
+    .roller.right { right: 18px; }
+    .roller::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      border: 2px dashed color-mix(in oklch, white 25%, transparent);
+    }
+
+    .flow-hint {
+      position: absolute;
+      top: 50%; right: 44px;
+      transform: translateY(-50%);
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      pointer-events: none;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .flow-hint::after { content: '→'; color: var(--accent); font-size: 0.9rem; }
+
+    .detail-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 24px 24px 28px;
+      min-height: 120px;
+    }
+    .detail-panel h2 { font-family: var(--font-display); font-size: 1.35rem; margin: 0 0 8px; }
+    .detail-panel p { margin: 0 0 12px; }
+    .detail-empty { color: var(--muted); text-align: center; padding: 28px; }
+    .detail-type {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-bottom: 10px;
+    }
+    .detail-type .type-icon { width: 28px; height: 28px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+    .tag {
+      font-size: 0.65rem; padding: 2px 6px; background: var(--accent-soft);
+      color: var(--accent-2); border-radius: 3px; font-family: var(--font-mono);
+    }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; margin-bottom: 4px; }
+    .btn-row .btn { display: inline-flex; align-items: center; justify-content: center; }
+
+    @media (max-width: 560px) {
+      .belt-window { height: 132px; margin: 0 28px; }
+      .dish { width: 88px; height: 88px; }
+      .type-icon { width: 30px; height: 30px; }
+      .belt-train { gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stripe" aria-hidden="true"></div>
+  <div class="wrap" id="app"><p class="meta">Loading software from CSV…</p></div>
+  <script type="module">
+    import { DATA, loadText, csvToObjects, displayField, initEmbedShell, reportEmbedHeight } from '../js/data-source.js';
+    initEmbedShell();
+
+    const TYPE_DEFS = {
+      shiny: {
+        label: 'Shiny app',
+        color: 'var(--type-shiny)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="8" width="28" height="20" rx="2"/><path d="M6 14h28"/><circle cx="12" cy="11" r="1.5" fill="currentColor"/><rect x="10" y="18" width="10" height="6" rx="1" fill="currentColor" opacity="0.2"/><path d="M24 20v8M20 24h8" stroke-linecap="round"/></svg>`,
+      },
+      package: {
+        label: 'R package',
+        color: 'var(--type-package)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12h24v20H8z"/><path d="M8 12l12-6 12 6"/><path d="M20 6v26"/><text x="14" y="28" font-size="10" font-weight="700" fill="currentColor" stroke="none">R</text></svg>`,
+      },
+      teaching: {
+        label: 'Course / textbook',
+        color: 'var(--type-teaching)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 10h14v22H6z"/><path d="M20 10h14v22H20z"/><line x1="10" y1="16" x2="16" y2="16"/><line x1="24" y1="16" x2="30" y2="16"/><line x1="10" y1="22" x2="16" y2="22"/><line x1="24" y1="22" x2="28" y2="22"/></svg>`,
+      },
+      python: {
+        label: 'Python / AI',
+        color: 'var(--type-python)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 8c-4 0-6 2-6 5v3h6v-2h8v6h-2v6c0 3 2 5 6 5h4c4 0 6-2 6-5v-3h-6v2h-8v-6h2v-6c0-3-2-5-6-5h-4z"/><circle cx="15" cy="11" r="1.5" fill="currentColor"/><circle cx="25" cy="29" r="1.5" fill="currentColor"/></svg>`,
+      },
+      gis: {
+        label: 'GIS / maps',
+        color: 'var(--type-gis)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 28l8-16 8 10 8-14 8 20"/><circle cx="28" cy="12" r="4"/><path d="M26 12h4M28 10v4"/></svg>`,
+      },
+      dataviz: {
+        label: 'Dashboard / viz',
+        color: 'var(--type-dataviz)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="8" width="28" height="24" rx="2"/><rect x="10" y="22" width="5" height="6" fill="currentColor" opacity="0.35"/><rect x="18" y="16" width="5" height="12" fill="currentColor" opacity="0.5"/><rect x="26" y="20" width="5" height="8" fill="currentColor" opacity="0.35"/></svg>`,
+      },
+      simulation: {
+        label: 'Simulation',
+        color: 'var(--type-sim)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="20" r="12"/><path d="M20 8v4M20 28v4M8 20h4M28 20h4"/><path d="M12 12l3 3M25 25l3 3M28 12l-3 3M15 25l-3 3" stroke-linecap="round"/></svg>`,
+      },
+      optimization: {
+        label: 'Optimization',
+        color: 'var(--type-package)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="20" r="10"/><path d="M20 10v10l7 4" stroke-linecap="round"/><path d="M8 30h24" stroke-linecap="round"/></svg>`,
+      },
+      networks: {
+        label: 'Networks',
+        color: 'var(--type-shiny)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="14" r="4"/><circle cx="28" cy="12" r="4"/><circle cx="20" cy="30" r="4"/><line x1="15" y1="16" x2="25" y2="14"/><line x1="14" y1="17" x2="18" y2="27"/><line x1="26" y1="15" x2="22" y2="27"/></svg>`,
+      },
+      code: {
+        label: 'Software',
+        color: 'var(--accent)',
+        svg: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12l-6 8 6 8M28 12l6 8-6 8"/><line x1="22" y1="10" x2="18" y2="30" stroke-linecap="round"/></svg>`,
+      },
+    };
+
+    function detectType(item) {
+      const tags = (item.tags || '').toLowerCase();
+      if (tags.includes('shiny')) return 'shiny';
+      if (tags.includes('teaching') || tags.includes('textbook')) return 'teaching';
+      if (tags.includes('python') || tags.includes('ai')) return 'python';
+      if (tags.includes('gis')) return 'gis';
+      if (tags.includes('dataviz') || tags.includes('dashboards') || tags.includes('emissions')) return 'dataviz';
+      if (tags.includes('simulation') || tags.includes('reliability')) return 'simulation';
+      if (tags.includes('optimization') || tags.includes('systems')) return 'optimization';
+      if (tags.includes('networks')) return 'networks';
+      if (tags.includes('package')) return 'package';
+      return 'code';
+    }
+
+    function shortName(name) {
+      const base = name.split('(')[0].trim();
+      return base.length > 14 ? `${base.slice(0, 12)}…` : base;
+    }
+
+    function buildPlate(item, idx, selected) {
+      const typeKey = detectType(item);
+      const type = TYPE_DEFS[typeKey];
+      const feat = item.featured === 'true';
+      const isSel = selected && selected.id === item.id;
+      return `<button type="button" class="plate-item${feat ? ' featured' : ''}${isSel ? ' selected' : ''}" data-i="${idx}" aria-label="${item.name}">
+        <div class="dish">
+          <span class="status-ring ${item.status || ''}"></span>
+          <span class="type-icon" style="--icon-color:${type.color}">${type.svg}</span>
+          <span class="plate-label">${shortName(item.name)}</span>
+          <span class="type-tag">${type.label}</span>
+        </div>
+      </button>`;
+    }
+
+    /** Seamless horizontal belt — RAF-driven, not CSS keyframes */
+    class BeltEngine {
+      constructor({ surface, train, leftRoller, rightRoller }) {
+        this.surface = surface;
+        this.train = train;
+        this.leftRoller = leftRoller;
+        this.rightRoller = rightRoller;
+        this.offset = 0;
+        this.loopWidth = 0;
+        this.speed = 52;
+        this.stripePeriod = 112;
+        this.running = true;
+        this.hoverPause = false;
+        this.raf = null;
+        this.lastTs = 0;
+        this.rollerAngle = 0;
+      }
+
+      measure() {
+        const plates = this.train.querySelectorAll('.plate-item');
+        const half = plates.length / 2;
+        if (half < 1) {
+          this.loopWidth = this.train.scrollWidth;
+          return;
+        }
+        let w = 0;
+        const gap = parseFloat(getComputedStyle(this.train).gap) || 36;
+        for (let i = 0; i < half; i++) {
+          w += plates[i].offsetWidth;
+          if (i < half - 1) w += gap;
+        }
+        this.loopWidth = w;
+      }
+
+      start() {
+        this.measure();
+        this.lastTs = performance.now();
+        const tick = (ts) => {
+          const dt = Math.min(ts - this.lastTs, 48);
+          this.lastTs = ts;
+          if (this.running && !this.hoverPause && this.loopWidth > 0) {
+            this.offset -= (this.speed * dt) / 1000;
+            while (this.offset <= -this.loopWidth) this.offset += this.loopWidth;
+            this.rollerAngle += (this.speed * dt) / 1000 * 4.2;
+          }
+          this.train.style.transform = `translate3d(${this.offset}px, 0, 0)`;
+          this.surface.style.backgroundPositionX = `${this.offset}px`;
+          const rot = this.rollerAngle;
+          if (this.leftRoller) this.leftRoller.style.transform = `rotate(${rot}rad)`;
+          if (this.rightRoller) this.rightRoller.style.transform = `rotate(${-rot}rad)`;
+          this.raf = requestAnimationFrame(tick);
+        };
+        if (this.raf) cancelAnimationFrame(this.raf);
+        this.raf = requestAnimationFrame(tick);
+      }
+
+      stop() {
+        if (this.raf) cancelAnimationFrame(this.raf);
+        this.raf = null;
+      }
+
+      setPaused(p) { this.running = !p; }
+      setHoverPause(p) { this.hoverPause = p; }
+    }
+
+    let beltEngine = null;
+    const state = { items: [], selected: null, paused: false };
+
+    function bindBelt() {
+      beltEngine?.stop();
+      const surface = document.getElementById('belt-surface');
+      const train = document.getElementById('belt-train');
+      const leftRoller = document.getElementById('roller-left');
+      const rightRoller = document.getElementById('roller-right');
+      const windowEl = document.getElementById('belt-window');
+      if (!surface || !train) return;
+
+      beltEngine = new BeltEngine({ surface, train, leftRoller, rightRoller });
+      beltEngine.setPaused(state.paused);
+      beltEngine.start();
+
+      windowEl?.addEventListener('mouseenter', () => beltEngine.setHoverPause(true));
+      windowEl?.addEventListener('mouseleave', () => beltEngine.setHoverPause(false));
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => beltEngine?.measure(), 120);
+      });
+    }
+
+    function render() {
+      const sel = state.selected;
+      const items = state.items;
+      const doubled = [...items, ...items];
+      const platesHtml = doubled.map((item, i) => buildPlate(item, i % items.length, sel)).join('');
+
+      let detail = `<div class="detail-empty">Click on a plate on the belt!</div>`;
+      if (sel) {
+        const typeKey = detectType(sel);
+        const type = TYPE_DEFS[typeKey];
+        const tags = (sel.tags || '').split('|').filter(Boolean).slice(0, 6);
+        const liveLink = (sel.live_url || '').trim();
+        const repoLink = (sel.repo_url || '').trim();
+        const linkRow = (liveLink || repoLink)
+          ? `<div class="btn-row">
+            ${liveLink ? `<a class="btn btn-accent" href="${liveLink}" target="_blank" rel="noopener noreferrer">Live demo →</a>` : ''}
+            ${repoLink ? `<a class="btn btn-ghost" href="${repoLink}" target="_blank" rel="noopener noreferrer">Repository →</a>` : ''}
+            <button type="button" class="btn btn-ghost" id="clear-sel">Clear</button>
+          </div>`
+          : `<div class="btn-row"><button type="button" class="btn btn-ghost" id="clear-sel">Clear</button></div>`;
+        detail = `<div class="detail-panel">
+          <div class="detail-type"><span class="type-icon" style="--icon-color:${type.color}">${type.svg}</span> ${type.label}</div>
+          <h2>${sel.name}</h2>
+          <p>${displayField(sel.blurb)}</p>
+          ${linkRow}
+          <p class="meta">${displayField(sel.year)} · ${displayField(sel.status)}${sel.featured === 'true' ? ' · featured' : ''}</p>
+          <div class="tags">${tags.map((t) => `<span class="tag">${t}</span>`).join('')}</div>
+        </div>`;
+      }
+
+      const legend = Object.entries(TYPE_DEFS)
+        .filter(([k]) => ['shiny', 'package', 'teaching', 'python', 'dataviz', 'gis'].includes(k))
+        .map(([, v]) => `<span><span class="legend-dot" style="background:${v.color}"></span>${v.label}</span>`)
+        .join('');
+
+      document.getElementById('app').innerHTML = `
+        <header>
+          <p class="eyebrow">Software &amp; tools</p>
+          <h1>Software conveyor</h1>
+          <p class="lead">Products ride kaiten-style plates — hover to pause, click a dish for details. Icon shape reflects project type.</p>
+        </header>
+        <div class="controls">
+          <button type="button" class="btn btn-ghost" id="toggle-pause">${state.paused ? 'Resume belt' : 'Pause belt'}</button>
+          <span class="meta">${items.length} products on the line</span>
+        </div>
+        <div class="legend" aria-hidden="true">${legend}</div>
+        <div class="kaiten-lane" id="belt-lane">
+          <div class="lane-rail left" aria-hidden="true"></div>
+          <div class="lane-rail right" aria-hidden="true"></div>
+          <div class="belt-window" id="belt-window">
+            <div class="belt-surface" id="belt-surface"></div>
+            <span class="flow-hint">Flow</span>
+            <div class="belt-train-wrap">
+              <div class="belt-train" id="belt-train">${platesHtml}</div>
+            </div>
+          </div>
+          <div class="roller left" id="roller-left" aria-hidden="true"></div>
+          <div class="roller right" id="roller-right" aria-hidden="true"></div>
+        </div>
+        ${detail}
+      `;
+
+      document.getElementById('toggle-pause')?.addEventListener('click', () => {
+        state.paused = !state.paused;
+        beltEngine?.setPaused(state.paused);
+        document.getElementById('toggle-pause').textContent = state.paused ? 'Resume belt' : 'Pause belt';
+      });
+
+      document.querySelectorAll('.plate-item').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const i = parseInt(btn.dataset.i, 10);
+          state.selected = state.items[i];
+          state.paused = true;
+          beltEngine?.setPaused(true);
+          render();
+        });
+      });
+
+      document.getElementById('clear-sel')?.addEventListener('click', () => {
+        state.selected = null;
+        state.paused = false;
+        render();
+      });
+
+      requestAnimationFrame(() => {
+        bindBelt();
+        reportEmbedHeight();
+      });
+    }
+
+    try {
+      const text = await loadText(DATA.software);
+      state.items = csvToObjects(text).filter((r) => r.name);
+      render();
+    } catch (e) {
+      document.getElementById('app').innerHTML = `<p style="color:var(--accent)">Load error: ${e.message}</p>`;
+    }
+  </script>
+</body>
+</html>
