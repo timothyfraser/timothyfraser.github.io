@@ -32,8 +32,10 @@ export default function Press() {
 
   // Speaking engagements are curated content (not press mentions), so they sit
   // in their own section above the feed and ignore the search/type filters.
+  // Only entries flagged `featured` are rendered. Non-featured speaking entries
+  // (e.g. the MARAMA invited talk) are intentionally NOT rendered right now —
+  // they stay in site/content/speaking.json as the durable log of every talk.
   const featuredTalks = useMemo(() => speaking.filter(s => s.featured), []);
-  const otherTalks = useMemo(() => speaking.filter(s => !s.featured), []);
 
   const groupedByYear = useMemo(() => {
     const m = new Map<number, typeof press.items>();
@@ -62,9 +64,6 @@ export default function Press() {
         />
       </header>
 
-      {/* FEATURED WNYC */}
-      <WNYCEmbed />
-
       {/* STAT BOXES */}
       <div className="grid-2" style={{ margin: '20px 0 28px' }}>
         <StatBox
@@ -77,97 +76,74 @@ export default function Press() {
         />
       </div>
 
-      {/* SPEAKING — keynotes & invited talks */}
-      {speaking.length > 0 && (
-        <section style={{ marginTop: 34 }}>
-          <div className="section-head">
-            <div className="eyebrow">Speaking</div>
-            <h2>Keynotes &amp; invited talks</h2>
-            <p className="subhead">Recent invited addresses to engineering, air-quality, and policy audiences.</p>
-          </div>
+      {/* FEATURED PRESS COVERAGE — marquee keynote + broadcast interview */}
+      <section style={{ marginTop: 34 }}>
+        <div className="section-head">
+          <div className="eyebrow">Featured</div>
+          <h2>Featured Press Coverage</h2>
+          <p className="subhead">Marquee appearances — keynote stages and broadcast interviews on congestion pricing and air quality.</p>
+        </div>
 
-          {featuredTalks.map((s, i) => (
-            <article className="card featured" key={`ft-${i}`}>
-              <div
-                style={{
-                  display: 'flex',
-                  gap: 20,
-                  padding: '20px 24px',
-                  flexWrap: 'wrap',
-                  alignItems: 'flex-start',
-                }}
-              >
-                {s.image && (
-                  <figure style={{ margin: 0, flex: '0 0 200px', maxWidth: '100%' }}>
-                    <img
-                      src={s.image}
-                      alt={s.image_alt || s.title}
-                      loading="lazy"
+        {featuredTalks.map((s, i) => (
+          <article className="card featured" key={`ft-${i}`}>
+            <div
+              style={{
+                display: 'flex',
+                gap: 20,
+                padding: '20px 24px',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start',
+              }}
+            >
+              {s.image && (
+                <figure style={{ margin: 0, flex: '0 0 200px', maxWidth: '100%' }}>
+                  <img
+                    src={s.image}
+                    alt={s.image_alt || s.title}
+                    loading="lazy"
+                    style={{
+                      width: '100%',
+                      height: 130,
+                      objectFit: 'cover',
+                      display: 'block',
+                      borderRadius: 'var(--radius-sm)',
+                      border: '1px solid var(--line)',
+                    }}
+                  />
+                  {s.image_credit && (
+                    <figcaption
                       style={{
-                        width: '100%',
-                        height: 130,
-                        objectFit: 'cover',
-                        display: 'block',
-                        borderRadius: 'var(--radius-sm)',
-                        border: '1px solid var(--line)',
+                        fontSize: '0.68rem',
+                        fontStyle: 'italic',
+                        color: 'var(--muted)',
+                        marginTop: 5,
                       }}
-                    />
-                    {s.image_credit && (
-                      <figcaption
-                        style={{
-                          fontSize: '0.68rem',
-                          fontStyle: 'italic',
-                          color: 'var(--muted)',
-                          marginTop: 5,
-                        }}
-                      >
-                        {s.image_credit}
-                      </figcaption>
-                    )}
-                  </figure>
-                )}
-                <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-                  <span className="badge accent">{s.role}</span>
-                  <h3 className="card-name" style={{ fontSize: '1.28rem', margin: '10px 0 0' }}>
-                    {s.title}
-                  </h3>
-                  <div className="card-tag" style={{ marginTop: 6 }}>{s.venue}</div>
-                  <div
-                    className="card-meta"
-                    style={{ marginTop: 12, paddingTop: 10 }}
-                  >
-                    {[s.date, s.location].filter(Boolean).join(' · ')}
-                  </div>
+                    >
+                      {s.image_credit}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
+              <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+                <span className="badge accent">{s.role}</span>
+                <h3 className="card-name" style={{ fontSize: '1.28rem', margin: '10px 0 0' }}>
+                  {s.title}
+                </h3>
+                <div className="card-tag" style={{ marginTop: 6 }}>{s.venue}</div>
+                <div
+                  className="card-meta"
+                  style={{ marginTop: 12, paddingTop: 10 }}
+                >
+                  {[s.date, s.location].filter(Boolean).join(' · ')}
                 </div>
               </div>
-            </article>
-          ))}
-
-          {otherTalks.length > 0 && (
-            <div className="press-feed">
-              {otherTalks.map((s, i) => (
-                <div
-                  className="press-row"
-                  key={`ot-${i}`}
-                  style={{
-                    padding: '14px 16px',
-                    borderBottom: i === otherTalks.length - 1 ? 'none' : undefined,
-                  }}
-                >
-                  <div className="date">{s.date}</div>
-                  <div className="press-main">
-                    <span className="type-pill">{s.role}</span>
-                    <span className="title">{s.title}</span>
-                  </div>
-                  <div className="outlet">
-                    {[s.venue, s.location].filter(Boolean).join(' · ')}
-                  </div>
-                </div>
-              ))}
             </div>
-          )}
-        </section>
-      )}
+          </article>
+        ))}
+
+        {/* FEATURED WNYC — broadcast interview, sits directly below the keynote card */}
+        <WNYCEmbed />
+      </section>
 
       <div className="prose" style={{ maxWidth: 'none', marginTop: 34 }}>
         <p>Below: full press feed, grouped by year. Filter or search to narrow.</p>

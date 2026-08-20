@@ -11,6 +11,10 @@ import Card, { CardBody, CardHead, CardFigure } from '../components/Card';
 
 const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
   cat: { src: '/images/dashboard_cat.PNG', alt: 'CAT dashboard' },
+  cpportal: {
+    src: '/images/image_nyc_congestion.png',
+    alt: 'NYC congestion pricing — PM2.5 changes after six months of the cordon (npj Clean Air, 2025)',
+  },
   'social-infrastructure': { src: '/images/image_social_infra_nyc.png', alt: 'Social infrastructure map' },
   evacuation: { src: '/images/hero_image_cropped_banner.png', alt: 'Hurricane Dorian evacuation network visualization' },
 };
@@ -87,7 +91,8 @@ export default function Research() {
         </div>
       </section>
 
-      {/* SELECTED FIGURES — promoted up */}
+      {/* SELECTED FIGURES — commented out; the NYC congestion figure now leads the CIVIC
+          project card above, so this section duplicated it.
       <section className="section">
         <div className="section-head">
           <h2>Selected figures</h2>
@@ -106,6 +111,7 @@ export default function Research() {
           />
         </div>
       </section>
+      */}
 
       {/* MAP */}
       <section className="section">
