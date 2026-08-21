@@ -54,6 +54,7 @@ export default function Projects() {
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <a className="btn accent" href="/meng/syllabus.html">Read the syllabus →</a>
                 <a className="btn ghost" href="/meng/syllabus.pdf">Download PDF</a>
+                <a className="btn ghost" href="/meng/slides.html">View slides →</a>
               </div>
             </CardBody>
           </Card>
