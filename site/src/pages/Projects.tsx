@@ -40,6 +40,24 @@ export default function Projects() {
         <div className="section-head">
           <h2>MEng — recruiting students</h2>
           <p className="subhead">Cornell MEng students welcome. Each project ships a paper plus a usable artifact (dashboard, API, or model).</p>
+
+          <div style={{ marginTop: 18 }}>
+          <Card featured>
+            <CardBody>
+              <div style={{ marginTop: 14, marginBottom: 10 }}>
+                <span className="badge accent">SYSEN 5900 · 2026</span>
+              </div>
+              <p style={{ marginBottom: 14 }}>
+                <strong>Recruiting for 2026</strong> — the M.Eng. Project Syllabus covers all six projects:
+                how to join, how to register, and how grading works.
+              </p>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                <a className="btn accent" href="/meng/syllabus.html">Read the syllabus →</a>
+                <a className="btn ghost" href="/meng/syllabus.pdf">Download PDF</a>
+              </div>
+            </CardBody>
+          </Card>
+          </div>
         </div>
         {meng.map(p => {
           const img = PROJECT_IMAGES[p.id];
@@ -47,7 +65,7 @@ export default function Projects() {
             <Card key={p.id} featured>
               {img && <CardFigure src={img.src} alt={img.alt} illustrative={img.illustrative} />}
               <CardHead
-                id={`Project ${p.n} · ${p.category}`}
+                id={p.code ? `${p.code} · Project ${p.n} · ${p.category}` : `Project ${p.n} · ${p.category}`}
                 name={p.icon ? `${p.icon} ${p.name}` : p.name}
                 tag={p.tagline}
                 badge={<span className="badge accent">{p.badge.label}</span>}
@@ -74,6 +92,16 @@ export default function Projects() {
                 <div className="chips">
                   {p.skills.map(s => <span className="chip" key={s}>{s}</span>)}
                 </div>
+
+                {p.code && (
+                  <>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginTop: 14 }}>Register</div>
+                    <div className="chips">
+                      <span className="chip">{p.code}</span>
+                      {p.classNumber && <span className="chip">class nbr {p.classNumber}</span>}
+                    </div>
+                  </>
+                )}
 
                 {(p.links.length > 0 || p.recruiting) && (
                   <div style={{ marginTop: 18, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
