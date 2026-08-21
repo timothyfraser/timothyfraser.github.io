@@ -98,7 +98,6 @@ export default function Projects() {
                     <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginTop: 14 }}>Register</div>
                     <div className="chips">
                       <span className="chip">{p.code}</span>
-                      {p.classNumber && <span className="chip">class nbr {p.classNumber}</span>}
                     </div>
                   </>
                 )}

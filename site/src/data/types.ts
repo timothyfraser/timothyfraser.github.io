@@ -70,8 +70,6 @@ export interface ProjectItem {
   category: string;
   /** Registration code, e.g. "SYSEN 5900-662" (MEng projects only). */
   code?: string;
-  /** Student Center class number, e.g. "19053" (MEng projects only). */
-  classNumber?: string;
   name: string;
   tagline: string;
   badge: { label: string; variant: string };
