@@ -68,6 +68,8 @@ export interface ProjectItem {
   kind: 'meng' | 'research';
   icon?: string;
   category: string;
+  /** Registration code, e.g. "SYSEN 5900-662" (MEng projects only). */
+  code?: string;
   name: string;
   tagline: string;
   badge: { label: string; variant: string };
