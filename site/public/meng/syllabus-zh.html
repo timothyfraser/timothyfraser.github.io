@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SYSEN 5900 · 硕士项目教学大纲 · Tim Fraser</title>
+<meta name="description" content="2026 年 SYSEN 5900 硕士团队项目教学大纲，由康奈尔大学系统工程 Timothy Fraser 博士指导。（非官方中文翻译）">
+<link rel="icon" href="data:,">
+<style>
+  /* ─────────────────────────────────────────────────────────────
+     SYSEN 5900 · M.Eng. Project Syllabus (2026)
+     Self-contained: no external CSS, JS, fonts, or images.
+     ───────────────────────────────────────────────────────────── */
+  :root{
+    --ink:#1d1d21;
+    --body:#33333a;
+    --muted:#6b6b76;
+    --line:#e2e2e8;
+    --line-2:#c9c9d4;
+    --gray:#f6f6f9;
+    --white:#fff;
+    --red:#b31b1b;          /* Cornell carnelian */
+    --red-dark:#8c1414;
+    --red-tint:#fbf0f0;
+    --red-line:#eccfcf;
+    --b-soft:#d8e4fb;
+    --p-soft:#e5daf6;
+    --y-soft:#fbeecb;
+    --g-soft:#d6ecd8;
+    --o-soft:#fbdfc9;
+    --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --serif:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Georgia,"Times New Roman",Times,serif;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:#fff;color:var(--body);
+    font-family:var(--serif);font-size:16px;line-height:1.62;
+  }
+  .page{max-width:900px;margin:0 auto;padding:0 28px 64px}
+
+  a{color:var(--red-dark)}
+  a:hover{color:var(--red)}
+
+  h1,h2,h3,h4{font-family:var(--sans);color:var(--ink);line-height:1.25}
+
+  /* ── toolbar ───────────────────────────────────────────────── */
+  .toolbar{
+    position:sticky;top:0;z-index:50;background:#fff;
+    border-bottom:1px solid var(--line);
+  }
+  .toolbar-inner{
+    max-width:900px;margin:0 auto;padding:10px 28px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:12px;
+    justify-content:space-between;font-family:var(--sans);font-size:.84rem;
+  }
+  .langs{display:flex;align-items:center;gap:8px;color:var(--muted)}
+  .langs a,.langs span.cur{
+    text-decoration:none;padding:4px 9px;border-radius:999px;border:1px solid transparent;
+  }
+  .langs a{color:var(--red-dark)}
+  .langs a:hover{background:var(--gray);border-color:var(--line)}
+  .langs span.cur{font-weight:800;color:var(--ink);background:var(--gray);border-color:var(--line-2)}
+  .langs .sep{color:var(--line-2)}
+  .tools{display:flex;align-items:center;gap:9px}
+  .btn{
+    font-family:var(--sans);font-size:.85rem;font-weight:700;
+    text-decoration:none;border-radius:8px;padding:8px 15px;cursor:pointer;
+    border:1px solid var(--red);background:var(--red);color:#fff;display:inline-block;
+  }
+  .btn:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff}
+  .btn-2{
+    font-family:var(--sans);font-size:.85rem;font-weight:700;
+    border-radius:8px;padding:8px 14px;cursor:pointer;
+    border:1px solid var(--line-2);background:#fff;color:var(--ink);
+  }
+  .btn-2:hover{background:var(--gray)}
+
+  /* ── unofficial-translation banner (screen AND print) ──────── */
+  .xlate{background:var(--red-tint);border-bottom:1px solid var(--red-line)}
+  .xlate-inner{
+    max-width:900px;margin:0 auto;padding:11px 28px;
+    font-family:var(--sans);font-size:.85rem;line-height:1.6;color:var(--ink);
+  }
+  .xlate-inner b{color:var(--red-dark)}
+
+  .backlink{
+    display:inline-block;margin:16px 0 0;font-family:var(--sans);font-size:.84rem;
+    text-decoration:none;color:var(--muted);
+  }
+  .backlink:hover{color:var(--red)}
+
+  /* ── head ──────────────────────────────────────────────────── */
+  .runhead{
+    font-family:var(--sans);font-size:.72rem;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--red-dark);
+    margin:22px 0 10px;padding-bottom:9px;border-bottom:2px solid var(--red);
+  }
+  h1.title{
+    font-size:2.05rem;margin:0 0 8px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  }
+  .lead{font-size:1.03rem;color:var(--body);margin:0 0 8px;max-width:680px}
+  .sem{
+    display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:800;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--red-dark);
+    background:var(--red-tint);border:1px solid var(--red-line);border-radius:5px;
+    padding:3px 9px;vertical-align:middle;
+  }
+  .head-meta{font-family:var(--sans);font-size:.85rem;color:var(--muted);margin:10px 0 0}
+
+  /* ── sections ──────────────────────────────────────────────── */
+  section{margin:34px 0 0}
+  h2.sec{
+    font-size:1.16rem;margin:0 0 12px;padding-bottom:7px;
+    border-bottom:1px solid var(--line-2);
+    text-transform:uppercase;letter-spacing:.05em;
+  }
+  h3.sub{font-size:.98rem;margin:1.4em 0 .4em}
+  p{margin:.65em 0}
+  ul{margin:.6em 0;padding-left:1.25em}
+  li{margin:.35em 0}
+
+  /* ── definition rows ───────────────────────────────────────── */
+  .info-grid{display:grid;grid-template-columns:1fr;gap:9px;margin:.6em 0}
+  .info-grid>div{font-size:.95rem;line-height:1.55}
+  .info-grid .lbl{
+    display:inline-block;min-width:150px;font-family:var(--sans);font-size:.82rem;
+    font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--red-dark);
+    vertical-align:top;
+  }
+
+  /* ── staff card ────────────────────────────────────────────── */
+  .staff-card{
+    background:var(--gray);border:1px solid var(--line-2);border-radius:10px;
+    padding:14px 18px;font-size:.95rem;line-height:1.7;margin:.6em 0;
+  }
+  .staff-card b{font-family:var(--sans)}
+
+  /* ── callouts ──────────────────────────────────────────────── */
+  .callout{
+    border:1px solid var(--line-2);border-left:4px solid var(--red);
+    background:var(--red-tint);border-radius:0 9px 9px 0;
+    padding:12px 16px;margin:14px 0;font-size:.95rem;
+  }
+  .callout b{font-family:var(--sans)}
+  .callout-plain{
+    border:1px solid var(--line-2);border-left:4px solid var(--line-2);
+    background:var(--gray);border-radius:0 9px 9px 0;
+    padding:12px 16px;margin:14px 0;font-size:.95rem;
+  }
+  .callout-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:16px 0}
+  .callout-grid .callout,.callout-grid .callout-plain{margin:0}
+
+  /* ── tables ────────────────────────────────────────────────── */
+  .tbl-wrap{overflow-x:auto;margin:.8em 0}
+  table.tbl{border-collapse:collapse;width:100%;min-width:640px;font-size:.9rem;font-family:var(--sans)}
+  table.tbl th,table.tbl td{
+    text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;
+  }
+  table.tbl thead th{
+    border-bottom:2px solid var(--line-2);font-size:.76rem;text-transform:uppercase;
+    letter-spacing:.06em;color:var(--red-dark);
+  }
+  table.tbl tbody tr:nth-child(even){background:var(--gray)}
+  table.tbl td.code{font-weight:700;white-space:nowrap;color:var(--ink)}
+
+  /* ── project blocks ────────────────────────────────────────── */
+  .proj{
+    border:1px solid var(--line-2);border-radius:12px;margin:18px 0;overflow:hidden;
+    break-inside:avoid;page-break-inside:avoid;
+  }
+  .proj-head{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+    padding:11px 18px;background:var(--gray);border-bottom:1px solid var(--line-2);
+    font-family:var(--sans);font-size:.83rem;
+  }
+  .proj-code{font-weight:800;color:var(--ink);letter-spacing:.02em}
+  .proj-cnbr{color:var(--muted)}
+  .chip-short{
+    margin-left:auto;font-weight:800;font-size:.8rem;color:var(--red-dark);
+    background:var(--red-tint);border:1px solid var(--red-line);border-radius:999px;
+    padding:4px 12px;
+  }
+  .proj-body{padding:14px 18px 16px}
+  .proj-body h3{font-size:1.06rem;margin:0 0 8px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 10px}
+  .chip{
+    font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--muted);background:#fff;
+    border:1px solid var(--line-2);border-radius:999px;padding:3px 10px;
+  }
+  .guiding{
+    font-style:italic;font-size:1rem;color:var(--ink);
+    border-left:3px solid var(--red-line);padding-left:12px;margin:0 0 10px;
+  }
+  .proj-desc{margin:0 0 12px;font-size:.97rem}
+  .proj-foot{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;
+    border-top:1px solid var(--line);padding-top:10px;
+    font-family:var(--sans);font-size:.82rem;color:var(--muted);
+  }
+  .phase{
+    font-weight:800;color:var(--red-dark);background:var(--red-tint);
+    border:1px solid var(--red-line);border-radius:6px;padding:3px 10px;
+  }
+  .cap{font-weight:700;color:var(--ink)}
+
+  /* ── grading bar ───────────────────────────────────────────── */
+  .grade-bar{display:flex;height:36px;border-radius:9px;overflow:hidden;border:1px solid var(--line-2);margin:.7em 0 0}
+  .grade-bar>div{border-right:1px solid rgba(255,255,255,.75)}
+  .grade-bar>div:last-child{border-right:0}
+  .grade-legend{
+    display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:11px;
+    font-family:var(--sans);font-size:.84rem;color:var(--muted);
+  }
+  .grade-legend .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle;border:1px solid rgba(0,0,0,.08)}
+  .weight{
+    font-family:var(--sans);font-weight:800;color:var(--ink);
+  }
+  .grade-item{margin:1.1em 0}
+  .grade-item p{margin:.4em 0}
+  .grade-sub{list-style:none;padding-left:0;margin:.5em 0}
+  .grade-sub li{
+    font-family:var(--sans);font-size:.88rem;border-top:1px solid var(--line);
+    padding:6px 0;color:var(--body);
+  }
+  .grade-sub li:first-child{border-top:0}
+
+  /* ── footer ────────────────────────────────────────────────── */
+  footer.pagefoot{
+    margin:44px 0 0;padding-top:16px;border-top:2px solid var(--red);
+    font-family:var(--sans);font-size:.82rem;color:var(--muted);
+  }
+  footer.pagefoot p{margin:.4em 0}
+  footer.pagefoot .gov{color:var(--ink)}
+
+  @media (max-width:640px){
+    .page{padding:0 18px 48px}
+    .toolbar-inner{padding:10px 18px}
+    .xlate-inner{padding:11px 18px}
+    h1.title{font-size:1.6rem}
+    .info-grid .lbl{min-width:0;display:block}
+    .chip-short{margin-left:0}
+  }
+
+  /* ── print ─────────────────────────────────────────────────── */
+  @media print{
+    @page{margin:0.75in}
+    html,body{background:#fff !important;color:#000 !important;font-size:10.5pt}
+    .toolbar,.backlink,.noprint{display:none !important}
+    .page{max-width:none;padding:0}
+    a{color:#000 !important;text-decoration:none}
+    h1,h2,h3,h4,.proj-code,.cap,.weight,footer.pagefoot .gov{color:#000 !important}
+    .runhead{color:#000 !important;border-bottom:2px solid #000}
+    h2.sec{border-bottom:1px solid #000;page-break-after:avoid;break-after:avoid}
+    h3.sub{page-break-after:avoid;break-after:avoid}
+    .sem,.chip,.chip-short,.phase{color:#000 !important;background:#fff !important;border:1px solid #000 !important}
+    .proj,.callout,.callout-plain,.staff-card,.grade-item,table.tbl tr{
+      break-inside:avoid;page-break-inside:avoid;
+    }
+    .proj{border:1px solid #000}
+    .proj-head{background:#fff !important;border-bottom:1px solid #000}
+    .callout,.callout-plain{background:#fff !important;border:1px solid #000;border-left:3px solid #000}
+    .staff-card{background:#fff !important;border:1px solid #000}
+    .grade-bar{border:1px solid #000}
+    .grade-bar>div{border-right:1px solid #000}
+    table.tbl tbody tr:nth-child(even){background:#fff !important}
+    table.tbl th,table.tbl td{border-bottom:1px solid #000}
+    table.tbl{min-width:0}
+    .tbl-wrap{overflow:visible}
+    .guiding{border-left:2px solid #000}
+    footer.pagefoot{border-top:2px solid #000;color:#000 !important}
+    .print-only{display:block !important}
+    .xlate{
+      display:block !important;background:#fff !important;
+      border:1px solid #000;border-radius:0;margin:0 0 12px;
+      break-inside:avoid;page-break-inside:avoid;
+    }
+    .xlate-inner{max-width:none;padding:8px 10px;color:#000 !important}
+    .xlate-inner b{color:#000 !important}
+  }
+  .print-only{display:none}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ Toolbar (screen only) ═══════════════════ -->
+<div class="toolbar noprint">
+  <div class="toolbar-inner">
+    <div class="langs">
+      <a href="./syllabus.html" lang="en" hreflang="en">English</a>
+      <span class="sep">·</span>
+      <span class="cur" lang="zh-Hans">中文</span>
+      <span class="sep">·</span>
+      <a href="./syllabus-es.html" lang="es" hreflang="es">Español</a>
+    </div>
+    <div class="tools">
+      <a class="btn" href="./syllabus-zh.pdf" download>⬇ 下载 PDF</a>
+      <button type="button" class="btn-2" onclick="window.print()">打印</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ Unofficial-translation banner (screen + print) ═══════════ -->
+<div class="xlate">
+  <div class="xlate-inner">
+    <b>非官方翻译</b> — 本页面为方便阅读提供的非官方中文翻译。以英文版教学大纲为准。<a href="./syllabus.html">查看英文原版</a>
+  </div>
+</div>
+
+<div class="page">
+
+  <a class="backlink noprint" href="https://timothyfraser.com/projects">← timothyfraser.com/projects</a>
+
+  <!-- ═══════════════════ Head ═══════════════════ -->
+  <div class="runhead">SYSEN 5900 · 硕士项目教学大纲 · 康奈尔大学</div>
+
+  <h1 class="title">📋 硕士项目教学大纲</h1>
+  <p class="lead">六个硕士团队项目，构建大数据与人工智能系统，用以测量并追踪城市与环境系统中的各项结果——空气质量、拥堵收费、出行网络与灾害韧性。</p>
+  <p class="head-meta">
+    <span class="sem">2026</span>
+    &nbsp;项目导师：Timothy Fraser 博士，康奈尔大学系统工程助理教学教授。
+  </p>
+
+  <!-- ═══════════════════ Project overview ═══════════════════ -->
+  <section id="overview">
+    <h2 class="sec">项目概览</h2>
+
+    <p>构建大数据与人工智能系统，用以测量并追踪城市与环境系统中的各项结果——空气质量、拥堵收费、出行网络与灾害韧性。本年度共有六个硕士团队项目，每个项目都有自己的团队、自己的注册课号和自己的产品。<b>每个项目都要交付一份报告以及一个可运行的工具。</b></p>
+
+    <div class="info-grid">
+      <div><span class="lbl">项目领域</span> 排放、交通运输、空气质量、社会基础设施、可靠性、传感器、数据通信、可视化、系统架构、数据库、仪表板、算法</div>
+      <div><span class="lbl">项目关键词</span> 人工智能；自动化报告；仪表板；Web 系统开发；API；排放；因果推断；GIS；网络科学；智能体 AI；开放数据</div>
+      <div><span class="lbl">选课名额</span> 每个项目 5 名学生</div>
+    </div>
+
+    <h3 class="sub">六个项目一览</h3>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr><th>#</th><th>注册课号</th><th>课程编号</th><th>简称</th><th>项目</th><th>名额</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td class="code">SYSEN 5900-648</td><td>—</td><td>MOVESAI</td><td>基于 MOVESAI 的人工智能排放报告系统</td><td>5</td></tr>
+          <tr><td>2</td><td class="code">SYSEN 5900-662</td><td>19053</td><td>城市空气</td><td>基于 CIVIC 的城市空气质量与交通数据系统</td><td>5</td></tr>
+          <tr><td>3</td><td class="code">SYSEN 5900-663</td><td>19054</td><td>社会基础设施</td><td>社会基础设施与应急出行</td><td>5</td></tr>
+          <tr><td>4</td><td class="code">SYSEN 5900-664</td><td>19055</td><td>共享单车</td><td>共享单车网络分析</td><td>5</td></tr>
+          <tr><td>5</td><td class="code">SYSEN 5900-665</td><td>19056</td><td>故障树</td><td>基于 FaultDB 的智能体故障树分析</td><td>5</td></tr>
+          <tr><td>6</td><td class="code">SYSEN 5900-666</td><td>19057</td><td>SAFECAST</td><td>基于 SAFECAST 的开源辐射监测</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout-grid">
+      <div class="callout">
+        <b>看起来很偏 R？其实不是。</b> 什么适合解决问题就用什么——React、Python、R、SQL、云服务。你会在这些技术之间自由地"氛围编程"（vibecode）。
+      </div>
+      <div class="callout-plain">
+        <b>刚开始学编程？欢迎加入。</b> 请做好自学的准备——并同时选修 SYSEN 5300（秋季 · R 语言基础）或 SYSEN 5381（春季）来提升技能。
+      </div>
+    </div>
+
+    <p><b>现正招募团队。</b> 远程学习与在校学生均欢迎——每个项目都要交付一份报告以及一个可运行的工具。每个项目都是独立的 SYSEN 5900 课号；请组建团队，并注册上表中列出的相应课号。</p>
+  </section>
+
+  <!-- ═══════════════════ The six projects ═══════════════════ -->
+  <section id="projects">
+    <h2 class="sec">六个项目</h2>
+
+    <!-- 1 ─ MOVESAI -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-648</span>
+        <span class="proj-cnbr">课程编号 —</span>
+        <span class="chip-short">🚗 MOVESAI</span>
+      </div>
+      <div class="proj-body">
+        <h3>基于 MOVESAI 的人工智能排放报告系统（AI-Powered Emissions Reporting Systems with MOVESAI）</h3>
+        <div class="chips"><span class="chip">机器学习</span><span class="chip">仪表板</span><span class="chip">排放</span></div>
+        <p class="guiding">人工智能能否以足够快的速度复现一个重量级的 EPA 排放模型，让任何城市都能在线使用？</p>
+        <p class="proj-desc">交通运输是温室气体和空气污染的主要来源之一，但用于估算它的模型运行缓慢，地方机构也难以使用。你将构建人工智能与机器学习系统，复现 EPA 的 MOVES 排放模拟器，并通过高速 API 和仪表板对外提供服务——这样城市就能在线估算并报告其交通排放，而无需运行完整模型。工作内容涵盖机器学习、API 设计、前端仪表板，以及随之交付的报告。</p>
+        <div class="proj-foot">
+          <span class="cap">选课名额：5 名学生</span>
+          <span class="phase">代理模型 → 仪表板 → 报告</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 ─ Urban Air -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-662</span>
+        <span class="proj-cnbr">课程编号 19053</span>
+        <span class="chip-short">🏙️ 城市空气</span>
+      </div>
+      <div class="proj-body">
+        <h3>基于 CIVIC 的城市空气质量与交通数据系统（Urban Air Quality and Traffic Data Systems with CIVIC）</h3>
+        <div class="chips"><span class="chip">空气质量</span><span class="chip">交通运输</span><span class="chip">因果推断</span></div>
+        <p class="guiding">当一座城市向进入市中心的驾驶者收费时，空气真的变干净了吗——又是谁从中受益？</p>
+        <p class="proj-desc">当一座城市改变人们的出行方式——拥堵收费、新建公共交通、道路改造——空气真的变干净了吗，又是为谁变干净的？你将构建 CIVIC 背后的数据系统：整合来自纽约、伦敦、斯德哥尔摩等城市的空气质量、公共交通与交通流量数据，然后运用因果推断来测量政策如何改变污染与出行。工作内容涵盖数据工程、面板数据库、统计学，以及向政策受众传达研究结果。</p>
+        <div class="proj-foot">
+          <span class="cap">选课名额：5 名学生</span>
+          <span class="phase">数据 → 整合 → 报告</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 ─ Soc. Infra -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-663</span>
+        <span class="proj-cnbr">课程编号 19054</span>
+        <span class="chip-short">🏘️ 社会基础设施</span>
+      </div>
+      <div class="proj-body">
+        <h3>社会基础设施与应急出行（Social Infrastructure &amp; Emergency Mobility）</h3>
+        <div class="chips"><span class="chip">GIS</span><span class="chip">城市韧性</span><span class="chip">应急管理</span></div>
+        <p class="guiding">邻里聚集的场所，能否预测一座城市在灾害中的存续能力？</p>
+        <p class="proj-desc">社会基础设施更为密集的城市——公园、图书馆、宗教场所——往往能更快地从灾害中恢复，但恢复程度有多大、又体现在哪些地方？你将构建空间数据管道，为数十座美国城市的公共空间打分，然后利用出行数据把这些评分与疏散行为和灾害暴露联系起来。工作内容涵盖 GIS 与空间统计、用于共享结果的仪表板和 API，以及一份把社区基础设施与应急准备联系起来的报告。</p>
+        <div class="proj-foot">
+          <span class="cap">选课名额：5 名学生</span>
+          <span class="phase">数据管道 → 评分 → 报告</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 ─ Bikeshare -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-664</span>
+        <span class="proj-cnbr">课程编号 19055</span>
+        <span class="chip-short">🚲 共享单车</span>
+      </div>
+      <div class="proj-body">
+        <h3>共享单车网络分析（Bikeshare Network Analytics）</h3>
+        <div class="chips"><span class="chip">网络</span><span class="chip">大数据</span><span class="chip">出行</span></div>
+        <p class="guiding">当我们比较骑行者在美国各大共享单车系统中的移动方式时，会浮现出哪些规律？</p>
+        <p class="proj-desc">美国每一座主要城市都运营着共享单车系统——Bluebikes、Citi Bike、Divvy、Capital Bikeshare——每个系统都记录着数百万次骑行。你将抓取这些记录，并用统一的数据模式把它们整合进一个可供分析的数据库，然后对由此产生的出行网络建模，研究骑行量、公平性与骑行者行为——这些是任何单一城市的数据都无法单独揭示的。工作内容涵盖网络科学、大规模数据抓取与数据库设计。</p>
+        <div class="proj-foot">
+          <span class="cap">选课名额：5 名学生</span>
+          <span class="phase">抓取 → 统一 → 建模</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 ─ Fault Tree -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-665</span>
+        <span class="proj-cnbr">课程编号 19056</span>
+        <span class="chip-short">🌳 故障树</span>
+      </div>
+      <div class="proj-body">
+        <h3>基于 FaultDB 的智能体故障树分析（Agentic Fault Tree Analysis with FaultDB）</h3>
+        <div class="chips"><span class="chip">可靠性</span><span class="chip">安全</span><span class="chip">智能体 AI</span></div>
+        <p class="guiding">这个系统失效的概率有多大——又是哪些部件最为关键？</p>
+        <p class="proj-desc">可靠性工程师花了太多时间与笨重的桌面工具较劲，只为回答一个问题：这个系统失效的可能性有多大，哪些部件最关键？你将扩展 FaultDB——一个把 R 分析引擎与 React 图形编辑器结合起来的浏览器平台——并加入智能体 AI 工作流，帮助用户构建故障树与攻击树、运行割集分析并解读结果。工作内容涵盖 LLM 智能体设计、可靠性建模、交互式前端，以及它们背后的 API。</p>
+        <div class="proj-foot">
+          <span class="cap">选课名额：5 名学生</span>
+          <span class="phase">概念验证 → Alpha → Beta</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 ─ SAFECAST -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-666</span>
+        <span class="proj-cnbr">课程编号 19057</span>
+        <span class="chip-short">☢️ SAFECAST</span>
+      </div>
+      <div class="proj-body">
+        <h3>基于 SAFECAST 的开源辐射监测（Open-Source Radiation Monitoring with SAFECAST）</h3>
+        <div class="chips"><span class="chip">传感器</span><span class="chip">开放数据</span><span class="chip">危机响应</span></div>
+        <p class="guiding">核灾难之后，一个开放的、由公民运行的传感器网络能否清晰、实时地告诉人们哪里是安全的？</p>
+        <p class="proj-desc">SAFECAST 是一家总部位于东京的非营利组织，在 2011 年福岛核灾之后，建立了全球最大的本底辐射测量开放数据集——由公民使用手持和固定传感器众包采集，并免费向公众发布。如今他们的网络绘制了福岛、乌克兰以及全球各城市的地图，用以支持受辐射影响地区的危机追踪与恢复工作。在这项全新的合作中，你的团队将协助 SAFECAST 建设其全球传感器网络背后的仪表板系统与 AI 集成，使其能够在最关键的时刻向公众传递准确、公正的辐射信息。我们正在招募具备以下任一方面技能的学生：数据库、传感器工作、API、React、仪表板与数据可视化——你将交付一个可运行的工具以及一份报告。</p>
+        <div class="proj-foot">
+          <span class="cap">选课名额：5 名学生</span>
+          <span class="phase">传感器 → 仪表板 → AI</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═══════════════════ Who we're seeking ═══════════════════ -->
+  <section id="seeking">
+    <h2 class="sec">我们正在寻找……</h2>
+    <p>我们正在寻找有才华的编程者，运用你们的数据整理、数据可视化与数据传达技能，构建可运行的工具——什么适合解决问题就用什么：React、Python、R、SQL、云服务。并不要求你事先有使用我们特定技术栈的经验；我们会培训学生使用 API、仪表板和 GitHub，学生们将协作共同打造产品。我们的团队由计算机科学、系统工程以及其他工程专业的学生共同组成。</p>
+    <p><b>要求具备 R 语言的先修经验</b>（例如 SYSEN 5300）<b>或具备扎实的 Web 开发经验</b>（例如 JavaScript、HTML、CSS）。所有学生都应准备好学习新技能。刚开始学编程？请做好自学的准备——并同时选修 SYSEN 5300（秋季 · R 语言基础）或 SYSEN 5381（春季）来提升技能。</p>
+    <p><b>远程学习与在校学生均欢迎。</b></p>
+  </section>
+
+  <!-- ═══════════════════ How do I join? ═══════════════════ -->
+  <section id="join">
+    <h2 class="sec">我该如何加入？</h2>
+    <ul>
+      <li>把你的简历以及一段简短的加入理由说明发邮件给我！</li>
+      <li>必须收到项目导师的邀请才能加入团队。</li>
+      <li>填写<b>《学生作品使用许可》（Licensed Permission to Use Student Work）</b>表格，并发送至 <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a>。这使我们可以在我们的工具和仪表板中使用你的硕士项目交付成果。</li>
+      <li>填写、取得签字并向所在系提交 SYSEN 表格或 CS 表格。（若属于其他院系，请自行提供相应表格。）</li>
+      <li>注册课程（见下方<a href="#register">我该如何注册？</a>）。</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════ How do I register? ═══════════════════ -->
+  <section id="register">
+    <h2 class="sec">我该如何注册？</h2>
+    <p><b>每个项目都是独立的 SYSEN 5900 课号。</b>请组建团队，并注册你所在项目对应的课号：</p>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>注册课号</th><th>课程编号</th><th>简称</th><th>项目</th></tr></thead>
+        <tbody>
+          <tr><td class="code">SYSEN 5900-648</td><td>—</td><td>MOVESAI</td><td>基于 MOVESAI 的人工智能排放报告系统</td></tr>
+          <tr><td class="code">SYSEN 5900-662</td><td>19053</td><td>城市空气</td><td>基于 CIVIC 的城市空气质量与交通数据系统</td></tr>
+          <tr><td class="code">SYSEN 5900-663</td><td>19054</td><td>社会基础设施</td><td>社会基础设施与应急出行</td></tr>
+          <tr><td class="code">SYSEN 5900-664</td><td>19055</td><td>共享单车</td><td>共享单车网络分析</td></tr>
+          <tr><td class="code">SYSEN 5900-665</td><td>19056</td><td>故障树</td><td>基于 FaultDB 的智能体故障树分析</td></tr>
+          <tr><td class="code">SYSEN 5900-666</td><td>19057</td><td>SAFECAST</td><td>基于 SAFECAST 的开源辐射监测</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li><b>系统工程及其他专业的学生</b>应使用上表中所列其项目对应的 SYSEN 5900 课号进行注册。</li>
+      <li><b>计算机科学专业的学生</b>应向 CS 的 Renee 咨询有关 CS 5999 独立研究等效课程的最新信息。</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════ Attendance ═══════════════════ -->
+  <section id="attendance">
+    <h2 class="sec">出勤</h2>
+    <ul>
+      <li>我们将大约每周集体会面一次，每位团队成员在会上分享自己的进展。</li>
+      <li>会议时间将在开课第一周之后由大家共同商定。</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════ Grading ═══════════════════ -->
+  <section id="grading">
+    <h2 class="sec">评分标准</h2>
+
+    <div class="grade-bar" aria-hidden="true">
+      <div style="flex:0 0 60%;background:var(--b-soft)" title="交付成果 — 60%"></div>
+      <div style="flex:0 0 10%;background:var(--p-soft)" title="每周进度检查出勤 — 10%"></div>
+      <div style="flex:0 0 10%;background:var(--y-soft)" title="每周进度检查得分 — 10%"></div>
+      <div style="flex:0 0 10%;background:var(--g-soft)" title="海报展示 — 10%"></div>
+      <div style="flex:0 0 10%;background:var(--o-soft)" title="期末报告 — 10%"></div>
+    </div>
+    <div class="grade-legend">
+      <span><span class="sw" style="background:var(--b-soft)"></span>交付成果（小组） — 60%</span>
+      <span><span class="sw" style="background:var(--p-soft)"></span>每周进度检查出勤 — 10%</span>
+      <span><span class="sw" style="background:var(--y-soft)"></span>每周进度检查得分 — 10%</span>
+      <span><span class="sw" style="background:var(--g-soft)"></span>海报展示 — 10%</span>
+      <span><span class="sw" style="background:var(--o-soft)"></span>期末报告 — 10%</span>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">60%</span> — 交付成果（小组）</h3>
+      <p>学生将在教师建议下，按自己的意愿分成若干小组，共同应对一系列有助于推进本项目的挑战。每个学生小组需在整个学期内产出 3 项交付成果。每项交付成果都应附有一份共同撰写的说明，描述该交付成果，篇幅至少 1 页、单倍行距（这些内容日后可以整合进一篇论文！）。每项交付成果占该学生团队成绩的 20%。学生将在每个截止日期前一个月，与项目导师共同确定下一项交付成果。</p>
+      <ul class="grade-sub">
+        <li><b>20%</b> — 交付成果 1：第 1 个月结束后提交，附说明。</li>
+        <li><b>20%</b> — 交付成果 2：第 2 个月结束后提交，附说明。</li>
+        <li><b>20%</b> — 交付成果 3：第 3 个月结束后提交，附说明。</li>
+      </ul>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">10%</span> — 参加每周进度检查（个人）</h3>
+      <p>每周报名并参加至少 1 次与项目教师团队的进度检查会议。（强烈建议你每周与你的搭档报名同一时段的进度检查。）</p>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">10%</span> — 每周进度检查得分（小组）</h3>
+      <p>在每次检查会议上，学生需向项目导师汇报自己的进展。每次检查可能得到两种分数之一：有进展（100%）或无进展（0%）。每学期每位学生有 2 次"免罚"机会（即某一周可以没有进展），不影响成绩。在剔除 2 次"无进展"得分之后，你的每周进度检查得分将取平均值，作为这一部分的总评成绩。</p>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">10%</span> — 海报展示（团队）</h3>
+      <p>学期末，你的团队将制作一份面向公众的海报或视频（详情另行通知），用以展示本学期所完成的产品。</p>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">10%</span> — 期末报告（团队）</h3>
+      <p>学期末，你的团队需要向所在项目提交一份报告，总结你们在本硕士项目中所做的贡献。</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ Coding & replication ═══════════════════ -->
+  <section id="coding">
+    <h2 class="sec">代码与可复现性</h2>
+    <ul>
+      <li>参与者需以完全可复现的脚本来编写自己的工作——什么适合解决问题就用什么：React、Python、R、SQL、云服务。</li>
+      <li>教师强烈建议在相关场景下使用 RStudio。</li>
+      <li>对于每一项交付成果，参与者都必须将全部代码和数据提交并推送到我们团队 GitHub 页面上的代码仓库。链接：<a href="https://github.coecis.cornell.edu/CAT">github.coecis.cornell.edu/CAT</a></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════ Staff & office hours ═══════════════════ -->
+  <section id="staff">
+    <h2 class="sec">教师团队与答疑时间</h2>
+    <div class="staff-card">
+      <b>Timothy Fraser 博士</b> — 项目导师<br>
+      康奈尔大学系统工程助理教学教授<br>
+      <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a> · Rhodes Hall 404
+    </div>
+    <p>请在 <a href="https://bit.ly/office_hours_fraser">bit.ly/office_hours_fraser</a> 查看当前的答疑时间安排并报名。</p>
+  </section>
+
+  <!-- ═══════════════════ Footer ═══════════════════ -->
+  <footer class="pagefoot">
+    <p class="gov">网页版具有权威性——若打印件与本页面出现不一致，以网页版为准。非官方翻译仅为方便阅读而提供，一切以英文版教学大纲为准。</p>
+    <p>SYSEN 5900 硕士项目 · 康奈尔大学系统工程 · Timothy Fraser 博士 · 2026</p>
+    <p class="print-only">打印自 https://timothyfraser.com/meng/syllabus-zh.html</p>
+  </footer>
+
+</div>
+</body>
+</html>
