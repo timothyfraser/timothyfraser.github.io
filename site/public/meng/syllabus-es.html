@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SYSEN 5900 · Programa del Proyecto M.Eng. · Tim Fraser</title>
+<meta name="description" content="Programa de los proyectos en equipo de SYSEN 5900 M.Eng. 2026, asesorados por el Dr. Timothy Fraser, Ingeniería de Sistemas, Universidad de Cornell. Traducción no oficial al español.">
+<link rel="icon" href="data:,">
+<style>
+  /* ─────────────────────────────────────────────────────────────
+     SYSEN 5900 · Programa del Proyecto M.Eng. (2026) — español
+     Autocontenido: sin CSS, JS, fuentes ni imágenes externas.
+     ───────────────────────────────────────────────────────────── */
+  :root{
+    --ink:#1d1d21;
+    --body:#33333a;
+    --muted:#6b6b76;
+    --line:#e2e2e8;
+    --line-2:#c9c9d4;
+    --gray:#f6f6f9;
+    --white:#fff;
+    --red:#b31b1b;          /* Cornell carnelian */
+    --red-dark:#8c1414;
+    --red-tint:#fbf0f0;
+    --red-line:#eccfcf;
+    --b-soft:#d8e4fb;
+    --p-soft:#e5daf6;
+    --y-soft:#fbeecb;
+    --g-soft:#d6ecd8;
+    --o-soft:#fbdfc9;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --serif:Georgia,"Times New Roman",Times,serif;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:#fff;color:var(--body);
+    font-family:var(--serif);font-size:16px;line-height:1.62;
+  }
+  .page{max-width:900px;margin:0 auto;padding:0 28px 64px}
+
+  a{color:var(--red-dark)}
+  a:hover{color:var(--red)}
+
+  h1,h2,h3,h4{font-family:var(--sans);color:var(--ink);line-height:1.25}
+
+  /* ── toolbar ───────────────────────────────────────────────── */
+  .toolbar{
+    position:sticky;top:0;z-index:50;background:#fff;
+    border-bottom:1px solid var(--line);
+  }
+  .toolbar-inner{
+    max-width:900px;margin:0 auto;padding:10px 28px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:12px;
+    justify-content:space-between;font-family:var(--sans);font-size:.84rem;
+  }
+  .langs{display:flex;align-items:center;gap:8px;color:var(--muted)}
+  .langs a,.langs span.cur{
+    text-decoration:none;padding:4px 9px;border-radius:999px;border:1px solid transparent;
+  }
+  .langs a{color:var(--red-dark)}
+  .langs a:hover{background:var(--gray);border-color:var(--line)}
+  .langs span.cur{font-weight:800;color:var(--ink);background:var(--gray);border-color:var(--line-2)}
+  .langs .sep{color:var(--line-2)}
+  .tools{display:flex;align-items:center;gap:9px}
+  .btn{
+    font-family:var(--sans);font-size:.85rem;font-weight:700;
+    text-decoration:none;border-radius:8px;padding:8px 15px;cursor:pointer;
+    border:1px solid var(--red);background:var(--red);color:#fff;display:inline-block;
+  }
+  .btn:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff}
+  .btn-2{
+    font-family:var(--sans);font-size:.85rem;font-weight:700;
+    border-radius:8px;padding:8px 14px;cursor:pointer;
+    border:1px solid var(--line-2);background:#fff;color:var(--ink);
+  }
+  .btn-2:hover{background:var(--gray)}
+
+  /* ── aviso de traducción no oficial (pantalla e impresión) ─── */
+  .xlate{
+    max-width:900px;margin:14px auto 0;padding:11px 16px;
+    background:var(--red-tint);border:1px solid var(--red-line);
+    border-left:4px solid var(--red);border-radius:0 9px 9px 0;
+    font-family:var(--sans);font-size:.86rem;line-height:1.55;color:var(--body);
+  }
+  .xlate b{color:var(--red-dark);text-transform:uppercase;letter-spacing:.04em;font-size:.8rem}
+  .xlate a{font-weight:700}
+
+  .backlink{
+    display:inline-block;margin:16px 0 0;font-family:var(--sans);font-size:.84rem;
+    text-decoration:none;color:var(--muted);
+  }
+  .backlink:hover{color:var(--red)}
+
+  /* ── head ──────────────────────────────────────────────────── */
+  .runhead{
+    font-family:var(--sans);font-size:.72rem;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--red-dark);
+    margin:22px 0 10px;padding-bottom:9px;border-bottom:2px solid var(--red);
+  }
+  h1.title{
+    font-size:2.05rem;margin:0 0 8px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  }
+  .lead{font-size:1.03rem;color:var(--body);margin:0 0 8px;max-width:680px}
+  .sem{
+    display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:800;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--red-dark);
+    background:var(--red-tint);border:1px solid var(--red-line);border-radius:5px;
+    padding:3px 9px;vertical-align:middle;
+  }
+  .head-meta{font-family:var(--sans);font-size:.85rem;color:var(--muted);margin:10px 0 0}
+
+  /* ── sections ──────────────────────────────────────────────── */
+  section{margin:34px 0 0}
+  h2.sec{
+    font-size:1.16rem;margin:0 0 12px;padding-bottom:7px;
+    border-bottom:1px solid var(--line-2);
+    text-transform:uppercase;letter-spacing:.05em;
+  }
+  h3.sub{font-size:.98rem;margin:1.4em 0 .4em}
+  p{margin:.65em 0}
+  ul{margin:.6em 0;padding-left:1.25em}
+  li{margin:.35em 0}
+
+  /* ── definition rows ───────────────────────────────────────── */
+  .info-grid{display:grid;grid-template-columns:1fr;gap:9px;margin:.6em 0}
+  .info-grid>div{font-size:.95rem;line-height:1.55}
+  .info-grid .lbl{
+    display:inline-block;min-width:150px;font-family:var(--sans);font-size:.82rem;
+    font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--red-dark);
+    vertical-align:top;
+  }
+
+  /* ── staff card ────────────────────────────────────────────── */
+  .staff-card{
+    background:var(--gray);border:1px solid var(--line-2);border-radius:10px;
+    padding:14px 18px;font-size:.95rem;line-height:1.7;margin:.6em 0;
+  }
+  .staff-card b{font-family:var(--sans)}
+
+  /* ── callouts ──────────────────────────────────────────────── */
+  .callout{
+    border:1px solid var(--line-2);border-left:4px solid var(--red);
+    background:var(--red-tint);border-radius:0 9px 9px 0;
+    padding:12px 16px;margin:14px 0;font-size:.95rem;
+  }
+  .callout b{font-family:var(--sans)}
+  .callout-plain{
+    border:1px solid var(--line-2);border-left:4px solid var(--line-2);
+    background:var(--gray);border-radius:0 9px 9px 0;
+    padding:12px 16px;margin:14px 0;font-size:.95rem;
+  }
+  .callout-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:16px 0}
+  .callout-grid .callout,.callout-grid .callout-plain{margin:0}
+
+  /* ── tables ────────────────────────────────────────────────── */
+  .tbl-wrap{overflow-x:auto;margin:.8em 0}
+  table.tbl{border-collapse:collapse;width:100%;min-width:640px;font-size:.9rem;font-family:var(--sans)}
+  table.tbl th,table.tbl td{
+    text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;
+  }
+  table.tbl thead th{
+    border-bottom:2px solid var(--line-2);font-size:.76rem;text-transform:uppercase;
+    letter-spacing:.06em;color:var(--red-dark);
+  }
+  table.tbl tbody tr:nth-child(even){background:var(--gray)}
+  table.tbl td.code{font-weight:700;white-space:nowrap;color:var(--ink)}
+
+  /* ── project blocks ────────────────────────────────────────── */
+  .proj{
+    border:1px solid var(--line-2);border-radius:12px;margin:18px 0;overflow:hidden;
+    break-inside:avoid;page-break-inside:avoid;
+  }
+  .proj-head{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+    padding:11px 18px;background:var(--gray);border-bottom:1px solid var(--line-2);
+    font-family:var(--sans);font-size:.83rem;
+  }
+  .proj-code{font-weight:800;color:var(--ink);letter-spacing:.02em}
+  .proj-cnbr{color:var(--muted)}
+  .chip-short{
+    margin-left:auto;font-weight:800;font-size:.8rem;color:var(--red-dark);
+    background:var(--red-tint);border:1px solid var(--red-line);border-radius:999px;
+    padding:4px 12px;
+  }
+  .proj-body{padding:14px 18px 16px}
+  .proj-body h3{font-size:1.06rem;margin:0 0 8px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 10px}
+  .chip{
+    font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--muted);background:#fff;
+    border:1px solid var(--line-2);border-radius:999px;padding:3px 10px;
+  }
+  .guiding{
+    font-style:italic;font-size:1rem;color:var(--ink);
+    border-left:3px solid var(--red-line);padding-left:12px;margin:0 0 10px;
+  }
+  .proj-desc{margin:0 0 12px;font-size:.97rem}
+  .proj-foot{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;
+    border-top:1px solid var(--line);padding-top:10px;
+    font-family:var(--sans);font-size:.82rem;color:var(--muted);
+  }
+  .phase{
+    font-weight:800;color:var(--red-dark);background:var(--red-tint);
+    border:1px solid var(--red-line);border-radius:6px;padding:3px 10px;
+  }
+  .cap{font-weight:700;color:var(--ink)}
+
+  /* ── grading bar ───────────────────────────────────────────── */
+  .grade-bar{display:flex;height:36px;border-radius:9px;overflow:hidden;border:1px solid var(--line-2);margin:.7em 0 0}
+  .grade-bar>div{border-right:1px solid rgba(255,255,255,.75)}
+  .grade-bar>div:last-child{border-right:0}
+  .grade-legend{
+    display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:11px;
+    font-family:var(--sans);font-size:.84rem;color:var(--muted);
+  }
+  .grade-legend .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle;border:1px solid rgba(0,0,0,.08)}
+  .weight{
+    font-family:var(--sans);font-weight:800;color:var(--ink);
+  }
+  .grade-item{margin:1.1em 0}
+  .grade-item p{margin:.4em 0}
+  .grade-sub{list-style:none;padding-left:0;margin:.5em 0}
+  .grade-sub li{
+    font-family:var(--sans);font-size:.88rem;border-top:1px solid var(--line);
+    padding:6px 0;color:var(--body);
+  }
+  .grade-sub li:first-child{border-top:0}
+
+  /* ── footer ────────────────────────────────────────────────── */
+  footer.pagefoot{
+    margin:44px 0 0;padding-top:16px;border-top:2px solid var(--red);
+    font-family:var(--sans);font-size:.82rem;color:var(--muted);
+  }
+  footer.pagefoot p{margin:.4em 0}
+  footer.pagefoot .gov{color:var(--ink)}
+
+  @media (max-width:640px){
+    .page{padding:0 18px 48px}
+    .toolbar-inner{padding:10px 18px}
+    .xlate{margin:12px 18px 0}
+    h1.title{font-size:1.6rem}
+    .info-grid .lbl{min-width:0;display:block}
+    .chip-short{margin-left:0}
+  }
+
+  /* ── print ─────────────────────────────────────────────────── */
+  @media print{
+    @page{margin:0.75in}
+    html,body{background:#fff !important;color:#000 !important;font-size:10.5pt}
+    .toolbar,.backlink,.noprint{display:none !important}
+    .page{max-width:none;padding:0}
+    a{color:#000 !important;text-decoration:none}
+    h1,h2,h3,h4,.proj-code,.cap,.weight,footer.pagefoot .gov{color:#000 !important}
+    .runhead{color:#000 !important;border-bottom:2px solid #000}
+    h2.sec{border-bottom:1px solid #000;page-break-after:avoid;break-after:avoid}
+    h3.sub{page-break-after:avoid;break-after:avoid}
+    .sem,.chip,.chip-short,.phase{color:#000 !important;background:#fff !important;border:1px solid #000 !important}
+    .proj,.callout,.callout-plain,.staff-card,.grade-item,table.tbl tr{
+      break-inside:avoid;page-break-inside:avoid;
+    }
+    .proj{border:1px solid #000}
+    .proj-head{background:#fff !important;border-bottom:1px solid #000}
+    .callout,.callout-plain{background:#fff !important;border:1px solid #000;border-left:3px solid #000}
+    .staff-card{background:#fff !important;border:1px solid #000}
+    .xlate{
+      display:block !important;max-width:none;margin:0 0 14px;
+      background:#fff !important;color:#000 !important;
+      border:1px solid #000;border-left:3px solid #000;
+      break-inside:avoid;page-break-inside:avoid;
+    }
+    .xlate b{color:#000 !important}
+    .grade-bar{border:1px solid #000}
+    .grade-bar>div{border-right:1px solid #000}
+    table.tbl tbody tr:nth-child(even){background:#fff !important}
+    table.tbl th,table.tbl td{border-bottom:1px solid #000}
+    table.tbl{min-width:0}
+    .tbl-wrap{overflow:visible}
+    .guiding{border-left:2px solid #000}
+    footer.pagefoot{border-top:2px solid #000;color:#000 !important}
+    .print-only{display:block !important}
+  }
+  .print-only{display:none}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ Barra de herramientas (solo pantalla) ═══════════════════ -->
+<div class="toolbar noprint">
+  <div class="toolbar-inner">
+    <div class="langs">
+      <a href="./syllabus.html" lang="en" hreflang="en">English</a>
+      <span class="sep">·</span>
+      <a href="./syllabus-zh.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+      <span class="sep">·</span>
+      <span class="cur" lang="es">Español</span>
+    </div>
+    <div class="tools">
+      <a class="btn" href="./syllabus-es.pdf" download>⬇ Descargar PDF</a>
+      <button type="button" class="btn-2" onclick="window.print()">Imprimir</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ Aviso de traducción no oficial (pantalla e impresión) ═══════════════════ -->
+<div class="xlate">
+  <b>Traducción no oficial</b> — Esta es una traducción no oficial al español, proporcionada por conveniencia. La versión en inglés del programa es la que rige.
+  <a href="./syllabus.html" hreflang="en">Ver la versión original en inglés</a>.
+</div>
+
+<div class="page">
+
+  <a class="backlink noprint" href="https://timothyfraser.com/projects">← timothyfraser.com/projects</a>
+
+  <!-- ═══════════════════ Encabezado ═══════════════════ -->
+  <div class="runhead">SYSEN 5900 · Programa del Proyecto M.Eng. · Universidad de Cornell</div>
+
+  <h1 class="title">📋 Programa del Proyecto M.Eng.</h1>
+  <p class="lead">Seis proyectos en equipo de M.Eng. dedicados a construir sistemas de big data e inteligencia artificial para medir y monitorear resultados en sistemas urbanos y ambientales: calidad del aire, tarificación vial por congestión, redes de movilidad y resiliencia ante desastres.</p>
+  <p class="head-meta">
+    <span class="sem">2026</span>
+    &nbsp;Asesor de proyectos: Dr. Timothy Fraser, Profesor Asistente de Docencia, Ingeniería de Sistemas, Universidad de Cornell.
+  </p>
+
+  <!-- ═══════════════════ Panorama del proyecto ═══════════════════ -->
+  <section id="overview">
+    <h2 class="sec">Panorama del proyecto</h2>
+
+    <p>Construye sistemas de big data e inteligencia artificial para medir y monitorear resultados en sistemas urbanos y ambientales: calidad del aire, tarificación vial por congestión, redes de movilidad y resiliencia ante desastres. Este año se desarrollan seis proyectos en equipo de M.Eng., cada uno con su propio equipo, su propia sección de inscripción y su propio producto. <b>Cada proyecto entrega un informe más una herramienta funcional.</b></p>
+
+    <div class="info-grid">
+      <div><span class="lbl">Áreas del proyecto</span> Emisiones, Transporte, Calidad del Aire, Infraestructura Social, Confiabilidad, Sensores, Comunicación de Datos, Visualización, Arquitectura de Sistemas, Bases de Datos, Tableros, Algoritmos</div>
+      <div><span class="lbl">Palabras clave</span> Inteligencia Artificial; Generación Automatizada de Informes; Tableros; Desarrollo de Sistemas Web; APIs; Emisiones; Inferencia Causal; SIG; Ciencia de Redes; IA Agéntica; Datos Abiertos</div>
+      <div><span class="lbl">Cupo máximo</span> 5 estudiantes por proyecto</div>
+    </div>
+
+    <h3 class="sub">Los seis proyectos de un vistazo</h3>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr><th>#</th><th>Inscribirse como</th><th>N.º de clase</th><th>Título corto</th><th>Proyecto</th><th>Cupo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td class="code">SYSEN 5900-648</td><td>—</td><td>MOVESAI</td><td>Sistemas de Reporte de Emisiones con IA mediante MOVESAI</td><td>5</td></tr>
+          <tr><td>2</td><td class="code">SYSEN 5900-662</td><td>19053</td><td>Aire Urbano</td><td>Sistemas de Datos de Calidad del Aire Urbano y Tráfico con CIVIC</td><td>5</td></tr>
+          <tr><td>3</td><td class="code">SYSEN 5900-663</td><td>19054</td><td>Infra. Social</td><td>Infraestructura Social y Movilidad de Emergencia</td><td>5</td></tr>
+          <tr><td>4</td><td class="code">SYSEN 5900-664</td><td>19055</td><td>Bicicletas Compartidas</td><td>Analítica de Redes de Bicicletas Compartidas</td><td>5</td></tr>
+          <tr><td>5</td><td class="code">SYSEN 5900-665</td><td>19056</td><td>Árbol de Fallos</td><td>Análisis Agéntico de Árboles de Fallos con FaultDB</td><td>5</td></tr>
+          <tr><td>6</td><td class="code">SYSEN 5900-666</td><td>19057</td><td>SAFECAST</td><td>Monitoreo de Radiación de Código Abierto con SAFECAST</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout-grid">
+      <div class="callout">
+        <b>¿Parece muy centrado en R? No lo es.</b> Se usa lo que mejor se ajuste al problema: React, Python, R, SQL, la nube. Programarás con IA (vibecoding) en todo ello.
+      </div>
+      <div class="callout-plain">
+        <b>¿Nuevo en la programación? Bienvenido.</b> Ven con disposición para autoaprender y matricúlate en paralelo en SYSEN 5300 (otoño · base de R) o SYSEN 5381 (primavera) para desarrollar tus habilidades.
+      </div>
+    </div>
+
+    <p><b>Estamos formando equipos ahora.</b> Damos la bienvenida tanto a estudiantes de educación a distancia como presenciales: cada proyecto entrega un informe más una herramienta funcional. Cada proyecto es su propia sección de SYSEN 5900; forma un equipo e inscríbete en la sección que aparece en la tabla anterior.</p>
+  </section>
+
+  <!-- ═══════════════════ Los seis proyectos ═══════════════════ -->
+  <section id="projects">
+    <h2 class="sec">Los seis proyectos</h2>
+
+    <!-- 1 ─ MOVESAI -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-648</span>
+        <span class="proj-cnbr">N.º de clase —</span>
+        <span class="chip-short">🚗 MOVESAI</span>
+      </div>
+      <div class="proj-body">
+        <h3>Sistemas de Reporte de Emisiones con IA mediante MOVESAI (AI-Powered Emissions Reporting Systems with MOVESAI)</h3>
+        <div class="chips"><span class="chip">Aprendizaje Automático</span><span class="chip">Tableros</span><span class="chip">Emisiones</span></div>
+        <p class="guiding">¿Puede la IA reproducir un modelo pesado de emisiones de la EPA con la rapidez suficiente para que cualquier ciudad lo use en línea?</p>
+        <p class="proj-desc">El transporte es una de las principales fuentes de gases de efecto invernadero y contaminación del aire, pero los modelos que lo estiman son lentos y difíciles de usar para las agencias locales. Construirás sistemas de IA y aprendizaje automático que reproduzcan el simulador de emisiones EPA MOVES y lo sirvan mediante APIs rápidas y tableros, de modo que las ciudades puedan estimar y reportar sus emisiones de transporte en línea sin ejecutar el modelo completo. El trabajo abarca aprendizaje automático, diseño de APIs, tableros de front-end y el informe que se entrega junto con ellos.</p>
+        <div class="proj-foot">
+          <span class="cap">Cupo máximo: 5 estudiantes</span>
+          <span class="phase">Sustituto → Tablero → Informe</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 ─ Aire Urbano -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-662</span>
+        <span class="proj-cnbr">N.º de clase 19053</span>
+        <span class="chip-short">🏙️ Aire Urbano</span>
+      </div>
+      <div class="proj-body">
+        <h3>Sistemas de Datos de Calidad del Aire Urbano y Tráfico con CIVIC (Urban Air Quality and Traffic Data Systems with CIVIC)</h3>
+        <div class="chips"><span class="chip">Calidad del Aire</span><span class="chip">Transporte</span><span class="chip">Inferencia Causal</span></div>
+        <p class="guiding">Cuando una ciudad cobra a los conductores por entrar a su centro, ¿el aire realmente se vuelve más limpio? ¿Y quién se beneficia?</p>
+        <p class="proj-desc">Cuando una ciudad cambia la manera en que la gente se desplaza —tarificación por congestión, nuevo transporte público, rediseño de calles—, ¿el aire realmente se vuelve más limpio, y para quién? Construirás los sistemas de datos que sustentan CIVIC: integrarás datos de calidad del aire, transporte público y tráfico de ciudades como Nueva York, Londres y Estocolmo, y luego usarás inferencia causal para medir cómo las políticas modifican la contaminación y los desplazamientos. El trabajo abarca ingeniería de datos, bases de datos de panel, estadística y la comunicación de resultados a un público de política pública.</p>
+        <div class="proj-foot">
+          <span class="cap">Cupo máximo: 5 estudiantes</span>
+          <span class="phase">Datos → Integración → Informe</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 ─ Infra. Social -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-663</span>
+        <span class="proj-cnbr">N.º de clase 19054</span>
+        <span class="chip-short">🏘️ Infra. Social</span>
+      </div>
+      <div class="proj-body">
+        <h3>Infraestructura Social y Movilidad de Emergencia (Social Infrastructure &amp; Emergency Mobility)</h3>
+        <div class="chips"><span class="chip">SIG</span><span class="chip">Resiliencia Urbana</span><span class="chip">Gestión de Emergencias</span></div>
+        <p class="guiding">¿El lugar donde se reúnen tus vecinos predice qué tan bien sobrevive tu ciudad a un desastre?</p>
+        <p class="proj-desc">Las ciudades con una infraestructura social más densa —parques, bibliotecas, lugares de culto— tienden a recuperarse más rápido de los desastres, pero ¿cuánto y dónde? Construirás flujos de trabajo espaciales que puntúen los espacios cívicos en decenas de ciudades de Estados Unidos y luego vincularás esas puntuaciones con el comportamiento de evacuación y la exposición a amenazas usando datos de movilidad. El trabajo abarca SIG y estadística espacial, un tablero y una API para compartir los resultados, y un informe que conecte la infraestructura comunitaria con la preparación ante emergencias.</p>
+        <div class="proj-foot">
+          <span class="cap">Cupo máximo: 5 estudiantes</span>
+          <span class="phase">Flujo de datos → Puntuación → Informe</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 ─ Bicicletas Compartidas -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-664</span>
+        <span class="proj-cnbr">N.º de clase 19055</span>
+        <span class="chip-short">🚲 Bicicletas Compartidas</span>
+      </div>
+      <div class="proj-body">
+        <h3>Analítica de Redes de Bicicletas Compartidas (Bikeshare Network Analytics)</h3>
+        <div class="chips"><span class="chip">Redes</span><span class="chip">Big Data</span><span class="chip">Movilidad</span></div>
+        <p class="guiding">¿Qué patrones surgen cuando comparamos cómo se desplazan los usuarios en todos los grandes sistemas de bicicletas compartidas de Estados Unidos?</p>
+        <p class="proj-desc">Toda gran ciudad de Estados Unidos opera un sistema de bicicletas compartidas —Bluebikes, Citi Bike, Divvy, Capital Bikeshare— y cada uno registra millones de viajes. Obtendrás y unificarás esos registros en una única base de datos lista para el análisis con un esquema compartido, y luego modelarás las redes de movilidad resultantes para estudiar el uso, la equidad y el comportamiento de los usuarios que los datos de una sola ciudad no pueden revelar por sí solos. El trabajo abarca ciencia de redes, obtención de datos a gran escala y diseño de bases de datos.</p>
+        <div class="proj-foot">
+          <span class="cap">Cupo máximo: 5 estudiantes</span>
+          <span class="phase">Obtener → Unificar → Modelar</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 ─ Árbol de Fallos -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-665</span>
+        <span class="proj-cnbr">N.º de clase 19056</span>
+        <span class="chip-short">🌳 Árbol de Fallos</span>
+      </div>
+      <div class="proj-body">
+        <h3>Análisis Agéntico de Árboles de Fallos con FaultDB (Agentic Fault Tree Analysis with FaultDB)</h3>
+        <div class="chips"><span class="chip">Confiabilidad</span><span class="chip">Seguridad</span><span class="chip">IA Agéntica</span></div>
+        <p class="guiding">¿Cuál es la probabilidad de que este sistema falle, y qué componentes importan más?</p>
+        <p class="proj-desc">Los ingenieros de confiabilidad pasan demasiado tiempo peleando con herramientas de escritorio engorrosas para responder una sola pregunta: ¿qué tan probable es que este sistema falle y qué partes importan más? Extenderás FaultDB —una plataforma en navegador que combina un motor de análisis en R con un editor de diagramas en React— y añadirás flujos de trabajo de IA agéntica que ayuden a los usuarios a construir árboles de fallos y de ataque, ejecutar análisis de conjuntos de corte e interpretar los resultados. El trabajo abarca el diseño de agentes de LLM, el modelado de confiabilidad, front-ends interactivos y la API que los respalda.</p>
+        <div class="proj-foot">
+          <span class="cap">Cupo máximo: 5 estudiantes</span>
+          <span class="phase">Prueba de concepto → Alfa → Beta</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 ─ SAFECAST -->
+    <article class="proj">
+      <div class="proj-head">
+        <span class="proj-code">SYSEN 5900-666</span>
+        <span class="proj-cnbr">N.º de clase 19057</span>
+        <span class="chip-short">☢️ SAFECAST</span>
+      </div>
+      <div class="proj-body">
+        <h3>Monitoreo de Radiación de Código Abierto con SAFECAST (Open-Source Radiation Monitoring with SAFECAST)</h3>
+        <div class="chips"><span class="chip">Sensores</span><span class="chip">Datos Abiertos</span><span class="chip">Respuesta a Crisis</span></div>
+        <p class="guiding">Después de un desastre nuclear, ¿puede una red abierta de sensores gestionada por la ciudadanía decirle a la gente qué es seguro, de forma clara y en tiempo real?</p>
+        <p class="proj-desc">SAFECAST es una organización sin fines de lucro con sede en Tokio que, tras el desastre de Fukushima de 2011, construyó el mayor conjunto de datos abiertos de mediciones de radiación de fondo, recopilado de forma colaborativa por la ciudadanía mediante sensores portátiles y fijos, y publicado libremente para el público. Hoy su red cartografía Fukushima, Ucrania y ciudades de todo el mundo para apoyar el seguimiento de crisis y la recuperación en zonas afectadas por la radiación. En esta nueva colaboración, tu equipo ayudará a SAFECAST a desarrollar los sistemas de tableros y la integración de IA que sustentan su red global de sensores, para que pueda comunicar información de radiación precisa e imparcial al público cuando más importa. Buscamos estudiantes con habilidades en cualquiera de estas áreas: bases de datos, trabajo con sensores, APIs, React, tableros y visualización de datos; y entregarás una herramienta funcional más un informe.</p>
+        <div class="proj-foot">
+          <span class="cap">Cupo máximo: 5 estudiantes</span>
+          <span class="phase">Sensores → Tablero → IA</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═══════════════════ A quién buscamos ═══════════════════ -->
+  <section id="seeking">
+    <h2 class="sec">Estamos buscando…</h2>
+    <p>Buscamos programadores talentosos que aprovechen sus habilidades de manipulación de datos, visualización de datos y comunicación de datos para construir herramientas funcionales, con lo que mejor se ajuste al problema: React, Python, R, SQL, la nube. No se requiere experiencia previa con nuestro stack específico; capacitaremos a los estudiantes en APIs, tableros y GitHub, y los estudiantes trabajarán de forma colaborativa para construir el producto en conjunto. Nuestro equipo reúne a estudiantes de ciencias de la computación, de sistemas y de otras ingenierías.</p>
+    <p><b>Se requiere experiencia previa en R</b> (por ejemplo, SYSEN 5300) <b>o experiencia previa significativa en desarrollo web</b> (por ejemplo, JavaScript, HTML, CSS). Todos los estudiantes deben estar dispuestos a aprender nuevas habilidades. ¿Nuevo en la programación? Ven con disposición para autoaprender y matricúlate en paralelo en SYSEN 5300 (otoño · base de R) o SYSEN 5381 (primavera) para desarrollar tus habilidades.</p>
+    <p><b>Damos la bienvenida tanto a estudiantes de educación a distancia como presenciales.</b></p>
+  </section>
+
+  <!-- ═══════════════════ ¿Cómo me uno? ═══════════════════ -->
+  <section id="join">
+    <h2 class="sec">¿Cómo me uno?</h2>
+    <ul>
+      <li>¡Envíame por correo tu CV y una breve descripción de por qué quieres unirte!</li>
+      <li>Se debe recibir una invitación del asesor del proyecto para unirse al equipo.</li>
+      <li>Completa el formulario <b>Licensed Permission to Use Student Work</b> (Permiso con licencia para usar el trabajo estudiantil) y envíalo a <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a>. Esto nos permite usar los entregables de tu proyecto de M.Eng. en nuestras herramientas y tableros.</li>
+      <li>Completa, haz firmar y entrega el formulario de SYSEN o el formulario de CS a tu departamento. (Si perteneces a otro departamento, proporciona tu propio formulario.)</li>
+      <li>Inscríbete en el curso (consulta <a href="#register">¿Cómo me inscribo?</a> más abajo).</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════ ¿Cómo me inscribo? ═══════════════════ -->
+  <section id="register">
+    <h2 class="sec">¿Cómo me inscribo?</h2>
+    <p><b>Cada proyecto es su propia sección de SYSEN 5900.</b> Forma un equipo e inscríbete en la sección indicada para tu proyecto:</p>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Inscribirse como</th><th>N.º de clase</th><th>Título corto</th><th>Proyecto</th></tr></thead>
+        <tbody>
+          <tr><td class="code">SYSEN 5900-648</td><td>—</td><td>MOVESAI</td><td>Sistemas de Reporte de Emisiones con IA mediante MOVESAI</td></tr>
+          <tr><td class="code">SYSEN 5900-662</td><td>19053</td><td>Aire Urbano</td><td>Sistemas de Datos de Calidad del Aire Urbano y Tráfico con CIVIC</td></tr>
+          <tr><td class="code">SYSEN 5900-663</td><td>19054</td><td>Infra. Social</td><td>Infraestructura Social y Movilidad de Emergencia</td></tr>
+          <tr><td class="code">SYSEN 5900-664</td><td>19055</td><td>Bicicletas Compartidas</td><td>Analítica de Redes de Bicicletas Compartidas</td></tr>
+          <tr><td class="code">SYSEN 5900-665</td><td>19056</td><td>Árbol de Fallos</td><td>Análisis Agéntico de Árboles de Fallos con FaultDB</td></tr>
+          <tr><td class="code">SYSEN 5900-666</td><td>19057</td><td>SAFECAST</td><td>Monitoreo de Radiación de Código Abierto con SAFECAST</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li>Los <b>estudiantes de Ingeniería de Sistemas y de otros programas</b> deben inscribirse usando la sección de SYSEN 5900 indicada arriba para su proyecto.</li>
+      <li>Los <b>estudiantes de Ciencias de la Computación</b> deben consultar a Renee en CS para obtener la información más actualizada sobre el equivalente de estudio independiente CS 5999.</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════ Asistencia ═══════════════════ -->
+  <section id="attendance">
+    <h2 class="sec">Asistencia</h2>
+    <ul>
+      <li>Nos reuniremos aproximadamente una vez por semana, en grupo, donde cada integrante del equipo compartirá sus avances.</li>
+      <li>Los horarios de reunión se elegirán en conjunto como grupo después de la primera semana de clases.</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════ Calificación ═══════════════════ -->
+  <section id="grading">
+    <h2 class="sec">Criterios de calificación</h2>
+
+    <div class="grade-bar" aria-hidden="true">
+      <div style="flex:0 0 60%;background:var(--b-soft)" title="Entregables — 60%"></div>
+      <div style="flex:0 0 10%;background:var(--p-soft)" title="Asistencia a las revisiones semanales de avance — 10%"></div>
+      <div style="flex:0 0 10%;background:var(--y-soft)" title="Puntajes de las revisiones semanales de avance — 10%"></div>
+      <div style="flex:0 0 10%;background:var(--g-soft)" title="Presentación de póster — 10%"></div>
+      <div style="flex:0 0 10%;background:var(--o-soft)" title="Informe final — 10%"></div>
+    </div>
+    <div class="grade-legend">
+      <span><span class="sw" style="background:var(--b-soft)"></span>Entregables (subgrupo) — 60%</span>
+      <span><span class="sw" style="background:var(--p-soft)"></span>Asistencia a las revisiones semanales de avance — 10%</span>
+      <span><span class="sw" style="background:var(--y-soft)"></span>Puntajes de las revisiones semanales de avance — 10%</span>
+      <span><span class="sw" style="background:var(--g-soft)"></span>Presentación de póster — 10%</span>
+      <span><span class="sw" style="background:var(--o-soft)"></span>Informe final — 10%</span>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">60%</span> — Entregables (subgrupo)</h3>
+      <p>Los estudiantes se dividirán en pequeños subgrupos de su elección, con la orientación del instructor, para abordar juntos una serie de desafíos que ayudarán a nuestro proyecto. Cada subgrupo de estudiantes será responsable de producir 3 entregables a lo largo del semestre. Cada entregable debe ir acompañado de un resumen escrito en conjunto que describa el entregable, de al menos 1 página, a espacio sencillo (¡que puede integrarse en un futuro artículo!). Cada entregable valdrá el 20% de la calificación de ese equipo de estudiantes. Los estudiantes decidirán su siguiente entregable junto con el asesor del proyecto, un mes antes de cada fecha límite.</p>
+      <ul class="grade-sub">
+        <li><b>20%</b> — Entregable 1: se entrega después del mes 1, con resumen.</li>
+        <li><b>20%</b> — Entregable 2: se entrega después del mes 2, con resumen.</li>
+        <li><b>20%</b> — Entregable 3: se entrega después del mes 3, con resumen.</li>
+      </ul>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">10%</span> — Asistir a las revisiones semanales de avance (individual)</h3>
+      <p>Inscribirse y asistir al menos a 1 reunión de revisión de avance por semana con el personal del proyecto. (Se recomienda encarecidamente que te inscribas a una revisión de avance en el mismo horario que tu compañero o compañera cada semana.)</p>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">10%</span> — Puntajes de las revisiones semanales de avance (subgrupo)</h3>
+      <p>En cada reunión de revisión, los estudiantes informarán al asesor del proyecto sobre sus avances. En cada revisión pueden recibir uno de dos puntajes posibles: avance (100%) o sin avance (0%). Cada semestre, cada estudiante dispone de 2 «comodines» (semanas en las que puedes no haber avanzado) sin impacto en la calificación. Después de descartar 2 puntajes de «sin avance», se promediarán tus puntajes de las revisiones semanales de avance para producir tu calificación general de este componente.</p>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">10%</span> — Presentación de póster (grupo)</h3>
+      <p>Al final del semestre, tu equipo elaborará un póster o video de cara al público (detalles por anunciar) para presentar el producto que hayan creado durante el semestre.</p>
+    </div>
+
+    <div class="grade-item">
+      <h3 class="sub"><span class="weight">10%</span> — Informe final (grupo)</h3>
+      <p>Al final del semestre, tu equipo deberá entregar a su programa un informe que resuma sus contribuciones en este proyecto de M.Eng.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ Programación y replicación ═══════════════════ -->
+  <section id="coding">
+    <h2 class="sec">Programación y replicación</h2>
+    <ul>
+      <li>Se espera que los participantes escriban su trabajo en scripts totalmente reproducibles, con lo que mejor se ajuste al problema: React, Python, R, SQL, la nube.</li>
+      <li>El instructor recomienda encarecidamente el uso de RStudio cuando sea pertinente.</li>
+      <li>Para cada entregable, los participantes deben hacer commit y push de todo el código y los datos a un repositorio en la página de GitHub de nuestro equipo. Enlace: <a href="https://github.coecis.cornell.edu/CAT">github.coecis.cornell.edu/CAT</a></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════ Equipo docente y horarios de consulta ═══════════════════ -->
+  <section id="staff">
+    <h2 class="sec">Equipo docente y horarios de consulta</h2>
+    <div class="staff-card">
+      <b>Dr. Timothy Fraser</b> — Asesor del proyecto<br>
+      Profesor Asistente de Docencia, Ingeniería de Sistemas, Universidad de Cornell<br>
+      <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a> · Rhodes Hall 404
+    </div>
+    <p>Consulta el calendario actual de horarios de consulta e inscríbete en <a href="https://bit.ly/office_hours_fraser">bit.ly/office_hours_fraser</a>.</p>
+  </section>
+
+  <!-- ═══════════════════ Pie de página ═══════════════════ -->
+  <footer class="pagefoot">
+    <p class="gov">La versión web es la autoritativa: si una impresión y esta página llegaran a discrepar, rige la versión web. Las traducciones no oficiales se proporcionan por conveniencia; la versión en inglés del programa es la que rige.</p>
+    <p>Proyectos M.Eng. de SYSEN 5900 · Ingeniería de Sistemas de Cornell · Dr. Timothy Fraser · 2026</p>
+    <p class="print-only">Impreso desde https://timothyfraser.com/meng/syllabus-es.html</p>
+  </footer>
+
+</div>
+</body>
+</html>
