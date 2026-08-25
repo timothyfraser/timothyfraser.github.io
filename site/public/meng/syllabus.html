@@ -76,6 +76,9 @@
     border:1px solid var(--line-2);background:#fff;color:var(--ink);
   }
   .btn-2:hover{background:var(--gray)}
+  .joinbtns{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 8px}
+  .joinbtns .btn{font-size:.9rem;padding:10px 18px}
+  .joinnote{font-family:var(--sans);font-size:.88rem;color:var(--muted);margin:6px 0 0}
 
   .backlink{
     display:inline-block;margin:16px 0 0;font-family:var(--sans);font-size:.84rem;
@@ -467,10 +470,17 @@
     <ul>
       <li>Email me your CV and a brief description of why you want to join!</li>
       <li>Must receive an invitation from project advisor to join team.</li>
-      <li>Complete the <b>Licensed Permission to Use Student Work</b> form and send to <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a>. This allows us to use your M.Eng. project deliverables in our tools and dashboards.</li>
+      <li>Complete the <a href="./student_work_commercial_license.pdf" target="_blank" rel="noopener"><b>Licensed Permission to Use Student Work</b></a> form and send to <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a>. This allows us to use your M.Eng. project deliverables in our tools and dashboards.</li>
       <li>Complete, get signed, and submit the SYSEN form or CS form to your department. (If another department, please supply your own form.)</li>
+      <li><b>Make a GitHub account</b> at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> if you do not have one, then <b>email me your GitHub ID</b> (mine is <code>timothyfraser</code>) so I can add you to the project repositories.</li>
       <li>Register for the course (see <a href="#register">How do I register?</a> below).</li>
     </ul>
+    <div class="joinbtns noprint">
+      <a class="btn" href="./student_work_commercial_license.pdf" target="_blank" rel="noopener">⬇ Complete this Form</a>
+      <a class="btn" href="https://github.com/signup" target="_blank" rel="noopener">Make a GitHub Account</a>
+      <a class="btn" href="mailto:tmf77@cornell.edu?subject=M.Eng.%20project%20%E2%80%94%20my%20GitHub%20ID">✉ Send Me Your GitHub ID</a>
+    </div>
+    <p class="joinnote">Email the signed form and your GitHub ID (mine is <code>timothyfraser</code>) to <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a>.</p>
   </section>
 
   <!-- ═══════════════════ How do I register? ═══════════════════ -->

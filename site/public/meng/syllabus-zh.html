@@ -76,6 +76,9 @@
     border:1px solid var(--line-2);background:#fff;color:var(--ink);
   }
   .btn-2:hover{background:var(--gray)}
+  .joinbtns{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 8px}
+  .joinbtns .btn{font-size:.9rem;padding:10px 18px}
+  .joinnote{font-family:var(--sans);font-size:.88rem;color:var(--muted);margin:6px 0 0}
 
   /* ── unofficial-translation banner (screen AND print) ──────── */
   .xlate{background:var(--red-tint);border-bottom:1px solid var(--red-line)}
@@ -490,10 +493,17 @@
     <ul>
       <li>把你的简历以及一段简短的加入理由说明发邮件给我！</li>
       <li>必须收到项目导师的邀请才能加入团队。</li>
-      <li>填写<b>《学生作品使用许可》（Licensed Permission to Use Student Work）</b>表格，并发送至 <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a>。这使我们可以在我们的工具和仪表板中使用你的硕士项目交付成果。</li>
+      <li>填写<a href="./student_work_commercial_license.pdf" target="_blank" rel="noopener"><b>《学生作品使用许可》（Licensed Permission to Use Student Work）</b></a>表格，并发送至 <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a>。这使我们可以在我们的工具和仪表板中使用你的硕士项目交付成果。</li>
       <li>填写、取得签字并向所在系提交 SYSEN 表格或 CS 表格。（若属于其他院系，请自行提供相应表格。）</li>
+      <li>如果你还没有 GitHub 账号，请在 <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> <b>注册一个 GitHub 账号</b>，然后<b>把你的 GitHub ID 发邮件给我</b>（我的是 <code>timothyfraser</code>），以便我把你加入项目代码库。</li>
       <li>注册课程（见下方<a href="#register">我该如何注册？</a>）。</li>
     </ul>
+    <div class="joinbtns noprint">
+      <a class="btn" href="./student_work_commercial_license.pdf" target="_blank" rel="noopener">⬇ 填写此表格</a>
+      <a class="btn" href="https://github.com/signup" target="_blank" rel="noopener">注册 GitHub 账号</a>
+      <a class="btn" href="mailto:tmf77@cornell.edu?subject=%E7%A1%95%E5%A3%AB%E9%A1%B9%E7%9B%AE%20%E2%80%94%20%E6%88%91%E7%9A%84%20GitHub%20ID">✉ 发送你的 GitHub ID</a>
+    </div>
+    <p class="joinnote">请将签署好的表格和你的 GitHub ID（我的是 <code>timothyfraser</code>）发送至 <a href="mailto:tmf77@cornell.edu">tmf77@cornell.edu</a>。</p>
   </section>
 
   <!-- ═══════════════════ How do I register? ═══════════════════ -->
