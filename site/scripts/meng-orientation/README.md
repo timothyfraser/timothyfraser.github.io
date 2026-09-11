@@ -64,6 +64,15 @@ key returns 403.
 Rscript site/scripts/meng-orientation/deploy_orientation.R
 ```
 
+## Two copies, and the drift risk
+
+This deck also lives in the **movesai** repo at `meng/orientation.html`, which is
+what deploys it to Posit Connect (that repo holds the Connect credentials).
+**Nothing syncs the two.** Edit one, edit the other in the same sitting, or the
+public page and the Connect page quietly diverge — the exact failure mode slide
+24 of this deck is about. If that becomes annoying, collapse it: pick one
+canonical copy and have the other mirror it.
+
 ## Keeping it true
 
 Several slides cite live facts — acceptance-criterion counts, model accuracy,
